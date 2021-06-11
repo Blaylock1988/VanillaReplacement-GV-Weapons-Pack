@@ -8,8 +8,8 @@
 			</Id>
 			<Category>WEP_SHOT</Category>
 			<MaxDistance>600</MaxDistance>
-			<PitchVariation>50</PitchVariation>
-			<PreventSynchronization>0</PreventSynchronization>
+			<PitchVariation>0</PitchVariation>
+			<PreventSynchronization>3</PreventSynchronization>
 			<DynamicMusicCategory>HeavyFight</DynamicMusicCategory>
 			<DynamicMusicAmount>3</DynamicMusicAmount>
 			<DistantSounds>
