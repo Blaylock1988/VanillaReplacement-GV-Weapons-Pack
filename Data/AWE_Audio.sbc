@@ -1,0 +1,131 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Sounds>
+    <Sound>
+      <Id>
+        <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+        <SubtypeId>ArcWepShipARYXJudge_Fire</SubtypeId>
+      </Id>
+      <Category>SHOT</Category>
+      <MaxDistance>700</MaxDistance>
+      <PreventSynchronization>0</PreventSynchronization>
+      <DynamicMusicCategory>HeavyFight</DynamicMusicCategory>
+      <DynamicMusicAmount>3</DynamicMusicAmount>
+      <Volume>0.60</Volume>
+      <Waves>
+        <Wave Type="D3">
+          <Start>Audio\Aryx\aryx_judge_fire_01.wav</Start>
+        </Wave>
+        <Wave Type="D3">
+          <Start>Audio\Aryx\aryx_judge_fire_02.wav</Start>
+        </Wave>	
+        <Wave Type="D3">
+          <Start>Audio\Aryx\aryx_judge_fire_03.wav</Start>
+        </Wave>			
+      </Waves>
+    </Sound>	
+	
+    <Sound>
+      <Id>
+        <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+        <SubtypeId>ArcWepShipARYXBurstCannon_Fire</SubtypeId>
+      </Id>
+      <Category>SHOT</Category>
+      <MaxDistance>300</MaxDistance>
+      <PreventSynchronization>0</PreventSynchronization>
+      <DynamicMusicCategory>HeavyFight</DynamicMusicCategory>
+      <DynamicMusicAmount>3</DynamicMusicAmount>
+      <Volume>0.7</Volume>
+      <Waves>
+        <Wave Type="D3">
+          <Start>Audio\Aryx\burst_cannon_fire_01.wav</Start>
+        </Wave>
+
+      </Waves>
+    </Sound> 
+	
+    <Sound>
+      <Id>
+        <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+        <SubtypeId>ArcWepShipARYXFlak_Fire</SubtypeId>
+      </Id>
+      <Category>SHOT</Category>
+      <MaxDistance>300</MaxDistance>
+      <PreventSynchronization>0</PreventSynchronization>
+      <DynamicMusicCategory>HeavyFight</DynamicMusicCategory>
+      <DynamicMusicAmount>3</DynamicMusicAmount>
+      <Volume>0.75</Volume>
+      <Waves>
+        <Wave Type="D3">
+          <Start>Audio\Aryx\aryx_flak_cannon_fire_01.wav</Start>
+        </Wave>
+        <Wave Type="D3">
+          <Start>Audio\Aryx\aryx_flak_cannon_fire_02.wav</Start>
+        </Wave>
+      </Waves>
+    </Sound> 
+
+
+    <Sound>
+      <Id>
+        <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+        <SubtypeId>ArcWepShipARYXRailgun_Fire</SubtypeId>
+      </Id>
+      <Category>SHOT</Category>
+      <MaxDistance>300</MaxDistance>
+      <PreventSynchronization>0</PreventSynchronization>
+      <DynamicMusicCategory>HeavyFight</DynamicMusicCategory>
+      <DynamicMusicAmount>3</DynamicMusicAmount>
+      <Volume>2</Volume>
+      <Waves>
+        <Wave Type="D3">
+          <Start>Audio\Aryx\aryx_railgun_fire_01.wav</Start>
+        </Wave>
+      </Waves>
+    </Sound> 
+
+    <Sound>
+      <Id>
+        <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+        <SubtypeId>ArcWepShipARYXRailgun_Windup</SubtypeId>
+      </Id>
+      <Category>SHOT</Category>
+      <MaxDistance>300</MaxDistance>
+      <PreventSynchronization>0</PreventSynchronization>
+      <DynamicMusicCategory>HeavyFight</DynamicMusicCategory>
+      <DynamicMusicAmount>3</DynamicMusicAmount>
+      <Volume>1</Volume>
+      <Waves>
+        <Wave Type="D3">
+          <Start>Audio\Aryx\aryx_railgun_windup_01.wav</Start>
+        </Wave>
+
+      </Waves>
+    </Sound> 
+	
+    <Sound>
+      <Id>
+        <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+        <SubtypeId>ArcWepShipARYX_AuroraFire</SubtypeId>
+      </Id>
+      <Category>SHOT</Category>
+      <MaxDistance>400</MaxDistance>
+      <PreventSynchronization>0</PreventSynchronization>
+      <DynamicMusicCategory>HeavyFight</DynamicMusicCategory>
+      <DynamicMusicAmount>3</DynamicMusicAmount>
+      <Volume>0.5</Volume>
+      <Waves>
+        <Wave Type="D3">
+          <Start>Audio\Aryx\aryx_aurora_fire_01.wav</Start>
+        </Wave>
+        <Wave Type="D3">
+          <Start>Audio\Aryx\aryx_aurora_fire_02.wav</Start>
+        </Wave>
+        <Wave Type="D3">
+          <Start>Audio\Aryx\aryx_aurora_fire_03.wav</Start>
+        </Wave>		
+      </Waves>
+    </Sound>
+	
+  </Sounds> 
+</Definitions>

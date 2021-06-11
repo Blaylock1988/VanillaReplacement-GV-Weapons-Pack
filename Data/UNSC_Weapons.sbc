@@ -1,0 +1,144 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<Weapons>
+
+		<!-- Coilguns -->
+	
+		<Weapon>
+		  <Id>
+			<TypeId>WeaponDefinition</TypeId>
+			<SubtypeId>MXA_CoilgunH</SubtypeId>
+		  </Id>
+		  <ProjectileAmmoData RateOfFire="1" ShootSoundName="" ShotsInBurst="1" />
+		  <ReleaseTimeAfterFire>0</ReleaseTimeAfterFire>
+		  <DeviateShotAngle>0</DeviateShotAngle>
+		  <MuzzleFlashLifeSpan>0</MuzzleFlashLifeSpan>
+		  <NoAmmoSoundName>WepShipGatlingNoAmmo</NoAmmoSoundName>
+		  <SecondarySoundName>WepShipGatlingRotation</SecondarySoundName>
+		  <AmmoMagazines>
+			<AmmoMagazine Subtype="Energy" />
+		  </AmmoMagazines>
+		  <ReloadTime>0</ReloadTime>
+		</Weapon>
+		
+		<Weapon>
+		  <Id>
+			<TypeId>WeaponDefinition</TypeId>
+			<SubtypeId>MXA_CoilgunL</SubtypeId>
+		  </Id>
+		  <ProjectileAmmoData RateOfFire="1" ShootSoundName="" ShotsInBurst="1" />
+		  <ReleaseTimeAfterFire>0</ReleaseTimeAfterFire>
+		  <DeviateShotAngle>0</DeviateShotAngle>
+		  <MuzzleFlashLifeSpan>0</MuzzleFlashLifeSpan>
+		  <NoAmmoSoundName>WepShipGatlingNoAmmo</NoAmmoSoundName>
+		  <SecondarySoundName>WepShipGatlingRotation</SecondarySoundName>
+		  <AmmoMagazines>
+			<AmmoMagazine Subtype="Energy" />
+		  </AmmoMagazines>
+		  <ReloadTime>0</ReloadTime>
+		</Weapon>
+				
+		<Weapon>
+		  <Id>
+			<TypeId>WeaponDefinition</TypeId>
+			<SubtypeId>MXA_MACL</SubtypeId>
+		  </Id>
+		  <ProjectileAmmoData RateOfFire="1" ShootSoundName="" ShotsInBurst="1" />
+		  <ReleaseTimeAfterFire>0</ReleaseTimeAfterFire>
+		  <DeviateShotAngle>0</DeviateShotAngle>
+		  <MuzzleFlashLifeSpan>0</MuzzleFlashLifeSpan>
+		  <NoAmmoSoundName>WepShipGatlingNoAmmo</NoAmmoSoundName>
+		  <SecondarySoundName>WepShipGatlingRotation</SecondarySoundName>
+		  <AmmoMagazines>
+			<AmmoMagazine Subtype="Energy" />
+		  </AmmoMagazines>
+		  <ReloadTime>0</ReloadTime>
+		</Weapon>
+						
+		<Weapon>
+		  <Id>
+			<TypeId>WeaponDefinition</TypeId>
+			<SubtypeId>MXA_ArcherPods</SubtypeId>
+		  </Id>
+		  <ProjectileAmmoData RateOfFire="1" ShootSoundName="" ShotsInBurst="1" />
+		  <ReleaseTimeAfterFire>0</ReleaseTimeAfterFire>
+		  <DeviateShotAngle>0</DeviateShotAngle>
+		  <MuzzleFlashLifeSpan>0</MuzzleFlashLifeSpan>
+		  <NoAmmoSoundName>WepShipGatlingNoAmmo</NoAmmoSoundName>
+		  <SecondarySoundName>WepShipGatlingRotation</SecondarySoundName>
+		  <AmmoMagazines>
+			<AmmoMagazine Subtype="Energy" />
+		  </AmmoMagazines>
+		  <ReloadTime>0</ReloadTime>
+		</Weapon>
+		
+		<Weapon>
+		  <Id>
+			<TypeId>WeaponDefinition</TypeId>
+			<SubtypeId>MXA_M58ArcherPods</SubtypeId>
+		  </Id>
+		  <ProjectileAmmoData RateOfFire="1" ShootSoundName="" ShotsInBurst="1" />
+		  <ReleaseTimeAfterFire>0</ReleaseTimeAfterFire>
+		  <DeviateShotAngle>0</DeviateShotAngle>
+		  <MuzzleFlashLifeSpan>0</MuzzleFlashLifeSpan>
+		  <NoAmmoSoundName>WepShipGatlingNoAmmo</NoAmmoSoundName>
+		  <SecondarySoundName>WepShipGatlingRotation</SecondarySoundName>
+		  <AmmoMagazines>
+			<AmmoMagazine Subtype="Energy" />
+		  </AmmoMagazines>
+		  <ReloadTime>0</ReloadTime>
+		</Weapon>
+		
+		<Weapon>
+		  <Id>
+			<TypeId>WeaponDefinition</TypeId>
+			<SubtypeId>MXA_M58ArcherPods_S</SubtypeId>
+		  </Id>
+		  <ProjectileAmmoData RateOfFire="1" ShootSoundName="" ShotsInBurst="1" />
+		  <ReleaseTimeAfterFire>0</ReleaseTimeAfterFire>
+		  <DeviateShotAngle>0</DeviateShotAngle>
+		  <MuzzleFlashLifeSpan>0</MuzzleFlashLifeSpan>
+		  <NoAmmoSoundName>WepShipGatlingNoAmmo</NoAmmoSoundName>
+		  <SecondarySoundName>WepShipGatlingRotation</SecondarySoundName>
+		  <AmmoMagazines>
+			<AmmoMagazine Subtype="Energy" />
+		  </AmmoMagazines>
+		  <ReloadTime>0</ReloadTime>
+		</Weapon>
+		
+		<Weapon>
+		  <Id>
+			<TypeId>WeaponDefinition</TypeId>
+			<SubtypeId>MXA_Shiva</SubtypeId>
+		  </Id>
+		  <ProjectileAmmoData RateOfFire="1" ShootSoundName="" ShotsInBurst="1" />
+		  <ReleaseTimeAfterFire>0</ReleaseTimeAfterFire>
+		  <DeviateShotAngle>0</DeviateShotAngle>
+		  <MuzzleFlashLifeSpan>0</MuzzleFlashLifeSpan>
+		  <NoAmmoSoundName>WepShipGatlingNoAmmo</NoAmmoSoundName>
+		  <SecondarySoundName>WepShipGatlingRotation</SecondarySoundName>
+		  <AmmoMagazines>
+			<AmmoMagazine Subtype="Energy" />
+		  </AmmoMagazines>
+		  <ReloadTime>0</ReloadTime>
+		</Weapon>
+		
+		<Weapon>
+		  <Id>
+			<TypeId>WeaponDefinition</TypeId>
+			<SubtypeId>MXA_Moray</SubtypeId>
+		  </Id>
+		  <ProjectileAmmoData RateOfFire="1" ShootSoundName="" ShotsInBurst="1" />
+		  <ReleaseTimeAfterFire>0</ReleaseTimeAfterFire>
+		  <DeviateShotAngle>0</DeviateShotAngle>
+		  <MuzzleFlashLifeSpan>0</MuzzleFlashLifeSpan>
+		  <NoAmmoSoundName>WepShipGatlingNoAmmo</NoAmmoSoundName>
+		  <SecondarySoundName>WepShipGatlingRotation</SecondarySoundName>
+		  <AmmoMagazines>
+			<AmmoMagazine Subtype="Energy" />
+		  </AmmoMagazines>
+		  <ReloadTime>0</ReloadTime>
+		</Weapon>
+		
+	</Weapons>
+</Definitions>

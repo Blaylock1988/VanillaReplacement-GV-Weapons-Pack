@@ -1,0 +1,243 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<Sounds>
+		<Sound>
+			<Id>
+				<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+				<SubtypeId>HWR_GatlingLoop</SubtypeId>
+			</Id>
+			<Category>WEP_SHOT</Category>
+			<MaxDistance>600</MaxDistance>
+			<PitchVariation>50</PitchVariation>
+			<PreventSynchronization>0</PreventSynchronization>
+			<DynamicMusicCategory>HeavyFight</DynamicMusicCategory>
+			<DynamicMusicAmount>3</DynamicMusicAmount>
+			<DistantSounds>
+				<DistantSound DistanceCrossfade="50" Distance="500" Sound="HWR_GatlingLoopDistant"/>
+			</DistantSounds>
+			<Volume>1</Volume>
+			<Loopable>true</Loopable>
+			<Waves>
+				<Wave Type="D3">
+					<Start>Audio\HWR\GatlingStart.wav</Start>
+					<Loop>Audio\HWR\GatlingLoop.wav</Loop>
+					<End>Audio\HWR\GatlingEnd.wav</End>
+				</Wave>
+			</Waves>
+		</Sound>
+		<Sound>
+			<Id>
+				<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+				<SubtypeId>HWR_GatlingLoopDistant</SubtypeId>
+			</Id>
+			<Category>WEP_SHOT</Category>
+			<MaxDistance>1000</MaxDistance>
+			<PitchVariation>100</PitchVariation>
+			<Volume>1.5</Volume>
+			<Loopable>true</Loopable>
+			<Waves>
+				<Wave Type="D3">
+					<Start>Audio\HWR\GatlingStartDistant.wav</Start>
+					<Loop>Audio\HWR\GatlingLoopDistant.wav</Loop>
+					<End>Audio\HWR\GatlingEndDistant.wav</End>
+				</Wave>
+			</Waves>
+		</Sound>
+		<Sound>
+			<Id>
+				<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+				<SubtypeId>HWR_Gatling</SubtypeId>
+			</Id>
+			<Category>WEP_SHOT</Category>
+			<MaxDistance>1000</MaxDistance>
+			<PitchVariation>50</PitchVariation>
+			<PreventSynchronization>0</PreventSynchronization>
+			<DynamicMusicCategory>HeavyFight</DynamicMusicCategory>
+			<DynamicMusicAmount>3</DynamicMusicAmount>
+			<DistantSounds>
+				<DistantSound DistanceCrossfade="300" Distance="1000" Sound="HWR_GatlingDistant"/>
+			</DistantSounds>
+			<Volume>1</Volume>
+			<Loopable>false</Loopable>
+			<Waves>
+				<Wave Type="D3">
+					<Start>Audio\HWR\Gatling.wav</Start>
+				</Wave>
+			</Waves>
+		</Sound>
+		<Sound>
+			<Id>
+				<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+				<SubtypeId>HWR_GatlingDistant</SubtypeId>
+			</Id>
+			<Category>WEP_SHOT</Category>
+			<MaxDistance>1500</MaxDistance>
+			<PitchVariation>100</PitchVariation>
+			<Volume>1.2</Volume>
+			<Loopable>false</Loopable>
+			<Waves>
+				<Wave Type="D3">
+					<Start>Audio\HWR\GatlingDistant.wav</Start>
+				</Wave>
+			</Waves>
+		</Sound>
+		<Sound>
+			<Id>
+				<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+				<SubtypeId>HWR_SmallExplosion</SubtypeId>
+			</Id>
+			<Category>WEP_EXPL</Category>
+			<MaxDistance>1000</MaxDistance>
+			<PitchVariation>200</PitchVariation>
+			<PreventSynchronization>0</PreventSynchronization>
+			<DynamicMusicCategory>HeavyFight</DynamicMusicCategory>
+			<DynamicMusicAmount>3</DynamicMusicAmount>
+			<DistantSounds>
+				<DistantSound DistanceCrossfade="500" Distance="1000" Sound="HWR_ExplosionDistant"/>
+			</DistantSounds>
+			<Volume>1</Volume>
+			<Loopable>false</Loopable>
+			<Waves>
+				<Wave Type="D3">
+					<Start>Audio\HWR\Small_explosion_1.wav</Start>
+				</Wave>
+				<Wave Type="D3">
+					<Start>Audio\HWR\Small_explosion_2.wav</Start>
+				</Wave>
+				<Wave Type="D3">
+					<Start>Audio\HWR\Small_explosion_3.wav</Start>
+				</Wave>
+				<Wave Type="D3">
+					<Start>Audio\HWR\Small_explosion_4.wav</Start>
+				</Wave>
+				<Wave Type="D3">
+					<Start>Audio\HWR\Small_explosion_5.wav</Start>
+				</Wave>
+			</Waves>
+		</Sound>
+		<Sound>
+			<Id>
+				<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+				<SubtypeId>HWR_LargeExplosion</SubtypeId>
+			</Id>
+			<Category>WEP_EXPL</Category>
+			<MaxDistance>1000</MaxDistance>
+			<PitchVariation>200</PitchVariation>
+			<PreventSynchronization>0</PreventSynchronization>
+			<DynamicMusicCategory>HeavyFight</DynamicMusicCategory>
+			<DynamicMusicAmount>3</DynamicMusicAmount>
+			<DistantSounds>
+				<DistantSound DistanceCrossfade="500" Distance="1000" Sound="HWR_ExplosionDistant"/>
+			</DistantSounds>
+			<Volume>1</Volume>
+			<Loopable>false</Loopable>
+			<Waves>
+				<Wave Type="D3">
+					<Start>Audio\HWR\Large_explosion_1.wav</Start>
+				</Wave>
+				<Wave Type="D3">
+					<Start>Audio\HWR\Large_explosion_2.wav</Start>
+				</Wave>
+				<Wave Type="D3">
+					<Start>Audio\HWR\Large_explosion_3.wav</Start>
+				</Wave>
+				<Wave Type="D3">
+					<Start>Audio\HWR\Large_explosion_4.wav</Start>
+				</Wave>
+			</Waves>
+		</Sound>
+		<Sound>
+			<Id>
+				<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+				<SubtypeId>HWR_FireyExplosion</SubtypeId>
+			</Id>
+			<Category>WEP_EXPL</Category>
+			<MaxDistance>2000</MaxDistance>
+			<PitchVariation>1000</PitchVariation>
+			<PreventSynchronization>0</PreventSynchronization>
+			<DynamicMusicCategory>HeavyFight</DynamicMusicCategory>
+			<DynamicMusicAmount>3</DynamicMusicAmount>
+			<DistantSounds>
+				<DistantSound DistanceCrossfade="1000" Distance="2000" Sound="HWR_ExplosionDistant"/>
+			</DistantSounds>
+			<Volume>1.2</Volume>
+			<Loopable>false</Loopable>
+			<Waves>
+				<Wave Type="D3">
+					<Start>Audio\HWR\Firey_explosion_1.wav</Start>
+				</Wave>
+				<Wave Type="D3">
+					<Start>Audio\HWR\Firey_explosion_2.wav</Start>
+				</Wave>
+				<Wave Type="D3">
+					<Start>Audio\HWR\Firey_explosion_3.wav</Start>
+				</Wave>
+				<Wave Type="D3">
+					<Start>Audio\HWR\Firey_explosion_4.wav</Start>
+				</Wave>
+			</Waves>
+		</Sound>
+		<Sound>
+			<Id>
+				<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+				<SubtypeId>HWR_FlakExplosion</SubtypeId>
+			</Id>
+			<Category>WEP_EXPL</Category>
+			<MaxDistance>1000</MaxDistance>
+			<PitchVariation>200</PitchVariation>
+			<PreventSynchronization>0</PreventSynchronization>
+			<DynamicMusicCategory>HeavyFight</DynamicMusicCategory>
+			<DynamicMusicAmount>3</DynamicMusicAmount>
+			<DistantSounds>
+				<DistantSound DistanceCrossfade="500" Distance="1000" Sound="HWR_ExplosionDistant"/>
+			</DistantSounds>
+			<Volume>1</Volume>
+			<Loopable>false</Loopable>
+			<Waves>
+				<Wave Type="D3">
+					<Start>Audio\HWR\Flak_explosion_1.wav</Start>
+				</Wave>
+				<Wave Type="D3">
+					<Start>Audio\HWR\Flak_explosion_2.wav</Start>
+				</Wave>
+				<Wave Type="D3">
+					<Start>Audio\HWR\Flak_explosion_3.wav</Start>
+				</Wave>
+				<Wave Type="D3">
+					<Start>Audio\HWR\Flak_explosion_4.wav</Start>
+				</Wave>
+				<Wave Type="D3">
+					<Start>Audio\HWR\Flak_explosion_5.wav</Start>
+				</Wave>
+			</Waves>
+		</Sound>
+		<Sound>
+			<Id>
+				<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+				<SubtypeId>HWR_ExplosionDistant</SubtypeId>
+			</Id>
+			<Category>WEP_EXPL</Category>
+			<MaxDistance>3000</MaxDistance>
+			<PitchVariation>200</PitchVariation>
+			<Volume>1.2</Volume>
+			<Loopable>false</Loopable>
+			<Waves>
+				<Wave Type="D3">
+					<Start>Audio\HWR\Distant_explosion_1.wav</Start>
+				</Wave>
+				<Wave Type="D3">
+					<Start>Audio\HWR\Distant_explosion_2.wav</Start>
+				</Wave>
+				<Wave Type="D3">
+					<Start>Audio\HWR\Distant_explosion_3.wav</Start>
+				</Wave>
+				<Wave Type="D3">
+					<Start>Audio\HWR\Distant_explosion_4.wav</Start>
+				</Wave>
+				<Wave Type="D3">
+					<Start>Audio\HWR\Distant_explosion_5.wav</Start>
+				</Wave>
+			</Waves>
+		</Sound>
+	</Sounds>
+</Definitions>

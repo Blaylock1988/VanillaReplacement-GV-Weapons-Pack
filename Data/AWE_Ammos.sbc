@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Ammos>
+	
+    <Ammo xsi:type="MyObjectBuilder_ProjectileAmmoDefinition">
+      <Id>
+        <TypeId>AmmoDefinition</TypeId>
+        <SubtypeId>AryxRailgunAmmo</SubtypeId>
+      </Id>
+      <BasicProperties>
+        <DesiredSpeed>1500</DesiredSpeed>
+        <SpeedVariance>0</SpeedVariance>
+        <MaxTrajectory>2000</MaxTrajectory>
+        <BackkickForce>50</BackkickForce>
+        <PhysicalMaterial>GunBullet</PhysicalMaterial>
+      </BasicProperties>
+      <ProjectileProperties>
+        <ProjectileTrailScale>0.2</ProjectileTrailScale>
+        <ProjectileHitImpulse>2</ProjectileHitImpulse>
+        <ProjectileMassDamage>2500000</ProjectileMassDamage>
+        <ProjectileHealthDamage>5000</ProjectileHealthDamage>
+        <HeadShot>true</HeadShot>
+      </ProjectileProperties>
+    </Ammo> 	
+	
+    <Ammo xsi:type="MyObjectBuilder_ProjectileAmmoDefinition">
+      <Id>
+        <TypeId>AmmoDefinition</TypeId>
+        <SubtypeId>AryxFlakAmmo</SubtypeId>
+      </Id>
+      <BasicProperties>
+        <DesiredSpeed>250</DesiredSpeed>
+        <SpeedVariance>0</SpeedVariance>
+        <MaxTrajectory>1400</MaxTrajectory>
+        <BackkickForce>50</BackkickForce>
+        <PhysicalMaterial>GunBullet</PhysicalMaterial>
+      </BasicProperties>
+      <ProjectileProperties>
+        <ProjectileTrailScale>0.2</ProjectileTrailScale>
+        <ProjectileHitImpulse>6</ProjectileHitImpulse>
+        <ProjectileMassDamage>300</ProjectileMassDamage>
+        <ProjectileHealthDamage>120</ProjectileHealthDamage>
+        <HeadShot>true</HeadShot>
+      </ProjectileProperties>
+    </Ammo> 	
+	
+    <Ammo xsi:type="MyObjectBuilder_ProjectileAmmoDefinition">
+      <Id>
+        <TypeId>AmmoDefinition</TypeId>
+        <SubtypeId>70mmBurstAmmoDef</SubtypeId>
+      </Id>
+      <BasicProperties>
+        <DesiredSpeed>400</DesiredSpeed>
+        <SpeedVariance>0</SpeedVariance>
+        <MaxTrajectory>1400</MaxTrajectory>
+        <BackkickForce>75</BackkickForce>
+        <PhysicalMaterial>GunBullet</PhysicalMaterial>
+      </BasicProperties>
+      <ProjectileProperties>
+        <ProjectileTrailScale>0.1</ProjectileTrailScale>
+        <ProjectileHitImpulse>2</ProjectileHitImpulse>
+        <ProjectileMassDamage>300</ProjectileMassDamage>
+        <ProjectileHealthDamage>45</ProjectileHealthDamage>
+        <HeadShot>true</HeadShot>
+      </ProjectileProperties>
+    </Ammo> 	
+	
+  </Ammos>
+</Definitions>

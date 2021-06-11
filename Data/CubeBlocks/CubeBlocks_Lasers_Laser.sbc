@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
+			<Id>
+				<TypeId>LargeGatlingTurret</TypeId>
+				<SubtypeId>ARYXAuroraLaser</SubtypeId>
+			</Id>
+			<DisplayName>Aurora Combat Laser</DisplayName>
+			<Icon>Textures\GUI\Icons\AryxLaserGatling.dds</Icon>
+			<Description>The Aurora is a gatling laser turret that specialises in rapid-response PD and anti-shield. Unlike the ATLAS, it does not require ammo, but it is susceptible to overheating and is larger. [Energy Weapon]</Description>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="2" z="1"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Aurora\LG_ARYX_AuroraLaser_Base.mwm</Model>
+			<Components>
+				<Component Subtype="SteelPlate" Count="80"/>
+				<Component Subtype="Construction" Count="40"/>
+				<Component Subtype="PowerCell" Count="20"/>
+				<Component Subtype="SmallTube" Count="12"/>
+				<Component Subtype="Motor" Count="30"/>
+				<Component Subtype="Superconductor" Count="40"/>
+				<Component Subtype="Girder" Count="24"/>
+				<Component Subtype="Detector" Count="5"/>
+				<Component Subtype="Computer" Count="80"/>
+				<Component Subtype="SteelPlate" Count="50"/>
+			</Components>
+			<CriticalComponent Subtype="Computer" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Front" StartX="0.0" StartY="0.0" EndX="1.0" EndY="1.0"/>
+				<MountPoint Side="Back" StartX="0.0" StartY="0.0" EndX="1.0" EndY="1.0"/>
+				<MountPoint Side="Left" StartX="0.0" StartY="0.0" EndX="1.0" EndY="1.0"/>
+				<MountPoint Side="Right" StartX="0.0" StartY="0.0" EndX="1.0" EndY="1.0"/>
+				<MountPoint Side="Bottom" StartX="0.0" StartY="0.0" EndX="1.0" EndY="1.0"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\Aurora\LG_ARYX_AuroraLaser_Base_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.66" File="Models\Aurora\LG_ARYX_AuroraLaser_Base_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.0" File="Models\Aurora\LG_ARYX_AuroraLaser_Base_BS3.mwm"/>
+			</BuildProgressModels>
+			<BlockPairName>AryxAuroraLaser</BlockPairName>
+			<MirroringY>Z</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+			<BuildTimeSeconds>45</BuildTimeSeconds>
+			<OverlayTexture>Textures\GUI\Screens\turret_overlay.dds</OverlayTexture>
+			<EdgeType>Light</EdgeType>
+			<WeaponDefinitionId Subtype="AryxAuroraWepDef"/>
+			<ResourceSinkGroup>Defense</ResourceSinkGroup>
+			<InventoryMaxVolume>1.14</InventoryMaxVolume>
+			<DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
+			<DamagedSound>ParticleWeapExpl</DamagedSound>
+			<DestroyEffect>BlockDestroyedExplosion_Small</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<AiEnabled>false</AiEnabled>
+			<PCU>500</PCU>
+		</Definition>
+	</CubeBlocks>
+</Definitions>

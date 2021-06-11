@@ -1,0 +1,71 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+			<Id>
+				<TypeId>ConveyorSorter</TypeId>
+				<SubtypeId>MXA_MACL</SubtypeId>
+			</Id>
+			<DisplayName>Mark IX MAC</DisplayName>
+			<Description>Mark IX, Heavy Coil - 45J3D3 MAC
+			MACs serve as the primary armament of UNSC Navy warships and weapon platforms.
+			The Mark IX is a MAC version that uses heavy coils, a specialized upgrade from the Mark IV. It's enhanced with booster capacitors which allow it to be fired three times per charge
+			
+			Engagement Range: 45k
+			Ammo: 1000mm MAC Slugs
+			</Description>
+			<Icon>Textures\GUI\Icons\MXA_MACL.png</Icon>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="2" z="10"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\MXA_MACL.mwm</Model>
+			<UseModelIntersection>true</UseModelIntersection>
+			<MirroringY>Z</MirroringY>
+		    <MirroringZ>Y</MirroringZ>
+			<Components>
+             <Component Subtype="SteelPlate" Count="1000" />
+             <Component Subtype="Construction" Count="250" />
+             <Component Subtype="MetalGrid" Count="150" />
+             <Component Subtype="LargeTube" Count="100" />
+             <Component Subtype="Motor" Count="75" />
+	         <Component Subtype="Superconductor" Count="300" />	
+			 <Component Subtype="PowerCell" Count="1600" />
+             <Component Subtype="Computer" Count="200" />
+             <Component Subtype="SteelPlate" Count="1250" />
+            </Components>
+            <CriticalComponent Subtype="Computer" Index="0" />
+            <EdgeType>Light</EdgeType>
+			<WeaponDefinitionId Subtype="MXA_MACL" />
+			<InventoryMaxVolume>8.0</InventoryMaxVolume>
+            <DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
+            <DamagedSound>ParticleWeapExpl</DamagedSound>
+            <ResourceSinkGroup>Defense</ResourceSinkGroup>
+			<BuildTimeSeconds>180</BuildTimeSeconds>
+			<DisassembleRatio>1.25</DisassembleRatio>
+			<NavigationDefinition>Default</NavigationDefinition>
+            <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+            <DestroySound>WepSmallWarheadExpl</DestroySound>
+            <PCU>2500</PCU>
+            <IsAirTight>true</IsAirTight> 
+			<MountPoints>
+				<MountPoint Side="Back" StartX="0.0" StartY="0.0" EndX="1.0" EndY="2.0" PressurizedWhenOpen="true"/>
+				<MountPoint Side="Left" StartX="1.04" StartY="1.0" EndX="1.9" EndY="2.0" PressurizedWhenOpen="true"/>
+				<MountPoint Side="Left" StartX="1.04" StartY="0.0" EndX="9.92" EndY="1.0" PressurizedWhenOpen="true"/>
+				<MountPoint Side="Left" StartX="8.98" StartY="1.05" EndX="9.98" EndY="2" PressurizedWhenOpen="true"/>
+				<MountPoint Side="Right" StartX="8.1" StartY="1.0" EndX="8.96" EndY="2.0" PressurizedWhenOpen="true"/>
+				<MountPoint Side="Right" StartX="0.08" StartY="0.0" EndX="8.96" EndY="1.0" PressurizedWhenOpen="true"/>
+				<MountPoint Side="Right" StartX="0.03" StartY="1.05" EndX="1.03" EndY="2" PressurizedWhenOpen="true"/>
+				<MountPoint Side="Top" StartX="0.0" StartY="8.09" EndX="1.0" EndY="8.96" PressurizedWhenOpen="true"/>
+				<MountPoint Side="Top" StartX="0.0" StartY="0.02" EndX="1.0" EndY="1.02" PressurizedWhenOpen="true"/>
+				<MountPoint Side="Bottom" StartX="0.0" StartY="1.04" EndX="1.0" EndY="9.92" PressurizedWhenOpen="true"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\MXA_MACL_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.66" File="Models\MXA_MACL_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.0" File="Models\MXA_MACL_BS3.mwm"/>
+			</BuildProgressModels>
+			<BlockPairName>MXA_MACL</BlockPairName>
+		</Definition>
+	</CubeBlocks>
+</Definitions>

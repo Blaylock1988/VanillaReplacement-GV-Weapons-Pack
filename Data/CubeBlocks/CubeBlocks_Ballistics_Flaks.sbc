@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
+			<Id>
+				<TypeId>LargeMissileTurret</TypeId>
+				<SubtypeId>ARYXFlakTurret</SubtypeId>
+			</Id>
+			<DisplayName>65mm Riptide Flak Turret</DisplayName>
+			<Icon>Textures\GUI\Icons\AryxRiptideFlak.dds</Icon>
+			<Description>Riptide FT's fire heavy flak shells that deal massive explosive damage to lightly armoured ships and strike craft, but poor damage against armoured targets. [Accepts 70mm Riptide Shells.]</Description>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="1" z="1"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Flak\LG_ARYX_FlakBase.mwm</Model>
+			<Components>
+				<Component Subtype="SteelPlate" Count="75"/>
+				<Component Subtype="Construction" Count="16"/>
+				<Component Subtype="MetalGrid" Count="10"/>
+				<Component Subtype="SmallTube" Count="16"/>
+				<Component Subtype="Motor" Count="16"/>
+				<Component Subtype="Computer" Count="24"/>
+				<Component Subtype="SteelPlate" Count="25"/>
+			</Components>
+			<CriticalComponent Subtype="Computer" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0.0" StartY="0.0" EndX="1.0" EndY="1.0"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\Flak\LG_ARYX_FlakBase_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.66" File="Models\Flak\LG_ARYX_FlakBase_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.0" File="Models\Flak\LG_ARYX_FlakBase_BS3.mwm"/>
+			</BuildProgressModels>
+			<BlockPairName>AryxFlakCannon</BlockPairName>
+			<MirroringY>Z</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+			<BuildTimeSeconds>35</BuildTimeSeconds>
+			<EdgeType>Light</EdgeType>
+			<WeaponDefinitionId Subtype="AryxFlakTurretWepDef"/>
+			<OverlayTexture>Textures\GUI\Screens\turret_overlay.dds</OverlayTexture>
+			<ResourceSinkGroup>Defense</ResourceSinkGroup>
+			<InventoryMaxVolume>1.14</InventoryMaxVolume>
+			<DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
+			<DamagedSound>ParticleWeapExpl</DamagedSound>
+			<DestroyEffect>BlockDestroyedExplosion_Small</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<PCU>200</PCU>
+		</Definition>
+	</CubeBlocks>
+</Definitions>

@@ -1,0 +1,53 @@
+<?xml version="1.0"  encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CategoryClasses>
+    <Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+      <Id>
+        <TypeId>GuiBlockCategoryDefinition</TypeId>
+        <SubtypeId/>
+      </Id>
+      <DisplayName>AryxErin Weapon Enterprises</DisplayName>
+      <Name>ARYXWeapons</Name>
+      <ItemIds>
+		<string>LargeMissileTurret/ARYXBurstTurret</string>		
+		<string>LargeMissileTurret/ARYXFlakTurret</string>		
+		<string>ConveyorSorter/ARYXRailgun</string>			
+		<string>LargeMissileTurret/ARYXRailgunTurret</string>
+		<string>LargeGatlingTurret/ARYXAuroraLaser</string>		
+      </ItemIds>
+    </Category> 
+
+    <Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+      <Id>
+        <TypeId>GuiBlockCategoryDefinition</TypeId>
+        <SubtypeId/>
+      </Id>
+      <DisplayName>DisplayName_Category_ShipWeapons</DisplayName>
+      <Name>ShipWeapons</Name>
+      <ItemIds>
+		<string>LargeMissileTurret/ARYXBurstTurret</string>		
+		<string>LargeMissileTurret/ARYXFlakTurret</string>		
+		<string>ConveyorSorter/ARYXRailgun</string>			
+		<string>LargeMissileTurret/ARYXRailgunTurret</string>
+		<string>LargeGatlingTurret/ARYXAuroraLaser</string>		
+      </ItemIds>
+    </Category> 
+
+    <Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+      <Id>
+        <TypeId>GuiBlockCategoryDefinition</TypeId>
+        <SubtypeId/>
+      </Id>
+      <DisplayName>DisplayName_Category_LargeBlocks</DisplayName>
+      <Name>LargeBlocks</Name>
+      <ItemIds>
+		<string>LargeMissileTurret/ARYXBurstTurret</string>		
+		<string>LargeMissileTurret/ARYXFlakTurret</string>		
+		<string>ConveyorSorter/ARYXRailgun</string>			
+		<string>LargeMissileTurret/ARYXRailgunTurret</string>
+		<string>LargeGatlingTurret/ARYXAuroraLaser</string>		
+      </ItemIds>
+    </Category>  	
+	
+</CategoryClasses>
+</Definitions>

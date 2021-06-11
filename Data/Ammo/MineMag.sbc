@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <AmmoMagazines>
+    <AmmoMagazine>
+      <Id>
+        <TypeId>AmmoMagazine</TypeId>
+        <SubtypeId>MXA_Moray_Ammo</SubtypeId>
+      </Id>
+      <DisplayName>Moray Space Mine</DisplayName>
+      <Icon>Textures\GUI\Icons\MXA_Moray_Mine.png</Icon>
+      <Size>
+        <X>0.25</X>
+        <Y>0.2</Y>
+        <Z>0.2</Z>
+      </Size>
+      <Mass>2000</Mass> <!--250 Per Mine -->
+      <Volume>1000</Volume> <!--125 Per Mine -->
+      <Model>Models\Mines\MXA_Moray_Mine.mwm</Model>
+      <Capacity>8</Capacity>
+      <AmmoDefinitionId Subtype="Blank" />
+   </AmmoMagazine>
+   
+  </AmmoMagazines>
+</Definitions>
