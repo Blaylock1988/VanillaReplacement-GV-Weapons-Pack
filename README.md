@@ -9,7 +9,7 @@ AryxErin
 - AryxErin Weapon Pack (unlisted)
 
 Chipstix and Okim
--OKI Grand Weapons Retextured [WeaponCore] [4] https://steamcommunity.com/sharedfiles/filedetails/?id=2481720426
+- OKI Grand Weapons Retextured [WeaponCore] [4] https://steamcommunity.com/sharedfiles/filedetails/?id=2481720426
 
 Akiad
 - Akiad Development - Small Grid Weapons Pack (32) [WeaponCore] https://steamcommunity.com/sharedfiles/filedetails/?id=2408838606
