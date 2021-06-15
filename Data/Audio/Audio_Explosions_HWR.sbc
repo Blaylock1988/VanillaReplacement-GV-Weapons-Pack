@@ -10,7 +10,7 @@
 			<MaxDistance>200</MaxDistance>
 			<PitchVariation>15</PitchVariation>
 			<PreventSynchronization>0</PreventSynchronization>
-			<Volume>1</Volume>
+			<Volume>0.5</Volume>
 			<Loopable>true</Loopable>
 			<Waves>
 				<Wave Type="D3">

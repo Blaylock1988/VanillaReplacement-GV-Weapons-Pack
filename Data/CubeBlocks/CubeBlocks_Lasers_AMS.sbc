@@ -2,7 +2,7 @@
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 	<CubeBlocks>
 		<!-- PDX small -->
-		<!-- <Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
+		<Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
 			<Id>
 				<TypeId>LargeMissileTurret</TypeId>
 				<SubtypeId>MA_PDX_sm</SubtypeId>
@@ -81,9 +81,9 @@
 			<DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
 			<DestroySound>WepSmallWarheadExpl</DestroySound>
 			<PCU>100</PCU>
-		</Definition> -->
+		</Definition>
 		<!-- MA_T2PDX -->
-		<!-- <Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+		<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
 			<Id>
 				<TypeId>ConveyorSorter</TypeId>
 				<SubtypeId>MA_T2PDX</SubtypeId>
@@ -163,7 +163,7 @@
 			<DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
 			<DestroySound>WepSmallWarheadExpl</DestroySound>
 			<PCU>100</PCU>
-		</Definition> -->
+		</Definition>
 		<!-- PDT large -->
 		<Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
 			<Id>

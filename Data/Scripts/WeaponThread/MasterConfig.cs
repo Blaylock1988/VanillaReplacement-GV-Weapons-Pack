@@ -17,7 +17,7 @@
 						SmallAutoGatlingGun,
 						SmallRocketLauncherReload,
 						AryxRailgunTurret, 
-						AryxAuroraLaser, 
+						//AryxAuroraLaser, 
 						AryxFlakTurret, 
 						AryxRailgun,
 						SmallCannon122mm,
@@ -27,7 +27,9 @@
 						MXA_ArcherPods,
 						MXA_Shiva,
 						MXA_Moray,
-						MA_PDT);
+						MA_PDT,
+						MA_PDX,
+						MA_PDX_T2);
             
         }
     }
