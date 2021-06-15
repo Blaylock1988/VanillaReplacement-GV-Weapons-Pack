@@ -70,30 +70,30 @@ namespace WeaponThread
                 SubSystems = new[] {
                     Thrust, Utility, Offense, Power, Production, Any,
                 },
-                ClosestFirst = false, // tries to pick closest targets first (blocks on grids, projectiles, etc...).
-                IgnoreDumbProjectiles = false, // Don't fire at non-smart projectiles.
+                ClosestFirst = true, // tries to pick closest targets first (blocks on grids, projectiles, etc...).
+                IgnoreDumbProjectiles = true, // Don't fire at non-smart projectiles.
                 LockedSmartOnly = false, // Only fire at smart projectiles that are locked on to parent grid.
                 MinimumDiameter = 1, // 0 = unlimited, Minimum radius of threat to engage.
                 MaximumDiameter = 0, // 0 = unlimited, Maximum radius of threat to engage.
-                MaxTargetDistance = 10000, // 0 = unlimited, Maximum target distance that targets will be automatically shot at.
+                MaxTargetDistance = 3500, // 0 = unlimited, Maximum target distance that targets will be automatically shot at.
                 MinTargetDistance = 0, // 0 = unlimited, Min target distance that targets will be automatically shot at.
-                TopTargets = 6, // 0 = unlimited, max number of top targets to randomize between.
-                TopBlocks = 20, // 0 = unlimited, max number of blocks to randomize between
-                StopTrackingSpeed = 1000, // do not track target threats traveling faster than this speed
+                TopTargets = 4, // 0 = unlimited, max number of top targets to randomize between.
+                TopBlocks = 10, // 0 = unlimited, max number of blocks to randomize between
+                StopTrackingSpeed = 0, // do not track target threats traveling faster than this speed
             },
             HardPoint = new HardPointDef
             {
                 WeaponName = "M42 Archer Missile Pods", // name of weapon in terminal
                 DeviateShotAngle = 1f,
                 AimingTolerance = 0f, // 0 - 180 firing angle
-                AimLeadingPrediction = Accurate, // Off, Basic, Accurate, Advanced
+                AimLeadingPrediction = Off, // Off, Basic, Accurate, Advanced
                 DelayCeaseFire = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-                AddToleranceToTracking = true,
+                AddToleranceToTracking = false,
                 CanShootSubmerged = false,
 
                 Ui = new UiDef
                 {
-                    RateOfFire = false,
+                    RateOfFire = true,
                     DamageModifier = false,
                     ToggleGuidance = false,
                     EnableOverload = false,
@@ -116,7 +116,7 @@ namespace WeaponThread
                     MaxAzimuth = 0,
                     MinElevation = 0,
                     MaxElevation = 0,
-                    FixedOffset = false,
+                    FixedOffset = true,
                     InventorySize = 2.5f,
                     Offset = Vector(x: 0, y: 0, z: 0),
                     Armor = IsWeapon, // IsWeapon, Passive, Active
@@ -219,7 +219,7 @@ namespace WeaponThread
                         MuzzlePartId = "None",
                         ElevationPartId = "None",
                         AzimuthPartId = "None",
-                        DurabilityMod = 0.5f,
+                        DurabilityMod = 0.25f,
                         IconName = "TestIcon.dds",
                     },
 
@@ -236,26 +236,26 @@ namespace WeaponThread
             {
                 Threats = new[]
                 {
-                    Grids, Characters, Projectiles, Meteors, // threats percieved automatically without changing menu settings
+                    Grids, // threats percieved automatically without changing menu settings
                 },
                 SubSystems = new[]
                 {
-                    Thrust, Utility, Offense, Power, Production, Any, // subsystems the gun targets
+                    Thrust, Utility, Offense, Power, Production, Jumping, Steering, Any, // subsystems the gun targets
                 },
-                ClosestFirst = false, // tries to pick closest targets first (blocks on grids, projectiles, etc...).
+                ClosestFirst = true, // tries to pick closest targets first (blocks on grids, projectiles, etc...).
                 MinimumDiameter = 0, // 0 = unlimited, Minimum radius of threat to engage.
                 MaximumDiameter = 0, // 0 = unlimited, Maximum radius of threat to engage.
-                TopTargets = 4, // 0 = unlimited, max number of top targets to randomize between.
-                TopBlocks = 4, // 0 = unlimited, max number of blocks to randomize between
-                StopTrackingSpeed = 1000, // do not track target threats traveling faster than this speed
+                TopTargets = 2, // 0 = unlimited, max number of top targets to randomize between.
+                TopBlocks = 5, // 0 = unlimited, max number of blocks to randomize between
+                StopTrackingSpeed = 00, // do not track target threats traveling faster than this speed
             },
             HardPoint = new HardPointDef
             {
                 WeaponName = "SmallRocketLauncherReload", // name of weapon in terminal
-                DeviateShotAngle = 0.1f,
-                AimingTolerance = 4f, // 0 - 180 firing angle
-                AimLeadingPrediction = Advanced, // Off, Basic, Accurate, Advanced
-                DelayCeaseFire = 10, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                DeviateShotAngle = 1f,
+                AimingTolerance = 0f, // 0 - 180 firing angle
+                AimLeadingPrediction = Off, // Off, Basic, Accurate, Advanced
+                DelayCeaseFire = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
 
                 Ui = new UiDef
                 {
@@ -270,25 +270,26 @@ namespace WeaponThread
                     TurretAttached = true,
                     TurretController = true,
                     PrimaryTracking = true,
-                    LockOnFocus = false,
+                    LockOnFocus = true,
                     SuppressFire = true,
                     OverrideLeads = false, // Override default behavior for target leads
                 },
                 HardWare = new HardwareDef
                 {
-                    RotateRate = 0.00f,
-                    ElevateRate = 0.00f,
+                    RotateRate = 0f,
+                    ElevateRate = 0f,
                     MinAzimuth = 0,
                     MaxAzimuth = 0,
                     MinElevation = 0,
                     MaxElevation = 0,
-                    FixedOffset = false,
+                    FixedOffset = true,
                     InventorySize = 0.57f,
                     Offset = Vector(x: 0, y: 0, z: 0),
-                },
+                    Armor = IsWeapon, // IsWeapon, Passive, Active
+               },
                 Other = new OtherDef
                 {
-                    GridWeaponCap = 0,
+                    GridWeaponCap = 8,
                     RotateBarrelAxis = 0,
                     EnergyPriority = 0,
                     MuzzleCheck = false,

@@ -35,18 +35,18 @@ namespace WeaponThread {
                     Grids,
                 },
                 SubSystems = new[] {
-                    Thrust, Utility, Offense, Power, Production, Any,
+                    Thrust, Utility, Offense, Power, Production, Jumping, Steering, Any,
                 },
                 ClosestFirst = true, // tries to pick closest targets first (blocks on grids, projectiles, etc...).
                 IgnoreDumbProjectiles = false, // Don't fire at non-smart projectiles.
                 LockedSmartOnly = false, // Only fire at smart projectiles that are locked on to parent grid.
-                MinimumDiameter = 0, // 0 = unlimited, Minimum radius of threat to engage.
+                MinimumDiameter = 10, // 0 = unlimited, Minimum radius of threat to engage.
                 MaximumDiameter = 0, // 0 = unlimited, Maximum radius of threat to engage.
-                MaxTargetDistance = 2500, // 0 = unlimited, Maximum target distance that targets will be automatically shot at.
-                MinTargetDistance = 0, // 0 = unlimited, Min target distance that targets will be automatically shot at.
+                MaxTargetDistance = 3000, // 0 = unlimited, Maximum target distance that targets will be automatically shot at.
+                MinTargetDistance = 50, // 0 = unlimited, Min target distance that targets will be automatically shot at.
                 TopTargets = 4, // 0 = unlimited, max number of top targets to randomize between.
                 TopBlocks = 4, // 0 = unlimited, max number of blocks to randomize between
-                StopTrackingSpeed = 1000, // do not track target threats traveling faster than this speed
+                StopTrackingSpeed = 0, // do not track target threats traveling faster than this speed
             },
             HardPoint = new HardPointDef 
             {
@@ -56,9 +56,10 @@ namespace WeaponThread {
                 AimLeadingPrediction = Accurate, // Off, Basic, Accurate, Advanced
                 DelayCeaseFire = 120, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 AddToleranceToTracking = false,
+				CanShootSubmerged  = false,
 
                 Ui = new UiDef {
-                    RateOfFire = true,
+                    RateOfFire = false,
                     DamageModifier = false,
                     ToggleGuidance = true,
                     EnableOverload =  false,
@@ -69,10 +70,12 @@ namespace WeaponThread {
                     TurretController = true,
                     PrimaryTracking = true,
                     LockOnFocus = false,
+					SuppressFire = false,
+					OverrideLeads = false,
                 },
                 HardWare = new HardwareDef {
                     RotateRate = 0.004f,
-                    ElevateRate = 0.004f,
+                    ElevateRate = 0.002f,
                     MinAzimuth = -180,
                     MaxAzimuth =180,
                     MinElevation = -10,
@@ -101,14 +104,14 @@ namespace WeaponThread {
                     ReloadTime = 600, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     DelayUntilFire = 120, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     HeatPerShot = 0, //heat generated per shot
-                    MaxHeat = 70000, //max heat before weapon enters cooldown (70% of max heat)
-                    Cooldown = .95f, //percent of max heat to be under to start firing again after overheat accepts .2-.95
-                    HeatSinkRate = 9000, //amount of heat lost per second
+                    MaxHeat = 0, //max heat before weapon enters cooldown (70% of max heat)
+                    Cooldown = 0f, //percent of max heat to be under to start firing again after overheat accepts .2-.95
+                    HeatSinkRate = 0, //amount of heat lost per second
                     DegradeRof = false, // progressively lower rate of fire after 80% heat threshold (80% of max heat)
-                    ShotsInBurst = 1,
-                    DelayAfterBurst = 1, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-                    FireFullBurst = true,
-                    GiveUpAfterBurst = true,
+                    ShotsInBurst = 0,
+                    DelayAfterBurst = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                    FireFullBurst = false,
+                    GiveUpAfterBurst = false,
                 },
                 Audio = new HardPointAudioDef {
                     PreFiringSound = "ArcWepShipARYXRailgun_Windup",
@@ -171,32 +174,32 @@ namespace WeaponThread {
                     Grids,
                 },
                 SubSystems = new[] {
-                    Thrust, Utility, Offense, Power, Production, Any,
+                    Any,
                 },
-                ClosestFirst = true, // tries to pick closest targets first (blocks on grids, projectiles, etc...).
+                ClosestFirst = false, // tries to pick closest targets first (blocks on grids, projectiles, etc...).
                 IgnoreDumbProjectiles = false, // Don't fire at non-smart projectiles.
                 LockedSmartOnly = false, // Only fire at smart projectiles that are locked on to parent grid.
                 MinimumDiameter = 0, // 0 = unlimited, Minimum radius of threat to engage.
                 MaximumDiameter = 0, // 0 = unlimited, Maximum radius of threat to engage.
                 MaxTargetDistance = 0, // 0 = unlimited, Maximum target distance that targets will be automatically shot at.
                 MinTargetDistance = 0, // 0 = unlimited, Min target distance that targets will be automatically shot at.
-                TopTargets = 4, // 0 = unlimited, max number of top targets to randomize between.
-                TopBlocks = 4, // 0 = unlimited, max number of blocks to randomize between
-                StopTrackingSpeed = 1000, // do not track target threats traveling faster than this speed
+                TopTargets = 0, // 0 = unlimited, max number of top targets to randomize between.
+                TopBlocks = 0, // 0 = unlimited, max number of blocks to randomize between
+                StopTrackingSpeed = 0, // do not track target threats traveling faster than this speed
             },
             HardPoint = new HardPointDef 
             {
                 WeaponName = "Artemis 250mm Railgun", // name of weapon in terminal
                 DeviateShotAngle = 0.01f,
                 AimingTolerance = 1f, // 0 - 180 firing angle
-                AimLeadingPrediction = Accurate, // Off, Basic, Accurate, Advanced
+                AimLeadingPrediction = Off, // Off, Basic, Accurate, Advanced
                 DelayCeaseFire = 120, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 AddToleranceToTracking = false,
 
                 Ui = new UiDef {
-                    RateOfFire = true,
+                    RateOfFire = false,
                     DamageModifier = false,
-                    ToggleGuidance = true,
+                    ToggleGuidance = false,
                     EnableOverload =  false,
                 },
                 Ai = new AiDef {
@@ -205,6 +208,8 @@ namespace WeaponThread {
                     TurretController = false,
                     PrimaryTracking = false,
                     LockOnFocus = false,
+					SuppressFire = true,
+					OverrideLeads = false,	
                 },
                 HardWare = new HardwareDef {
                     RotateRate = 0f,
@@ -213,7 +218,7 @@ namespace WeaponThread {
                     MaxAzimuth = 0,
                     MinElevation = 0,
                     MaxElevation = 0,
-                    FixedOffset = false,
+                    FixedOffset = true,
                     InventorySize = 5f,
                     Offset = Vector(x: 0, y: 0, z: 0),
                     Armor = IsWeapon, // IsWeapon, Passive, Active
@@ -234,16 +239,16 @@ namespace WeaponThread {
                     BarrelsPerShot = 1,
                     TrajectilesPerBarrel = 1, // Number of Trajectiles per barrel per fire event.
                     SkipBarrels = 0,
-                    ReloadTime = 300, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                    ReloadTime = 600, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     DelayUntilFire = 120, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     HeatPerShot = 0, //heat generated per shot
-                    MaxHeat = 70000, //max heat before weapon enters cooldown (70% of max heat)
-                    Cooldown = .95f, //percent of max heat to be under to start firing again after overheat accepts .2-.95
-                    HeatSinkRate = 9000, //amount of heat lost per second
+                    MaxHeat = 0, //max heat before weapon enters cooldown (70% of max heat)
+                    Cooldown = 0f, //percent of max heat to be under to start firing again after overheat accepts .2-.95
+                    HeatSinkRate = 0, //amount of heat lost per second
                     DegradeRof = false, // progressively lower rate of fire after 80% heat threshold (80% of max heat)
-                    ShotsInBurst = 1,
-                    DelayAfterBurst = 300, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-                    FireFullBurst = true,
+                    ShotsInBurst = 0,
+                    DelayAfterBurst = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                    FireFullBurst = false,
                     GiveUpAfterBurst = false,
                 },
                 Audio = new HardPointAudioDef {

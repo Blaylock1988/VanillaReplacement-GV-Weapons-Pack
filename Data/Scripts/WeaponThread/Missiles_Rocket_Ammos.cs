@@ -30,6 +30,9 @@ namespace WeaponThread
 			Mass = 1000f, // in kilograms
 			Health = 4, // 0 = disabled, otherwise how much damage it can take from other trajectiles before dying.
 			BackKickForce = 1f,
+			HardPointUsable = true, // set to false if this is a shrapnel ammoType and you don't want the turret to be able to select it directly.
+			EnergyMagazineSize = 0,
+			IgnoreWater = false,
 
 			Shape = new ShapeDef //defines the collision shape of projectile, defaults line and visual Line Length if set to 0
 			{
@@ -44,8 +47,8 @@ namespace WeaponThread
 			Shrapnel = new ShrapnelDef
 			{
 				AmmoRound = "",
-				Fragments = 12,
-				Degrees = 90,
+				Fragments = 0,
+				Degrees = 0,
 				Reverse = false,
 				RandomizeDir = false,
 			},
@@ -184,7 +187,7 @@ namespace WeaponThread
 				{
 					Inaccuracy = 0f, // 0 is perfect, hit accuracy will be a random num of meters between 0 and this value.
 					Aggressiveness = 3f, // controls how responsive tracking is.
-					MaxLateralThrust = 1f, // controls how sharp the trajectile may turn
+					MaxLateralThrust = 0.5f, // controls how sharp the trajectile may turn
 					TrackingDelay = 250, // Measured in Shape diameter units traveled.
 					MaxChaseTime = 2000, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
 					OverideTarget = false, // when set to true ammo picks its own target, does not use hardpoint's.
@@ -193,10 +196,10 @@ namespace WeaponThread
 				},
 				Mines = new MinesDef
 				{
-					DetectRadius =  200,
-					DeCloakRadius = 100,
-					FieldTime = 1800,
-					Cloak = true,
+					DetectRadius =  0,
+					DeCloakRadius = 0,
+					FieldTime = 0,
+					Cloak = false,
 					Persist = false,
 				},
 			},

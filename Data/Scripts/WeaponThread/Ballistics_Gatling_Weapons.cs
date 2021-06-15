@@ -120,19 +120,19 @@ namespace WeaponThread {
                     DegradeRof = false, // progressively lower rate of fire after 80% heat threshold (80% of max heat)
                     ShotsInBurst = 28,
                     DelayAfterBurst = 120, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-                    FireFullBurst = false,
+                    FireFullBurst = true,
                     GiveUpAfterBurst = false,
                     DeterministicSpin = false, // Spin barrel position will always be relative to initial / starting positions (spin will not be as smooth).
 				},
                 Audio = new HardPointAudioDef
                 {
                     PreFiringSound = "",
-                    FiringSound = "HWR_GatlingLoop", // WM_Lightning, WepTurretInteriorFire, ArcWepShipGatlingShot
+                    FiringSound = "MD_GatlingLoop", // WM_Lightning, WepTurretInteriorFire, ArcWepShipGatlingShot
                     FiringSoundPerShot = false,
                     ReloadSound = "",
                     NoAmmoSound = "WepShipGatlingNoAmmo",
                     HardPointRotationSound = "WepTurretGatlingRotate", 
-                    BarrelRotationSound = "WepShipGatlingRotation",
+                    BarrelRotationSound = "MD_GatlingBarrelLoop",
                     FireSoundEndDelay = 0, // Measured in game ticks(6 = 100ms, 60 = 1 seconds, etc..).
                 },
                 Graphics = new HardPointParticleDef
@@ -272,7 +272,7 @@ namespace WeaponThread {
                 Loading = new LoadingDef
                 {
                     RateOfFire = 1200,
-                    BarrelSpinRate = 1200, // visual only, 0 disables and uses RateOfFire
+                    BarrelSpinRate = 0, // visual only, 0 disables and uses RateOfFire
                     BarrelsPerShot = 1,
                     TrajectilesPerBarrel = 1, // Number of Trajectiles per barrel per fire event.
                     SkipBarrels = 0,
@@ -366,18 +366,18 @@ namespace WeaponThread {
             {
                 Threats = new[]
                 {
-                    Grids, Characters, Projectiles, Meteors, // threats percieved automatically without changing menu settings
+                    Grids, Characters, // threats percieved automatically without changing menu settings
                 },
                 SubSystems = new[]
                 {
-                    Offense, Thrust, Utility, Power, Production, Any, // subsystems the gun targets
+                    Any, // subsystems the gun targets
                 },
                 ClosestFirst = false, // tries to pick closest targets first (blocks on grids, projectiles, etc...).
                 IgnoreDumbProjectiles = false, // Don't fire at non-smart projectiles.
                 LockedSmartOnly = false, // Only fire at smart projectiles that are locked on to parent grid.
                 MinimumDiameter = 0, // 0 = unlimited, Minimum radius of threat to engage.
                 MaximumDiameter = 0, // 0 = unlimited, Maximum radius of threat to engage.
-                MaxTargetDistance = 2000, // 0 = unlimited, Maximum target distance that targets will be automatically shot at.
+                MaxTargetDistance = 0, // 0 = unlimited, Maximum target distance that targets will be automatically shot at.
                 MinTargetDistance = 0, // 0 = unlimited, Min target distance that targets will be automatically shot at.
                 TopTargets = 0, // 0 = unlimited, max number of top targets to randomize between.
                 TopBlocks = 0, // 0 = unlimited, max number of blocks to randomize between
@@ -418,7 +418,7 @@ namespace WeaponThread {
                     MaxAzimuth = 0,
                     MinElevation = 0,
                     MaxElevation = 0,
-                    FixedOffset = false,
+                    FixedOffset = true,
                     InventorySize = 0.064f,
                     Offset = Vector(x: 0, y: 0, z: 0),
                 },
@@ -447,8 +447,8 @@ namespace WeaponThread {
                     Cooldown = 0f, //percent of max heat to be under to start firing again after overheat accepts .2-.95
                     HeatSinkRate = 0, //amount of heat lost per second
                     DegradeRof = false, // progressively lower rate of fire after 80% heat threshold (80% of max heat)
-                    ShotsInBurst = 28,
-                    DelayAfterBurst = 120, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                    ShotsInBurst = 0,
+                    DelayAfterBurst = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     FireFullBurst = false,
                     GiveUpAfterBurst = false,
                     DeterministicSpin = false, // Spin barrel position will always be relative to initial / starting positions (spin will not be as smooth).
@@ -585,7 +585,7 @@ namespace WeaponThread {
                     MinElevation = -10,
                     MaxElevation = 10,
                     FixedOffset = false,
-                    InventorySize = 0.360f,
+                    InventorySize = 0.064f,
                     Offset = Vector(x: 0, y: 0, z: 0),
                 },
                 Other = new OtherDef

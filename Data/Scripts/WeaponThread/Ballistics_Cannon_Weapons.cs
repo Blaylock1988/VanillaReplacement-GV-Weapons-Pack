@@ -24,7 +24,7 @@ namespace WeaponThread
                         MuzzlePartId = "MissileTurretBarrels",
                         AzimuthPartId = "MissileTurretBase1",
                         ElevationPartId = "MissileTurretBarrels",
-                        DurabilityMod = 0.25f, //this is the GeneralDamageMultiplier of the weapon
+                        DurabilityMod = 0.5f, //this is the GeneralDamageMultiplier of the weapon
                         IconName = ""
                     },
                 },
@@ -41,18 +41,18 @@ namespace WeaponThread
                     Grids,
                 },
                 SubSystems = new[] {
-                    Thrust, Utility, Offense, Power, Production, Any,
+                    Thrust, Utility, Offense, Power, Production, Jumping, Steering, Any,
                 },
                 ClosestFirst = true, // tries to pick closest targets first (blocks on grids, projectiles, etc...).
                 IgnoreDumbProjectiles = true, // Don't fire at non-smart projectiles.
                 LockedSmartOnly = false, // Only fire at smart projectiles that are locked on to parent grid.
-                MinimumDiameter = 3, // 0 = unlimited, Minimum radius of threat to engage.
+                MinimumDiameter = 5, // 0 = unlimited, Minimum radius of threat to engage.
                 MaximumDiameter = 0, // 0 = unlimited, Maximum radius of threat to engage.
                 MaxTargetDistance = 3000, // 0 = unlimited, Maximum target distance that targets will be automatically shot at.
-                MinTargetDistance = 200, // 0 = unlimited, Min target distance that targets will be automatically shot at.
+                MinTargetDistance = 20, // 0 = unlimited, Min target distance that targets will be automatically shot at.
                 TopTargets = 4, // 0 = unlimited, max number of top targets to randomize between.
                 TopBlocks = 4, // 0 = unlimited, max number of blocks to randomize between
-                StopTrackingSpeed = 1000, // do not track target threats traveling faster than this speed
+                StopTrackingSpeed = 0, // do not track target threats traveling faster than this speed
             },
             HardPoint = new HardPointDef
             {
@@ -77,7 +77,7 @@ namespace WeaponThread
                     TurretAttached = true,
                     TurretController = true,
                     PrimaryTracking = true,
-                    LockOnFocus = false,
+                    LockOnFocus = true,
                     SuppressFire = false,
                     OverrideLeads = false, // Override default behavior for target leads
                 },
@@ -190,7 +190,7 @@ namespace WeaponThread
                         MuzzlePartId = "MissileTurretBarrels",
                         AzimuthPartId = "MissileTurretBase1",
                         ElevationPartId = "MissileTurretBarrels",
-                        DurabilityMod = 1f,
+                        DurabilityMod = 0.5f,
                         IconName = ""
                     },
                     
@@ -214,12 +214,12 @@ namespace WeaponThread
             Targeting = new TargetingDef  
             {
                 Threats = new[] {
-                    Grids, Characters, Meteors,
+                    Grids,
                 },
                 SubSystems = new[] {
-                    Utility, Power, Offense, Thrust, Any,
+                    Thrust, Utility, Offense, Power, Production, Jumping, Steering, Any,
                 },
-                ClosestFirst = false, // tries to pick closest targets first (blocks on grids, projectiles, etc...).
+                ClosestFirst = true, // tries to pick closest targets first (blocks on grids, projectiles, etc...).
                 IgnoreDumbProjectiles = false, // Don't fire at non-smart projectiles.
                 LockedSmartOnly = false, // Only fire at smart projectiles that are locked on to parent grid.
                 MinimumDiameter = 0, // 0 = unlimited, Minimum radius of threat to engage.
@@ -251,13 +251,13 @@ namespace WeaponThread
                     TurretAttached = true,
                     TurretController = true,
                     PrimaryTracking = true,
-                    LockOnFocus = false,
+                    LockOnFocus = true,
                     SuppressFire = false,
                     OverrideLeads = false, // Override default behavior for target leads
                 },
                 HardWare = new HardwareDef {
                     RotateRate = 0.02f,
-                    ElevateRate = 0.02f,
+                    ElevateRate = 0.01f,
                     MinAzimuth = -120,
                     MaxAzimuth = 120,
                     MinElevation = -15,
@@ -279,16 +279,16 @@ namespace WeaponThread
                     CheckForAnyWeapon = false, // if true, the check will fail if ANY gun is present, false only looks for this subtype
                 },
                 Loading = new LoadingDef {
-                    RateOfFire = 20,
+                    RateOfFire = 60,
                     BarrelsPerShot = 1,
                     TrajectilesPerBarrel = 1, // Number of Trajectiles per barrel per fire event.
                     SkipBarrels = 0,
                     ReloadTime = 180, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     DelayUntilFire = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-                    HeatPerShot = 1, //heat generated per shot
-                    MaxHeat = 100000, //max heat before weapon enters cooldown (70% of max heat)
-                    Cooldown = .95f, //percent of max heat to be under to start firing again after overheat accepts .2-.95
-                    HeatSinkRate = 9000000, //amount of heat lost per second
+                    HeatPerShot = 0, //heat generated per shot
+                    MaxHeat = 0, //max heat before weapon enters cooldown (70% of max heat)
+                    Cooldown = 0f, //percent of max heat to be under to start firing again after overheat accepts .2-.95
+                    HeatSinkRate = 0, //amount of heat lost per second
                     DegradeRof = false, // progressively lower rate of fire after 80% heat threshold (80% of max heat)
                     ShotsInBurst = 0,
                     DelayAfterBurst = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
@@ -357,7 +357,7 @@ namespace WeaponThread
                         MuzzlePartId = "None",
                         AzimuthPartId = "None",
                         ElevationPartId = "None",
-                        DurabilityMod = 1f,
+                        DurabilityMod = 0.5f,
                         IconName = ""
                     },
                     
@@ -367,7 +367,7 @@ namespace WeaponThread
                         MuzzlePartId = "None",
                         AzimuthPartId = "None",
                         ElevationPartId = "None",
-                        DurabilityMod = 1f,
+                        DurabilityMod = 0.5f,
                         IconName = ""
                     },
 
@@ -381,12 +381,12 @@ namespace WeaponThread
             Targeting = new TargetingDef  
             {
                 Threats = new[] {
-                    Other
+                    Grids,
                 },
                 SubSystems = new[] {
-                    Offense, Thrust, Utility, Power, Any,
+                    Any,
                 },
-                ClosestFirst = true, // tries to pick closest targets first (blocks on grids, projectiles, etc...).
+                ClosestFirst = false, // tries to pick closest targets first (blocks on grids, projectiles, etc...).
                 IgnoreDumbProjectiles = false, // Don't fire at non-smart projectiles.
                 LockedSmartOnly = false, // Only fire at smart projectiles that are locked on to parent grid.
                 MinimumDiameter = 0, // 0 = unlimited, Minimum radius of threat to engage.
@@ -423,13 +423,13 @@ namespace WeaponThread
                     OverrideLeads = false, // Override default behavior for target leads
                 },
                 HardWare = new HardwareDef {
-                    RotateRate = 0.05f,
-                    ElevateRate = 0.05f,
-                    MinAzimuth = -180,
-                    MaxAzimuth = 180,
-                    MinElevation = -15,
-                    MaxElevation = 90,
-                    FixedOffset = false,
+                    RotateRate = 0f,
+                    ElevateRate = 0f,
+                    MinAzimuth = 0,
+                    MaxAzimuth = 0,
+                    MinElevation = 0,
+                    MaxElevation = 0,
+                    FixedOffset = true,
                     InventorySize = 0.64f,
                     Offset = Vector(x: 0, y: 0, z: 0),
                     Armor = IsWeapon, // IsWeapon, Passive, Active
@@ -446,20 +446,20 @@ namespace WeaponThread
                     CheckForAnyWeapon = false, // if true, the check will fail if ANY gun is present, false only looks for this subtype
                 },
                 Loading = new LoadingDef {
-                    RateOfFire = 20,
+                    RateOfFire = 60,
                     BarrelsPerShot = 1,
                     TrajectilesPerBarrel = 1, // Number of Trajectiles per barrel per fire event.
                     SkipBarrels = 0,
                     ReloadTime = 180, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     DelayUntilFire = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-                    HeatPerShot = 1, //heat generated per shot
-                    MaxHeat = 100000, //max heat before weapon enters cooldown (70% of max heat)
-                    Cooldown = .95f, //percent of max heat to be under to start firing again after overheat accepts .2-.95
-                    HeatSinkRate = 9000000, //amount of heat lost per second
+                    HeatPerShot = 0, //heat generated per shot
+                    MaxHeat = 0, //max heat before weapon enters cooldown (70% of max heat)
+                    Cooldown = 0f, //percent of max heat to be under to start firing again after overheat accepts .2-.95
+                    HeatSinkRate = 0, //amount of heat lost per second
                     DegradeRof = false, // progressively lower rate of fire after 80% heat threshold (80% of max heat)
                     ShotsInBurst = 0,
                     DelayAfterBurst = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-                    FireFullBurst = true,
+                    FireFullBurst = false,
                     GiveUpAfterBurst = false,
                     BarrelSpinRate = 0, // visual only, 0 disables and uses RateOfFire
                     DeterministicSpin = false, // Spin barrel position will always be relative to initial / starting positions (spin will not be as smooth).

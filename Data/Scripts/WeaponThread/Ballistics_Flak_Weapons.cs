@@ -36,21 +36,21 @@ namespace WeaponThread
             Targeting = new TargetingDef
             {
                 Threats = new[] {
-                    Grids,
+                    Grids, Characters, Projectiles, 
                 },
                 SubSystems = new[] {
-                    Thrust, Utility, Offense, Power, Production, Any,
+                    Any,
                 },
                 ClosestFirst = true, // tries to pick closest targets first (blocks on grids, projectiles, etc...).
                 IgnoreDumbProjectiles = false, // Don't fire at non-smart projectiles.
                 LockedSmartOnly = false, // Only fire at smart projectiles that are locked on to parent grid.
                 MinimumDiameter = 0, // 0 = unlimited, Minimum radius of threat to engage.
                 MaximumDiameter = 0, // 0 = unlimited, Maximum radius of threat to engage.
-                MaxTargetDistance = 0, // 0 = unlimited, Maximum target distance that targets will be automatically shot at.
+                MaxTargetDistance = 1500, // 0 = unlimited, Maximum target distance that targets will be automatically shot at.
                 MinTargetDistance = 0, // 0 = unlimited, Min target distance that targets will be automatically shot at.
                 TopTargets = 4, // 0 = unlimited, max number of top targets to randomize between.
                 TopBlocks = 4, // 0 = unlimited, max number of blocks to randomize between
-                StopTrackingSpeed = 1000, // do not track target threats traveling faster than this speed
+                StopTrackingSpeed = 0, // do not track target threats traveling faster than this speed
             },
             HardPoint = new HardPointDef
             {
@@ -63,10 +63,10 @@ namespace WeaponThread
 
                 Ui = new UiDef
                 {
-                    RateOfFire = true,
-                    DamageModifier = true,
-                    ToggleGuidance = true,
-                    EnableOverload = true,
+                    RateOfFire = false,
+                    DamageModifier = false,
+                    ToggleGuidance = false,
+                    EnableOverload = false,
                 },
                 Ai = new AiDef
                 {
@@ -79,13 +79,13 @@ namespace WeaponThread
                 HardWare = new HardwareDef
                 {
                     RotateRate = 0.05f,
-                    ElevateRate = 0.05f,
+                    ElevateRate = 0.025f,
                     MinAzimuth = -180,
                     MaxAzimuth = 180,
                     MinElevation = -10,
                     MaxElevation = 70,
                     FixedOffset = false,
-                    InventorySize = 12f,
+                    InventorySize = 0.658f,
                     Offset = Vector(x: 0, y: 0, z: 0),
                     Armor = IsWeapon, // IsWeapon, Passive, Active
                 },
@@ -96,6 +96,9 @@ namespace WeaponThread
                     EnergyPriority = 0,
                     MuzzleCheck = false,
                     Debug = false,
+					RestrictionRadius = 3,
+					CheckInflatedBox = false,
+					CheckForAnyWeapon = true,
                 },
                 Loading = new LoadingDef
                 {
@@ -107,11 +110,11 @@ namespace WeaponThread
                     ReloadTime = 240, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     DelayUntilFire = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     HeatPerShot = 0, //heat generated per shot
-                    MaxHeat = 70000, //max heat before weapon enters cooldown (70% of max heat)
-                    Cooldown = .95f, //percent of max heat to be under to start firing again after overheat accepts .2-.95
-                    HeatSinkRate = 9000, //amount of heat lost per second
+                    MaxHeat = 0, //max heat before weapon enters cooldown (70% of max heat)
+                    Cooldown = 0, //percent of max heat to be under to start firing again after overheat accepts .2-.95
+                    HeatSinkRate = 0, //amount of heat lost per second
                     DegradeRof = false, // progressively lower rate of fire after 80% heat threshold (80% of max heat)
-                    ShotsInBurst = 1,
+                    ShotsInBurst = 0,
                     DelayAfterBurst = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     FireFullBurst = false,
                     GiveUpAfterBurst = false,

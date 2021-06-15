@@ -40,27 +40,27 @@ namespace WeaponThread
                     Grids,
                 },
                 SubSystems = new[] {
-                    Thrust, Utility, Offense, Power, Production, Any,
+                    Any,
                 },
                 ClosestFirst = false, // tries to pick closest targets first (blocks on grids, projectiles, etc...).
-                IgnoreDumbProjectiles = true, // Don't fire at non-smart projectiles.
+                IgnoreDumbProjectiles = false, // Don't fire at non-smart projectiles.
                 LockedSmartOnly = false, // Only fire at smart projectiles that are locked on to parent grid.
-                MinimumDiameter = 3, // 0 = unlimited, Minimum radius of threat to engage.
+                MinimumDiameter = 0, // 0 = unlimited, Minimum radius of threat to engage.
                 MaximumDiameter = 0, // 0 = unlimited, Maximum radius of threat to engage.
-                MaxTargetDistance = 15000, // 0 = unlimited, Maximum target distance that targets will be automatically shot at.
+                MaxTargetDistance = 0, // 0 = unlimited, Maximum target distance that targets will be automatically shot at.
                 MinTargetDistance = 0, // 0 = unlimited, Min target distance that targets will be automatically shot at.
-                TopTargets = 4, // 0 = unlimited, max number of top targets to randomize between.
-                TopBlocks = 4, // 0 = unlimited, max number of blocks to randomize between
-                StopTrackingSpeed = 1000, // do not track target threats traveling faster than this speed
+                TopTargets = 0, // 0 = unlimited, max number of top targets to randomize between.
+                TopBlocks = 0, // 0 = unlimited, max number of blocks to randomize between
+                StopTrackingSpeed = 0, // do not track target threats traveling faster than this speed
             },
             HardPoint = new HardPointDef
             {
                 WeaponName = "Mark IX MAC", // name of weapon in terminal
                 DeviateShotAngle = 0.1f,
-                AimingTolerance = 0.8f, // 0 - 180 firing angle
+                AimingTolerance = 0f, // 0 - 180 firing angle
                 AimLeadingPrediction = Off, // Off, Basic, Accurate, Advanced
                 DelayCeaseFire = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-                AddToleranceToTracking = true,
+                AddToleranceToTracking = false,
                 CanShootSubmerged = false,
 
                 Ui = new UiDef
@@ -93,14 +93,14 @@ namespace WeaponThread
                 },
                 Other = new OtherDef
                 {
-                    GridWeaponCap = 0,
+                    GridWeaponCap = 1,
                     RotateBarrelAxis = 0,
                     EnergyPriority = 0,
                     MuzzleCheck = false,
                     Debug = false,
-                    RestrictionRadius = 3f, // Meters, radius of sphere disable this gun if another is present
-                    CheckInflatedBox = false, // if true, the bounding box of the gun is expanded by the RestrictionRadius
-                    CheckForAnyWeapon = false, // if true, the check will fail if ANY gun is present, false only looks for this subtype
+                    RestrictionRadius = 5f, // Meters, radius of sphere disable this gun if another is present
+                    CheckInflatedBox = true, // if true, the bounding box of the gun is expanded by the RestrictionRadius
+                    CheckForAnyWeapon = true, // if true, the check will fail if ANY gun is present, false only looks for this subtype
                 },
                 Loading = new LoadingDef
                 {
@@ -111,12 +111,12 @@ namespace WeaponThread
                     ReloadTime = 2700, //5400// Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     DelayUntilFire = 126, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     HeatPerShot = 0, //heat generated per shot
-                    MaxHeat = 70000, //max heat before weapon enters cooldown (70% of max heat)
-                    Cooldown = .95f, //percent of max heat to be under to start firing again after overheat accepts .2-.95
-                    HeatSinkRate = 9000000, //amount of heat lost per second
+                    MaxHeat = 0, //max heat before weapon enters cooldown (70% of max heat)
+                    Cooldown = 0f, //percent of max heat to be under to start firing again after overheat accepts .2-.95
+                    HeatSinkRate = 0, //amount of heat lost per second
                     DegradeRof = false, // progressively lower rate of fire after 80% heat threshold (80% of max heat)
                     ShotsInBurst = 0,
-                    DelayAfterBurst = 120, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                    DelayAfterBurst = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     FireFullBurst = false,
                     GiveUpAfterBurst = false,
                     BarrelSpinRate = 0, // visual only, 0 disables and uses RateOfFire
@@ -171,11 +171,6 @@ namespace WeaponThread
             Ammos = new[] {
                 MXA_MACL_Ammo,
                 MXA_MACL_Shrapnel,
-                MXA_MACL_HPAmmo,
-                MXA_MACL_Impact,
-				//MXA_MACL_HPAmmo2,
-				//MXA_MACL_HPImpact,
-				//MXA_MACL_HPShrapnel,
             },
             Animations = MXA_MACL_Animation,
             //Upgrades = UpgradeModules,

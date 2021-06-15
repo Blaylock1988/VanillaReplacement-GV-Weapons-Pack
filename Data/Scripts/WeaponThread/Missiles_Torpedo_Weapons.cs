@@ -25,7 +25,7 @@ namespace WeaponThread
                         MuzzlePartId = "None",
                         AzimuthPartId = "None",
                         ElevationPartId = "None",
-                        //DurabilityMod = 0.75f,
+                        DurabilityMod = 0.5f,
                         IconName = ""
                     },
                 },
@@ -40,17 +40,17 @@ namespace WeaponThread
                     Grids,
                 },
                 SubSystems = new[] {
-                    Thrust, Utility, Offense, Power, Production, Any,
+                    Thrust, Utility, Offense, Power, Production, Jumping, Steering, Any,
                 },
-                ClosestFirst = false, // tries to pick closest targets first (blocks on grids, projectiles, etc...).
-                IgnoreDumbProjectiles = false, // Don't fire at non-smart projectiles.
+                ClosestFirst = true, // tries to pick closest targets first (blocks on grids, projectiles, etc...).
+                IgnoreDumbProjectiles = true, // Don't fire at non-smart projectiles.
                 LockedSmartOnly = false, // Only fire at smart projectiles that are locked on to parent grid.
-                MinimumDiameter = 1, // 0 = unlimited, Minimum radius of threat to engage.
+                MinimumDiameter = 20, // 0 = unlimited, Minimum radius of threat to engage.
                 MaximumDiameter = 0, // 0 = unlimited, Maximum radius of threat to engage.
                 MaxTargetDistance = 5000, // 0 = unlimited, Maximum target distance that targets will be automatically shot at.
-                MinTargetDistance = 0, // 0 = unlimited, Min target distance that targets will be automatically shot at.
-                TopTargets = 6, // 0 = unlimited, max number of top targets to randomize between.
-                TopBlocks = 4, // 0 = unlimited, max number of blocks to randomize between
+                MinTargetDistance = 200, // 0 = unlimited, Min target distance that targets will be automatically shot at.
+                TopTargets = 0, // 0 = unlimited, max number of top targets to randomize between.
+                TopBlocks = 0, // 0 = unlimited, max number of blocks to randomize between
                 StopTrackingSpeed = 1000, // do not track target threats traveling faster than this speed
             },
             HardPoint = new HardPointDef
@@ -86,14 +86,14 @@ namespace WeaponThread
                     MaxAzimuth = 0,
                     MinElevation = 0,
                     MaxElevation = 0,
-                    FixedOffset = false,
+                    FixedOffset = true,
                     InventorySize = 2.25f,
                     Offset = Vector(x: 0, y: 0, z: 0),
                     //Armor = IsWeapon, // IsWeapon, Passive, Active
                 },
                 Other = new OtherDef
                 {
-                    GridWeaponCap = 0,
+                    GridWeaponCap = 4,
                     RotateBarrelAxis = 0,
                     EnergyPriority = 0,
                     MuzzleCheck = false,

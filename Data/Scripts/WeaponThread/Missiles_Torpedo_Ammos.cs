@@ -345,7 +345,7 @@ namespace WeaponThread
             AmmoMagazine = "Energy",
             AmmoRound = "MXA_Shiva_EMPStage",
             HybridRound = false, //AmmoMagazine based weapon with energy cost
-            EnergyCost = 0.16f, //(((EnergyCost * DefaultDamage) * ShotsPerSecond) * BarrelsPerShot) * ShotsPerBarrel
+            EnergyCost = 0f, //(((EnergyCost * DefaultDamage) * ShotsPerSecond) * BarrelsPerShot) * ShotsPerBarrel
             BaseDamage = 10f,
             Mass = 750f, // in kilograms
             Health = 40f, // 0 = disabled, otherwise how much damage it can take from other trajectiles before dying.
@@ -393,7 +393,7 @@ namespace WeaponThread
                 SelfDamage = false, // true = allow self damage.
                 HealthHitModifier = 0, // defaults to a value of 1, this setting modifies how much Health is subtracted from a projectile per hit (1 = per hit).
                 VoxelHitModifier = -1f,
-                Characters = 1f,
+                Characters = -1f,
                 // modifier values: -1 = disabled (higher performance), 0 = no damage, 0.01 = 1% damage, 2 = 200% damage.
                 FallOff = new FallOffDef
                 {
@@ -403,7 +403,7 @@ namespace WeaponThread
                 Grids = new GridSizeDef
                 {
                     Large = -1f,
-                    Small = 0.3f,
+                    Small = 0.25f,
                 },
                 Armor = new ArmorDef
                 {
@@ -415,7 +415,7 @@ namespace WeaponThread
                 Shields = new ShieldDef
                 {
                     Modifier = -1f,
-                    Type = Emp,
+                    Type = Energy,
                     BypassModifier = -1f,
                 },
                 // first true/false (ignoreOthers) will cause projectiles to pass through all blocks that do not match the custom subtypeIds.
@@ -447,8 +447,8 @@ namespace WeaponThread
                 },
                 Pulse = new PulseDef // interval measured in game ticks (60 == 1 second), pulseChance chance (0 - 100) that an entity in field will be hit
                 {
-                    Interval = 300,
-                    PulseChance = 100,
+                    Interval = 0,
+                    PulseChance = 0,
                     GrowTime = 0,
                     HideModel = false,
                     ShowParticle = false,
@@ -530,11 +530,12 @@ namespace WeaponThread
                     Aggressiveness = 2f, // controls how responsive tracking is.
                     MaxLateralThrust = .49f, // controls how sharp the trajectile may turn
                     TrackingDelay = 20, // Measured in Shape diameter units traveled.
-                    MaxChaseTime = 1800, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                    MaxChaseTime = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     OverideTarget = false, // when set to true ammo picks its own target, does not use hardpoint's.
                     MaxTargets = 3, // Number of targets allowed before ending, 0 = unlimited
                     NoTargetExpire = false, // Expire without ever having a target at TargetLossTime
                     Roam = true, // Roam current area after target loss
+					KeepAliveAfterTargetLoss = true,
                 },
                 Mines = new MinesDef
                 {
@@ -674,7 +675,7 @@ namespace WeaponThread
             BaseDamage = 1f,
             Mass = 0f, // in kilograms
             Health = 0f, // 0 = disabled, otherwise how much damage it can take from other trajectiles before dying.
-            BackKickForce = 5f,
+            BackKickForce = 0f,
             DecayPerShot = 0f,
             HardPointUsable = false, // set to false if this is a shrapnel ammoType and you don't want the turret to be able to select it directly.
             EnergyMagazineSize = 0,
@@ -718,7 +719,7 @@ namespace WeaponThread
                 SelfDamage = false, // true = allow self damage.
                 HealthHitModifier = 100f, // defaults to a value of 1, this setting modifies how much Health is subtracted from a projectile per hit (1 = per hit).
                 VoxelHitModifier = -1f,
-                Characters = 1f,
+                Characters = -1f,
                 // modifier values: -1 = disabled (higher performance), 0 = no damage, 0.01 = 1% damage, 2 = 200% damage.
                 FallOff = new FallOffDef
                 {
@@ -728,7 +729,7 @@ namespace WeaponThread
                 Grids = new GridSizeDef
                 {
                     Large = -1f,
-                    Small = 0.3f,
+                    Small = 0.25f,
                 },
                 Armor = new ArmorDef
                 {
@@ -842,22 +843,22 @@ namespace WeaponThread
                 TargetLossTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 MaxLifeTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 AccelPerSec = 0f,
-                DesiredSpeed = 4100,
+                DesiredSpeed = 4000,
                 MaxTrajectory = 1f,
                 FieldTime = 0, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
                 GravityMultiplier = 0f, // Gravity multiplier, influences the trajectory of the projectile, value greater than 0 to enable.
-                SpeedVariance = Random(start: 0, end: 15), // subtracts value from DesiredSpeed
+                SpeedVariance = Random(start: 0, end: 0), // subtracts value from DesiredSpeed
                 RangeVariance = Random(start: 0, end: 0), // subtracts value from MaxTrajectory
                 MaxTrajectoryTime = 0, // How long the weapon must fire before it reaches MaxTrajectory.
                 Smarts = new SmartsDef
                 {
-                    Inaccuracy = 1.5f, // 0 is perfect, hit accuracy will be a random num of meters between 0 and this value.
-                    Aggressiveness = 0.25f, // controls how responsive tracking is.
-                    MaxLateralThrust = .33f, // controls how sharp the trajectile may turn
-                    TrackingDelay = 20, // Measured in Shape diameter units traveled.
-                    MaxChaseTime = 1800, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                    Inaccuracy = 0f, // 0 is perfect, hit accuracy will be a random num of meters between 0 and this value.
+                    Aggressiveness = 0f, // controls how responsive tracking is.
+                    MaxLateralThrust = 0f, // controls how sharp the trajectile may turn
+                    TrackingDelay = 0, // Measured in Shape diameter units traveled.
+                    MaxChaseTime = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     OverideTarget = false, // when set to true ammo picks its own target, does not use hardpoint's.
-                    MaxTargets = 1, // Number of targets allowed before ending, 0 = unlimited
+                    MaxTargets = 3, // Number of targets allowed before ending, 0 = unlimited
                     NoTargetExpire = false, // Expire without ever having a target at TargetLossTime
                     Roam = false, // Roam current area after target loss
                 },

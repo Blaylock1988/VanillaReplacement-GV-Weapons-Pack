@@ -344,12 +344,12 @@ namespace WeaponThread
 
         private AmmoDef MXA_ArcherPods_Stage => new AmmoDef
         {
-            AmmoMagazine = "",
+            AmmoMagazine = "Energy",
             AmmoRound = "MXA_ArcherPods_Stage",
             HybridRound = false, //AmmoMagazine based weapon with energy cost
             EnergyCost = 0f, //(((EnergyCost * DefaultDamage) * ShotsPerSecond) * BarrelsPerShot) * ShotsPerBarrel
             BaseDamage = 1f,
-            Mass = 20f, // in kilograms
+            Mass = 75f, // in kilograms
             Health = 1f, // 0 = disabled, otherwise how much damage it can take from other trajectiles before dying.
             BackKickForce = 5f,
             DecayPerShot = 0f,
@@ -405,7 +405,7 @@ namespace WeaponThread
                 Grids = new GridSizeDef
                 {
                     Large = -1f,
-                    Small = 0.5f,
+                    Small = 0.25f,
                 },
                 Armor = new ArmorDef
                 {
@@ -450,7 +450,7 @@ namespace WeaponThread
 				Pulse = new PulseDef // interval measured in game ticks (60 == 1 second), pulseChance chance (0 - 100) that an entity in field will be hit
 				{
 					Interval = 0,
-					PulseChance = 100,
+					PulseChance = 0,
 					GrowTime = 0,
 					HideModel = false,
 					ShowParticle = false,
@@ -532,14 +532,14 @@ namespace WeaponThread
                     Aggressiveness = 1f, // controls how responsive tracking is.
                     MaxLateralThrust = .5f, // controls how sharp the trajectile may turn
                     TrackingDelay = 0, // Measured in Shape diameter units traveled.
-                    MaxChaseTime = 2400, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                    MaxChaseTime = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     OverideTarget = true, // when set to true ammo picks its own target, does not use hardpoint's.
-                    MaxTargets = 1, // Number of targets allowed before ending, 0 = unlimited
+                    MaxTargets = 2, // Number of targets allowed before ending, 0 = unlimited
                     NoTargetExpire = false, // Expire without ever having a target at TargetLossTime
 					OffsetRatio = 0.4f, // The ratio to offset the random dir (0 to 1) 
 					OffsetTime = 15, // how often to offset degree, measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     Roam = false, // Roam current area after target loss
-                    KeepAliveAfterTargetLoss = false, // Whether to stop early death of projectile on target loss
+                    KeepAliveAfterTargetLoss = true, // Whether to stop early death of projectile on target loss
                 },
                 Mines = new MinesDef
                 {

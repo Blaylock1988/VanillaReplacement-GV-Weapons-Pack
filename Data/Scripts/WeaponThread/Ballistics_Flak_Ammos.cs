@@ -22,7 +22,7 @@ namespace WeaponThread
             AmmoMagazine = "60mmFlakMagazine",
             AmmoRound = "AryxFlakAmmoWC",
             HybridRound = false, //AmmoMagazine based weapon with energy cost
-            EnergyCost = 0.00000000000f, //(((EnergyCost * DefaultDamage) * ShotsPerSecond) * BarrelsPerShot) * ShotsPerBarrel
+            EnergyCost = 0f, //(((EnergyCost * DefaultDamage) * ShotsPerSecond) * BarrelsPerShot) * ShotsPerBarrel
             BaseDamage = 80f,
             Mass = 5, // in kilograms
             Health = 0, // 0 = disabled, otherwise how much damage it can take from other trajectiles before dying.
@@ -65,8 +65,8 @@ namespace WeaponThread
                 MaxIntegrity = 0f, // 0 = disabled, 1000 = any blocks with currently integrity above 1000 will be immune to damage.
                 DamageVoxels = false, // true = voxels are vulnerable to this weapon
                 SelfDamage = false, // true = allow self damage.
-
-                // modifier values: -1 = disabled (higher performance), 0 = no damage, 0.01 = 1% damage, 2 = 200% damage.
+                HealthHitModifier = 1, // defaults to a value of 1, this setting modifies how much Health is subtracted from a projectile per hit (1 = per hit).
+                VoxelHitModifier = -1,
                 Characters = -1f,
                 FallOff = new FallOffDef
                 {
@@ -80,7 +80,7 @@ namespace WeaponThread
                 },
                 Armor = new ArmorDef
                 {
-                    Armor = -1f,
+                    Armor = 0.5f,
                     Light = -1f,
                     Heavy = -1f,
                     NonArmor = -1f,
@@ -152,14 +152,15 @@ namespace WeaponThread
                     ArmOnlyOnHit = false,
                     DetonationDamage = 300,
                     DetonationRadius = 2,
+					MinArmingTime = 10,
                 },
                 EwarFields = new EwarFieldsDef
                 {
                     Duration = 0,
                     StackDuration = false,
                     Depletable = false,
-                    MaxStacks = 10,
-                    TriggerRange = 5f,
+                    MaxStacks = 0,
+                    TriggerRange = 0f,
                 },
             },
             Beams = new BeamDef
@@ -173,7 +174,7 @@ namespace WeaponThread
             Trajectory = new TrajectoryDef
             {
                 Guidance = None,
-                TargetLossDegree = 80f,
+                TargetLossDegree = 0f,
                 TargetLossTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 MaxLifeTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 AccelPerSec = 0f,
@@ -182,15 +183,15 @@ namespace WeaponThread
                 FieldTime = 0, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
                 GravityMultiplier = 0f, // Gravity multiplier, influences the trajectory of the projectile, value greater than 0 to enable.
                 SpeedVariance = Random(start: 0, end: 20), // subtracts value from DesiredSpeed
-                RangeVariance = Random(start: 0, end: 60), // subtracts value from MaxTrajectory
+                RangeVariance = Random(start: 0, end: 100), // subtracts value from MaxTrajectory
                 MaxTrajectoryTime = 0, // How long the weapon must fire before it reaches MaxTrajectory.
                 Smarts = new SmartsDef
                 {
                     Inaccuracy = 0f, // 0 is perfect, hit accuracy will be a random num of meters between 0 and this value.
-                    Aggressiveness = 1f, // controls how responsive tracking is.
-                    MaxLateralThrust = 0.5f, // controls how sharp the trajectile may turn
-                    TrackingDelay = 1, // Measured in Shape diameter units traveled.
-                    MaxChaseTime = 1800, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                    Aggressiveness = 0f, // controls how responsive tracking is.
+                    MaxLateralThrust = 0f, // controls how sharp the trajectile may turn
+                    TrackingDelay = 0, // Measured in Shape diameter units traveled.
+                    MaxChaseTime = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     OverideTarget = true, // when set to true ammo picks its own target, does not use hardpoint's.
                     MaxTargets = 0, // Number of targets allowed before ending, 0 = unlimited
                     NoTargetExpire = false, // Expire without ever having a target at TargetLossTime
@@ -198,9 +199,9 @@ namespace WeaponThread
                 },
                 Mines = new MinesDef
                 {
-                    DetectRadius = 200,
-                    DeCloakRadius = 100,
-                    FieldTime = 1800,
+                    DetectRadius = 0,
+                    DeCloakRadius = 0,
+                    FieldTime = 0,
                     Cloak = false,
                     Persist = false,
                 },
@@ -351,7 +352,7 @@ namespace WeaponThread
 
         private AmmoDef AryxFlakAmmoWC_Shrapnel => new AmmoDef
         {
-            AmmoMagazine = "60mmFlakMagazine",
+            AmmoMagazine = "Energy",
             AmmoRound = "AryxFlakAmmoWC_Shrapnel",
             HybridRound = false, //AmmoMagazine based weapon with energy cost
             EnergyCost = 0f, //(((EnergyCost * DefaultDamage) * ShotsPerSecond) * BarrelsPerShot) * ShotsPerBarrel
@@ -360,7 +361,7 @@ namespace WeaponThread
             Health = 0, // 0 = disabled, otherwise how much damage it can take from other trajectiles before dying.
             BackKickForce = 25f,
             DecayPerShot = 0,
-            HardPointUsable = true, // set to false if this is a shrapnel ammoType and you don't want the turret to be able to select it directly.
+            HardPointUsable = false, // set to false if this is a shrapnel ammoType and you don't want the turret to be able to select it directly.
 
             Shape = new ShapeDef //defines the collision shape of projectile, defaults line and visual Line Length if set to 0
             {
@@ -375,10 +376,10 @@ namespace WeaponThread
             Shrapnel = new ShrapnelDef
             {
                 AmmoRound = "",
-                Fragments = 200,
-                Degrees = 360,
+                Fragments = 0,
+                Degrees = 0,
                 Reverse = false,
-                RandomizeDir = true, // randomzie between forward and backward directions
+                RandomizeDir = false, // randomzie between forward and backward directions
             },
             Pattern = new AmmoPatternDef
             {
@@ -397,29 +398,29 @@ namespace WeaponThread
                 MaxIntegrity = 0f, // 0 = disabled, 1000 = any blocks with currently integrity above 1000 will be immune to damage.
                 DamageVoxels = false, // true = voxels are vulnerable to this weapon
                 SelfDamage = false, // true = allow self damage.
-
-                // modifier values: -1 = disabled (higher performance), 0 = no damage, 0.01 = 1% damage, 2 = 200% damage.
+                HealthHitModifier = 1, // defaults to a value of 1, this setting modifies how much Health is subtracted from a projectile per hit (1 = per hit).
+                VoxelHitModifier = -1,
                 Characters = -1f,
                 FallOff = new FallOffDef
                 {
-                    Distance = 1000f, // Distance at which max damage begins falling off.
-                    MinMultipler = 0.45f, // value from 0.0f to 1f where 0.1f would be a min damage of 10% of max damage.
+                    Distance = 0f, // Distance at which max damage begins falling off.
+                    MinMultipler = 0f, // value from 0.0f to 1f where 0.1f would be a min damage of 10% of max damage.
                 },
                 Grids = new GridSizeDef
                 {
                     Large = 1f,
-                    Small = 5f,
+                    Small = 1f,
                 },
                 Armor = new ArmorDef
                 {
                     Armor = 0.5f,
-                    Light = 1f,
-                    Heavy = 0.5f,
-                    NonArmor = 1f,
+                    Light = -1f,
+                    Heavy = -1f,
+                    NonArmor = -1f,
                 },
                 Shields = new ShieldDef
                 {
-                    Modifier = -0.25f,
+                    Modifier = -1f,
                     Type = Kinetic,
                     BypassModifier = -1f,
                 },
@@ -449,9 +450,9 @@ namespace WeaponThread
                 AreaEffectRadius = 5f,
                 Pulse = new PulseDef // interval measured in game ticks (60 == 1 second), pulseChance chance (0 - 100) that an entity in field will be hit
                 {
-                    Interval = 60,
-                    PulseChance = 100,
-                    GrowTime = 100,
+                    Interval = 0,
+                    PulseChance = 0,
+                    GrowTime = 0,
                     HideModel = false,
                     ShowParticle = false,
                     Particle = new ParticleDef
@@ -490,8 +491,8 @@ namespace WeaponThread
                     Duration = 0,
                     StackDuration = false,
                     Depletable = false,
-                    MaxStacks = 10,
-                    TriggerRange = 5f,
+                    MaxStacks = 0,
+                    TriggerRange = 0f,
                 },
             },
             Beams = new BeamDef
@@ -505,24 +506,24 @@ namespace WeaponThread
             Trajectory = new TrajectoryDef
             {
                 Guidance = None,
-                TargetLossDegree = 80f,
+                TargetLossDegree = 0f,
                 TargetLossTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 MaxLifeTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 AccelPerSec = 0f,
                 DesiredSpeed = 800,
-                MaxTrajectory = 900f,
+                MaxTrajectory = 30f,
                 FieldTime = 0, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
                 GravityMultiplier = 0f, // Gravity multiplier, influences the trajectory of the projectile, value greater than 0 to enable.
-                SpeedVariance = Random(start: 0, end: 20), // subtracts value from DesiredSpeed
-                RangeVariance = Random(start: 0, end: 60), // subtracts value from MaxTrajectory
+                SpeedVariance = Random(start: 0, end: 50), // subtracts value from DesiredSpeed
+                RangeVariance = Random(start: 0, end: 20), // subtracts value from MaxTrajectory
                 MaxTrajectoryTime = 0, // How long the weapon must fire before it reaches MaxTrajectory.
                 Smarts = new SmartsDef
                 {
                     Inaccuracy = 0f, // 0 is perfect, hit accuracy will be a random num of meters between 0 and this value.
-                    Aggressiveness = 1f, // controls how responsive tracking is.
-                    MaxLateralThrust = 0.5f, // controls how sharp the trajectile may turn
+                    Aggressiveness = 0f, // controls how responsive tracking is.
+                    MaxLateralThrust = 0f, // controls how sharp the trajectile may turn
                     TrackingDelay = 1, // Measured in Shape diameter units traveled.
-                    MaxChaseTime = 1800, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                    MaxChaseTime = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     OverideTarget = true, // when set to true ammo picks its own target, does not use hardpoint's.
                     MaxTargets = 0, // Number of targets allowed before ending, 0 = unlimited
                     NoTargetExpire = false, // Expire without ever having a target at TargetLossTime
@@ -530,9 +531,9 @@ namespace WeaponThread
                 },
                 Mines = new MinesDef
                 {
-                    DetectRadius = 200,
-                    DeCloakRadius = 100,
-                    FieldTime = 1800,
+                    DetectRadius = 0,
+                    DeCloakRadius = 0,
+                    FieldTime = 0,
                     Cloak = false,
                     Persist = false,
                 },

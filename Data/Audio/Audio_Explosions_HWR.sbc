@@ -4,80 +4,122 @@
 		<Sound>
 			<Id>
 				<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
-				<SubtypeId>HWR_GatlingLoop</SubtypeId>
+				<SubtypeId>MD_GatlingBarrelLoop</SubtypeId>
 			</Id>
-			<Category>WEP_SHOT</Category>
-			<MaxDistance>600</MaxDistance>
-			<PitchVariation>0</PitchVariation>
-			<PreventSynchronization>3</PreventSynchronization>
-			<DynamicMusicCategory>HeavyFight</DynamicMusicCategory>
-			<DynamicMusicAmount>3</DynamicMusicAmount>
-			<DistantSounds>
-				<DistantSound DistanceCrossfade="50" Distance="500" Sound="HWR_GatlingLoopDistant"/>
-			</DistantSounds>
+			<Category>SHOT</Category>
+			<MaxDistance>200</MaxDistance>
+			<PitchVariation>15</PitchVariation>
+			<PreventSynchronization>0</PreventSynchronization>
 			<Volume>1</Volume>
 			<Loopable>true</Loopable>
 			<Waves>
 				<Wave Type="D3">
-					<Start>Audio\HWR\GatlingStart.wav</Start>
-					<Loop>Audio\HWR\GatlingLoop.wav</Loop>
-					<End>Audio\HWR\GatlingEnd.wav</End>
+					<Start>Audio\MD\BarrelSpinStart.wav</Start>
+					<Loop>Audio\MD\BarrelSpinLoop.wav</Loop>
+					<End>Audio\MD\BarrelSpinEnd.wav</End>
 				</Wave>
 			</Waves>
 		</Sound>
 		<Sound>
 			<Id>
 				<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
-				<SubtypeId>HWR_GatlingLoopDistant</SubtypeId>
+				<SubtypeId>MD_GatlingLoop</SubtypeId>
 			</Id>
-			<Category>WEP_SHOT</Category>
-			<MaxDistance>1000</MaxDistance>
-			<PitchVariation>100</PitchVariation>
-			<Volume>1.5</Volume>
-			<Loopable>true</Loopable>
-			<Waves>
-				<Wave Type="D3">
-					<Start>Audio\HWR\GatlingStartDistant.wav</Start>
-					<Loop>Audio\HWR\GatlingLoopDistant.wav</Loop>
-					<End>Audio\HWR\GatlingEndDistant.wav</End>
-				</Wave>
-			</Waves>
-		</Sound>
-		<Sound>
-			<Id>
-				<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
-				<SubtypeId>HWR_Gatling</SubtypeId>
-			</Id>
-			<Category>WEP_SHOT</Category>
-			<MaxDistance>1000</MaxDistance>
-			<PitchVariation>50</PitchVariation>
+			<Category>SHOT</Category>
+			<MaxDistance>500</MaxDistance>
+			<PitchVariation>30</PitchVariation>
 			<PreventSynchronization>0</PreventSynchronization>
 			<DynamicMusicCategory>HeavyFight</DynamicMusicCategory>
 			<DynamicMusicAmount>3</DynamicMusicAmount>
 			<DistantSounds>
-				<DistantSound DistanceCrossfade="300" Distance="1000" Sound="HWR_GatlingDistant"/>
+				<DistantSound DistanceCrossfade="10" Distance="500" Sound="MD_GatlingLoopDistant"/>
 			</DistantSounds>
 			<Volume>1</Volume>
-			<Loopable>false</Loopable>
+			<Loopable>true</Loopable>
 			<Waves>
 				<Wave Type="D3">
-					<Start>Audio\HWR\Gatling.wav</Start>
+					<Start>Audio\MD\GatlingStart.wav</Start>
+					<Loop>Audio\MD\GatlingLoop.wav</Loop>
+					<End>Audio\MD\GatlingEnd.wav</End>
 				</Wave>
 			</Waves>
 		</Sound>
 		<Sound>
 			<Id>
 				<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
-				<SubtypeId>HWR_GatlingDistant</SubtypeId>
+				<SubtypeId>MD_GatlingLoopDistant</SubtypeId>
 			</Id>
-			<Category>WEP_SHOT</Category>
-			<MaxDistance>1500</MaxDistance>
+			<Category>SHOT</Category>
+			<MaxDistance>1000</MaxDistance>
 			<PitchVariation>100</PitchVariation>
-			<Volume>1.2</Volume>
-			<Loopable>false</Loopable>
+			<PreventSynchronization>0</PreventSynchronization>
+			<Volume>1.5</Volume>
+			<Loopable>true</Loopable>
 			<Waves>
 				<Wave Type="D3">
-					<Start>Audio\HWR\GatlingDistant.wav</Start>
+					<Start>Audio\MD\GatlingStartDistant.wav</Start>
+					<Loop>Audio\MD\GatlingLoopDistant.wav</Loop>
+					<End>Audio\MD\GatlingEndDistant.wav</End>
+				</Wave>
+			</Waves>
+		</Sound>
+		<Sound>
+			<Id>
+				<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+				<SubtypeId>HWR_MediumLaserPreFiring</SubtypeId>
+			</Id>
+			<Category>SHOT</Category>
+			<MaxDistance>200</MaxDistance>
+			<PitchVariation>15</PitchVariation>
+			<PreventSynchronization>0</PreventSynchronization>
+			<Volume>1</Volume>
+			<Loopable>true</Loopable>
+			<Waves>
+				<Wave Type="D3">
+					<Start>Audio\HWR\MediumLaserPreFiring.wav</Start>
+				</Wave>
+			</Waves>
+		</Sound>
+		<Sound>
+			<Id>
+				<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+				<SubtypeId>HWR_MediumLaserLoop</SubtypeId>
+			</Id>
+			<Category>SHOT</Category>
+			<MaxDistance>500</MaxDistance>
+			<PitchVariation>30</PitchVariation>
+			<PreventSynchronization>0</PreventSynchronization>
+			<DynamicMusicCategory>HeavyFight</DynamicMusicCategory>
+			<DynamicMusicAmount>3</DynamicMusicAmount>
+			<DistantSounds>
+				<DistantSound DistanceCrossfade="10" Distance="500" Sound="HWR_MediumLaserLoopDistant"/>
+			</DistantSounds>
+			<Volume>1</Volume>
+			<Loopable>true</Loopable>
+			<Waves>
+				<Wave Type="D3">
+					<Start>Audio\HWR\MediumLaserStart.wav</Start>
+					<Loop>Audio\HWR\MediumLaserLoop.wav</Loop>
+					<End>Audio\HWR\MediumLaserEnd.wav</End>
+				</Wave>
+			</Waves>
+		</Sound>
+		<Sound>
+			<Id>
+				<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+				<SubtypeId>HWR_MediumLaserLoopDistant</SubtypeId>
+			</Id>
+			<Category>SHOT</Category>
+			<MaxDistance>1000</MaxDistance>
+			<PitchVariation>100</PitchVariation>
+			<PreventSynchronization>0</PreventSynchronization>
+			<Volume>1.5</Volume>
+			<Loopable>true</Loopable>
+			<Waves>
+				<Wave Type="D3">
+					<Start>Audio\HWR\MediumLaserStartDistant.wav</Start>
+					<Loop>Audio\HWR\MediumLaserLoopDistant.wav</Loop>
+					<End>Audio\HWR\MediumLaserEndDistant.wav</End>
 				</Wave>
 			</Waves>
 		</Sound>

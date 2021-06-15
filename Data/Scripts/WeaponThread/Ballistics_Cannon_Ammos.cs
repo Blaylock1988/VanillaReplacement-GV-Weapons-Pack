@@ -28,7 +28,7 @@ namespace WeaponThread
             BaseDamage = 1f,
             Mass = 43f, // in kilograms
             Health = 0, // 0 = disabled, otherwise how much damage it can take from other trajectiles before dying.
-            BackKickForce = 10f,
+            BackKickForce = 100f,
             DecayPerShot = 0f,
             HardPointUsable = true, // set to false if this is a shrapnel ammoType and you don't want the turret to be able to select it directly.
             EnergyMagazineSize = 0,
@@ -77,8 +77,8 @@ namespace WeaponThread
                 // modifier values: -1 = disabled (higher performance), 0 = no damage, 0.01 = 1% damage, 2 = 200% damage.
                 FallOff = new FallOffDef
                 {
-                    Distance = 0f, // Distance at which max damage begins falling off.
-                    MinMultipler = 0f, // value from 0.0f to 1f where 0.1f would be a min damage of 10% of max damage.
+                    Distance = 2000f, // Distance at which max damage begins falling off.
+                    MinMultipler = 0.5f, // value from 0.0f to 1f where 0.1f would be a min damage of 10% of max damage.
                 },
                 Grids = new GridSizeDef
                 {
@@ -193,7 +193,7 @@ namespace WeaponThread
             Trajectory = new TrajectoryDef
             {
                 Guidance = None,
-                TargetLossDegree = 80f,
+                TargetLossDegree = 0f,
                 TargetLossTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 MaxLifeTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 AccelPerSec = 0f,
@@ -207,17 +207,17 @@ namespace WeaponThread
                 Smarts = new SmartsDef
                 {
                     Inaccuracy = 0f, // 0 is perfect, hit accuracy will be a random num of meters between 0 and this value.
-                    Aggressiveness = 1f, // controls how responsive tracking is.
-                    MaxLateralThrust = 0.5, // controls how sharp the trajectile may turn, no more than 0.5
+                    Aggressiveness = 0f, // controls how responsive tracking is.
+                    MaxLateralThrust = 0, // controls how sharp the trajectile may turn, no more than 0.5
                     TrackingDelay = 0, // Measured in Shape diameter units traveled.
                     MaxChaseTime = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     OverideTarget = true, // when set to true ammo picks its own target, does not use hardpoint's.
                     MaxTargets = 0, // Number of targets allowed before ending, 0 = unlimited
-                    NoTargetExpire = false, // Expire without ever having a target at TargetLossTime
+                    NoTargetExpire = true, // Expire without ever having a target at TargetLossTime
                     Roam = false, // Roam current area after target loss
                     KeepAliveAfterTargetLoss = false, // Whether to stop early death of projectile on target loss
-                    OffsetRatio = 0.5f, // The ratio to offset the random dir (0 to 1) 
-                    OffsetTime = 180, // how often to offset degree, measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                    OffsetRatio = 0f, // The ratio to offset the random dir (0 to 1) 
+                    OffsetTime = 0, // how often to offset degree, measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 },
                 Mines = new MinesDef
                 {

@@ -56,18 +56,18 @@ namespace WeaponThread
             {
                 Threats = new[]
                 {
-                    Grids, Characters, Projectiles, Meteors, // threats percieved automatically without changing menu settings
+                    Grids, // threats percieved automatically without changing menu settings
                 },
                 SubSystems = new[]
                 {
-                    Thrust, Utility, Offense, Power, Production, Any, // subsystems the gun targets
+                    Any, // subsystems the gun targets
                 },
                 ClosestFirst = false, // tries to pick closest targets first (blocks on grids, projectiles, etc...).
                 MinimumDiameter = 0, // 0 = unlimited, Minimum radius of threat to engage.
                 MaximumDiameter = 0, // 0 = unlimited, Maximum radius of threat to engage.
-                TopTargets = 4, // 0 = unlimited, max number of top targets to randomize between.
-                TopBlocks = 4, // 0 = unlimited, max number of blocks to randomize between
-                StopTrackingSpeed = 1000, // do not track target threats traveling faster than this speed
+                TopTargets = 0, // 0 = unlimited, max number of top targets to randomize between.
+                TopBlocks = 0, // 0 = unlimited, max number of blocks to randomize between
+                StopTrackingSpeed = 0, // do not track target threats traveling faster than this speed
             },
             HardPoint = new HardPointDef
             {
@@ -79,7 +79,7 @@ namespace WeaponThread
 
                 Ui = new UiDef
                 {
-                    RateOfFire = false,
+                    RateOfFire = true,
                     DamageModifier = false,
                     ToggleGuidance = false,
                     EnableOverload =  false,
@@ -215,7 +215,7 @@ namespace WeaponThread
                     Grids,
                 },
                 SubSystems = new[] {
-                    Thrust, Utility, Offense, Power, Production, Any,
+                    Any,
                 },
                 ClosestFirst = true, // tries to pick closest targets first (blocks on grids, projectiles, etc...).
                 IgnoreDumbProjectiles = true, // Don't fire at non-smart projectiles.
@@ -234,7 +234,7 @@ namespace WeaponThread
                 DeviateShotAngle = 2f,
                 AimingTolerance = 4f, // 0 - 180 firing angle
                 AimLeadingPrediction = Advanced, // Off, Basic, Accurate, Advanced
-                DelayCeaseFire = 10, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                DelayCeaseFire = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
 
                 Ui = new UiDef
                 {
@@ -249,7 +249,7 @@ namespace WeaponThread
                     TurretAttached = true,
                     TurretController = true,
                     PrimaryTracking = true,
-                    LockOnFocus = false,
+                    LockOnFocus = true,
                 },
                 HardWare = new HardwareDef
                 {
@@ -257,7 +257,7 @@ namespace WeaponThread
                     ElevateRate = 0.005f,
                     MinAzimuth = -180,
                     MaxAzimuth = 180,
-                    MinElevation = -58,
+                    MinElevation = -20,
                     MaxElevation = 90,
                     FixedOffset = false,
                     InventorySize = 0.768f,
@@ -408,8 +408,8 @@ namespace WeaponThread
                 },
                 HardWare = new HardwareDef
                 {
-                    RotateRate = 0.00f,
-                    ElevateRate = 0.00f,
+                    RotateRate = 0f,
+                    ElevateRate = 0f,
                     MinAzimuth = 0,
                     MaxAzimuth = 0,
                     MinElevation = 0,
@@ -521,7 +521,7 @@ namespace WeaponThread
             {
                 Threats = new[]
                 {
-                    Grids, Characters, Projectiles, Meteors, // threats percieved automatically without changing menu settings
+                    Grids, Projectiles, Meteors, // threats percieved automatically without changing menu settings
                 },
                 SubSystems = new[]
                 {
@@ -532,7 +532,7 @@ namespace WeaponThread
                 MaximumDiameter = 0, // 0 = unlimited, Maximum radius of threat to engage.
                 TopTargets = 4, // 0 = unlimited, max number of top targets to randomize between.
                 TopBlocks = 4, // 0 = unlimited, max number of blocks to randomize between
-                StopTrackingSpeed = 1000, // do not track target threats traveling faster than this speed
+                StopTrackingSpeed = 0, // do not track target threats traveling faster than this speed
             },
             HardPoint = new HardPointDef
             {

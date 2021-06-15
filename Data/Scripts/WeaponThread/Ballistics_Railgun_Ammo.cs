@@ -43,8 +43,8 @@ namespace WeaponThread
             Shrapnel = new ShrapnelDef
             {
                 AmmoRound = "",
-                Fragments = 100,
-                Degrees = 15,
+                Fragments = 0,
+                Degrees = 0,
                 Reverse = false,
                 RandomizeDir = false, // randomzie between forward and backward directions
             },
@@ -70,24 +70,24 @@ namespace WeaponThread
                 Characters = -1f,
                 FallOff = new FallOffDef
                 {
-                    Distance = 1000f, // Distance at which max damage begins falling off.
+                    Distance = 2000f, // Distance at which max damage begins falling off.
                     MinMultipler = 0.1f, // value from 0.0f to 1f where 0.1f would be a min damage of 10% of max damage.
                 },
                 Grids = new GridSizeDef
                 {
-                    Large = 1f,
-                    Small = 1f,
+                    Large = -1f,
+                    Small = 0.25f,
                 },
                 Armor = new ArmorDef
                 {
-                    Armor = 1f,
-                    Light = 100f,
-                    Heavy = 1f,
-                    NonArmor = 1f,
+                    Armor = -1f,
+                    Light = -1f,
+                    Heavy = -1f,
+                    NonArmor = -1f,
                 },
                 Shields = new ShieldDef
                 {
-                    Modifier = 0.000001f,
+                    Modifier = -1f,,
                     Type = Kinetic,
                     BypassModifier = -1f,
                 },
@@ -113,13 +113,16 @@ namespace WeaponThread
             AreaEffect = new AreaDamageDef
             {
                 AreaEffect = Disabled, // Disabled = do not use area effect at all, Explosive, Radiant, AntiSmart, JumpNullField, JumpNullField, EnergySinkField, AnchorField, EmpField, OffenseField, NavField, DotField.
-                AreaEffectDamage = 0f, // 0 = use spillover from BaseDamage, otherwise use this value.
-                AreaEffectRadius = 0f,
+                Base = new AreaInfluence
+                {
+                    Radius = 0f, // the sphere of influence of area effects
+                    EffectStrength = 0f, // For ewar it applies this amount per pulse/hit, non-ewar applies this as damage per tick per entity in area of influence. For radiant 0 == use spillover from BaseDamage, otherwise use this value.
+                },
                 Pulse = new PulseDef // interval measured in game ticks (60 == 1 second), pulseChance chance (0 - 100) that an entity in field will be hit
                 {
-                    Interval = 60,
-                    PulseChance = 100,
-                    GrowTime = 100,
+                    Interval = 0,
+                    PulseChance = 0,
+                    GrowTime = 0,
                     HideModel = false,
                     ShowParticle = false,
                     Particle = new ParticleDef
@@ -140,8 +143,10 @@ namespace WeaponThread
                 },
                 Explosions = new ExplosionDef
                 {
-                    NoVisuals = true,
-                    NoSound = true,
+                    NoVisuals = false,
+                    NoSound = false,
+                    NoShrapnel = false,
+                    NoDeformation = false,
                     Scale = 1,
                     CustomParticle = "",
                     CustomSound = "",
@@ -150,16 +155,17 @@ namespace WeaponThread
                 {
                     DetonateOnEnd = false,
                     ArmOnlyOnHit = false,
-                    DetonationDamage = 1000000,
-                    DetonationRadius = 75,
+                    DetonationDamage = 0,
+                    DetonationRadius = 0,
+					MinArmingTime = 0, //Min time in ticks before projectile will arm for detonation (will also affect shrapnel spawning)
                 },
                 EwarFields = new EwarFieldsDef
                 {
                     Duration = 0,
                     StackDuration = false,
                     Depletable = false,
-                    MaxStacks = 10,
-                    TriggerRange = 5f,
+                    MaxStacks = 0,
+                    TriggerRange = 0f,
                 },
             },
             Beams = new BeamDef
@@ -173,12 +179,12 @@ namespace WeaponThread
             Trajectory = new TrajectoryDef
             {
                 Guidance = None,
-                TargetLossDegree = 80f,
+                TargetLossDegree = 0f,
                 TargetLossTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-                MaxLifeTime = 6000, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                MaxLifeTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 AccelPerSec = 0f,
-                DesiredSpeed = 9000,
-                MaxTrajectory = 10000,
+                DesiredSpeed = 1500,
+                MaxTrajectory = 4000,
                 FieldTime = 0, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
                 GravityMultiplier = 0f, // Gravity multiplier, influences the trajectory of the projectile, value greater than 0 to enable.
                 SpeedVariance = Random(start: 0, end: 0), // subtracts value from DesiredSpeed
@@ -186,11 +192,11 @@ namespace WeaponThread
                 MaxTrajectoryTime = 0, // How long the weapon must fire before it reaches MaxTrajectory.
                 Smarts = new SmartsDef
                 {
-                    Inaccuracy = 0.25f, // 0 is perfect, hit accuracy will be a random num of meters between 0 and this value.
-                    Aggressiveness = 2f, // controls how responsive tracking is.
-                    MaxLateralThrust = 0.5f, // controls how sharp the trajectile may turn
-                    TrackingDelay = 8, // Measured in Shape diameter units traveled.
-                    MaxChaseTime = 4500, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                    Inaccuracy = 0f, // 0 is perfect, hit accuracy will be a random num of meters between 0 and this value.
+                    Aggressiveness = 0f, // controls how responsive tracking is.
+                    MaxLateralThrust = 0f, // controls how sharp the trajectile may turn
+                    TrackingDelay = 0, // Measured in Shape diameter units traveled.
+                    MaxChaseTime = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     OverideTarget = false, // when set to true ammo picks its own target, does not use hardpoint's.
                     MaxTargets = 0, // Number of targets allowed before ending, 0 = unlimited
                     NoTargetExpire = false, // Expire without ever having a target at TargetLossTime
@@ -198,9 +204,9 @@ namespace WeaponThread
                 },
                 Mines = new MinesDef
                 {
-                    DetectRadius = 200,
-                    DeCloakRadius = 100,
-                    FieldTime = 1800,
+                    DetectRadius = 0,
+                    DeCloakRadius = 0,
+                    FieldTime = 0,
                     Cloak = false,
                     Persist = false,
                 },
