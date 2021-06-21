@@ -32,7 +32,7 @@ namespace WeaponThread
 
             Shape = new ShapeDef //defines the collision shape of projectile, defaults line and visual Line Length if set to 0
             {
-                Shape = SphereShape,
+                Shape = LineShape,
                 Diameter = 1,
             },
             ObjectsHit = new ObjectsHitDef
@@ -42,11 +42,11 @@ namespace WeaponThread
             },
             Shrapnel = new ShrapnelDef
             {
-                AmmoRound = "AryxFlakAmmoWC_Shrapnel",
-                Fragments = 3,
-                Degrees = 360,
+                AmmoRound = "AryxFlakAmmoWC_Shrapnel", //AryxFlakAmmoWC_Shrapnel
+                Fragments = 1,
+                Degrees = 0,
                 Reverse = false,
-                RandomizeDir = true, // randomzie between forward and backward directions
+                RandomizeDir = false, // randomzie between forward and backward directions
             },
             Pattern = new AmmoPatternDef
             {
@@ -115,14 +115,14 @@ namespace WeaponThread
                 AreaEffect = AntiSmart, // Disabled = do not use area effect at all, Explosive, Radiant, AntiSmart, JumpNullField, JumpNullField, EnergySinkField, AnchorField, EmpField, OffenseField, NavField, DotField.
                 Base = new AreaInfluence
                 {
-                    Radius = 100f, // the sphere of influence of area effects
-                    EffectStrength = 1f, // For ewar it applies this amount per pulse/hit, non-ewar applies this as damage per tick per entity in area of influence. For radiant 0 == use spillover from BaseDamage, otherwise use this value.
+                    Radius = 200f, // the sphere of influence of area effects
+                    EffectStrength = 100f, // For ewar it applies this amount per pulse/hit, non-ewar applies this as damage per tick per entity in area of influence. For radiant 0 == use spillover from BaseDamage, otherwise use this value.
                 },                
 				Pulse = new PulseDef // interval measured in game ticks (60 == 1 second), pulseChance chance (0 - 100) that an entity in field will be hit
                 {
                     Interval = 1,
                     PulseChance = 100,
-                    GrowTime = 0,
+                    GrowTime = 1,
                     HideModel = false,
                     ShowParticle = false,
                     Particle = new ParticleDef
@@ -185,10 +185,10 @@ namespace WeaponThread
                 AccelPerSec = 0f,
                 DesiredSpeed = 800,
                 MaxTrajectory = 2500f,
-                FieldTime = 0, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
+                FieldTime = 1, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
                 GravityMultiplier = 0f, // Gravity multiplier, influences the trajectory of the projectile, value greater than 0 to enable.
                 SpeedVariance = Random(start: 0, end: 20), // subtracts value from DesiredSpeed
-                RangeVariance = Random(start: 0, end: 200), // subtracts value from MaxTrajectory
+                RangeVariance = Random(start: 0, end: 50), // subtracts value from MaxTrajectory
                 MaxTrajectoryTime = 0, // How long the weapon must fire before it reaches MaxTrajectory.
                 Smarts = new SmartsDef
                 {
@@ -197,7 +197,7 @@ namespace WeaponThread
                     MaxLateralThrust = 0, // controls how sharp the trajectile may turn
                     TrackingDelay = 0, // Measured in Shape diameter units traveled.
                     MaxChaseTime = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-                    OverideTarget = true, // when set to true ammo picks its own target, does not use hardpoint's.
+                    OverideTarget = false, // when set to true ammo picks its own target, does not use hardpoint's.
                     MaxTargets = 1, // Number of targets allowed before ending, 0 = unlimited
                     NoTargetExpire = false, // Expire without ever having a target at TargetLossTime
                     Roam = false, // Roam current area after target loss
@@ -238,24 +238,24 @@ namespace WeaponThread
                     },
                     Hit = new ParticleDef
                     {
-                        Name = "MaterialHit_Metal_GatlingGun",
+                        Name = "",
                         ApplyToShield = true,
                         ShrinkByDistance = false,
-                        Color = Color(red: 3, green: 1.9f, blue: 1f, alpha: 1),
+                        Color = Color(red: 1, green: 1f, blue: 1f, alpha: 1),
                         Offset = Vector(x: 0, y: 0, z: 0),
                         Extras = new ParticleOptionDef
                         {
                             Loop = false,
                             Restart = false,
                             MaxDistance = 5000,
-                            MaxDuration = 30,
+                            MaxDuration = 5,
                             Scale = 1,
                             HitPlayChance = 1f,
                         },
                     },
                     Eject = new ParticleDef
                     {
-                        Name = "MaterialHit_Metal_GatlingGun",
+                        Name = "",
                         ApplyToShield = true,
                         ShrinkByDistance = false,
                         Color = Color(red: 3, green: 1.9f, blue: 1f, alpha: 1),
@@ -273,14 +273,14 @@ namespace WeaponThread
                 },
                 Lines = new LineDef
                 {
-                    ColorVariance = Random(start: 0.75f, end: 2f), // multiply the color by random values within range.
-                    WidthVariance = Random(start: 0f, end: 1.025f), // adds random value to default width (negatives shrinks width)
+                    ColorVariance = Random(start: 0f, end: 5f), // multiply the color by random values within range.
+                    WidthVariance = Random(start: 0f, end: 1f), // adds random value to default width (negatives shrinks width)
                     Tracer = new TracerBaseDef
                     {
                         Enable = true,
                         Length = 8f,
-                        Width = 0.025f,
-                        Color = Color(red: 10, green: 6, blue: 1, alpha: 1),
+                        Width = 1f,
+                        Color = Color(red: 80, green: 40, blue: 8, alpha: 1),
                         VisualFadeStart = 0, // Number of ticks the weapon has been firing before projectiles begin to fade their color
                         VisualFadeEnd = 0, // How many ticks after fade began before it will be invisible.
                         Textures = new[] {// WeaponLaser, ProjectileTrailLine, WarpBubble, etc..
@@ -336,7 +336,7 @@ namespace WeaponThread
             AmmoAudio = new AmmoAudioDef
             {
                 TravelSound = "",
-                HitSound = "HWR_FlakExplosion",
+                HitSound = "",
                 ShieldHitSound = "",
                 PlayerHitSound = "",
                 VoxelHitSound = "",
@@ -364,8 +364,8 @@ namespace WeaponThread
             AmmoRound = "AryxFlakAmmoWC_Shrapnel",
             HybridRound = false, //AmmoMagazine based weapon with energy cost
             EnergyCost = 0f, //(((EnergyCost * DefaultDamage) * ShotsPerSecond) * BarrelsPerShot) * ShotsPerBarrel
-            BaseDamage = 80f,
-            Mass = 5, // in kilograms
+            BaseDamage = 1f,
+            Mass = 100, // in kilograms
             Health = 0, // 0 = disabled, otherwise how much damage it can take from other trajectiles before dying.
             BackKickForce = 25f,
             DecayPerShot = 0,
@@ -454,8 +454,8 @@ namespace WeaponThread
             AreaEffect = new AreaDamageDef
             {
                 AreaEffect = Explosive, // Disabled = do not use area effect at all, Explosive, Radiant, AntiSmart, JumpNullField, JumpNullField, EnergySinkField, AnchorField, EmpField, OffenseField, NavField, DotField.
-                AreaEffectDamage = 0f, // 0 = use spillover from BaseDamage, otherwise use this value.
-                AreaEffectRadius = 5f,
+                AreaEffectDamage = 500f, // 0 = use spillover from BaseDamage, otherwise use this value.
+                AreaEffectRadius = 20f,
                 Pulse = new PulseDef // interval measured in game ticks (60 == 1 second), pulseChance chance (0 - 100) that an entity in field will be hit
                 {
                     Interval = 0,
@@ -483,16 +483,18 @@ namespace WeaponThread
                 {
                     NoVisuals = false,
                     NoSound = false,
+                    NoShrapnel = false,
+                    NoDeformation = false,
                     Scale = 1,
-                    CustomParticle = "MXA_MissileExplosion",
-                    CustomSound = "HWR_FlakExplosion",
+                    CustomParticle = "MD_FlakExplosion",
+                    CustomSound = "HWR_FlakExplosion",//HWR_FlakExplosion
                 },
                 Detonation = new DetonateDef
                 {
                     DetonateOnEnd = true,
                     ArmOnlyOnHit = false,
-                    DetonationDamage = 300,
-                    DetonationRadius = 20,
+                    DetonationDamage = 0,
+                    DetonationRadius = 0,
                 },
                 EwarFields = new EwarFieldsDef
                 {
@@ -519,7 +521,7 @@ namespace WeaponThread
                 MaxLifeTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 AccelPerSec = 0f,
                 DesiredSpeed = 800,
-                MaxTrajectory = 30f,
+                MaxTrajectory = 1f,
                 FieldTime = 0, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
                 GravityMultiplier = 0f, // Gravity multiplier, influences the trajectory of the projectile, value greater than 0 to enable.
                 SpeedVariance = Random(start: 0, end: 50), // subtracts value from DesiredSpeed
@@ -530,7 +532,7 @@ namespace WeaponThread
                     Inaccuracy = 0f, // 0 is perfect, hit accuracy will be a random num of meters between 0 and this value.
                     Aggressiveness = 0f, // controls how responsive tracking is.
                     MaxLateralThrust = 0f, // controls how sharp the trajectile may turn
-                    TrackingDelay = 1, // Measured in Shape diameter units traveled.
+                    TrackingDelay = 0, // Measured in Shape diameter units traveled.
                     MaxChaseTime = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     OverideTarget = true, // when set to true ammo picks its own target, does not use hardpoint's.
                     MaxTargets = 0, // Number of targets allowed before ending, 0 = unlimited
@@ -570,7 +572,7 @@ namespace WeaponThread
                     },
                     Hit = new ParticleDef
                     {
-                        Name = "MaterialHit_Metal_GatlingGun",
+                        Name = "",
                         ApplyToShield = true,
                         ShrinkByDistance = false,
                         Color = Color(red: 3, green: 1.9f, blue: 1f, alpha: 1),
@@ -587,7 +589,7 @@ namespace WeaponThread
                     },
                     Eject = new ParticleDef
                     {
-                        Name = "MaterialHit_Metal_GatlingGun",
+                        Name = "",
                         ApplyToShield = true,
                         ShrinkByDistance = false,
                         Color = Color(red: 3, green: 1.9f, blue: 1f, alpha: 1),
@@ -605,14 +607,14 @@ namespace WeaponThread
                 },
                 Lines = new LineDef
                 {
-                    ColorVariance = Random(start: 0.75f, end: 2f), // multiply the color by random values within range.
-                    WidthVariance = Random(start: 0f, end: 1.025f), // adds random value to default width (negatives shrinks width)
+                    ColorVariance = Random(start: 0f, end: 0f), // multiply the color by random values within range.
+                    WidthVariance = Random(start: 0f, end: 0f), // adds random value to default width (negatives shrinks width)
                     Tracer = new TracerBaseDef
                     {
                         Enable = true,
-                        Length = 8f,
-                        Width = 0.025f,
-                        Color = Color(red: 10, green: 6, blue: 1, alpha: 1),
+                        Length = 0f,
+                        Width = 0f,
+                        Color = Color(red: 0, green: 0, blue: 0, alpha: 1),
                         VisualFadeStart = 0, // Number of ticks the weapon has been firing before projectiles begin to fade their color
                         VisualFadeEnd = 0, // How many ticks after fade began before it will be invisible.
                         Textures = new[] {// WeaponLaser, ProjectileTrailLine, WarpBubble, etc..
@@ -668,7 +670,7 @@ namespace WeaponThread
             AmmoAudio = new AmmoAudioDef
             {
                 TravelSound = "",
-                HitSound = "HWR_FlakExplosion",
+                HitSound = "",
                 ShieldHitSound = "",
                 PlayerHitSound = "",
                 VoxelHitSound = "",

@@ -9,6 +9,7 @@
 			<DisplayName>Artemis-250 Railgun</DisplayName>
 			<Description>The Ares' little sister. Fires 250mm ferrous slugs, piercing armour and delivering devastating blows to ships. Substantially less powerful than the Ares, but still stands as a fearsome weapon. [Accepts 250mm Ferrous.]</Description>
 			<Icon>Textures\GUI\Icons\AWERailgun.dds</Icon>
+			<GuiVisible>true</GuiVisible>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
 			<Size x="1" y="1" z="5"/>
@@ -40,7 +41,7 @@
 				<Model BuildPercentUpperBound="0.66" File="Models\AWERailgun\LG_Railgun_BS2.mwm"/>
 				<Model BuildPercentUpperBound="1.0" File="Models\AWERailgun\LG_Railgun_BS3.mwm"/>
 			</BuildProgressModels>
-			<BlockPairName>AWERailgun</BlockPairName>
+			<BlockPairName>ARYXRailgun</BlockPairName>
 			<MirroringY>Z</MirroringY>
 			<MirroringZ>Y</MirroringZ>
 			<EdgeType>Light</EdgeType>
@@ -61,6 +62,7 @@
 			<Icon>Textures\GUI\Icons\AWERailgunTurret.dds</Icon>
 			<Description>A turreted version of the Artemis railgun, sporting an armoured base and automatic aiming system. Can be manually controlled by a gunner from any control seat. [Accepts 250mm Ferrous.]</Description>
 			<CubeSize>Large</CubeSize>
+			<GuiVisible>true</GuiVisible>
 			<BlockTopology>TriangleMesh</BlockTopology>
 			<Size x="3" y="2" z="5"/>
 			<ModelOffset x="0" y="0" z="0"/>
@@ -84,7 +86,7 @@
 				<MountPoint Side="Bottom" StartX="0.5" StartY="1.6" EndX="1.0" EndY="4.0"/>
 			</MountPoints>
 			<OverlayTexture>Textures\GUI\Screens\turret_overlay.dds</OverlayTexture>
-			<BlockPairName>AWERailgunTurret</BlockPairName>
+			<BlockPairName>ARYXRailgunTurret</BlockPairName>
 			<MirroringY>Z</MirroringY>
 			<MirroringZ>Y</MirroringZ>
 			<BuildTimeSeconds>120</BuildTimeSeconds>

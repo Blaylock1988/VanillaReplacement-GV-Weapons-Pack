@@ -4,7 +4,7 @@
 		<Definition xsi:type="MyObjectBuilder_WeaponBlockDefinition">
 			<Id>
 				<TypeId>SmallMissileLauncher</TypeId>
-				<SubtypeId>OKI122mmAGfixed</SubtypeId>
+				<SubtypeId>OKI122mmSGfixed</SubtypeId>
 			</Id>
 			<DisplayName>OKI 122mm Fixed Assault Cannon</DisplayName>
 			<Icon>Textures\GUI\Icons\Cubes\OKI122mmASG_fixed.dds</Icon>
@@ -36,13 +36,13 @@
 				<Model BuildPercentUpperBound="0.5" File="Models\Cubes\Small\122mmFixed_BS1.mwm"/>
 				<Model BuildPercentUpperBound="1.0" File="Models\Cubes\Small\122mmFixed_BS2.mwm"/>
 			</BuildProgressModels>
-			<BlockPairName>OKI122mmAGfixed</BlockPairName>
+			<BlockPairName>OKI122mmSGfixed</BlockPairName>
 			<Center x="0" y="1" z="8"/>
 			<MirroringY>Z</MirroringY>
 			<MirroringZ>Y</MirroringZ>
 			<BuildTimeSeconds>15</BuildTimeSeconds>
 			<EdgeType>Light</EdgeType>
-			<WeaponDefinitionId Subtype="AryxBurstCannonWepDef"/>
+			<WeaponDefinitionId Subtype="OKI122mmSGfixed"/>
 			<InventoryMaxVolume>0.30</InventoryMaxVolume>
 			<InventoryFillFactorMin>0.1</InventoryFillFactorMin>
 			<ResourceSinkGroup>Defense</ResourceSinkGroup>
@@ -155,13 +155,13 @@
 					<MinAllowed>0.01</MinAllowed>
 				</DynamicMode>
 			</VoxelPlacement>
-			<BlockPairName>OKI76mmAG</BlockPairName>
+			<BlockPairName>Ballistics_Cannon</BlockPairName>
 			<MirroringY>Z</MirroringY>
 			<MirroringZ>Y</MirroringZ>
 			<EdgeType>Light</EdgeType>
 			<BuildTimeSeconds>40</BuildTimeSeconds>
 			<OverlayTexture>Textures\GUI\Screens\turret_overlay.dds</OverlayTexture>
-			<WeaponDefinitionId Subtype="AryxBurstCannonWepDef"/>
+			<WeaponDefinitionId Subtype="OKI76mmAG"/>
 			<InventoryMaxVolume>0.360</InventoryMaxVolume>
 			<ResourceSinkGroup>Defense</ResourceSinkGroup>
 			<DamageEffectId>213</DamageEffectId>
@@ -176,111 +176,6 @@
 			<AiEnabled>false</AiEnabled>
 			<DeformationRatio>0.2</DeformationRatio>
 			<PCU>500</PCU>
-		</Definition> -->
-		<!-- <Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
-			<Id>
-				<TypeId>LargeMissileTurret</TypeId>
-				<SubtypeId>MXA_CoilgunH</SubtypeId>
-			</Id>
-			<DisplayName>Mark 40 Spitfire</DisplayName>
-			<Description>The Spitfire naval coilgun battery is a ship-to-ship weapon utilised by the UNSC Navy during and after the Human-Covenant War.
-				Engagement Range: 4.5k
-				Ammo: 305mm Coilgun Rounds
-			</Description>
-			<Icon>Textures\GUI\Icons\MXA_CoilGunH.png</Icon>
-			<CubeSize>Large</CubeSize>
-			<BlockTopology>TriangleMesh</BlockTopology>
-			<Size x="3" y="2" z="3"/>
-			<ModelOffset x="0" y="1.25" z="0"/>
-			<Model>Models\Coilguns\MXA_Spitfire.mwm</Model>
-			<UseModelIntersection>true</UseModelIntersection>
-			<MirroringY>Z</MirroringY>
-			<MirroringZ>Y</MirroringZ>
-			<Components>
-				<Component Subtype="SteelPlate" Count="200"/>
-				<Component Subtype="Construction" Count="50"/>
-				<Component Subtype="MetalGrid" Count="30"/>
-				<Component Subtype="LargeTube" Count="2"/>
-				<Component Subtype="Motor" Count="15"/>
-				<Component Subtype="Superconductor" Count="60"/>
-				<Component Subtype="PowerCell" Count="320"/>
-				<Component Subtype="Computer" Count="40"/>
-				<Component Subtype="SteelPlate" Count="250"/>
-			</Components>
-			<CriticalComponent Subtype="Computer" Index="0"/>
-			<EdgeType>Light</EdgeType>
-			<WeaponDefinitionId Subtype="MXA_CoilgunH"/>
-			<InventoryMaxVolume>4.0</InventoryMaxVolume>
-			<DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
-			<DamagedSound>ParticleWeapExpl</DamagedSound>
-			<ResourceSinkGroup>Defense</ResourceSinkGroup>
-			<BuildTimeSeconds>60</BuildTimeSeconds>
-			<DisassembleRatio>1.25</DisassembleRatio>
-			<NavigationDefinition>Default</NavigationDefinition>
-			<DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
-			<DestroySound>WepSmallWarheadExpl</DestroySound>
-			<PCU>500</PCU>
-			<IsAirTight>false</IsAirTight>
-			<MountPoints>
-				<MountPoint Side="Bottom" StartX="0.0" StartY="0.0" EndX="3" EndY="3"/>
-			</MountPoints>
-			<BuildProgressModels>
-				<Model BuildPercentUpperBound="0.33" File="Models\Coilguns\MXA_Spitfire_BS1.mwm"/>
-				<Model BuildPercentUpperBound="0.66" File="Models\Coilguns\MXA_Spitfire_BS2.mwm"/>
-				<Model BuildPercentUpperBound="1.0" File="Models\Coilguns\MXA_Spitfire_BS3.mwm"/>
-			</BuildProgressModels>
-			<BlockPairName>MXA_CoilgunH</BlockPairName>
-		</Definition> -->
-		<!-- <Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
-			<Id>
-				<TypeId>LargeMissileTurret</TypeId>
-				<SubtypeId>ARYXBurstTurret</SubtypeId>
-			</Id>
-			<DisplayName>120mm "Judge" Salvo Cannon</DisplayName>
-			<Icon>Textures\GUI\Icons\AryxJudgeCannon.dds</Icon>
-			<Description>Fires 4 round bursts of highly damaging heavy ordinance, followed by a hefty reload. Slow projectile travel time means these turrets are ineffective against smaller, nimble ships, but are decent as broadside cannons for large battleships. [Accepts 120mm Salvo Rounds.]</Description>
-			<CubeSize>Large</CubeSize>
-			<BlockTopology>TriangleMesh</BlockTopology>
-			<Size x="3" y="2" z="3"/>
-			<ModelOffset x="0" y="0" z="0"/>
-			<Model>Models\BurstCannon\LG_ARYX_BurstCannonTurretBase.mwm</Model>
-			<Components>
-				<Component Subtype="SteelPlate" Count="250"/>
-				<Component Subtype="Construction" Count="200"/>
-				<Component Subtype="MetalGrid" Count="110"/>
-				<Component Subtype="LargeTube" Count="48"/>
-				<Component Subtype="SmallTube" Count="80"/>
-				<Component Subtype="Motor" Count="80"/>
-				<Component Subtype="Computer" Count="100"/>
-				<Component Subtype="SteelPlate" Count="250"/>
-			</Components>
-			<CriticalComponent Subtype="Computer" Index="0"/>
-			<MountPoints>
-				<MountPoint Side="Front" StartX="0.0" StartY="0.0" EndX="3.0" EndY="1.0"/>
-				<MountPoint Side="Back" StartX="0.0" StartY="0.0" EndX="3.0" EndY="1.0"/>
-				<MountPoint Side="Left" StartX="0.0" StartY="0.0" EndX="3.0" EndY="1.0"/>
-				<MountPoint Side="Right" StartX="0.0" StartY="0.0" EndX="3.0" EndY="1.0"/>
-				<MountPoint Side="Bottom" StartX="0.0" StartY="0.0" EndX="3.0" EndY="3.0"/>
-			</MountPoints>
-			<BuildProgressModels>
-				<Model BuildPercentUpperBound="0.33" File="Models\BurstCannon\LG_ARYX_BurstCannonTurretBase_BS1.mwm"/>
-				<Model BuildPercentUpperBound="0.66" File="Models\BurstCannon\LG_ARYX_BurstCannonTurretBase_BS2.mwm"/>
-				<Model BuildPercentUpperBound="1.0" File="Models\BurstCannon\LG_ARYX_BurstCannonTurretBase_BS3.mwm"/>
-			</BuildProgressModels>
-			<BlockPairName>AryxBurstCannon</BlockPairName>
-			<MirroringY>Z</MirroringY>
-			<MirroringZ>Y</MirroringZ>
-			<BuildTimeSeconds>60</BuildTimeSeconds>
-			<EdgeType>Light</EdgeType>
-			<WeaponDefinitionId Subtype="AryxBurstCannonWepDef"/>
-			<OverlayTexture>Textures\GUI\Screens\turret_overlay.dds</OverlayTexture>
-			<ResourceSinkGroup>Defense</ResourceSinkGroup>
-			<InventoryMaxVolume>1.14</InventoryMaxVolume>
-			<DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
-			<DamagedSound>ParticleWeapExpl</DamagedSound>
-			<DestroyEffect>BlockDestroyedExplosion_Small</DestroyEffect>
-			<DestroySound>WepSmallWarheadExpl</DestroySound>
-			<PCU>800</PCU>
 		</Definition> -->
 		<Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
 			<Id>
@@ -334,7 +229,60 @@
 				<Model BuildPercentUpperBound="0.66" File="Models\Coilguns\MXA_Sentry_BS2.mwm"/>
 				<Model BuildPercentUpperBound="1.0" File="Models\Coilguns\MXA_Sentry_BS3.mwm"/>
 			</BuildProgressModels>
-			<BlockPairName>MXA_CoilgunL</BlockPairName>
+			<BlockPairName>Ballistics_Cannon</BlockPairName>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_WeaponBlockDefinition">
+			<Id>
+				<TypeId>SmallMissileLauncher</TypeId>
+				<SubtypeId>OKI230mmBCfixed</SubtypeId>
+			</Id>
+			<DisplayName>OKI 155mm Fixed Battlecannon</DisplayName>
+			<Description>Large caliber anti-capital ship cannon in fixed mount. Best used for large grid assault ships. Great range and damage against light and heavy armor.</Description>
+			<Icon>Textures\GUI\Icons\Cubes\OKI230mmBC_Fixed.dds</Icon>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="1" z="5"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\Large\Battlecannon.mwm</Model>
+			<Components>
+				<Component Subtype="SteelPlate" Count="60" />
+				<Component Subtype="Construction" Count="20" />
+				<Component Subtype="MetalGrid" Count="8" />
+				<Component Subtype="SmallTube" Count="12" />
+				<Component Subtype="LargeTube" Count="40" />
+				<Component Subtype="Motor" Count="18" />
+				<Component Subtype="Computer" Count="10" />
+				<Component Subtype="Construction" Count="20" />
+				<Component Subtype="SteelPlate" Count="60" />
+			</Components>
+			<CriticalComponent Subtype="Computer" Index="0" />
+			<MountPoints>
+				<MountPoint Side="Back" StartX="0.0" StartY="0.0" EndX="1.0" EndY="1.0"/>
+				<MountPoint Side="Left" StartX="3.0" StartY="0.0" EndX="5.0" EndY="1.0"/>
+				<MountPoint Side="Right" StartX="0.0" StartY="0.0" EndX="2.0" EndY="1.0"/>
+				<MountPoint Side="Top" StartX="0.0" StartY="0.0" EndX="1.0" EndY="2.0"/>
+				<MountPoint Side="Bottom" StartX="0.0" StartY="3.0" EndX="1.0" EndY="4.0"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\Battlecannon_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.66" File="Models\Cubes\Large\Battlecannon_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.0" File="Models\Cubes\Large\Battlecannon_BS3.mwm"/>
+			</BuildProgressModels>
+			<StandbyPowerConsumption>0.001</StandbyPowerConsumption>
+			<OperationalPowerConsumption>0.2</OperationalPowerConsumption>
+			<BlockPairName>OKI122mmSGfixed</BlockPairName>
+			<Center x="0" y="0" z="4" />
+			<MirroringY>Z</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+			<BuildTimeSeconds>30</BuildTimeSeconds>
+			<EdgeType>Heavy</EdgeType>
+			<WeaponDefinitionId Subtype="OKI230mmFixedCannon" />
+			<InventoryMaxVolume>0.960</InventoryMaxVolume>
+			<InventoryFillFactorMin>0.1</InventoryFillFactorMin>
+			<ResourceSinkGroup>Defense</ResourceSinkGroup>
+			<DamageEffectId>213</DamageEffectId>
+			<DeformationRatio>0.2</DeformationRatio>
+			<PCU>600</PCU>
 		</Definition>
 	</CubeBlocks>
 </Definitions>

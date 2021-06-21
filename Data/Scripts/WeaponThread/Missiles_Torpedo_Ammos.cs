@@ -570,7 +570,7 @@ namespace WeaponThread
                     },
                     Hit = new ParticleDef
                     {
-                        Name = "AryxAWETorpedoBlast",
+                        Name = "MD_TorpedoSlowBlast",
                         ApplyToShield = true,
                         ShrinkByDistance = false,
                         Color = Color(red: 1, green: 1, blue: 1, alpha: 1),

@@ -36,11 +36,11 @@ namespace WeaponThread {
             {
                 Threats = new[]
                 {
-                    Grids, Characters, Projectiles, Meteors, // threats percieved automatically without changing menu settings
+                    Grids, Characters, Projectiles, // threats percieved automatically without changing menu settings
                 },
                 SubSystems = new[]
                 {
-                    Offense, Thrust, Utility, Power, Production, Any, // subsystems the gun targets
+                    Offense, Thrust, Utility, Power, Production, Jumping, Steering, Any, // subsystems the gun targets
                 },
                 ClosestFirst = true, // tries to pick closest targets first (blocks on grids, projectiles, etc...).
                 IgnoreDumbProjectiles = false, // Don't fire at non-smart projectiles.
@@ -49,8 +49,8 @@ namespace WeaponThread {
                 MaximumDiameter = 0, // 0 = unlimited, Maximum radius of threat to engage.
                 MaxTargetDistance = 2000, // 0 = unlimited, Maximum target distance that targets will be automatically shot at.
                 MinTargetDistance = 0, // 0 = unlimited, Min target distance that targets will be automatically shot at.
-                TopTargets = 0, // 0 = unlimited, max number of top targets to randomize between.
-                TopBlocks = 0, // 0 = unlimited, max number of blocks to randomize between
+                TopTargets = 8, // 0 = unlimited, max number of top targets to randomize between.
+                TopBlocks = 8, // 0 = unlimited, max number of blocks to randomize between
                 StopTrackingSpeed = 0, // do not track target threats traveling faster than this speed
             },
             HardPoint = new HardPointDef
@@ -58,7 +58,7 @@ namespace WeaponThread {
                 WeaponName = "LargeGatlingTurret", // name of weapon in terminal
                 DeviateShotAngle = 0.5f,
                 AimingTolerance = 4f, // 0 - 180 firing angle
-                AimLeadingPrediction = Accurate, // Off, Basic, Accurate, Advanced
+                AimLeadingPrediction = Advanced, // Off, Basic, Accurate, Advanced
                 DelayCeaseFire = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 AddToleranceToTracking = false,
                 CanShootSubmerged = false,
@@ -84,7 +84,7 @@ namespace WeaponThread {
                 {
 
                     RotateRate = 0.02f,
-                    ElevateRate = 0.01f,
+                    ElevateRate = 0.015f,
                     MinAzimuth = -180,
                     MaxAzimuth = 180,
                     MinElevation = -10,
@@ -120,8 +120,8 @@ namespace WeaponThread {
                     DegradeRof = false, // progressively lower rate of fire after 80% heat threshold (80% of max heat)
                     ShotsInBurst = 28,
                     DelayAfterBurst = 120, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-                    FireFullBurst = true,
-                    GiveUpAfterBurst = false,
+                    FireFullBurst = false,
+                    GiveUpAfterBurst = true,
                     DeterministicSpin = false, // Spin barrel position will always be relative to initial / starting positions (spin will not be as smooth).
 				},
                 Audio = new HardPointAudioDef

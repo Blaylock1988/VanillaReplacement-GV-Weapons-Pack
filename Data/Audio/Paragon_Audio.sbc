@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Sounds>
+		<Sound>
+			 <Id>
+				<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+				<SubtypeId>FlareShot</SubtypeId>
+			 </Id>
+		 <Category>SHOT</Category>
+		 <MaxDistance>150</MaxDistance>
+		 <PitchVariation>10</PitchVariation>
+		 <DynamicMusicCategory>HeavyFight</DynamicMusicCategory>
+		 <DynamicMusicAmount>35</DynamicMusicAmount>
+		 <Volume>0.3</Volume>
+		 <DistantSounds>
+			<DistantSound DistanceCrossfade="75" Distance="150" Sound="FlareShotDistant" />
+		 </DistantSounds>
+		 <Loopable>false</Loopable>
+		 <Waves>
+			<Wave Type="D3">
+				<Start>Audio\flareshot.wav</Start>
+			</Wave>
+			</Waves>
+		</Sound>
+		
+		<Sound>
+		  <Id>
+			<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+			<SubtypeId>FlareShotDistant</SubtypeId>
+		  </Id>
+		  <Category>SHOT</Category>
+		  <MaxDistance>500</MaxDistance>
+		  <Volume>0.4</Volume>
+		  <Waves>
+			<Wave Type="D3">
+			  <Start>Audio\flareshotdistant.wav</Start>
+			</Wave>
+		  </Waves>
+		</Sound>	
+		
+		<Sound>
+		  <Id>
+			<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+			<SubtypeId>FlareReload</SubtypeId>
+		  </Id>
+		  <Category>SHOT</Category>
+		  <MaxDistance>30</MaxDistance>
+		  <Volume>0.6</Volume>
+		  <Waves>
+			<Wave Type="D3">
+			  <Start>Audio\flarereload.wav</Start>
+			</Wave>
+		  </Waves>
+		</Sound>	
+		
+		<Sound>
+		  <Id>
+			<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+			<SubtypeId>ArcFlareLoop</SubtypeId>
+		  </Id>
+		  <Category>SHOT</Category>
+		  <MaxDistance>80</MaxDistance>
+		  <PitchVariation>5</PitchVariation>
+		  <Volume>0.6</Volume>
+		  <Loopable>true</Loopable>
+		  <Waves>
+			<Wave Type="D3">
+			  <Loop>Audio\WEP\flareloop.wav</Loop>
+			</Wave>
+		  </Waves>
+		</Sound>
+	</Sounds>
+</Definitions>

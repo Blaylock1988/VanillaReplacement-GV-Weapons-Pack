@@ -11,7 +11,7 @@
 			<Icon>Textures\GUI\Icons\Cubes\RocketLauncherReload.dds</Icon>
 			<Description>Description_RocketLauncherReload</Description>
 			<CubeSize>Small</CubeSize>
-			<GuiVisible>false</GuiVisible>
+			<GuiVisible>true</GuiVisible>
 			<BlockTopology>TriangleMesh</BlockTopology>
 			<Size x="1" y="3" z="3"/>
 			<ModelOffset x="0" y="0" z="0"/>
@@ -66,8 +66,8 @@
 			<Icon>Textures\GUI\Icons\MXA_ArcherPods.png</Icon>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
-			<Size x="3" y="2" z="1"/>
-			<ModelOffset x="0" y="0" z="0"/>
+			<Size x="3" y="2" z="2"/>
+			<ModelOffset x="0" y="0" z="1.25"/>
 			<Model>Models\Missiles\MXA_ArcherPods.mwm</Model>
 			<MirroringY>Z</MirroringY>
 			<MirroringZ>Y</MirroringZ>
@@ -97,10 +97,10 @@
 			<PCU>300</PCU>
 			<MountPoints>
 				<MountPoint Side="Back" StartX="0.0" StartY="0.0" EndX="3.0" EndY="2.0" PressurizedWhenOpen="true"/>
-				<MountPoint Side="Left" StartX="0.05" StartY="0.0" EndX="1" EndY="2.0" PressurizedWhenOpen="true"/>
-				<MountPoint Side="Right" StartX="0.0" StartY="0.0" EndX="0.95" EndY="2.0" PressurizedWhenOpen="true"/>
+				<MountPoint Side="Left" StartX="1" StartY="0.0" EndX="2" EndY="2.0" PressurizedWhenOpen="true"/>
+				<MountPoint Side="Right" StartX="0.0" StartY="0.0" EndX="1" EndY="2.0" PressurizedWhenOpen="true"/>
 				<MountPoint Side="Top" StartX="0.0" StartY="0.0" EndX="3.0" EndY="0.95" PressurizedWhenOpen="true"/>
-				<MountPoint Side="Bottom" StartX="0.0" StartY="0.05" EndX="3.0" EndY="1" PressurizedWhenOpen="true"/>
+				<MountPoint Side="Bottom" StartX="0.0" StartY="1" EndX="3.0" EndY="2" PressurizedWhenOpen="true"/>
 			</MountPoints>
 			<BuildProgressModels>
 				<Model BuildPercentUpperBound="0.33" File="Models\Missiles\MXA_ArcherPods_BS1.mwm"/>
@@ -109,118 +109,5 @@
 			</BuildProgressModels>
 			<BlockPairName>MXA_ArcherPods</BlockPairName>
 		</Definition>
-		<!--<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
-			<Id>
-				<TypeId>ConveyorSorter</TypeId>
-				<SubtypeId>MXA_M58ArcherPods</SubtypeId>
-			</Id>
-			<DisplayName>M58 Archer Missile Pods</DisplayName>
-			<Description>The Archer missile is a ship-to-ship missile used by the UNSC Navy.
-				This variant is the standard and carries 30 per pod.
-				Engagement Range: 5k
-				Ammo: M58 Archer Missiles</Description>
-			<Icon>Textures\GUI\Icons\MXA_M58ArcherPods.png</Icon>
-			<CubeSize>Large</CubeSize>
-			<BlockTopology>TriangleMesh</BlockTopology>
-			<Size x="2" y="1" z="1"/>
-			<ModelOffset x="0" y="0" z="0"/>
-			<Model>Models\Missiles\MXA_M58ArcherPods.mwm</Model>
-			<MirroringY>Z</MirroringY>
-			<MirroringZ>Y</MirroringZ>
-			<Components>
-				<Component Subtype="SteelPlate" Count="125"/>
-				<Component Subtype="Construction" Count="250"/>
-				<Component Subtype="MetalGrid" Count="15"/>
-				<Component Subtype="SmallTube" Count="150"/>
-				<Component Subtype="Motor" Count="150"/>
-				<Component Subtype="Computer" Count="75"/>
-				<Component Subtype="Superconductor" Count="30"/>
-				<Component Subtype="Construction" Count="75"/>
-				<Component Subtype="SteelPlate" Count="50"/>
-			</Components>
-			<CriticalComponent Subtype="Computer" Index="0"/>
-			<EdgeType>Light</EdgeType>
-			<WeaponDefinitionId Subtype="MXA_M58ArcherPods"/>
-			<InventoryMaxVolume>0.250</InventoryMaxVolume>
-			<DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
-			<DamagedSound>ParticleWeapExpl</DamagedSound>
-			<ResourceSinkGroup>Defense</ResourceSinkGroup>
-			<BuildTimeSeconds>60</BuildTimeSeconds>
-			<NavigationDefinition>Default</NavigationDefinition>
-			<DestroyEffect>BlockDestroyedExplosion</DestroyEffect>
-			<DestroySound>WepSmallWarheadExpl</DestroySound>
-			<PCU>250</PCU>
-			<MountPoints>
-				<MountPoint Side="Back" StartX="0.0" StartY="0.0" EndX="1.0" EndY="1.0" PressurizedWhenOpen="true"/>
-				<MountPoint Side="Back" StartX="1.0" StartY="0.0" EndX="2.0" EndY="1.0" PressurizedWhenOpen="true"/>
-				<MountPoint Side="Left" StartX="0.0" StartY="0.0" EndX="1.0" EndY="1.0" PressurizedWhenOpen="true"/>
-				<MountPoint Side="Right" StartX="0.0" StartY="0.0" EndX="1.0" EndY="1.0" Default="true" PressurizedWhenOpen="true"/>
-				<MountPoint Side="Top" StartX="0.0" StartY="0.0" EndX="1.0" EndY="1.0" PressurizedWhenOpen="true"/>
-				<MountPoint Side="Top" StartX="1.0" StartY="0.0" EndX="2.0" EndY="1.0" PressurizedWhenOpen="true"/>
-				<MountPoint Side="Bottom" StartX="0.0" StartY="0.0" EndX="1.0" EndY="1.0" PressurizedWhenOpen="true"/>
-				<MountPoint Side="Bottom" StartX="1.0" StartY="0.0" EndX="2.0" EndY="1.0" PressurizedWhenOpen="true"/>
-			</MountPoints>
-			<BuildProgressModels>
-				<Model BuildPercentUpperBound="0.33" File="Models\Missiles\MXA_M58ArcherPods_BS1.mwm"/>
-				<Model BuildPercentUpperBound="0.66" File="Models\Missiles\MXA_M58ArcherPods_BS2.mwm"/>
-				<Model BuildPercentUpperBound="1.0" File="Models\Missiles\MXA_M58ArcherPods_BS3.mwm"/>
-			</BuildProgressModels>
-			<BlockPairName>MXA_M58ArcherPods</BlockPairName>
-		</Definition>
-		<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
-			<Id>
-				<TypeId>ConveyorSorter</TypeId>
-				<SubtypeId>MXA_M58ArcherPods_S</SubtypeId>
-			</Id>
-			<DisplayName>M58 Archer Missile Pods</DisplayName>
-			<Description>The Archer missile is a ship-to-ship missile used by the UNSC Navy.
-				This variant is the standard and carries 30 per pod.
-				Engagement Range: 5k
-				Ammo: M58 Archer Missiles</Description>
-			<Icon>Textures\GUI\Icons\MXA_M58ArcherPods_S.png</Icon>
-			<CubeSize>Small</CubeSize>
-			<BlockTopology>TriangleMesh</BlockTopology>
-			<Size x="5" y="3" z="2"/>
-			<ModelOffset x="0" y="0" z="0"/>
-			<Model>Models\Missiles\MXA_M58ArcherPods_S.mwm</Model>
-			<MirroringY>Z</MirroringY>
-			<MirroringZ>Y</MirroringZ>
-			<Components>
-				<Component Subtype="SteelPlate" Count="100"/>
-				<Component Subtype="Construction" Count="200"/>
-				<Component Subtype="MetalGrid" Count="10"/>
-				<Component Subtype="SmallTube" Count="150"/>
-				<Component Subtype="Motor" Count="150"/>
-				<Component Subtype="Computer" Count="50"/>
-				<Component Subtype="Superconductor" Count="15"/>
-				<Component Subtype="Construction" Count="50"/>
-				<Component Subtype="SteelPlate" Count="25"/>
-			</Components>
-			<CriticalComponent Subtype="Computer" Index="0"/>
-			<EdgeType>Light</EdgeType>
-			<WeaponDefinitionId Subtype="MXA_M58ArcherPods_S"/>
-			<InventoryMaxVolume>0.250</InventoryMaxVolume>
-			<DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
-			<DamagedSound>ParticleWeapExpl</DamagedSound>
-			<ResourceSinkGroup>Defense</ResourceSinkGroup>
-			<BuildTimeSeconds>45</BuildTimeSeconds>
-			<NavigationDefinition>Default</NavigationDefinition>
-			<DestroyEffect>BlockDestroyedExplosion</DestroyEffect>
-			<DestroySound>WepSmallWarheadExpl</DestroySound>
-			<PCU>225</PCU>
-			<MountPoints>
-				<MountPoint Side="Back" StartX="0.0" StartY="0.0" EndX="5.0" EndY="3.0" Default="true" PressurizedWhenOpen="true"/>
-				<MountPoint Side="Left" StartX="0.0" StartY="0.0" EndX="2.0" EndY="3.0" PressurizedWhenOpen="true"/>
-				<MountPoint Side="Right" StartX="0.0" StartY="0.0" EndX="2.0" EndY="3.0" PressurizedWhenOpen="true"/>
-				<MountPoint Side="Top" StartX="0.0" StartY="0.0" EndX="5.0" EndY="2.0" PressurizedWhenOpen="true"/>
-				<MountPoint Side="Bottom" StartX="0.0" StartY="0.0" EndX="5.0" EndY="2.0" PressurizedWhenOpen="true"/>
-			</MountPoints>
-			<BuildProgressModels>
-				<Model BuildPercentUpperBound="0.33" File="Models\Missiles\MXA_M58ArcherPods_S_BS1.mwm"/>
-				<Model BuildPercentUpperBound="0.66" File="Models\Missiles\MXA_M58ArcherPods_S_BS2.mwm"/>
-				<Model BuildPercentUpperBound="1.0" File="Models\Missiles\MXA_M58ArcherPods_S_BS3.mwm"/>
-			</BuildProgressModels>
-			<BlockPairName>MXA_M58ArcherPods</BlockPairName>
-		</Definition> -->
 	</CubeBlocks>
 </Definitions>

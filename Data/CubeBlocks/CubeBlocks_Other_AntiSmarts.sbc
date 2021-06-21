@@ -1,0 +1,82 @@
+﻿<?xml version="1.0"?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<CubeBlocks>
+		<!-- <Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
+			<Id>
+				<TypeId>LargeMissileTurret</TypeId>
+				<SubtypeId>Lotus</SubtypeId>
+			</Id>
+			<DisplayName>Lotus Net Active Mine Layer</DisplayName>
+			<Description>Propels small anti-projectile mines around an area in order to protect against missile attacks.
+				Range: 1.2k
+			</Description>
+			<Icon>Textures\GUI\Icons\LotusBase.png</Icon>
+			<CubeSize>Small</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="5" y="3" z="3"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Akiad\Small\LotusBase.mwm</Model>
+			<Components>
+				<Component Count="2" Subtype="SteelPlate"/>
+				<Component Count="4" Subtype="Construction"/>
+				<Component Count="1" Subtype="SmallTube"/>
+				<Component Count="1" Subtype="Motor"/>
+				<Component Count="15" Subtype="Computer"/>
+				<Component Count="2" Subtype="SteelPlate"/>
+			</Components>
+			<CriticalComponent Subtype="Construction" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="3.0" StartY="0.0" EndX="4.0" EndY="3.0"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\Akiad\Small\LotusBase_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.66" File="Models\Akiad\Small\LotusBase_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.0" File="Models\Akiad\Small\LotusBase_BS3.mwm"/>
+			</BuildProgressModels>
+			<VoxelPlacement>
+				<StaticMode>
+					<PlacementMode>OutsideVoxel</PlacementMode>
+					<MaxAllowed>0.2</MaxAllowed>
+					<MinAllowed>0</MinAllowed>
+				</StaticMode>
+				<DynamicMode>
+					<PlacementMode>OutsideVoxel</PlacementMode>
+					<MaxAllowed>0.2</MaxAllowed>
+					<MinAllowed>0.01</MinAllowed>
+				</DynamicMode>
+			</VoxelPlacement>
+			<BlockPairName>Lotus</BlockPairName>
+			<MirroringY>Z</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+			<EdgeType>Light</EdgeType>
+			<BuildTimeSeconds>25</BuildTimeSeconds>
+			<OverlayTexture>Textures\GUI\Screens\turret_overlay.dds</OverlayTexture>
+			<WeaponDefinitionId Subtype="Lotus"/>
+			<InventoryMaxVolume>0.12</InventoryMaxVolume>
+			<DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
+			<DamagedSound>ParticleWeapExpl</DamagedSound>
+			<ResourceSinkGroup>Defense</ResourceSinkGroup>
+			<MinElevationDegrees>-8</MinElevationDegrees>
+			<MaxElevationDegrees>180</MaxElevationDegrees>
+			<MinAzimuthDegrees>-180</MinAzimuthDegrees>
+			<MaxAzimuthDegrees>180</MaxAzimuthDegrees>
+			<IdleRotation>true</IdleRotation>
+			<MaxRangeMeters>600</MaxRangeMeters>
+			<RotationSpeed>0.002</RotationSpeed>
+			<ElevationSpeed>0.002 </ElevationSpeed>
+			<EmissiveColorPreset>Default</EmissiveColorPreset>
+			<MinFov>0.1</MinFov>
+			<MaxFov>1.04719755</MaxFov>
+			<DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<PCU>100</PCU>
+			<AmmoPullAmountPerTick>3</AmmoPullAmountPerTick>
+			<InventoryFillFactorMin>.25</InventoryFillFactorMin>
+			<InventoryFillFactorMax>.5</InventoryFillFactorMax>
+			<TieredUpdateTimes>
+				<unsignedInt>10</unsignedInt>
+				<unsignedInt>0</unsignedInt>
+			</TieredUpdateTimes>
+		</Definition> -->
+	</CubeBlocks>
+</Definitions>

@@ -7,10 +7,10 @@
 				<SubtypeId/>
 			</Id>
 			<DisplayName>DisplayName_Block_MissileTurret</DisplayName>
-			<Icon>Textures\GUI\Icons\Cubes\missile_turret.dds</Icon>
+			<Icon>Textures\GUI\Icons\Cubes\LGMissileBase.dds</Icon>
 			<Description>Description_MissileTurret</Description>
 			<CubeSize>Large</CubeSize>
-			<GuiVisible>false</GuiVisible>
+			<GuiVisible>true</GuiVisible>
 			<PlaceDecals>false</PlaceDecals>
 			<BlockTopology>TriangleMesh</BlockTopology>
 			<Size x="3" y="3" z="3"/>
@@ -64,7 +64,7 @@
 			<MaxElevationDegrees>90</MaxElevationDegrees>
 			<MinAzimuthDegrees>-180</MinAzimuthDegrees>
 			<MaxAzimuthDegrees>180</MaxAzimuthDegrees>
-			<IdleRotation>true</IdleRotation>
+			<IdleRotation>false</IdleRotation>
 			<MaxRangeMeters>1000</MaxRangeMeters>
 			<RotationSpeed>0.002</RotationSpeed>
 			<ElevationSpeed>0.002 </ElevationSpeed>

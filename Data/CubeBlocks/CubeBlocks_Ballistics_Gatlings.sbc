@@ -7,7 +7,7 @@
 				<SubtypeId/>
 			</Id>
 			<DisplayName>DisplayName_Block_GatlingTurret</DisplayName>
-			<Icon>Textures\GUI\Icons\Cubes\gatling_turret.dds</Icon>
+			<Icon>Textures\GUI\Icons\Cubes\OKI14mmCIWS_Turret.dds</Icon>
 			<Description>Description_GatlingTurret</Description>
 			<CubeSize>Large</CubeSize>
 			<PlaceDecals>false</PlaceDecals>
@@ -217,7 +217,7 @@
 			<PCU>80</PCU>
 			<InventoryFillFactorMin>.6</InventoryFillFactorMin>
 		</Definition>
-		<Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
+		<!--<Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
 			<Id>
 				<TypeId>LargeGatlingTurret</TypeId>
 				<SubtypeId>SmallGatlingTurretAutoGatling</SubtypeId>
@@ -252,7 +252,6 @@
 				<Model BuildPercentUpperBound="1.00" File="Models\GatlingTurretAutoGatling\GatlingTurretAutoGatling_SmallConstruction_2.mwm"/>
 			</BuildProgressModels>
 			<VoxelPlacement>
-				<!--Possible settings Both,InVoxel,OutsideVoxel,Volumetric. If volumetric set than MaxAllowed and MinAllowed will be used.-->
 				<StaticMode>
 					<PlacementMode>OutsideVoxel</PlacementMode>
 					<MaxAllowed>0.2</MaxAllowed>
@@ -290,6 +289,6 @@
 			<EmissiveColorPreset>Default</EmissiveColorPreset>
 			<DestroyEffect>BlockDestroyedExplosion_Small</DestroyEffect>
 			<DestroySound>WepSmallWarheadExpl</DestroySound>
-		</Definition>
+		</Definition>-->
 	</CubeBlocks>
 </Definitions>

@@ -21,7 +21,7 @@ namespace WeaponThread
     {
         private AmmoDef BallisticCannonAP => new AmmoDef
         {
-            AmmoMagazine = "70mmBurstMag",
+            AmmoMagazine = "MXA_CoilgunL_Ammo",
             AmmoRound = "BallisticCannonAP",
             HybridRound = false, //AmmoMagazine based weapon with energy cost
             EnergyCost = 0f, //(((EnergyCost * DefaultDamage) * ShotsPerSecond) * BarrelsPerShot) * ShotsPerBarrel

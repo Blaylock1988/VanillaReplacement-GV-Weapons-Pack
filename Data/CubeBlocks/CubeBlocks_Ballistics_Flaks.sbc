@@ -32,7 +32,7 @@
 				<Model BuildPercentUpperBound="0.66" File="Models\Flak\LG_ARYX_FlakBase_BS2.mwm"/>
 				<Model BuildPercentUpperBound="1.0" File="Models\Flak\LG_ARYX_FlakBase_BS3.mwm"/>
 			</BuildProgressModels>
-			<BlockPairName>AryxFlakCannon</BlockPairName>
+			<BlockPairName>ARYXFlakTurret</BlockPairName>
 			<MirroringY>Z</MirroringY>
 			<MirroringZ>Y</MirroringZ>
 			<BuildTimeSeconds>35</BuildTimeSeconds>

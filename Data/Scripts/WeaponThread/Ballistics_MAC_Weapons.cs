@@ -66,7 +66,7 @@ namespace WeaponThread
                 Ui = new UiDef
                 {
                     RateOfFire = false,
-                    DamageModifier = true,
+                    DamageModifier = false,
                     ToggleGuidance = false,
                     EnableOverload = false,
                 },
@@ -86,7 +86,7 @@ namespace WeaponThread
                     MaxAzimuth = 0,
                     MinElevation = 0,
                     MaxElevation = 0,
-                    FixedOffset = false,
+                    FixedOffset = true,
                     InventorySize = 1.65f,
                     Offset = Vector(x: 0, y: 0, z: 0),
                     //Armor = IsWeapon, // IsWeapon, Passive, Active
@@ -109,7 +109,7 @@ namespace WeaponThread
                     TrajectilesPerBarrel = 1, // Number of Trajectiles per barrel per fire event.
                     SkipBarrels = 0,
                     ReloadTime = 2700, //5400// Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-                    DelayUntilFire = 126, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                    DelayUntilFire = 124, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     HeatPerShot = 0, //heat generated per shot
                     MaxHeat = 0, //max heat before weapon enters cooldown (70% of max heat)
                     Cooldown = 0f, //percent of max heat to be under to start firing again after overheat accepts .2-.95
