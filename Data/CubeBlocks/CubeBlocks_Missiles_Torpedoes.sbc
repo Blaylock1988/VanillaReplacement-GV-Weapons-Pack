@@ -8,7 +8,7 @@
 			</Id>
 			<DisplayName>Shiva Missile Pod</DisplayName>
 			<Description>The Shiva-class nuclear missile is the most commonly used starship and starfighter launched thermonuclear weapon used by the UNSC. The Shiva can be outfitted with various payloads and explosive yields.
-				Engagement Range: 10k
+				Engagement Range: 5k
 				Ammo: Shiva Missiles</Description>
 			<Icon>Textures\GUI\Icons\MXA_Shiva.png</Icon>
 			<CubeSize>Large</CubeSize>
@@ -19,16 +19,19 @@
 			<MirroringY>Z</MirroringY>
 			<MirroringZ>Y</MirroringZ>
 			<Components>
-				<Component Subtype="SteelPlate" Count="100"/>
-				<Component Subtype="Construction" Count="200"/>
-				<Component Subtype="MetalGrid" Count="10"/>
-				<Component Subtype="LargeTube" Count="1"/>
-				<Component Subtype="Motor" Count="50"/>
-				<Component Subtype="Computer" Count="150"/>
-				<Component Subtype="Superconductor" Count="15"/>
-				<Component Subtype="Construction" Count="50"/>
-				<Component Subtype="SteelPlate" Count="25"/>
-			</Components>
+                <Component Subtype="SteelPlate" Count="100" />
+                <Component Subtype="Construction" Count="200" />
+                <Component Subtype="MetalGrid" Count="10" />
+                <Component Subtype="LargeTube" Count="1" />
+                <Component Subtype="Motor" Count="50" />
+                <Component Subtype="Computer" Count="150" />
+                <Component Subtype="Superconductor" Count="14" />
+                <Component Subtype="Construction" Count="50" />
+                <Component Subtype="SteelPlate" Count="25" />
+            </Components>
+
+            <BuildTimeSeconds>45</BuildTimeSeconds>
+            <PCU>6260</PCU>
 			<CriticalComponent Subtype="Computer" Index="0"/>
 			<EdgeType>Light</EdgeType>
 			<WeaponDefinitionId Subtype="MXA_Shiva"/>
@@ -36,11 +39,9 @@
 			<DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
 			<DamagedSound>ParticleWeapExpl</DamagedSound>
 			<ResourceSinkGroup>Defense</ResourceSinkGroup>
-			<BuildTimeSeconds>60</BuildTimeSeconds>
 			<NavigationDefinition>Default</NavigationDefinition>
 			<DestroyEffect>BlockDestroyedExplosion</DestroyEffect>
 			<DestroySound>WepSmallWarheadExpl</DestroySound>
-			<PCU>500</PCU>
 			<MountPoints>
 				<MountPoint Side="Back" StartX="0.0" StartY="0.0" EndX="1.0" EndY="1.0" PressurizedWhenOpen="true"/>
 				<MountPoint Side="Left" StartX="0.93" StartY="0.0" EndX="3" EndY="1.0" PressurizedWhenOpen="true"/>

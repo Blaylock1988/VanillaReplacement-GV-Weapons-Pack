@@ -18,14 +18,19 @@
 			<Model>Models\Cubes\Large\InteriorTurret.mwm</Model>
 			<UseModelIntersection>true</UseModelIntersection>
 			<Components>
-				<Component Subtype="InteriorPlate" Count="6"/>
-				<Component Subtype="Construction" Count="15"/>
-				<Component Subtype="SmallTube" Count="1"/>
-				<Component Subtype="Motor" Count="2"/>
-				<Component Subtype="Computer" Count="5"/>
-				<Component Subtype="Construction" Count="5"/>
-				<Component Subtype="SteelPlate" Count="4"/>
-			</Components>
+                <Component Subtype="InteriorPlate" Count="19" />
+                <Component Subtype="Construction" Count="47" />
+                <Component Subtype="SmallTube" Count="3" />
+                <Component Subtype="Motor" Count="6" />
+                <Component Subtype="Computer" Count="16" />
+                <Component Subtype="Construction" Count="16" />
+                <Component Subtype="SteelPlate" Count="13" />
+            </Components>
+
+
+
+            <BuildTimeSeconds>8</BuildTimeSeconds>
+            <PCU>1990</PCU>
 			<CriticalComponent Subtype="Computer" Index="0"/>
 			<MountPoints>
 				<MountPoint Side="Bottom" StartX="0.46" StartY="0.46" EndX="0.54" EndY="0.54"/>
@@ -52,7 +57,6 @@
 			<MirroringY>Z</MirroringY>
 			<MirroringZ>Y</MirroringZ>
 			<EdgeType>Light</EdgeType>
-			<BuildTimeSeconds>24</BuildTimeSeconds>
 			<OverlayTexture>Textures\GUI\Screens\turret_overlay.dds</OverlayTexture>
 			<WeaponDefinitionId Subtype="LargeInteriorTurret"/>
 			<InventoryMaxVolume>0.384</InventoryMaxVolume>
@@ -73,7 +77,6 @@
 			<DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
 			<DestroySound>WepSmallWarheadExpl</DestroySound>
 			<AiEnabled>false</AiEnabled>
-			<PCU>125</PCU>
 			<IsAirTight>false</IsAirTight>
 			<AmmoPullAmountPerTick>3</AmmoPullAmountPerTick>
 			<InventoryFillFactorMin>.25</InventoryFillFactorMin>

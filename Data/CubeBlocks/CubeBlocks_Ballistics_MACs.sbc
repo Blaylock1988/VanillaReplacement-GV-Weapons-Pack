@@ -1,4 +1,4 @@
-<?xml version="1.0" ?>
+<?xml version="1.0"?>
 <Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<CubeBlocks>
 		<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
@@ -8,11 +8,10 @@
 			</Id>
 			<DisplayName>Mark IX MAC</DisplayName>
 			<Description>Mark IX, Heavy Coil - 45J3D3 MAC
-			MACs serve as the primary armament of UNSC Navy warships and weapon platforms.
-			The Mark IX is a MAC version that uses heavy coils, a specialized upgrade from the Mark IV. It's enhanced with booster capacitors which allow it to be fired three times per charge
-			
-			Engagement Range: 45k
-			Ammo: 1000mm MAC Slugs
+				MACs serve as the primary armament of UNSC Navy warships and weapon platforms.
+				The Mark IX is a MAC version that uses heavy coils, a specialized upgrade from the Mark IV. It's enhanced with booster capacitors which allow it to be fired three times per charge
+				Engagement Range: 5km
+				Ammo: 1000mm MAC Slugs
 			</Description>
 			<Icon>Textures\GUI\Icons\MXA_MACL.png</Icon>
 			<CubeSize>Large</CubeSize>
@@ -22,32 +21,32 @@
 			<Model>Models\MXA_MACL.mwm</Model>
 			<UseModelIntersection>true</UseModelIntersection>
 			<MirroringY>Z</MirroringY>
-		    <MirroringZ>Y</MirroringZ>
+			<MirroringZ>Y</MirroringZ>
 			<Components>
-             <Component Subtype="SteelPlate" Count="1000" />
-             <Component Subtype="Construction" Count="250" />
-             <Component Subtype="MetalGrid" Count="150" />
-             <Component Subtype="LargeTube" Count="100" />
-             <Component Subtype="Motor" Count="75" />
-	         <Component Subtype="Superconductor" Count="300" />	
-			 <Component Subtype="PowerCell" Count="1600" />
-             <Component Subtype="Computer" Count="200" />
-             <Component Subtype="SteelPlate" Count="1250" />
-            </Components>
-            <CriticalComponent Subtype="Computer" Index="0" />
-            <EdgeType>Light</EdgeType>
-			<WeaponDefinitionId Subtype="MXA_MACL" />
+				<Component Subtype="SteelPlate" Count="102"/>
+				<Component Subtype="Construction" Count="26"/>
+				<Component Subtype="MetalGrid" Count="15"/>
+				<Component Subtype="LargeTube" Count="10"/>
+				<Component Subtype="Motor" Count="8"/>
+				<Component Subtype="Superconductor" Count="31"/>
+				<Component Subtype="PowerCell" Count="164"/>
+				<Component Subtype="Computer" Count="20"/>
+				<Component Subtype="SteelPlate" Count="128"/>
+			</Components>
+			<BuildTimeSeconds>67</BuildTimeSeconds>
+			<PCU>12280</PCU>
+			<CriticalComponent Subtype="Computer" Index="0"/>
+			<EdgeType>Light</EdgeType>
+			<WeaponDefinitionId Subtype="MXA_MACL"/>
 			<InventoryMaxVolume>8.0</InventoryMaxVolume>
-            <DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
-            <DamagedSound>ParticleWeapExpl</DamagedSound>
-            <ResourceSinkGroup>Defense</ResourceSinkGroup>
-			<BuildTimeSeconds>180</BuildTimeSeconds>
+			<DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
+			<DamagedSound>ParticleWeapExpl</DamagedSound>
+			<ResourceSinkGroup>Defense</ResourceSinkGroup>
 			<DisassembleRatio>1.25</DisassembleRatio>
 			<NavigationDefinition>Default</NavigationDefinition>
-            <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
-            <DestroySound>WepSmallWarheadExpl</DestroySound>
-            <PCU>2500</PCU>
-            <IsAirTight>true</IsAirTight> 
+			<DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<IsAirTight>true</IsAirTight>
 			<MountPoints>
 				<MountPoint Side="Back" StartX="0.0" StartY="0.0" EndX="1.0" EndY="2.0" PressurizedWhenOpen="true"/>
 				<MountPoint Side="Left" StartX="1.04" StartY="1.0" EndX="1.9" EndY="2.0" PressurizedWhenOpen="true"/>

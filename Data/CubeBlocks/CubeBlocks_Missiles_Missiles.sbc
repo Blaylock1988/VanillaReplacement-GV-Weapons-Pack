@@ -25,31 +25,32 @@
 				<MountPoint Side="Left" StartX="0" StartY="0" EndX="3" EndY="3"/>
 			</MountPoints>
 			<Components>
-				<Component Subtype="SmallTube" Count="50"/>
-				<Component Subtype="InteriorPlate" Count="40"/>
-				<Component Subtype="Construction" Count="24"/>
-				<Component Subtype="LargeTube" Count="8"/>
-				<Component Subtype="MetalGrid" Count="10"/>
-				<Component Subtype="Motor" Count="4"/>
-				<Component Subtype="Computer" Count="2"/>
-				<Component Subtype="SteelPlate" Count="8"/>
-				<Component Subtype="InteriorPlate" Count="10"/>
-			</Components>
+                <Component Subtype="SmallTube" Count="24" />
+                <Component Subtype="InteriorPlate" Count="19" />
+                <Component Subtype="Construction" Count="11" />
+                <Component Subtype="LargeTube" Count="4" />
+                <Component Subtype="MetalGrid" Count="5" />
+                <Component Subtype="Motor" Count="2" />
+                <Component Subtype="Computer" Count="1" />
+                <Component Subtype="SteelPlate" Count="4" />
+                <Component Subtype="InteriorPlate" Count="5" />
+            </Components>
+
+            <BuildTimeSeconds>4</BuildTimeSeconds>
+            <PCU>3210</PCU>
 			<CriticalComponent Subtype="Computer" Index="0"/>
 			<BuildProgressModels>
 				<Model BuildPercentUpperBound="0.50" File="Models\Cubes\small\RocketLauncherReloadConstruction_1.mwm"/>
 				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\small\RocketLauncherReloadConstruction_2.mwm"/>
 			</BuildProgressModels>
 			<Center x="0" y="0" z="1"/>
-			<BuildTimeSeconds>15</BuildTimeSeconds>
 			<InventoryMaxVolume>0.24</InventoryMaxVolume>
 			<ResourceSinkGroup>Defense</ResourceSinkGroup>
-			<WeaponDefinitionId Subtype="MXA_ArcherPods"/>
+			<WeaponDefinitionId Subtype="SmallRocketLauncherReload"/>
 			<DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
 			<DamagedSound>ParticleWeapExpl</DamagedSound>
 			<DestroyEffect>BlockDestroyedExplosion_Small</DestroyEffect>
 			<DestroySound>WepSmallWarheadExpl</DestroySound>
-			<PCU>425</PCU>
 			<MirroringZ>Y</MirroringZ>
 		</Definition>
 		<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
@@ -73,16 +74,19 @@
 			<MirroringZ>Y</MirroringZ>
 			<MirroringX>X</MirroringX>
 			<Components>
-				<Component Subtype="SteelPlate" Count="250"/>
-				<Component Subtype="Construction" Count="500"/>
-				<Component Subtype="MetalGrid" Count="30"/>
-				<Component Subtype="LargeTube" Count="150"/>
-				<Component Subtype="Motor" Count="150"/>
-				<Component Subtype="Computer" Count="150"/>
-				<Component Subtype="Superconductor" Count="60"/>
-				<Component Subtype="Construction" Count="150"/>
-				<Component Subtype="SteelPlate" Count="100"/>
-			</Components>
+                <Component Subtype="SteelPlate" Count="301" />
+                <Component Subtype="Construction" Count="602" />
+                <Component Subtype="MetalGrid" Count="36" />
+                <Component Subtype="LargeTube" Count="181" />
+                <Component Subtype="Motor" Count="181" />
+                <Component Subtype="Computer" Count="181" />
+                <Component Subtype="Superconductor" Count="72" />
+                <Component Subtype="Construction" Count="181" />
+                <Component Subtype="SteelPlate" Count="120" />
+            </Components>
+
+            <BuildTimeSeconds>171</BuildTimeSeconds>
+            <PCU>6080</PCU>
 			<CriticalComponent Subtype="Computer" Index="0"/>
 			<EdgeType>Light</EdgeType>
 			<WeaponDefinitionId Subtype="MXA_ArcherPods"/>
@@ -90,11 +94,9 @@
 			<DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
 			<DamagedSound>ParticleWeapExpl</DamagedSound>
 			<ResourceSinkGroup>Defense</ResourceSinkGroup>
-			<BuildTimeSeconds>60</BuildTimeSeconds>
 			<NavigationDefinition>Default</NavigationDefinition>
 			<DestroyEffect>BlockDestroyedExplosion</DestroyEffect>
 			<DestroySound>WepSmallWarheadExpl</DestroySound>
-			<PCU>300</PCU>
 			<MountPoints>
 				<MountPoint Side="Back" StartX="0.0" StartY="0.0" EndX="3.0" EndY="2.0" PressurizedWhenOpen="true"/>
 				<MountPoint Side="Left" StartX="1" StartY="0.0" EndX="2" EndY="2.0" PressurizedWhenOpen="true"/>
