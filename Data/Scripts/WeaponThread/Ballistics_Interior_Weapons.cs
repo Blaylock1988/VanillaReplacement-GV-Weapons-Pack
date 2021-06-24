@@ -96,17 +96,8 @@ namespace WeaponThread
                     InventorySize = 0.08f,
                     Offset = Vector(x: 0, y: 0, z: 0),
                 },
-                Other = new OtherDef
-                {
-                    GridWeaponCap = 0,
-                    RotateBarrelAxis = 0,
-                    EnergyPriority = 0,
-                    MuzzleCheck = false,
-                    Debug = false,
-                    RestrictionRadius = 0, // Meters, radius of sphere disable this gun if another is present
-                    CheckInflatedBox = false, // if true, the bounding box of the gun is expanded by the RestrictionRadius
-                    CheckForAnyWeapon = false, // if true, the check will fail if ANY gun i
-                },
+                Other = Ballistics_Cannons_Hardpoint_Other_Large,
+				
                 Loading = new LoadingDef
                 {
                     RateOfFire = 600,

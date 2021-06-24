@@ -56,7 +56,7 @@ namespace WeaponThread {
                 LockedSmartOnly = false, // Only fire at smart projectiles that are locked on to parent grid.
                 MinimumDiameter = 0, // 0 = unlimited, Minimum radius of threat to engage.
                 MaximumDiameter = 0, // 0 = unlimited, Maximum radius of threat to engage.
-                MaxTargetDistance = 1250, // 0 = unlimited, Maximum target distance that targets will be automatically shot at.
+                MaxTargetDistance = 1000, // 0 = unlimited, Maximum target distance that targets will be automatically shot at.
                 MinTargetDistance = 10, // 0 = unlimited, Min target distance that targets will be automatically shot at.
                 TopTargets = 8, // 0 = unlimited, max number of top targets to randomize between.
                 TopBlocks = 0, // 0 = unlimited, max number of blocks to randomize between
@@ -72,21 +72,16 @@ namespace WeaponThread {
                 AddToleranceToTracking = false,
                 CanShootSubmerged = false,
 				
-                Ui = new UiDef
-                {
-                    RateOfFire = false,
-                    DamageModifier = false,
-                    ToggleGuidance = false,
-                    EnableOverload =  false,
-                },
+                Ui = Ballistics_Cannons_Hardpoint_Ui,
+				
                 Ai = new AiDef 
 				{
-                    TrackTargets = true,
-                    TurretAttached = true,
-                    TurretController = true,
-                    PrimaryTracking = false,
-                    LockOnFocus = false,
-                    SuppressFire = false,
+                    TrackTargets = true, //This Weapon will know there are targets in range
+                    TurretAttached = true, // This weapon is on a turret and moves
+                    TurretController = false, //The turret in this WeaponDefinition has control over where other turrets aim.
+                    PrimaryTracking = false, //The turret in this WeaponDefinition selects targets for other turrets that do not have tracking capabilities.
+                    LockOnFocus = false, // fires this weapon when something is locked using the WC hud reticle
+                    SuppressFire = false, //prevent automatic firing
                     OverrideLeads = false, // Override default behavior for target leads
                 },
                 HardWare = new HardwareDef
@@ -102,16 +97,9 @@ namespace WeaponThread {
                     Offset = Vector(x: 0, y: 0, z: 0),
                     Armor = IsWeapon, // IsWeapon, Passive, Active
                 },
-                Other = new OtherDef {
-                    GridWeaponCap = 0,
-                    RotateBarrelAxis = 0,
-                    EnergyPriority = 0,
-                    MuzzleCheck = false,
-                    Debug = false,
-                    RestrictionRadius = 7.5, // Meters, radius of sphere disable this gun if another is present
-                    CheckInflatedBox = false, // if true, the bounding box of the gun is expanded by the RestrictionRadius
-                    CheckForAnyWeapon = false, // if true, the check will fail if ANY gun is present, false only looks for this subtype
-				},
+				
+                Other = Ballistics_Cannons_Hardpoint_Other_Large,
+				
                 Loading = new LoadingDef
                 {
                     RateOfFire = 3600,
@@ -123,7 +111,7 @@ namespace WeaponThread {
                     DelayUntilFire = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     HeatPerShot = 2, //heat generated per shot
                     MaxHeat = 240, //max heat before weapon enters cooldown (70% of max heat)
-                    Cooldown = 0.99f, //percent of max heat to be under to start firing again after overheat accepts .2-.95
+                    Cooldown = 0.8f, //percent of max heat to be under to start firing again after overheat accepts .2-.95
                     HeatSinkRate = 5, //amount of heat lost per second
                     DegradeRof = true, // progressively lower rate of fire after 80% heat threshold (80% of max heat)
                     ShotsInBurst = 0,

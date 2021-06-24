@@ -8,7 +8,7 @@
 			</Id>
 			<Version>0</Version>
 			<ParticleId>120257</ParticleId>
-			<Length>5</Length>
+			<Length>1</Length>
 			<DurationMin>0.2</DurationMin>
 			<DurationMax>0.2</DurationMax>
 			<DistanceMax>5000</DistanceMax>

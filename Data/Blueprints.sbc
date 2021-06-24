@@ -54,16 +54,16 @@
 		<Blueprint>
 			<Id>
 				<TypeId>BlueprintDefinition</TypeId>
-				<SubtypeId>MXA_Coil155Ammo</SubtypeId>
+				<SubtypeId>MXA_CoilgunL_Ammo</SubtypeId>
 			</Id>
 			<DisplayName>155mm Coilgun AP-Round</DisplayName>
-			<Icon>Textures\GUI\Icons\MXA_Coil155Ammo.png</Icon>
+			<Icon>Textures\GUI\Icons\MXA_AmmoBoxL.png</Icon>
 			<Prerequisites>
 				<Item Amount="180" TypeId="Ingot" SubtypeId="Iron"/>
 				<Item Amount="30" TypeId="Ingot" SubtypeId="Nickel"/>
 				<Item Amount="15" TypeId="Ingot" SubtypeId="Cobalt"/>
 			</Prerequisites>
-			<Result Amount="1" TypeId="AmmoMagazine" SubtypeId="MXA_Coil305Ammo"/>
+			<Result Amount="1" TypeId="AmmoMagazine" SubtypeId="MXA_CoilgunL_Ammo"/>
 			<BaseProductionTimeInSeconds>15</BaseProductionTimeInSeconds>
 		</Blueprint>
 		<Blueprint>
@@ -103,7 +103,7 @@
 		<Blueprint>
 			<Id>
 				<TypeId>BlueprintDefinition</TypeId>
-				<SubtypeId>MXA_M58ArcherPods_Ammo</SubtypeId>
+				<SubtypeId>MXA_ArcherPods_Ammo</SubtypeId>
 			</Id>
 			<DisplayName>M58 Archer Missile x 150</DisplayName>
 			<Icon>Textures\GUI\Icons\MXA_Archer_Missile_Ammo.png</Icon>
@@ -114,7 +114,7 @@
 				<Item Amount="125" TypeId="Ingot" SubtypeId="Cobalt"/>
 				<Item Amount="375" TypeId="Ingot" SubtypeId="Magnesium"/>
 			</Prerequisites>
-			<Result Amount="1" TypeId="AmmoMagazine" SubtypeId="MXA_M58ArcherPods_Ammo"/>
+			<Result Amount="1" TypeId="AmmoMagazine" SubtypeId="MXA_ArcherPods_Ammo"/>
 			<BaseProductionTimeInSeconds>90.0</BaseProductionTimeInSeconds>
 		</Blueprint>
 		<Blueprint>
@@ -135,7 +135,7 @@
 			<Result Amount="1" TypeId="AmmoMagazine" SubtypeId="MXA_Shiva_Ammo"/>
 			<BaseProductionTimeInSeconds>240.0</BaseProductionTimeInSeconds>
 		</Blueprint>
-		<Blueprint>
+		<!--<Blueprint>
 			<Id>
 				<TypeId>BlueprintDefinition</TypeId>
 				<SubtypeId>PGI_SmallFlareBox_Blueprint</SubtypeId>
@@ -164,6 +164,6 @@
 			</Prerequisites>
 			<Result Amount="1" TypeId="AmmoMagazine" SubtypeId="PGI_LargeFlareBox"/>
 			<BaseProductionTimeInSeconds>2</BaseProductionTimeInSeconds>
-		</Blueprint>
+		</Blueprint>-->
 	</Blueprints>
 </Definitions>

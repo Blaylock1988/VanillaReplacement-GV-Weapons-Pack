@@ -89,17 +89,9 @@ namespace WeaponThread
                     Offset = Vector(x: 0, y: 0, z: 0),
                     Armor = IsWeapon, // IsWeapon, Passive, Active
                 },
-                Other = new OtherDef
-                {
-                    GridWeaponCap = 0,
-                    RotateBarrelAxis = 0,
-                    EnergyPriority = 0,
-                    MuzzleCheck = false,
-                    Debug = false,
-					RestrictionRadius = 3,
-					CheckInflatedBox = false,
-					CheckForAnyWeapon = true,
-                },
+				
+                Other = Ballistics_Cannons_Hardpoint_Other_Large,
+				
                 Loading = new LoadingDef
                 {
                     RateOfFire = 120,

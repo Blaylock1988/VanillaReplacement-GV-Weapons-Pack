@@ -8,9 +8,11 @@
 			</Id>
 			<Version>0</Version>
 			<ParticleId>1188845</ParticleId>
-			<Length>5</Length>
-			<DurationMin>0.2</DurationMin>
-			<DurationMax>0.2</DurationMax>
+			<Length>1</Length>
+			<Preload>0</Preload>
+			<LowRes>false</LowRes>
+			<DurationMin>1</DurationMin>
+			<DurationMax>1</DurationMax>
 			<DistanceMax>2000</DistanceMax>
 			<Loop>false</Loop>
 			<ParticleGenerations>
@@ -1085,7 +1087,7 @@
 										<Keys>
 											<Key>
 												<Time>0</Time>
-												<ValueFloat>10</ValueFloat>
+												<ValueFloat>5</ValueFloat>
 												<Value2D/>
 											</Key>
 											<Key>

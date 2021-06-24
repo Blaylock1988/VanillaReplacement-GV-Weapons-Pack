@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using VRageMath;
+using System.Collections.Generic;
 using static WeaponThread.WeaponStructure;
 using static WeaponThread.WeaponStructure.WeaponDefinition;
 using static WeaponThread.WeaponStructure.WeaponDefinition.HardPointDef;
@@ -9,9 +10,100 @@ using static WeaponThread.WeaponStructure.WeaponDefinition.TargetingDef.BlockTyp
 using static WeaponThread.WeaponStructure.WeaponDefinition.TargetingDef.Threat;
 
 namespace WeaponThread
-{   // Don't edit above this line
+{
     partial class Weapons
     {
+
+		//Common definitions
+		
+		private TargetingDef Missiles_Rocket_Targeting => new TargetingDef {
+			Threats = new[] {
+				Grids,
+			},
+			SubSystems = new[] {
+				Any,
+			},
+			ClosestFirst = true, // tries to pick closest targets first (blocks on grids, projectiles, etc...).
+			IgnoreDumbProjectiles = true, // Don't fire at non-smart projectiles.
+			LockedSmartOnly = false, // Only fire at smart projectiles that are locked on to parent grid.
+			MinimumDiameter = 3, // 0 = unlimited, Minimum radius of threat to engage.
+			MaximumDiameter = 0, // 0 = unlimited, Maximum radius of threat to engage.
+			MaxTargetDistance = 1000, // 0 = unlimited, Maximum target distance that targets will be automatically shot at.
+			MinTargetDistance = 0, // 0 = unlimited, Min target distance that targets will be automatically shot at.
+			TopTargets = 4, // 0 = unlimited, max number of top targets to randomize between.
+			TopBlocks = 4, // 0 = unlimited, max number of blocks to randomize between
+			StopTrackingSpeed = 0, // do not track target threats traveling faster than this speed
+		};
+
+		private UiDef Missiles_Rocket_Hardpoint_Ui = new UiDef {
+			RateOfFire = false,
+			DamageModifier = false,
+			ToggleGuidance = false,
+			EnableOverload =  false,
+		};
+
+		private AiDef Missiles_Rocket_Hardpoint_Ai_Turret = new AiDef 
+		{
+			TrackTargets = true,
+			TurretAttached = true,
+			TurretController = false,
+			PrimaryTracking = false,
+			LockOnFocus = true,
+			SuppressFire = false,
+			OverrideLeads = false, // Override default behavior for target leads
+		};
+
+		private AiDef Missiles_Rocket_Hardpoint_Ai_Gun = new AiDef 
+		{
+			TrackTargets = false,
+			TurretAttached = false,
+			TurretController = false,
+			PrimaryTracking = false,
+			LockOnFocus = false,
+			SuppressFire = true,
+			OverrideLeads = false, // Override default behavior for target leads
+		};
+
+		private OtherDef Missiles_Rocket_Hardpoint_Other = new OtherDef {
+			GridWeaponCap = 0,
+			RotateBarrelAxis = 0,
+			EnergyPriority = 0,
+			MuzzleCheck = false,
+			Debug = false,
+			RestrictionRadius = 0f, // Meters, radius of sphere disable this gun if another is present
+			CheckInflatedBox = false, // if true, the bounding box of the gun is expanded by the RestrictionRadius
+			CheckForAnyWeapon = false, // if true, the check will fail if ANY gun is present, false only looks for this subtype
+		};
+
+		private HardPointAudioDef Missiles_Rocket_Hardpoint_Audio = new HardPointAudioDef {
+			PreFiringSound = "",
+			FiringSound = "WepShipSmallMissileShot", // subtype name from sbc
+			FiringSoundPerShot = true,
+			ReloadSound = "",
+			NoAmmoSound = "ArcWepShipGatlingNoAmmo",
+			HardPointRotationSound = "WepTurretGatlingRotate",
+			BarrelRotationSound = "",
+		};
+
+		private HardPointParticleDef Missiles_Rocket_Hardpoint_Graphics = new HardPointParticleDef {
+			Barrel1 = new ParticleDef
+			{
+				Name = "", // Smoke_LargeGunShot
+				Color = new Vector4(1f,1f,1f,1f), //RGBA
+				Offset = new Vector3D(0f,-1f,0f), //XYZ
+				Extras = new ParticleOptionDef
+				{
+					Loop = false,
+					Restart = false,
+					MaxDistance = 200,
+					MaxDuration = 1,
+					Scale = 1.0f,
+				}
+			},
+		};
+
+		//Weapon Definitions
+
         WeaponDefinition LargeMissileLauncher => new WeaponDefinition {
             Assignments = new ModelAssignmentsDef
             {
@@ -24,7 +116,7 @@ namespace WeaponThread
                         MuzzlePartId = "None",
                         ElevationPartId = "None",
                         AzimuthPartId = "None",
-                        DurabilityMod = 0.5f,
+                        DurabilityMod = 0.25f,
                         IconName = "TestIcon.dds",
                     },
 
@@ -52,68 +144,36 @@ namespace WeaponThread
 					"muzzle_missile_019",
                 },
             },
-            Targeting = new TargetingDef
-            {
-                Threats = new[]
-                {
-                    Grids, // threats percieved automatically without changing menu settings
-                },
-                SubSystems = new[]
-                {
-                    Any, // subsystems the gun targets
-                },
-                ClosestFirst = false, // tries to pick closest targets first (blocks on grids, projectiles, etc...).
-                MinimumDiameter = 0, // 0 = unlimited, Minimum radius of threat to engage.
-                MaximumDiameter = 0, // 0 = unlimited, Maximum radius of threat to engage.
-                TopTargets = 0, // 0 = unlimited, max number of top targets to randomize between.
-                TopBlocks = 0, // 0 = unlimited, max number of blocks to randomize between
-                StopTrackingSpeed = 0, // do not track target threats traveling faster than this speed
-            },
-            HardPoint = new HardPointDef
+			
+			Targeting = Missiles_Rocket_Targeting, //shared targeting def
+            
+			HardPoint = new HardPointDef
             {
                 WeaponName = "LargeMissileLauncher", // name of weapon in terminal
                 DeviateShotAngle = 2f,
-                AimingTolerance = 4f, // 0 - 180 firing angle
+                AimingTolerance = 0f, // 0 - 180 firing angle
                 AimLeadingPrediction = Off, // Off, Basic, Accurate, Advanced
-                DelayCeaseFire = 10, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                DelayCeaseFire = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
 
-                Ui = new UiDef
-                {
-                    RateOfFire = true,
-                    DamageModifier = false,
-                    ToggleGuidance = false,
-                    EnableOverload =  false,
-                },
-                Ai = new AiDef
-                {
-                    TrackTargets = false,
-                    TurretAttached = false,
-                    TurretController = false,
-                    PrimaryTracking = false,
-                    LockOnFocus = false,
-                },
+                Ui = Missiles_Rocket_Hardpoint_Ui,
+
+                Ai = Missiles_Rocket_Hardpoint_Ai_Gun,
+				
                 HardWare = new HardwareDef
                 {
-                    RotateRate = 0.00f,
-                    ElevateRate = 0.00f,
+                    RotateRate = 0f,
+                    ElevateRate = 0f,
                     MinAzimuth = 0,
                     MaxAzimuth = 0,
                     MinElevation = 0,
                     MaxElevation = 0,
-                    FixedOffset = false,
+                    FixedOffset = true,
                     InventorySize = 1.14f,
                     Offset = Vector(x: 0, y: 0, z: 0),
                 },
-                Other = new OtherDef {
-                    GridWeaponCap = 0,
-                    RotateBarrelAxis = 0,
-                    EnergyPriority = 0,
-                    MuzzleCheck = false,
-                    Debug = false,
-                    RestrictionRadius = 0, // Meters, radius of sphere disable this gun if another is present
-                    CheckInflatedBox = false, // if true, the bounding box of the gun is expanded by the RestrictionRadius
-                    CheckForAnyWeapon = false, // if true, the check will fail if ANY gun is present, false only looks for this subtype
-				},
+				
+                Other = Missiles_Rocket_Hardpoint_Other,
+				
                 Loading = new LoadingDef
                 {
                     RateOfFire = 480,
@@ -132,47 +192,11 @@ namespace WeaponThread
                     DelayAfterBurst = 480, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     FireFullBurst = false,
                 },
-                Audio = new HardPointAudioDef
-                {
-                    PreFiringSound = "",
-                    FiringSound = "WepShipSmallMissileShot", // subtype name from sbc
-                    FiringSoundPerShot = true,
-                    ReloadSound = "",
-                    NoAmmoSound = "ArcWepShipGatlingNoAmmo",
-                    HardPointRotationSound = "WepTurretGatlingRotate",
-                    BarrelRotationSound = "",
-                },
-                Graphics = new HardPointParticleDef
-                {
-                    Barrel1 = new ParticleDef
-                    {
-                        Name = "", // Smoke_LargeGunShot
-                        Color = Color(red: 1, green: 1, blue: 1, alpha: 1),
-                        Offset = Vector(x: 0, y: -1, z: 0),
-                        Extras = new ParticleOptionDef
-                        {
-                            Loop = false,
-                            Restart = false,
-                            MaxDistance = 200,
-                            MaxDuration = 1,
-                            Scale = 1.0f,
-                        },
-                    },
-                    Barrel2 = new ParticleDef
-                    {
-                        Name = "",//Muzzle_Flash_Large
-                        Color = Color(red: 1, green: 1, blue: 1, alpha: 1),
-                        Offset = Vector(x: 0, y: -1, z: 0),
-                        Extras = new ParticleOptionDef
-                        {
-                            Loop = false,
-                            Restart = false,
-                            MaxDistance = 100,
-                            MaxDuration = 1,
-                            Scale = 1f,
-                        },
-                    },
-                },
+				
+                Audio = Missiles_Rocket_Hardpoint_Audio,
+				
+                Graphics = Missiles_Rocket_Hardpoint_Graphics,
+				
             },
 
 			Ammos = new [] {
@@ -194,7 +218,7 @@ namespace WeaponThread
                         MuzzlePartId = "MissileTurretBarrels",
                         AzimuthPartId = "MissileTurretBase1",
                         ElevationPartId = "MissileTurretBarrels",
-                        DurabilityMod = 0.5f,
+                        DurabilityMod = 0.25f,
                         IconName = "TestIcon.dds",
                     },
 
@@ -209,25 +233,9 @@ namespace WeaponThread
 					"muzzle_missile_006",
                 },
             },
-            Targeting = new TargetingDef
-            {
-                Threats = new[] {
-                    Grids,
-                },
-                SubSystems = new[] {
-                    Any,
-                },
-                ClosestFirst = true, // tries to pick closest targets first (blocks on grids, projectiles, etc...).
-                IgnoreDumbProjectiles = true, // Don't fire at non-smart projectiles.
-                LockedSmartOnly = false, // Only fire at smart projectiles that are locked on to parent grid.
-                MinimumDiameter = 3, // 0 = unlimited, Minimum radius of threat to engage.
-                MaximumDiameter = 0, // 0 = unlimited, Maximum radius of threat to engage.
-                MaxTargetDistance = 1000, // 0 = unlimited, Maximum target distance that targets will be automatically shot at.
-                MinTargetDistance = 0, // 0 = unlimited, Min target distance that targets will be automatically shot at.
-                TopTargets = 4, // 0 = unlimited, max number of top targets to randomize between.
-                TopBlocks = 4, // 0 = unlimited, max number of blocks to randomize between
-                StopTrackingSpeed = 1000, // do not track target threats traveling faster than this speed
-            },
+
+			Targeting = Missiles_Rocket_Targeting, //shared targeting def
+
             HardPoint = new HardPointDef
             {
                 WeaponName = "LargeMissileTurret", // name of weapon in terminal
@@ -236,21 +244,10 @@ namespace WeaponThread
                 AimLeadingPrediction = Advanced, // Off, Basic, Accurate, Advanced
                 DelayCeaseFire = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
 
-                Ui = new UiDef
-                {
-                    RateOfFire = false,
-                    DamageModifier = false,
-                    ToggleGuidance = false,
-                    EnableOverload =  false,
-                },
-                Ai = new AiDef
-                {
-                    TrackTargets = true,
-                    TurretAttached = true,
-                    TurretController = true,
-                    PrimaryTracking = true,
-                    LockOnFocus = true,
-                },
+                Ui = Missiles_Rocket_Hardpoint_Ui,
+
+                Ai = Missiles_Rocket_Hardpoint_Ai_Turret,
+
                 HardWare = new HardwareDef
                 {
                     RotateRate = 0.01f,
@@ -263,16 +260,9 @@ namespace WeaponThread
                     InventorySize = 0.768f,
                     Offset = Vector(x: 0, y: 0, z: 0),
                 },
-                Other = new OtherDef {
-                    GridWeaponCap = 0,
-                    RotateBarrelAxis = 0,
-                    EnergyPriority = 0,
-                    MuzzleCheck = false,
-                    Debug = false,
-                    RestrictionRadius = 0, // Meters, radius of sphere disable this gun if another is present
-                    CheckInflatedBox = false, // if true, the bounding box of the gun is expanded by the RestrictionRadius
-                    CheckForAnyWeapon = false, // if true, the check will fail if ANY gun is present, false only looks for this subtype
-				},
+				
+                Other = Missiles_Rocket_Hardpoint_Other,
+				
                 Loading = new LoadingDef
                 {
                     RateOfFire = 480,
@@ -291,47 +281,11 @@ namespace WeaponThread
                     DelayAfterBurst = 240, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     FireFullBurst = false,
                 },
-                Audio = new HardPointAudioDef
-                {
-                    PreFiringSound = "",
-                    FiringSound = "ArcWepTurretMissileShot", // subtype name from sbc
-                    FiringSoundPerShot = true,
-                    ReloadSound = "",
-                    NoAmmoSound = "ArcWepShipGatlingNoAmmo",
-                    HardPointRotationSound = "WepTurretGatlingRotate",
-                    BarrelRotationSound = "",
-                },
-                Graphics = new HardPointParticleDef
-                {
-                    Barrel1 = new ParticleDef
-                    {
-                        Name = "", // Smoke_LargeGunShot
-                        Color = Color(red: 1, green: 1, blue: 1, alpha: 1),
-                        Offset = Vector(x: 0, y: -1, z: 0),
-                        Extras = new ParticleOptionDef
-                        {
-                            Loop = false,
-                            Restart = false,
-                            MaxDistance = 200,
-                            MaxDuration = 1,
-                            Scale = 1.0f,
-                        },
-                    },
-                    Barrel2 = new ParticleDef
-                    {
-                        Name = "",//Muzzle_Flash_Large
-                        Color = Color(red: 1, green: 1, blue: 1, alpha: 1),
-                        Offset = Vector(x: 0, y: -1, z: 0),
-                        Extras = new ParticleOptionDef
-                        {
-                            Loop = false,
-                            Restart = false,
-                            MaxDistance = 100,
-                            MaxDuration = 1,
-                            Scale = 1f,
-                        },
-                    },
-                },
+
+                Audio = Missiles_Rocket_Hardpoint_Audio,
+				
+                Graphics = Missiles_Rocket_Hardpoint_Graphics,
+
             },
 
 			Ammos = new [] {
@@ -353,7 +307,7 @@ namespace WeaponThread
                         MuzzlePartId = "None",
                         AzimuthPartId = "None",
                         ElevationPartId = "None",
-                        DurabilityMod = 0.5f,
+                        DurabilityMod = 0.25f,
                         IconName = "TestIcon.dds",
                     },
 
@@ -366,46 +320,22 @@ namespace WeaponThread
 					"muzzle_missile_004",
                 },
             },
-            Targeting = new TargetingDef
-            {
-                Threats = new[]
-                {
-                    Grids, Characters, Projectiles, Meteors, // threats percieved automatically without changing menu settings
-                },
-                SubSystems = new[]
-                {
-                    Thrust, Utility, Offense, Power, Production, Any, // subsystems the gun targets
-                },
-                ClosestFirst = false, // tries to pick closest targets first (blocks on grids, projectiles, etc...).
-                MinimumDiameter = 0, // 0 = unlimited, Minimum radius of threat to engage.
-                MaximumDiameter = 0, // 0 = unlimited, Maximum radius of threat to engage.
-                TopTargets = 4, // 0 = unlimited, max number of top targets to randomize between.
-                TopBlocks = 4, // 0 = unlimited, max number of blocks to randomize between
-                StopTrackingSpeed = 1000, // do not track target threats traveling faster than this speed
-            },
+
+			Targeting = Missiles_Rocket_Targeting, //shared targeting def
+
             HardPoint = new HardPointDef
             {
                 WeaponName = "SmallMissileLauncher", // name of weapon in terminal
                 DeviateShotAngle = 2f,
                 AimingTolerance = 4f, // 0 - 180 firing angle
                 AimLeadingPrediction = Off, // Off, Basic, Accurate, Advanced
-                DelayCeaseFire = 10, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                DelayCeaseFire = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
 
-                Ui = new UiDef
-                {
-                    RateOfFire = false,
-                    DamageModifier = false,
-                    ToggleGuidance = false,
-                    EnableOverload =  false,
-                },
-                Ai = new AiDef
-                {
-                    TrackTargets = false,
-                    TurretAttached = false,
-                    TurretController = false,
-                    PrimaryTracking = false,
-                    LockOnFocus = false,
-                },
+                Ui = Missiles_Rocket_Hardpoint_Ui,
+
+
+                Ai = Missiles_Rocket_Hardpoint_Ai_Gun,
+
                 HardWare = new HardwareDef
                 {
                     RotateRate = 0f,
@@ -414,20 +344,13 @@ namespace WeaponThread
                     MaxAzimuth = 0,
                     MinElevation = 0,
                     MaxElevation = 0,
-                    FixedOffset = false,
-                    InventorySize = 0.48f,
+                    FixedOffset = true,
+                    InventorySize = 1.14f,
                     Offset = Vector(x: 0, y: 0, z: 0),
                 },
-                Other = new OtherDef {
-                    GridWeaponCap = 0,
-                    RotateBarrelAxis = 0,
-                    EnergyPriority = 0,
-                    MuzzleCheck = false,
-                    Debug = false,
-                    RestrictionRadius = 0, // Meters, radius of sphere disable this gun if another is present
-                    CheckInflatedBox = false, // if true, the bounding box of the gun is expanded by the RestrictionRadius
-                    CheckForAnyWeapon = false, // if true, the check will fail if ANY gun is present, false only looks for this subtype
-				},
+				
+                Other = Missiles_Rocket_Hardpoint_Other,
+				
                 Loading = new LoadingDef
                 {
                     RateOfFire = 480,
@@ -446,47 +369,11 @@ namespace WeaponThread
                     DelayAfterBurst = 120, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     FireFullBurst = false,
                 },
-                Audio = new HardPointAudioDef
-                {
-                    PreFiringSound = "",
-                    FiringSound = "WepShipSmallMissileShot", // subtype name from sbc
-                    FiringSoundPerShot = true,
-                    ReloadSound = "",
-                    NoAmmoSound = "ArcWepShipGatlingNoAmmo",
-                    HardPointRotationSound = "WepTurretGatlingRotate",
-                    BarrelRotationSound = "",
-                },
-                Graphics = new HardPointParticleDef
-                {
-                    Barrel1 = new ParticleDef
-                    {
-                        Name = "", // Smoke_LargeGunShot
-                        Color = Color(red: 1, green: 1, blue: 1, alpha: 1),
-                        Offset = Vector(x: 0, y: -1, z: 0),
-                        Extras = new ParticleOptionDef
-                        {
-                            Loop = false,
-                            Restart = false,
-                            MaxDistance = 200,
-                            MaxDuration = 1,
-                            Scale = 1.0f,
-                        },
-                    },
-                    Barrel2 = new ParticleDef
-                    {
-                        Name = "",//Muzzle_Flash_Large
-                        Color = Color(red: 1, green: 1, blue: 1, alpha: 1),
-                        Offset = Vector(x: 0, y: -1, z: 0),
-                        Extras = new ParticleOptionDef
-                        {
-                            Loop = false,
-                            Restart = false,
-                            MaxDistance = 100,
-                            MaxDuration = 1,
-                            Scale = 1f,
-                        },
-                    },
-                },
+
+                Audio = Missiles_Rocket_Hardpoint_Audio,
+				
+                Graphics = Missiles_Rocket_Hardpoint_Graphics,
+
             },
 
 			Ammos = new [] {
@@ -506,7 +393,7 @@ namespace WeaponThread
                         SubtypeId = "SmallMissileTurret",
                         AimPartId = "MissileTurretBarrels",
                         MuzzlePartId = "MissileTurretBarrels",
-                        DurabilityMod = 0.5f,
+                        DurabilityMod = 0.25f,
                         IconName = "TestIcon.dds",
                     },
 
@@ -517,23 +404,9 @@ namespace WeaponThread
 					"muzzle_missile_002",
                 },
             },
-            Targeting = new TargetingDef
-            {
-                Threats = new[]
-                {
-                    Grids, Projectiles, Meteors, // threats percieved automatically without changing menu settings
-                },
-                SubSystems = new[]
-                {
-                    Thrust, Utility, Offense, Power, Production, Any, // subsystems the gun targets
-                },
-                ClosestFirst = false, // tries to pick closest targets first (blocks on grids, projectiles, etc...).
-                MinimumDiameter = 0, // 0 = unlimited, Minimum radius of threat to engage.
-                MaximumDiameter = 0, // 0 = unlimited, Maximum radius of threat to engage.
-                TopTargets = 4, // 0 = unlimited, max number of top targets to randomize between.
-                TopBlocks = 4, // 0 = unlimited, max number of blocks to randomize between
-                StopTrackingSpeed = 0, // do not track target threats traveling faster than this speed
-            },
+
+			Targeting = Missiles_Rocket_Targeting, //shared targeting def
+
             HardPoint = new HardPointDef
             {
                 WeaponName = "SmallMissileTurret", // name of weapon in terminal
@@ -542,21 +415,10 @@ namespace WeaponThread
                 AimLeadingPrediction = Advanced, // Off, Basic, Accurate, Advanced
                 DelayCeaseFire = 10, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
 
-                Ui = new UiDef
-                {
-                    RateOfFire = false,
-                    DamageModifier = false,
-                    ToggleGuidance = false,
-                    EnableOverload =  false,
-                },
-                Ai = new AiDef
-                {
-                    TrackTargets = true,
-                    TurretAttached = true,
-                    TurretController = true,
-                    PrimaryTracking = true,
-                    LockOnFocus = false,
-                },
+                Ui = Missiles_Rocket_Hardpoint_Ui,
+
+                Ai = Missiles_Rocket_Hardpoint_Ai_Turret,
+
                 HardWare = new HardwareDef
                 {
                     RotateRate = 0.02f,
@@ -569,16 +431,9 @@ namespace WeaponThread
                     InventorySize = 0.360f,
                     Offset = Vector(x: 0, y: 0, z: 0),
                 },
-                Other = new OtherDef {
-                    GridWeaponCap = 0,
-                    RotateBarrelAxis = 0,
-                    EnergyPriority = 0,
-                    MuzzleCheck = false,
-                    Debug = false,
-                    RestrictionRadius = 0, // Meters, radius of sphere disable this gun if another is present
-                    CheckInflatedBox = false, // if true, the bounding box of the gun is expanded by the RestrictionRadius
-                    CheckForAnyWeapon = false, // if true, the check will fail if ANY gun is present, false only looks for this subtype
-				},
+				
+                Other = Missiles_Rocket_Hardpoint_Other,
+				
                 Loading = new LoadingDef
                 {
                     RateOfFire = 480,
@@ -597,47 +452,11 @@ namespace WeaponThread
                     DelayAfterBurst = 80, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     FireFullBurst = false,
                 },
-                Audio = new HardPointAudioDef
-                {
-                    PreFiringSound = "",
-                    FiringSound = "WepShipSmallMissileShot", // subtype name from sbc
-                    FiringSoundPerShot = true,
-                    ReloadSound = "",
-                    NoAmmoSound = "ArcWepShipGatlingNoAmmo",
-                    HardPointRotationSound = "WepTurretGatlingRotate",
-                    BarrelRotationSound = "",
-                },
-                Graphics = new HardPointParticleDef
-                {
-                    Barrel1 = new ParticleDef
-                    {
-                        Name = "", // Smoke_LargeGunShot
-                        Color = Color(red: 1, green: 1, blue: 1, alpha: 1),
-                        Offset = Vector(x: 0, y: -1, z: 0),
-                        Extras = new ParticleOptionDef
-                        {
-                            Loop = false,
-                            Restart = false,
-                            MaxDistance = 200,
-                            MaxDuration = 1,
-                            Scale = 1.0f,
-                        },
-                    },
-                    Barrel2 = new ParticleDef
-                    {
-                        Name = "",//Muzzle_Flash_Large
-                        Color = Color(red: 1, green: 1, blue: 1, alpha: 1),
-                        Offset = Vector(x: 0, y: -1, z: 0),
-                        Extras = new ParticleOptionDef
-                        {
-                            Loop = false,
-                            Restart = false,
-                            MaxDistance = 100,
-                            MaxDuration = 1,
-                            Scale = 1f,
-                        },
-                    },
-                },
+
+                Audio = Missiles_Rocket_Hardpoint_Audio,
+				
+                Graphics = Missiles_Rocket_Hardpoint_Graphics,
+
             },
 
 			Ammos = new [] {

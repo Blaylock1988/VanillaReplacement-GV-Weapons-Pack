@@ -48,7 +48,7 @@ namespace WeaponThread
             Shrapnel = new ShrapnelDef
             {
                 AmmoRound = "MXA_MACL_Shrapnel",
-                Fragments = 75,
+                Fragments = 50,
                 Degrees = 270,
                 Reverse = false,
                 RandomizeDir = false, // randomzie between forward and backward directions

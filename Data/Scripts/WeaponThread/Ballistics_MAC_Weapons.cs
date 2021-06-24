@@ -34,25 +34,9 @@ namespace WeaponThread
                 },
                 Ejector = "",
             },
-            Targeting = new TargetingDef
-            {
-                Threats = new[] {
-                    Grids,
-                },
-                SubSystems = new[] {
-                    Any,
-                },
-                ClosestFirst = false, // tries to pick closest targets first (blocks on grids, projectiles, etc...).
-                IgnoreDumbProjectiles = false, // Don't fire at non-smart projectiles.
-                LockedSmartOnly = false, // Only fire at smart projectiles that are locked on to parent grid.
-                MinimumDiameter = 0, // 0 = unlimited, Minimum radius of threat to engage.
-                MaximumDiameter = 0, // 0 = unlimited, Maximum radius of threat to engage.
-                MaxTargetDistance = 0, // 0 = unlimited, Maximum target distance that targets will be automatically shot at.
-                MinTargetDistance = 0, // 0 = unlimited, Min target distance that targets will be automatically shot at.
-                TopTargets = 0, // 0 = unlimited, max number of top targets to randomize between.
-                TopBlocks = 0, // 0 = unlimited, max number of blocks to randomize between
-                StopTrackingSpeed = 0, // do not track target threats traveling faster than this speed
-            },
+
+            Targeting = Ballistics_Cannons_Targeting,
+			
             HardPoint = new HardPointDef
             {
                 WeaponName = "Mark IX MAC", // name of weapon in terminal
@@ -63,21 +47,10 @@ namespace WeaponThread
                 AddToleranceToTracking = false,
                 CanShootSubmerged = false,
 
-                Ui = new UiDef
-                {
-                    RateOfFire = false,
-                    DamageModifier = false,
-                    ToggleGuidance = false,
-                    EnableOverload = false,
-                },
-                Ai = new AiDef
-                {
-                    TrackTargets = false,
-                    TurretAttached = false,
-                    TurretController = false,
-                    PrimaryTracking = false,
-                    LockOnFocus = false,
-                },
+                Ui = Ballistics_Cannons_Hardpoint_Ui,
+				
+                Ai = Ballistics_Cannons_Hardpoint_Ai_Gun,
+
                 HardWare = new HardwareDef
                 {
                     RotateRate = 0,
@@ -91,17 +64,9 @@ namespace WeaponThread
                     Offset = Vector(x: 0, y: 0, z: 0),
                     //Armor = IsWeapon, // IsWeapon, Passive, Active
                 },
-                Other = new OtherDef
-                {
-                    GridWeaponCap = 1,
-                    RotateBarrelAxis = 0,
-                    EnergyPriority = 0,
-                    MuzzleCheck = false,
-                    Debug = false,
-                    RestrictionRadius = 5f, // Meters, radius of sphere disable this gun if another is present
-                    CheckInflatedBox = true, // if true, the bounding box of the gun is expanded by the RestrictionRadius
-                    CheckForAnyWeapon = true, // if true, the check will fail if ANY gun is present, false only looks for this subtype
-                },
+				
+                Other = Ballistics_Cannons_Hardpoint_Other_Large,
+				
                 Loading = new LoadingDef
                 {
                     RateOfFire = 60, // visual only, 0 disables and uses RateOfFire
