@@ -46,7 +46,7 @@ namespace WeaponThread
             },
             Shrapnel = new ShrapnelDef
             {
-                AmmoRound = "MXA_Moray_SMine",
+                AmmoRound = "",//MXA_Moray_SMine
                 Fragments = 1,
                 Degrees = 0,
                 Reverse = false,
@@ -191,26 +191,26 @@ namespace WeaponThread
             },
             Trajectory = new TrajectoryDef
             {
-                Guidance = None,
-                TargetLossDegree = 80f,
+                Guidance = DetectSmart,
+                TargetLossDegree = 0f,
                 TargetLossTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-                MaxLifeTime = 300, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-                AccelPerSec = -10f,
-                DesiredSpeed = 20, // DO NOT SET HIGHER THAN 4100
+                MaxLifeTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                AccelPerSec = 7.5f,
+                DesiredSpeed = 50, // DO NOT SET HIGHER THAN 4100
                 MaxTrajectory = 50f,
-                FieldTime = 0, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
+                FieldTime = 54000, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
                 GravityMultiplier = 0f, // Gravity multiplier, influences the trajectory of the projectile, value greater than 0 to enable.
-                SpeedVariance = Random(start: 0, end: 4), // subtracts value from DesiredSpeed
-                RangeVariance = Random(start: 0, end: 25), // subtracts value from MaxTrajectory
+                SpeedVariance = Random(start: 0, end: 0), // subtracts value from DesiredSpeed
+                RangeVariance = Random(start: 0, end: 0), // subtracts value from MaxTrajectory
                 MaxTrajectoryTime = 0, // How long the weapon must fire before it reaches MaxTrajectory.
                 Smarts = new SmartsDef
                 {
-                    Inaccuracy = 0f, // 0 is perfect, hit accuracy will be a random num of meters between 0 and this value.
-                    Aggressiveness = 1f, // controls how responsive tracking is.
+                    Inaccuracy = 20f, // 0 is perfect, hit accuracy will be a random num of meters between 0 and this value.
+                    Aggressiveness = 2f, // controls how responsive tracking is.
                     MaxLateralThrust = 0.5, // controls how sharp the trajectile may turn
                     TrackingDelay = 0, // Measured in Shape diameter units traveled.
                     MaxChaseTime = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-                    OverideTarget = false, // when set to true ammo picks its own target, does not use hardpoint's.
+                    OverideTarget = true, // when set to true ammo picks its own target, does not use hardpoint's.
                     MaxTargets = 0, // Number of targets allowed before ending, 0 = unlimited
                     NoTargetExpire = false, // Expire without ever having a target at TargetLossTime
                     Roam = false, // Roam current area after target loss
@@ -218,16 +218,16 @@ namespace WeaponThread
                 },
                 Mines = new MinesDef
                 {
-                    DetectRadius = 0f,
-                    DeCloakRadius = 0,
-                    FieldTime = 0,
+                    DetectRadius = 250f,
+                    DeCloakRadius = 10f,
+                    FieldTime = 54000,
                     Cloak = false,
                     Persist = true,
                 },
             },
             AmmoGraphics = new GraphicDef
             {
-                ModelName = "\\Models\\Mines\\MXA_Moray_Mine.mwm",
+                ModelName = "\\Models\\Mines\\MXA_Moray_Mine_F.mwm",// \\Models\\Mines\\MXA_Moray_Mine.mwm
                 VisualProbability = 1f,
                 ShieldHitDraw = false,
                 Particles = new AmmoParticleDef
