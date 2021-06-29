@@ -23,7 +23,7 @@ namespace WeaponThread {
                         MuzzlePartId = "GatlingBarrel",
                         AzimuthPartId = "GatlingTurretBase1",
                         ElevationPartId = "GatlingTurretBase2",
-						DurabilityMod = 1f,
+						DurabilityMod = 0.5f,
                         IconName = "filter_energy.dds"
                     },
  
@@ -34,7 +34,7 @@ namespace WeaponThread {
                         MuzzlePartId = "GatlingBarrel",
                         AzimuthPartId = "GatlingTurretBase1",
                         ElevationPartId = "GatlingTurretBase2",
-						DurabilityMod = 1f,
+						DurabilityMod = 0.5f,
                         IconName = "filter_energy.dds"
                     },				
 					
@@ -52,17 +52,17 @@ namespace WeaponThread {
                     Grids,
                 },
                 SubSystems = new[] {
-                    Thrust, Steering, Jumping,
+                    Jumping,
                 },
                 ClosestFirst = false, // tries to pick closest targets first (blocks on grids, projectiles, etc...).
                 IgnoreDumbProjectiles = true, // Don't fire at non-smart projectiles.
                 LockedSmartOnly = false, // Only fire at smart projectiles that are locked on to parent grid.
                 MinimumDiameter = 0, // 0 = unlimited, Minimum radius of threat to engage.
                 MaximumDiameter = 0, // 0 = unlimited, Maximum radius of threat to engage.
-                MaxTargetDistance = 1200, // 0 = unlimited, Maximum target distance that targets will be automatically shot at.
+                MaxTargetDistance = 1500, // 0 = unlimited, Maximum target distance that targets will be automatically shot at.
                 MinTargetDistance = 0, // 0 = unlimited, Min target distance that targets will be automatically shot at.
-                TopTargets = 0, // 0 = unlimited, max number of top targets to randomize between.
-                TopBlocks = 0, // 0 = unlimited, max number of blocks to randomize between
+                TopTargets = 5, // 0 = unlimited, max number of top targets to randomize between.
+                TopBlocks = 10, // 0 = unlimited, max number of blocks to randomize between
                 StopTrackingSpeed = 0, // do not track target threats traveling faster than this speed
             },
             HardPoint = new HardPointDef
@@ -87,14 +87,14 @@ namespace WeaponThread {
                     TrackTargets = true,
                     TurretAttached = true,
                     TurretController = true,
-                    PrimaryTracking = true,
+                    PrimaryTracking = false,
                     LockOnFocus = true,
                     SuppressFire = false,
                 },
                 HardWare = new HardwareDef
                 {
-                    RotateRate = 0.076f,
-                    ElevateRate = 0.023f,
+                    RotateRate = 0.03f,
+                    ElevateRate = 0.02f,
                     MinAzimuth = -180,
                     MaxAzimuth = 180,
                     MinElevation = -20,
@@ -121,16 +121,16 @@ namespace WeaponThread {
                     BarrelsPerShot = 1,
                     TrajectilesPerBarrel = 1, // Number of Trajectiles per barrel per fire event.
                     SkipBarrels = 0,
-                    ReloadTime = 120, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-                    DelayUntilFire = 10, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-                    HeatPerShot = 0, //10 heat generated per shot
-                    MaxHeat = 0, //max heat before weapon enters cooldown (70% of max heat)
-                    Cooldown = 1, //percent of max heat to be under to start firing again after overheat accepts .2-.95
-                    HeatSinkRate = 0, //amount of heat lost per second
+                    ReloadTime = 240, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                    DelayUntilFire = 30, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                    HeatPerShot = 2, //10 heat generated per shot
+                    MaxHeat = 300, //max heat before weapon enters cooldown (70% of max heat)
+                    Cooldown = 0.5f, //percent of max heat to be under to start firing again after overheat accepts .2-.95
+                    HeatSinkRate = 30, //amount of heat lost per second
                     DegradeRof = false, // progressively lower rate of fire after 80% heat threshold (80% of max heat)
-                    ShotsInBurst = 120,
-                    DelayAfterBurst = 10, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-                    FireFullBurst = true,
+                    ShotsInBurst = 0,
+                    DelayAfterBurst = 30, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                    FireFullBurst = false,
                     GiveUpAfterBurst = true,
                     BarrelSpinRate = 500, // visual only, 0 disables and uses RateOfFire
                     DeterministicSpin = false, // Spin barrel position will always be relative to initial / starting positions (spin will not be as smooth).
@@ -151,15 +151,15 @@ namespace WeaponThread {
                     Barrel1 = new ParticleDef
                     {
 						Name = "MA_laserhit_reversed",
-						Color = Color(red: 3, green: 3, blue: 5, alpha: 1),
-                        Offset = Vector(x: 0, y: 0, z: -1f),
+						Color = Color(red: 1, green: 3, blue: 5, alpha: 1),
+                        Offset = Vector(x: 0, y: 0, z: 0f),
 						Extras = new ParticleOptionDef
 						{
 							Loop = true,
 							Restart = false,
 							MaxDistance = 800, //meters
-							MaxDuration = 60, //ticks 60 = 1 second
-							Scale = 20f,
+							MaxDuration = 0, //ticks 60 = 1 second
+							Scale = 5f,
 						}
                     },
                 },
@@ -169,8 +169,6 @@ namespace WeaponThread {
 
                 GV_Laser_JumpNull,
 				GV_Laser_JumpNull_Cosmetic,
-				GV_Laser_Pull,
-				GV_Laser_Pull_Shrapnel,
 				
             },
             // Animations = JDDT_Animations,

@@ -19,17 +19,20 @@
 			<Model>Models\Mines\MXA_Moray.mwm</Model>
 			<MirroringY>Z</MirroringY>
 			<MirroringZ>Y</MirroringZ>
-			<Components>
-				<Component Subtype="SteelPlate" Count="125" />
-				<Component Subtype="Construction" Count="250" />
-				<Component Subtype="MetalGrid" Count="15" />
-				<Component Subtype="LargeTube" Count="8" />
-				<Component Subtype="Motor" Count="150" />
-				<Component Subtype="Computer" Count="75" />
-				<Component Subtype="Superconductor" Count="30" />
-				<Component Subtype="Construction" Count="75" />
-				<Component Subtype="SteelPlate" Count="50" />
-			</Components>
+            <Components>
+                <Component Subtype="SteelPlate" Count="26" />
+                <Component Subtype="Construction" Count="51" />
+                <Component Subtype="MetalGrid" Count="3" />
+                <Component Subtype="LargeTube" Count="2" />
+                <Component Subtype="Motor" Count="31" />
+                <Component Subtype="Computer" Count="15" />
+                <Component Subtype="Superconductor" Count="6" />
+                <Component Subtype="Construction" Count="15" />
+                <Component Subtype="SteelPlate" Count="10" />
+            </Components>
+
+            <BuildTimeSeconds>20</BuildTimeSeconds>
+            <PCU>38310</PCU>
 			<CriticalComponent Subtype="Computer" Index="0" />
 			<EdgeType>Light</EdgeType>
 			<WeaponDefinitionId Subtype="MXA_Moray" />
@@ -37,11 +40,9 @@
             <DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
             <DamagedSound>ParticleWeapExpl</DamagedSound>
             <ResourceSinkGroup>Defense</ResourceSinkGroup>
-			<BuildTimeSeconds>60</BuildTimeSeconds>
 			<NavigationDefinition>Default</NavigationDefinition>
             <DestroyEffect>BlockDestroyedExplosion</DestroyEffect>
             <DestroySound>WepSmallWarheadExpl</DestroySound>
-            <PCU>250</PCU>
 			<MountPoints>
 				<MountPoint Side="Back" StartX="0.0" StartY="0.0" EndX="1.0" EndY="1.0" PressurizedWhenOpen="true"/>
 				<MountPoint Side="Back" StartX="1.0" StartY="0.0" EndX="2.0" EndY="1.0" PressurizedWhenOpen="true"/>

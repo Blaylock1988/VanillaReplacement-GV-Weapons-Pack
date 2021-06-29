@@ -42,6 +42,8 @@ namespace WeaponThread
             },
             Trajectory = new TrajectoryDef
             {
+                MaxLifeTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                DesiredSpeed = 0,
                 Guidance = None,
                 MaxTrajectory = 1100f,
                 RangeVariance = Random(start: 0, end: 100), // subtracts value from MaxTrajectory

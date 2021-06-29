@@ -1026,6 +1026,7 @@ namespace WeaponThread
             {
                 MaxTrajectory = 2750f,
                 RangeVariance = Random(start: 0, end: 200), // subtracts value from MaxTrajectory
+				MaxTrajectoryTime = 10, // How long the weapon must fire before it reaches MaxTrajectory.
             },
             AmmoGraphics = new GraphicDef
             {

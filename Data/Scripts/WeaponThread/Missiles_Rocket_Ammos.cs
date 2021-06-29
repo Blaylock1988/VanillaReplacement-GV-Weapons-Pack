@@ -29,7 +29,7 @@ namespace WeaponThread
 			BaseDamage = 1f,
 			Mass = 1000f, // in kilograms
 			Health = 4, // 0 = disabled, otherwise how much damage it can take from other trajectiles before dying.
-			BackKickForce = 1f,
+			BackKickForce = 5f,
 			HardPointUsable = true, // set to false if this is a shrapnel ammoType and you don't want the turret to be able to select it directly.
 			EnergyMagazineSize = 0,
 			IgnoreWater = false,
@@ -38,19 +38,6 @@ namespace WeaponThread
 			{
 				Shape = LineShape,
 				Diameter = 1,
-			},
-			ObjectsHit = new ObjectsHitDef
-			{
-				MaxObjectsHit = 0, // 0 = disabled
-				CountBlocks = false, // counts gridBlocks and not just entities hit
-			},
-			Shrapnel = new ShrapnelDef
-			{
-				AmmoRound = "",
-				Fragments = 0,
-				Degrees = 0,
-				Reverse = false,
-				RandomizeDir = false,
 			},
 			DamageScales = new DamageScaleDef
 			{
@@ -64,7 +51,7 @@ namespace WeaponThread
 				Grids = new GridSizeDef
 				{
 					Large = -1f,
-					Small = -1f,
+					Small = 0.25f,
 				},
 				Armor = new ArmorDef
 				{
@@ -80,54 +67,14 @@ namespace WeaponThread
 					BypassModifier = -1f,
 				},
 				// first true/false (ignoreOthers) will cause projectiles to pass through all blocks that do not match the custom subtypeIds.
-				Custom = new CustomScalesDef
-				{
-					IgnoreAllOthers = false,
-					Types = new []
-					{
-						new CustomBlocksDef
-						{
-							SubTypeId = "Test1",
-							Modifier = -1f,
-						},
-						new CustomBlocksDef
-						{
-							SubTypeId = "Test2",
-							Modifier = -1f,
-						},
-					},
-				},
 			},
 			AreaEffect = new AreaDamageDef
 			{
-				AreaEffect = Radiant, // Disabled = do not use area effect at all, Explosive, Radiant, AntiSmart, JumpNullField, JumpNullField, EnergySinkField, AnchorField, EmpField, OffenseField, NavField, DotField.
+				AreaEffect = Explosive, // Disabled = do not use area effect at all, Explosive, Radiant, AntiSmart, JumpNullField, JumpNullField, EnergySinkField, AnchorField, EmpField, OffenseField, NavField, DotField.
 				Base = new AreaInfluence
 				{
 					Radius = 10f, // the sphere of influence of area effects, must be at least 1 for missiles
-					EffectStrength = 5000f, // For ewar it applies this amount per pulse/hit, non-ewar applies this as damage per tick per entity in area of influence. For radiant 0 == use spillover from BaseDamage, otherwise use this value.
-				},
-				Pulse = new PulseDef // interval measured in game ticks (60 == 1 second), pulseChance chance (0 - 100) that an entity in field will be hit
-				{
-					Interval = 0,
-					PulseChance = 0,
-					GrowTime = 0,
-					HideModel = false,
-					ShowParticle = false,
-					Particle = new ParticleDef
-					{
-						Name = "", //ShipWelderArc
-						ShrinkByDistance = false,
-						Color = Color(red: 128, green: 0, blue: 0, alpha: 32),
-						Offset = Vector(x: 0, y: -1, z: 0),
-						Extras = new ParticleOptionDef
-						{
-							Loop = false,
-							Restart = false,
-							MaxDistance = 5000,
-							MaxDuration = 1,
-							Scale = 1,
-						},
-					},
+					EffectStrength = 1500f, // For ewar it applies this amount per pulse/hit, non-ewar applies this as damage per tick per entity in area of influence. For radiant 0 == use spillover from BaseDamage, otherwise use this value.
 				},
 				Explosions = new ExplosionDef
 				{
@@ -136,8 +83,8 @@ namespace WeaponThread
 					NoShrapnel = false,
 					NoDeformation = false,
 					Scale = 1,
-					CustomParticle = "MXA_MissileExplosion",
-					CustomSound = "ArcWepLrgWarheadExpl",
+					CustomParticle = "",
+					CustomSound = "",
 				},
 				Detonation = new DetonateDef
 				{
@@ -147,29 +94,6 @@ namespace WeaponThread
 					DetonationRadius = 0,
 					MinArmingTime = 10, //Min time in ticks before projectile will arm for detonation (will also affect shrapnel spawning)
 				},
-				EwarFields = new EwarFieldsDef
-				{
-					Duration = 0,
-					StackDuration = false,
-					Depletable = false,
-					MaxStacks = 0,
-					TriggerRange = 0f,
-					DisableParticleEffect = true,
-					Force = new PushPullDef // AreaEffectDamage is multiplied by target mass.
-					{
-						ForceFrom = ProjectileLastPosition, // ProjectileLastPosition, ProjectileOrigin, HitPosition, TargetCenter, TargetCenterOfMass
-						ForceTo = HitPosition, // ProjectileLastPosition, ProjectileOrigin, HitPosition, TargetCenter, TargetCenterOfMass
-						Position = TargetCenterOfMass, // ProjectileLastPosition, ProjectileOrigin, HitPosition, TargetCenter, TargetCenterOfMass
-					},
-				},
-			},
-			Beams = new BeamDef
-			{
-				Enable = false,
-				VirtualBeams = false, // Only one hot beam, but with the effectiveness of the virtual beams combined (better performace)
-				ConvergeBeams = false, // When using virtual beams this option visually converges the beams to the location of the real beam.
-				RotateRealBeam = false, // The real (hot beam) is rotated between all virtual beams, instead of centered between them.
-				OneParticle = false, // Only spawn one particle hit per beam weapon.
 			},
 			Trajectory = new TrajectoryDef
 			{
@@ -210,24 +134,9 @@ namespace WeaponThread
 				ShieldHitDraw = true,
 				Particles = new AmmoParticleDef
 				{
-					Ammo = new ParticleDef
-					{
-						Name = "", //Hydra_RocketSmokeTrail
-						ShrinkByDistance = false,
-						Color = Color(red: 1, green: 1, blue: 1, alpha: 1),
-						Offset = Vector(x: 0, y: 0, z: -1.8f),
-						Extras = new ParticleOptionDef
-						{
-							Loop = true,
-							Restart = false,
-							MaxDistance = 5000,
-							MaxDuration = 10,
-							Scale = .4f,
-						},
-					},
                     Hit = new ParticleDef
                     {
-                        Name = "HydraRocketExplosion", //MXA_MissileExplosion
+                        Name = "MD_HydraRocketExplosion", //MD_HydraRocketExplosion MD_InstallationExplosion
                         ApplyToShield = true,
                         ShrinkByDistance = false,
                         Color = Color(red: 1, green: 1, blue: 1, alpha: 1),
@@ -245,37 +154,21 @@ namespace WeaponThread
 				},
 				Lines = new LineDef
 				{
-					ColorVariance = Random(start: 0.75f, end: 2f), // multiply the color by random values within range.
-					WidthVariance = Random(start: 0f, end: 0f), // adds random value to default width (negatives shrinks width)
-					Tracer = new TracerBaseDef
-					{
-						Enable = true,
-						Length = 10f,
-						Width = 0.3f,
-						Color = Color(red: 10f, green: 7.5f, blue: 1f, alpha: 1f),
-						VisualFadeStart = 0, // Number of ticks the weapon has been firing before projectiles begin to fade their color
-						VisualFadeEnd = 0, // How many ticks after fade began before it will be invisible.
-						Textures = new[] {// WeaponLaser, ProjectileTrailLine, WarpBubble, etc..
-							"ProjectileTrailLine",
-						},
-						TextureMode = Normal, // Normal, Cycle, Chaos, Wave
-						Segmentation = new SegmentDef
-						{
-							Enable = false, // If true Tracer TextureMode is ignored
-							Textures = new[] {
-								"",
-							},
-							SegmentLength = 0f, // Uses the values below.
-							SegmentGap = 0f, // Uses Tracer textures and values
-							Speed = 1f, // meters per second
-							Color = Color(red: 1, green: 2, blue: 2.5f, alpha: 1),
-							WidthMultiplier = 1f,
-							Reverse = false,
-							UseLineVariance = true,
-							WidthVariance = Random(start: 0f, end: 0f),
-							ColorVariance = Random(start: 0f, end: 0f)
-						}
-					},
+                    ColorVariance = Random(start: 0f, end: 2f), // multiply the color by random values within range.
+                    WidthVariance = Random(start: 0f, end: 0.1f), // adds random value to default width (negatives shrinks width)
+                    Tracer = new TracerBaseDef
+                    {
+                        Enable = true,
+                        Length = 10f,
+                        Width = 0.3f,
+                        Color = Color(red: 30f, green: 22f, blue: 1.5f, alpha: 1f),
+                        VisualFadeStart = 0, // Number of ticks the weapon has been firing before projectiles begin to fade their color
+                        VisualFadeEnd = 0, // How many ticks after fade began before it will be invisible.
+                        Textures = new[] {// WeaponLaser, ProjectileTrailLine, WarpBubble, etc..
+                            "MD_MissileThrustFlame",
+                        },
+                        TextureMode = Normal, // Normal, Cycle, Chaos, Wave
+                    },
 					Trail = new TrailDef
 					{
 						Enable = true,
@@ -290,22 +183,19 @@ namespace WeaponThread
 						UseWidthVariance = true,
 						UseColorFade = true,
 					},
-					OffsetEffect = new OffsetEffectDef
-					{
-						MaxOffset = 0,// 0 offset value disables this effect
-						MinLength = 0.2f,
-						MaxLength = 3,
-					},
 				},
 			},
 			AmmoAudio = new AmmoAudioDef
 			{
-				TravelSound = "",
+				TravelSound = "MXA_Archer_Travel",
 				HitSound = "HWR_LargeExplosion",
-				HitPlayChance = 1f,
-				HitPlayShield = true,
+                ShieldHitSound = "",
+                PlayerHitSound = "",
+                VoxelHitSound = "",
+                FloatingHitSound = "",
+                HitPlayChance = 1f,
+                HitPlayShield = true,
 			}, // Don't edit below this line
-
         };
     }
 }

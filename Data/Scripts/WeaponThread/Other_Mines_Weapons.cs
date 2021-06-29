@@ -179,7 +179,6 @@ namespace WeaponThread
             },
             Ammos = new[] {
                 MXA_Moray_SAmmo,
-                MXA_Moray_SMine,
                 MXA_Moray_Shrapnel,
             },
             Animations = MXA_Moray_Animation,

@@ -43,12 +43,12 @@ namespace WeaponThread
 		};
 
 		private AiDef Ballistics_Cannons_Hardpoint_Ai_Turret = new AiDef {
-			TrackTargets = true,
-			TurretAttached = true,
-			TurretController = false,
-			PrimaryTracking = false,
-			LockOnFocus = true,
-			SuppressFire = false,
+			TrackTargets = true, //This Weapon will know there are targets in range
+			TurretAttached = true, // This enables the ability for players to manually control
+			TurretController = true, //The turret in this WeaponDefinition has control over where other turrets aim.
+			PrimaryTracking = false, //The turret in this WeaponDefinition selects targets for other turrets that do not have tracking capabilities.
+			LockOnFocus = false, // fires this weapon when something is locked using the WC hud reticle
+			SuppressFire = false, //prevent automatic firing
 			OverrideLeads = false, // Override default behavior for target leads
 		};
 
@@ -216,17 +216,6 @@ namespace WeaponThread
                         DurabilityMod = 0.5f,
                         IconName = ""
                     },
-                    
-                    new MountPointDef {
-                        SubtypeId = "OKIVehicleTurret122mm",
-                        AimPartId = "",
-                        MuzzlePartId = "MissileTurretBarrels",
-                        AzimuthPartId = "MissileTurretBase1",
-                        ElevationPartId = "MissileTurretBarrels",
-                        DurabilityMod = 0.5f,
-                        IconName = ""
-                    },
-
                 },
                 Barrels = new [] {
                     "muzzle_projectile_1",
@@ -397,7 +386,7 @@ namespace WeaponThread
                         MuzzlePartId = "None",
                         AzimuthPartId = "None",
                         ElevationPartId = "None",
-                        DurabilityMod = 1f,
+                        DurabilityMod = 0.5f,
                         IconName = ""
                     },
 

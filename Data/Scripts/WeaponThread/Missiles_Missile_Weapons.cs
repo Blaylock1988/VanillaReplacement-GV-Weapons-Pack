@@ -77,7 +77,7 @@ namespace WeaponThread
 		private HardPointParticleDef Missiles_Missile_Hardpoint_Graphics = new HardPointParticleDef {
 			Barrel1 = new ParticleDef
 			{
-				Name = "Muzzle_Flash_Large_Core", // OKI_230mm_Muzzle_Flash 
+				Name = "", // OKI_230mm_Muzzle_Flash 
 				Color = new Vector4(1f,1f,1f,1f), //RGBA
 				Offset = new Vector3D(0f,-1f,0f), //XYZ
 				Extras = new ParticleOptionDef

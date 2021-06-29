@@ -29,7 +29,7 @@ namespace WeaponThread
             BaseDamage = 57000f,
             Mass = 1000000f, // in kilograms
             Health = 0, // 0 = disabled, otherwise how much damage it can take from other trajectiles before dying.
-            BackKickForce = 20000000f,
+            BackKickForce = 10000000f,
             DecayPerShot = 0f,
             HardPointUsable = true, // set to false if this is a shrapnel ammoType and you don't want the turret to be able to select it directly.
             EnergyMagazineSize = 0,
@@ -83,11 +83,11 @@ namespace WeaponThread
                 Grids = new GridSizeDef
                 {
                     Large = -1f,
-                    Small = .3f,
+                    Small = 0.25f,
                 },
                 Armor = new ArmorDef
                 {
-                    Armor = .5f,
+                    Armor = 0.5f,
                     Light = -1f,
                     Heavy = -1f,
                     NonArmor = -1f,
@@ -119,7 +119,7 @@ namespace WeaponThread
             },
             AreaEffect = new AreaDamageDef
             {
-                AreaEffect = Radiant, // Disabled = do not use area effect at all, Explosive, Radiant, AntiSmart, JumpNullField, JumpNullField, EnergySinkField, AnchorField, EmpField, OffenseField, NavField, DotField.
+                AreaEffect = Explosive, // Disabled = do not use area effect at all, Explosive, Radiant, AntiSmart, JumpNullField, JumpNullField, EnergySinkField, AnchorField, EmpField, OffenseField, NavField, DotField.
                 Base = new AreaInfluence
                 {
                     Radius = 1.75f, // the sphere of influence of area effects
@@ -182,14 +182,6 @@ namespace WeaponThread
                     },
                 },
             },
-            Beams = new BeamDef
-            {
-                Enable = false,
-                VirtualBeams = false, // Only one hot beam, but with the effectiveness of the virtual beams combined (better performace)
-                ConvergeBeams = false, // When using virtual beams this option visually converges the beams to the location of the real beam.
-                RotateRealBeam = false, // The real (hot beam) is rotated between all virtual beams, instead of centered between them.
-                OneParticle = false, // Only spawn one particle hit per beam weapon.
-            },
             Trajectory = new TrajectoryDef
             {
                 Guidance = None,
@@ -204,26 +196,6 @@ namespace WeaponThread
                 SpeedVariance = Random(start: 0, end: 200), // subtracts value from DesiredSpeed
                 RangeVariance = Random(start: 0, end: 400), // subtracts value from MaxTrajectory
                 MaxTrajectoryTime = 0, // How long the weapon must fire before it reaches MaxTrajectory.
-                Smarts = new SmartsDef
-                {
-                    Inaccuracy = 0f, // 0 is perfect, hit accuracy will be a random num of meters between 0 and this value.
-                    Aggressiveness = 0f, // controls how responsive tracking is.
-                    MaxLateralThrust = 0, // controls how sharp the trajectile may turn
-                    TrackingDelay = 0, // Measured in Shape diameter units traveled.
-                    MaxChaseTime = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-                    OverideTarget = true, // when set to true ammo picks its own target, does not use hardpoint's.
-                    MaxTargets = 0, // Number of targets allowed before ending, 0 = unlimited
-                    NoTargetExpire = false, // Expire without ever having a target at TargetLossTime
-                    Roam = false, // Roam current area after target loss
-                },
-                Mines = new MinesDef
-                {
-                    DetectRadius = 0,
-                    DeCloakRadius = 0,
-                    FieldTime = 0,
-                    Cloak = false,
-                    Persist = false,
-                },
             },
             AmmoGraphics = new GraphicDef
             {

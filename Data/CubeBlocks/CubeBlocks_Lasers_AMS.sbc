@@ -18,16 +18,20 @@
 			<ModelOffset x="0" y="0" z="0"/>
 			<Model>Models\MA_Designator\MA_Designator.mwm</Model>
 			<UseModelIntersection>true</UseModelIntersection>
-			<Components>
-				<Component Subtype="SteelPlate" Count="5"/>
-				<Component Subtype="Construction" Count="30"/>
-				<Component Subtype="MetalGrid" Count="5"/>
-				<Component Subtype="LargeTube" Count="6"/>
-				<Component Subtype="Motor" Count="16"/>
-				<Component Subtype="Computer" Count="12"/>
-				<Component Subtype="Construction" Count="10"/>
-				<Component Subtype="SteelPlate" Count="15"/>
-			</Components>
+            <Components>
+                <Component Subtype="SteelPlate" Count="7" />
+                <Component Subtype="Construction" Count="43" />
+                <Component Subtype="MetalGrid" Count="7" />
+                <Component Subtype="LargeTube" Count="9" />
+                <Component Subtype="Motor" Count="23" />
+                <Component Subtype="Computer" Count="17" />
+                <Component Subtype="Construction" Count="14" />
+                <Component Subtype="SteelPlate" Count="21" />
+            </Components>
+
+
+            <BuildTimeSeconds>18</BuildTimeSeconds>
+            <PCU>17450</PCU>
 			<CriticalComponent Subtype="Computer" Index="0"/>
 			<MountPoints>
 				<MountPoint Side="Bottom" StartX="0.25" StartY="0.25" EndX="0.75" EndY="0.75"/>
@@ -54,7 +58,6 @@
 			<MirroringY>Z</MirroringY>
 			<MirroringZ>Y</MirroringZ>
 			<EdgeType>Light</EdgeType>
-			<BuildTimeSeconds>40</BuildTimeSeconds>
 			<OverlayTexture>Textures\GUI\Screens\turret_overlay.dds</OverlayTexture>
 			<WeaponDefinitionId Subtype="MA_Laser"/>
 			<InventoryMaxVolume>0.5</InventoryMaxVolume>
@@ -75,7 +78,6 @@
 			<MaxFov>1.04719755</MaxFov>
 			<DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
 			<DestroySound>WepSmallWarheadExpl</DestroySound>
-			<PCU>75</PCU>
 			<IsAirTight>false</IsAirTight>
 		</Definition>
 		<!-- PDT small -->
@@ -95,16 +97,20 @@
 			<ModelOffset x="0" y="0" z="0"/>
 			<Model>Models\MA_Designator\MA_Designator_sm.mwm</Model>
 			<UseModelIntersection>true</UseModelIntersection>
-			<Components>
-				<Component Subtype="SteelPlate" Count="1"/>
-				<Component Subtype="Construction" Count="10"/>
-				<Component Subtype="MetalGrid" Count="1"/>
-				<Component Subtype="LargeTube" Count="1"/>
-				<Component Subtype="Motor" Count="2"/>
-				<Component Subtype="Computer" Count="12"/>
-				<Component Subtype="Construction" Count="5"/>
-				<Component Subtype="SteelPlate" Count="2"/>
-			</Components>
+            <Components>
+                <Component Subtype="SteelPlate" Count="3" />
+                <Component Subtype="Construction" Count="31" />
+                <Component Subtype="MetalGrid" Count="3" />
+                <Component Subtype="LargeTube" Count="3" />
+                <Component Subtype="Motor" Count="6" />
+                <Component Subtype="Computer" Count="37" />
+                <Component Subtype="Construction" Count="16" />
+                <Component Subtype="SteelPlate" Count="6" />
+            </Components>
+
+
+            <BuildTimeSeconds>8</BuildTimeSeconds>
+            <PCU>14110</PCU>
 			<CriticalComponent Subtype="Computer" Index="0"/>
 			<MountPoints>
 				<MountPoint Side="Bottom" StartX="0.04" StartY="0.04" EndX="0.96" EndY="0.96"/>
@@ -131,7 +137,6 @@
 			<MirroringY>Z</MirroringY>
 			<MirroringZ>Y</MirroringZ>
 			<EdgeType>Light</EdgeType>
-			<BuildTimeSeconds>40</BuildTimeSeconds>
 			<OverlayTexture>Textures\GUI\Screens\turret_overlay.dds</OverlayTexture>
 			<WeaponDefinitionId Subtype="MA_Laser"/>
 			<InventoryMaxVolume>0.5</InventoryMaxVolume>
@@ -152,7 +157,6 @@
 			<MaxFov>1.04719755</MaxFov>
 			<DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
 			<DestroySound>WepSmallWarheadExpl</DestroySound>
-			<PCU>75</PCU>
 			<IsAirTight>false</IsAirTight>
 		</Definition>
 	</CubeBlocks>

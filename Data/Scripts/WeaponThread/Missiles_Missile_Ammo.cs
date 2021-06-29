@@ -155,7 +155,7 @@ namespace WeaponThread
                     NoDeformation = false,
                     Scale = .75f,
                     CustomParticle = "MXA_MissileExplosion",
-                    CustomSound = "ArcWepLrgWarheadExpl",
+                    CustomSound = "HWR_SmallExplosion",
                 },
                 Detonation = new DetonateDef
                 {
@@ -268,40 +268,24 @@ namespace WeaponThread
                 },
                 Lines = new LineDef
                 {
-                    ColorVariance = Random(start: 0.75f, end: 2f), // multiply the color by random values within range.
+                    ColorVariance = Random(start: 0f, end: 0f), // multiply the color by random values within range.
                     WidthVariance = Random(start: 0f, end: 0f), // adds random value to default width (negatives shrinks width)
                     Tracer = new TracerBaseDef
                     {
                         Enable = true,
-                        Length = .5f,
-                        Width = 0.1f,
-                        Color = Color(red: 5f, green: 1f, blue: 1f, alpha: 1f),
+                        Length = 0f,
+                        Width = 0f,
+                        Color = Color(red: 0f, green: 0f, blue: 0f, alpha: 0f),
                         VisualFadeStart = 0, // Number of ticks the weapon has been firing before projectiles begin to fade their color
                         VisualFadeEnd = 0, // How many ticks after fade began before it will be invisible.
                         Textures = new[] {// WeaponLaser, ProjectileTrailLine, WarpBubble, etc..
                             "ProjectileTrailLine",
                         },
                         TextureMode = Normal, // Normal, Cycle, Chaos, Wave
-                        Segmentation = new SegmentDef
-                        {
-                            Enable = false, // If true Tracer TextureMode is ignored
-                            Textures = new[] {
-                                "",
-                            },
-                            SegmentLength = 0f, // Uses the values below.
-                            SegmentGap = 0f, // Uses Tracer textures and values
-                            Speed = 1f, // meters per second
-                            Color = Color(red: 1, green: 2, blue: 2.5f, alpha: 1),
-                            WidthMultiplier = 1f,
-                            Reverse = false,
-                            UseLineVariance = true,
-                            WidthVariance = Random(start: 0f, end: 0f),
-                            ColorVariance = Random(start: 0f, end: 0f)
-                        }
                     },
                     Trail = new TrailDef
                     {
-                        Enable = true,
+                        Enable = false,
                         Textures = new[] {
                             "WeaponLaser",
                         },
@@ -312,12 +296,6 @@ namespace WeaponThread
                         CustomWidth = 0.1f,
                         UseWidthVariance = false,
                         UseColorFade = true,
-                    },
-                    OffsetEffect = new OffsetEffectDef
-                    {
-                        MaxOffset = 0,// 0 offset value disables this effect
-                        MinLength = 0.2f,
-                        MaxLength = 3,
                     },
                 },
             },
@@ -349,7 +327,7 @@ namespace WeaponThread
             HybridRound = false, //AmmoMagazine based weapon with energy cost
             EnergyCost = 0f, //(((EnergyCost * DefaultDamage) * ShotsPerSecond) * BarrelsPerShot) * ShotsPerBarrel
             BaseDamage = 1f,
-            Mass = 75f, // in kilograms
+            Mass = 1000f, // in kilograms
             Health = 1f, // 0 = disabled, otherwise how much damage it can take from other trajectiles before dying.
             BackKickForce = 5f,
             DecayPerShot = 0f,
@@ -421,23 +399,6 @@ namespace WeaponThread
                     BypassModifier = -1f,
                 },
                 // first true/false (ignoreOthers) will cause projectiles to pass through all blocks that do not match the custom subtypeIds.
-                Custom = new CustomScalesDef
-                {
-                    IgnoreAllOthers = false,
-                    Types = new[]
-                    {
-                        new CustomBlocksDef
-                        {
-                            SubTypeId = "Test1",
-                            Modifier = -1f,
-                        },
-                        new CustomBlocksDef
-                        {
-                            SubTypeId = "Test2",
-                            Modifier = -1f,
-                        },
-                    },
-                },
             },
 			AreaEffect = new AreaDamageDef
 			{
@@ -445,7 +406,7 @@ namespace WeaponThread
 				Base = new AreaInfluence
 				{
 					Radius = 5f, // the sphere of influence of area effects
-					EffectStrength = 5000f, // For ewar it applies this amount per pulse/hit, non-ewar applies this as damage per tick per entity in area of influence. For radiant 0 == use spillover from BaseDamage, otherwise use this value.
+					EffectStrength = 2000f, // For ewar it applies this amount per pulse/hit, non-ewar applies this as damage per tick per entity in area of influence. For radiant 0 == use spillover from BaseDamage, otherwise use this value.
 				},
 				Pulse = new PulseDef // interval measured in game ticks (60 == 1 second), pulseChance chance (0 - 100) that an entity in field will be hit
 				{
@@ -477,8 +438,8 @@ namespace WeaponThread
 					NoShrapnel = false,
 					NoDeformation = false,
 					Scale = 1f,
-					CustomParticle = "MXA_MissileExplosion",
-					CustomSound = "ArcWepLrgWarheadExpl",
+					CustomParticle = "",
+					CustomSound = "",
 				},
 				Detonation = new DetonateDef //Explosive type damage independent of Base = new AreaInfluence. Only works with non-Explosive AreaEffect if DetonateOnEnd = true.
 				{
@@ -592,36 +553,20 @@ namespace WeaponThread
                 },
                 Lines = new LineDef
                 {
-                    ColorVariance = Random(start: 0.75f, end: 2f), // multiply the color by random values within range.
-                    WidthVariance = Random(start: 0f, end: 0f), // adds random value to default width (negatives shrinks width)
+                    ColorVariance = Random(start: 0f, end: 2f), // multiply the color by random values within range.
+                    WidthVariance = Random(start: 0f, end: 0.1f), // adds random value to default width (negatives shrinks width)
                     Tracer = new TracerBaseDef
                     {
                         Enable = true,
                         Length = 10f,
                         Width = 0.3f,
-                        Color = Color(red: 10f, green: 1f, blue: 1f, alpha: 1f),
+                        Color = Color(red: 30f, green: 6f, blue: 1.5f, alpha: 1f),
                         VisualFadeStart = 0, // Number of ticks the weapon has been firing before projectiles begin to fade their color
                         VisualFadeEnd = 0, // How many ticks after fade began before it will be invisible.
                         Textures = new[] {// WeaponLaser, ProjectileTrailLine, WarpBubble, etc..
-                            "ProjectileTrailLine",
+                            "MD_MissileThrustFlame",
                         },
                         TextureMode = Normal, // Normal, Cycle, Chaos, Wave
-                        Segmentation = new SegmentDef
-                        {
-                            Enable = false, // If true Tracer TextureMode is ignored
-                            Textures = new[] {
-                                "",
-                            },
-                            SegmentLength = 0f, // Uses the values below.
-                            SegmentGap = 0f, // Uses Tracer textures and values
-                            Speed = 1f, // meters per second
-                            Color = Color(red: 1, green: 2, blue: 2.5f, alpha: 1),
-                            WidthMultiplier = 1f,
-                            Reverse = false,
-                            UseLineVariance = true,
-                            WidthVariance = Random(start: 0f, end: 0f),
-                            ColorVariance = Random(start: 0f, end: 0f)
-                        }
                     },
                     Trail = new TrailDef
                     {
@@ -630,18 +575,12 @@ namespace WeaponThread
                             "WeaponLaser",
                         },
                         TextureMode = Normal,
-                        DecayTime = 100,
-                        Color = Color(red: 1, green: 1, blue: 1, alpha: 1f),
+                        DecayTime = 150,
+                        Color = Color(red: 1.1f, green: 1.01f, blue: 1, alpha: 1f),
                         Back = false,
                         CustomWidth = 1f,
                         UseWidthVariance = true,
                         UseColorFade = true,
-                    },
-                    OffsetEffect = new OffsetEffectDef
-                    {
-                        MaxOffset = 0,// 0 offset value disables this effect
-                        MinLength = 0.2f,
-                        MaxLength = 3,
                     },
                 },
             },
@@ -656,18 +595,6 @@ namespace WeaponThread
                 HitPlayChance = 1f,
                 HitPlayShield = true,
             }, // Don't edit below this line
-            Ejection = new AmmoEjectionDef
-            {
-                Type = Particle, // Particle or Item (Inventory Component)
-                Speed = 100f, // Speed inventory is ejected from in dummy direction
-                SpawnChance = 0.5f, // chance of triggering effect (0 - 1)
-                CompDef = new ComponentDef
-                {
-                    ItemDefinition = "", //InventoryComponent name
-                    LifeTime = 0, // how long item should exist in world
-                    Delay = 0, // delay in ticks after shot before ejected
-                }
-            },
         };
     }
 }

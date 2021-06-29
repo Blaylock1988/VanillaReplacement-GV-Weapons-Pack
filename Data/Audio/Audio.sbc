@@ -28,13 +28,13 @@
 			<Category>SHOT</Category>
 			<MaxDistance>500</MaxDistance>
 			<PitchVariation>50</PitchVariation>
-			<PreventSynchronization>0</PreventSynchronization>
+			<PreventSynchronization>3</PreventSynchronization>
 			<DynamicMusicCategory>HeavyFight</DynamicMusicCategory>
 			<DynamicMusicAmount>3</DynamicMusicAmount>
 			<DistantSounds>
 				<DistantSound DistanceCrossfade="10" Distance="500" Sound="MD_GatlingLoopDistant"/>
 			</DistantSounds>
-			<Volume>1</Volume>
+			<Volume>0.8</Volume>
 			<Loopable>true</Loopable>
 			<Waves>
 				<Wave Type="D3">
@@ -52,7 +52,7 @@
 			<Category>SHOT</Category>
 			<MaxDistance>1500</MaxDistance>
 			<PitchVariation>100</PitchVariation>
-			<PreventSynchronization>0</PreventSynchronization>
+			<PreventSynchronization>3</PreventSynchronization>
 			<Volume>1.2</Volume>
 			<Loopable>true</Loopable>
 			<Waves>
@@ -259,7 +259,7 @@
 			<DynamicMusicCategory>HeavyFight</DynamicMusicCategory>
 			<DynamicMusicAmount>3</DynamicMusicAmount>
 			<DistantSounds>
-				<DistantSound DistanceCrossfade="1000" Distance="2000" Sound="HWR_ExplosionDistant"/>
+				<DistantSound DistanceCrossfade="1000" Distance="2000" Sound="HWR_FlakExplosionDistant"/>
 			</DistantSounds>
 			<Volume>1</Volume>
 			<Loopable>false</Loopable>
@@ -284,10 +284,38 @@
 		<Sound>
 			<Id>
 				<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+				<SubtypeId>HWR_FlakExplosionDistant</SubtypeId>
+			</Id>
+			<Category>WEP_EXPL</Category>
+			<MaxDistance>5000</MaxDistance>
+			<PitchVariation>200</PitchVariation>
+			<Volume>2</Volume>
+			<Loopable>false</Loopable>
+			<Waves>
+				<Wave Type="D3">
+					<Start>Audio\HWR\Flak_explosion_1_Distant.xwm</Start>
+				</Wave>
+				<Wave Type="D3">
+					<Start>Audio\HWR\Flak_explosion_2_Distant.xwm</Start>
+				</Wave>
+				<Wave Type="D3">
+					<Start>Audio\HWR\Flak_explosion_3_Distant.xwm</Start>
+				</Wave>
+				<Wave Type="D3">
+					<Start>Audio\HWR\Flak_explosion_4_Distant.xwm</Start>
+				</Wave>
+				<Wave Type="D3">
+					<Start>Audio\HWR\Flak_explosion_5_Distant.xwm</Start>
+				</Wave>
+			</Waves>
+		</Sound>
+		<Sound>
+			<Id>
+				<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
 				<SubtypeId>HWR_ExplosionDistant</SubtypeId>
 			</Id>
 			<Category>WEP_EXPL</Category>
-			<MaxDistance>3000</MaxDistance>
+			<MaxDistance>5000</MaxDistance>
 			<PitchVariation>200</PitchVariation>
 			<Volume>2</Volume>
 			<Loopable>false</Loopable>
@@ -306,6 +334,31 @@
 				</Wave>
 				<Wave Type="D3">
 					<Start>Audio\HWR\Distant_explosion_5.xwm</Start>
+				</Wave>
+			</Waves>
+		</Sound>
+		<Sound>
+			<Id>
+				<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+				<SubtypeId>MXA_ImpactExplosion</SubtypeId>
+			</Id>
+			<Category>SHOT</Category>
+			<MaxDistance>500</MaxDistance>
+			<VolumeVariation>0.05</VolumeVariation>
+			<PreventSynchronization>0</PreventSynchronization>
+			<SoundLimit>10</SoundLimit>
+			<DynamicMusicCategory>HeavyFight</DynamicMusicCategory>
+			<DynamicMusicAmount>3</DynamicMusicAmount>
+			<Volume>1</Volume>
+			<Waves>
+				<Wave Type="D3">
+					<Start>Audio\MXA\ImpactExplosion1.xwm</Start>
+				</Wave>
+				<Wave Type="D3">
+					<Start>Audio\MXA\ImpactExplosion2.xwm</Start>
+				</Wave>
+				<Wave Type="D3">
+					<Start>Audio\MXA\ImpactExplosion3.xwm</Start>
 				</Wave>
 			</Waves>
 		</Sound>

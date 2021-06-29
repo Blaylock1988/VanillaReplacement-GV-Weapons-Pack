@@ -16,7 +16,7 @@
 			<Center x="0" y="0" z="4"/>
 			<ModelOffset x="0" y="0" z="0"/>
 			<Model>Models\AWERailgun\LG_Railgun.mwm</Model>
-			<Components>
+            <Components>
                 <Component Subtype="SteelPlate" Count="59" />
                 <Component Subtype="Construction" Count="42" />
                 <Component Subtype="MetalGrid" Count="12" />
@@ -28,8 +28,8 @@
                 <Component Subtype="Construction" Count="28" />
                 <Component Subtype="SteelPlate" Count="59" />
             </Components>
-            <BuildTimeSeconds>34</BuildTimeSeconds>
-            <PCU>7280</PCU>
+            <BuildTimeSeconds>48</BuildTimeSeconds>
+            <PCU>39210</PCU>
 			<CriticalComponent Subtype="Computer" Index="0"/>
 			<MountPoints>
 				<MountPoint Side="Back" StartX="0.0" StartY="0.0" EndX="1.0" EndY="1.0"/>
@@ -67,20 +67,20 @@
 			<Size x="3" y="2" z="5"/>
 			<ModelOffset x="0" y="0" z="0"/>
 			<Model>Models\AWERailTurret\LG_ARYXRailgunTurret_Base.mwm</Model>
-			<Components>
-                <Component Subtype="SteelPlate" Count="143" />
-                <Component Subtype="Construction" Count="97" />
-                <Component Subtype="MetalGrid" Count="43" />
-                <Component Subtype="PowerCell" Count="14" />
-                <Component Subtype="Superconductor" Count="29" />
-                <Component Subtype="SmallTube" Count="89" />
-                <Component Subtype="Motor" Count="143" />
-                <Component Subtype="Computer" Count="107" />
+            <Components>
+                <Component Subtype="SteelPlate" Count="117" />
                 <Component Subtype="Construction" Count="79" />
-                <Component Subtype="SteelPlate" Count="214" />
+                <Component Subtype="MetalGrid" Count="35" />
+                <Component Subtype="PowerCell" Count="12" />
+                <Component Subtype="Superconductor" Count="23" />
+                <Component Subtype="SmallTube" Count="73" />
+                <Component Subtype="Motor" Count="117" />
+                <Component Subtype="Computer" Count="88" />
+                <Component Subtype="Construction" Count="64" />
+                <Component Subtype="SteelPlate" Count="175" />
             </Components>
-            <BuildTimeSeconds>101</BuildTimeSeconds>
-            <PCU>13990</PCU>
+            <BuildTimeSeconds>117</BuildTimeSeconds>
+            <PCU>63520</PCU>
 			<CriticalComponent Subtype="Computer" Index="0"/>
 			<MountPoints>
 				<MountPoint Side="Bottom" StartX="1.0" StartY="1.0" EndX="2.0" EndY="4.0"/>

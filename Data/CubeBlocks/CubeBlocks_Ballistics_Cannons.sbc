@@ -14,7 +14,7 @@
 			<Size x="2" y="3" z="11"/>
 			<ModelOffset x="0" y="0" z="0"/>
 			<Model>Models\Cubes\Small\122mmFixed.mwm</Model>
-			<Components>
+            <Components>
                 <Component Subtype="SteelPlate" Count="14" />
                 <Component Subtype="Construction" Count="28" />
                 <Component Subtype="MetalGrid" Count="11" />
@@ -26,8 +26,8 @@
                 <Component Subtype="SteelPlate" Count="14" />
             </Components>
 
-            <BuildTimeSeconds>11</BuildTimeSeconds>
-            <PCU>4470</PCU>
+            <BuildTimeSeconds>16</BuildTimeSeconds>
+            <PCU>31250</PCU>
 			<CriticalComponent Subtype="Computer" Index="0"/>
 			<MountPoints>
 				<MountPoint Side="Top" StartX="0" StartY="2" EndX="2" EndY="6"/>
@@ -65,7 +65,7 @@
 			<ModelOffset x="0" y="0" z="0"/>
 			<Model>Models\Cubes\Small\122mmBase.mwm</Model>
 			<UseModelIntersection>true</UseModelIntersection>
-			<Components>
+            <Components>
                 <Component Subtype="SteelPlate" Count="12" />
                 <Component Subtype="Construction" Count="12" />
                 <Component Subtype="MetalGrid" Count="7" />
@@ -77,8 +77,8 @@
                 <Component Subtype="SteelPlate" Count="47" />
             </Components>
 
-            <BuildTimeSeconds>15</BuildTimeSeconds>
-            <PCU>4880</PCU>
+            <BuildTimeSeconds>21</BuildTimeSeconds>
+            <PCU>33300</PCU>
 			<CriticalComponent Subtype="Computer" Index="0"/>
 			<MountPoints>
 				<MountPoint Side="Bottom" StartX="0" StartY="0" EndX="5" EndY="5"/>
@@ -97,7 +97,7 @@
 			<MirroringZ>Y</MirroringZ>
 			<EdgeType>Heavy</EdgeType>
 			<OverlayTexture>Textures\GUI\Screens\turret_overlay.dds</OverlayTexture>
-			<WeaponDefinitionId Subtype="AryxBurstCannonWepDef"/>
+			<WeaponDefinitionId Subtype="OKI122mmVT"/>
 			<InventoryMaxVolume>0.720</InventoryMaxVolume>
 			<ResourceSinkGroup>Defense</ResourceSinkGroup>
 			<DamageEffectId>213</DamageEffectId>
@@ -197,7 +197,7 @@
 			<UseModelIntersection>true</UseModelIntersection>
 			<MirroringY>Z</MirroringY>
 			<MirroringZ>Y</MirroringZ>
-			<Components>
+            <Components>
                 <Component Subtype="SteelPlate" Count="120" />
                 <Component Subtype="Construction" Count="30" />
                 <Component Subtype="MetalGrid" Count="18" />
@@ -209,8 +209,8 @@
                 <Component Subtype="SteelPlate" Count="151" />
             </Components>
 
-            <BuildTimeSeconds>78</BuildTimeSeconds>
-            <PCU>11170</PCU>
+            <BuildTimeSeconds>111</BuildTimeSeconds>
+            <PCU>73000</PCU>
 			<CriticalComponent Subtype="Computer" Index="0"/>
 			<EdgeType>Light</EdgeType>
 			<WeaponDefinitionId Subtype="MXA_CoilgunL"/>
@@ -247,7 +247,7 @@
 			<Size x="1" y="1" z="5"/>
 			<ModelOffset x="0" y="0" z="0"/>
 			<Model>Models\Cubes\Large\Battlecannon.mwm</Model>
-			<Components>
+            <Components>
                 <Component Subtype="SteelPlate" Count="60" />
                 <Component Subtype="Construction" Count="20" />
                 <Component Subtype="MetalGrid" Count="8" />
@@ -259,8 +259,8 @@
                 <Component Subtype="SteelPlate" Count="60" />
             </Components>
 
-            <BuildTimeSeconds>34</BuildTimeSeconds>
-            <PCU>6730</PCU>
+            <BuildTimeSeconds>48</BuildTimeSeconds>
+            <PCU>47370</PCU>
 			<CriticalComponent Subtype="Computer" Index="0" />
 			<MountPoints>
 				<MountPoint Side="Back" StartX="0.0" StartY="0.0" EndX="1.0" EndY="1.0"/>

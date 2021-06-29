@@ -41,12 +41,12 @@ namespace WeaponThread {
 		};
 
 		private AiDef Ballistics_Gatlings_Hardpoint_Ai_Turret = new AiDef {
-			TrackTargets = true,
-			TurretAttached = true,
-			TurretController = false,
-			PrimaryTracking = false,
-			LockOnFocus = true,
-			SuppressFire = false,
+			TrackTargets = true, //This Weapon will know there are targets in range
+			TurretAttached = true, // This enables the ability for players to manually control
+			TurretController = true, //The turret in this WeaponDefinition has control over where other turrets aim.
+			PrimaryTracking = false, //The turret in this WeaponDefinition selects targets for other turrets that do not have tracking capabilities.
+			LockOnFocus = false, // fires this weapon when something is locked using the WC hud reticle
+			SuppressFire = false, //prevent automatic firing
 			OverrideLeads = false, // Override default behavior for target leads
 		};
 
@@ -152,7 +152,7 @@ namespace WeaponThread {
                         MuzzlePartId = "GatlingBarrel",
                         AzimuthPartId = "GatlingTurretBase1",
                         ElevationPartId = "GatlingTurretBase2",
-                        DurabilityMod = 0.5f,
+                        DurabilityMod = 0.25f,
                         IconName = "TestIcon.dds",
                     },
 
@@ -292,7 +292,7 @@ namespace WeaponThread {
                         MuzzlePartId = "Barrel",
                         ElevationPartId = "None",
                         AzimuthPartId = "None",
-                        DurabilityMod = 0.5f,
+                        DurabilityMod = 0.25f,
                         IconName = "TestIcon.dds",
                     },
 
@@ -362,7 +362,7 @@ namespace WeaponThread {
                         MuzzlePartId = "GatlingBarrel",
                         AzimuthPartId = "GatlingTurretBase1",
                         ElevationPartId = "GatlingTurretBase2",
-                        DurabilityMod = 0.5f,
+                        DurabilityMod = 0.25f,
                         IconName = "TestIcon.dds",
                     },
 

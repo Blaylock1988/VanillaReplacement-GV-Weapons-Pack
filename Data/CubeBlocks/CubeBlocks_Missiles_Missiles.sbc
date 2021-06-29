@@ -24,20 +24,20 @@
 				<MountPoint Side="Right" StartX="0" StartY="0" EndX="3" EndY="3"/>
 				<MountPoint Side="Left" StartX="0" StartY="0" EndX="3" EndY="3"/>
 			</MountPoints>
-			<Components>
-                <Component Subtype="SmallTube" Count="24" />
-                <Component Subtype="InteriorPlate" Count="19" />
-                <Component Subtype="Construction" Count="11" />
-                <Component Subtype="LargeTube" Count="4" />
-                <Component Subtype="MetalGrid" Count="5" />
-                <Component Subtype="Motor" Count="2" />
-                <Component Subtype="Computer" Count="1" />
-                <Component Subtype="SteelPlate" Count="4" />
-                <Component Subtype="InteriorPlate" Count="5" />
+            <Components>
+                <Component Subtype="SmallTube" Count="42" />
+                <Component Subtype="InteriorPlate" Count="34" />
+                <Component Subtype="Construction" Count="20" />
+                <Component Subtype="LargeTube" Count="7" />
+                <Component Subtype="MetalGrid" Count="8" />
+                <Component Subtype="Motor" Count="3" />
+                <Component Subtype="Computer" Count="2" />
+                <Component Subtype="SteelPlate" Count="7" />
+                <Component Subtype="InteriorPlate" Count="8" />
             </Components>
 
-            <BuildTimeSeconds>4</BuildTimeSeconds>
-            <PCU>3210</PCU>
+            <BuildTimeSeconds>10</BuildTimeSeconds>
+            <PCU>22180</PCU>
 			<CriticalComponent Subtype="Computer" Index="0"/>
 			<BuildProgressModels>
 				<Model BuildPercentUpperBound="0.50" File="Models\Cubes\small\RocketLauncherReloadConstruction_1.mwm"/>
@@ -73,20 +73,20 @@
 			<MirroringY>Z</MirroringY>
 			<MirroringZ>Y</MirroringZ>
 			<MirroringX>X</MirroringX>
-			<Components>
-                <Component Subtype="SteelPlate" Count="301" />
-                <Component Subtype="Construction" Count="602" />
-                <Component Subtype="MetalGrid" Count="36" />
-                <Component Subtype="LargeTube" Count="181" />
-                <Component Subtype="Motor" Count="181" />
-                <Component Subtype="Computer" Count="181" />
-                <Component Subtype="Superconductor" Count="72" />
-                <Component Subtype="Construction" Count="181" />
-                <Component Subtype="SteelPlate" Count="120" />
+            <Components>
+                <Component Subtype="SteelPlate" Count="61" />
+                <Component Subtype="Construction" Count="122" />
+                <Component Subtype="MetalGrid" Count="7" />
+                <Component Subtype="LargeTube" Count="37" />
+                <Component Subtype="Motor" Count="37" />
+                <Component Subtype="Computer" Count="37" />
+                <Component Subtype="Superconductor" Count="15" />
+                <Component Subtype="Construction" Count="37" />
+                <Component Subtype="SteelPlate" Count="24" />
             </Components>
 
-            <BuildTimeSeconds>171</BuildTimeSeconds>
-            <PCU>6080</PCU>
+            <BuildTimeSeconds>49</BuildTimeSeconds>
+            <PCU>40300</PCU>
 			<CriticalComponent Subtype="Computer" Index="0"/>
 			<EdgeType>Light</EdgeType>
 			<WeaponDefinitionId Subtype="MXA_ArcherPods"/>

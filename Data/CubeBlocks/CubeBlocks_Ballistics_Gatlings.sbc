@@ -4,7 +4,7 @@
 		<Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
 			<Id>
 				<TypeId>LargeGatlingTurret</TypeId>
-				<SubtypeId/>
+				<SubtypeId>LargeGatlingTurretTemp</SubtypeId> <!--<SubtypeId/>-->
 			</Id>
 			<DisplayName>DisplayName_Block_GatlingTurret</DisplayName>
 			<Icon>Textures\GUI\Icons\Cubes\OKI14mmCIWS_Turret.dds</Icon>
@@ -12,12 +12,12 @@
 			<CubeSize>Large</CubeSize>
 			<PlaceDecals>false</PlaceDecals>
 			<BlockTopology>TriangleMesh</BlockTopology>
-			<Size x="3" y="2" z="3"/>
-			<ModelOffset x="0" y="0" z="0"/>
+			<Size x="3" y="3" z="3"/>
+			<ModelOffset x="0" y="-1.25" z="0"/>
 			<Model>Models\Cubes\Large\Gatling\14mmLGBase.mwm</Model>
 			<UseModelIntersection>true</UseModelIntersection>
-			<Components>
-                <Component Subtype="SteelPlate" Count="21" />
+            <Components>
+				<Component Subtype="SteelPlate" Count="21" />
                 <Component Subtype="Construction" Count="106" />
                 <Component Subtype="MetalGrid" Count="63" />
                 <Component Subtype="SmallTube" Count="25" />
@@ -26,10 +26,8 @@
                 <Component Subtype="Construction" Count="21" />
                 <Component Subtype="SteelPlate" Count="63" />
             </Components>
-
-
-            <BuildTimeSeconds>32</BuildTimeSeconds>
-            <PCU>7260</PCU>
+            <BuildTimeSeconds>45</BuildTimeSeconds>
+            <PCU>39220</PCU>
 			<CriticalComponent Subtype="Computer" Index="0"/>
 			<MountPoints>
 				<MountPoint Side="Bottom" StartX="1" StartY="1" EndX="2" EndY="2"/>
@@ -100,7 +98,7 @@
 			<ModelOffset x="0" y="0" z="0"/>
 			<Model>Models\Cubes\Small\GatlingTurret.mwm</Model>
 			<UseModelIntersection>true</UseModelIntersection>
-			<Components>
+            <Components>
                 <Component Subtype="SteelPlate" Count="6" />
                 <Component Subtype="Construction" Count="31" />
                 <Component Subtype="MetalGrid" Count="6" />
@@ -112,8 +110,8 @@
             </Components>
 
 
-            <BuildTimeSeconds>6</BuildTimeSeconds>
-            <PCU>2060</PCU>
+            <BuildTimeSeconds>8</BuildTimeSeconds>
+            <PCU>13210</PCU>
 			<CriticalComponent Subtype="Computer" Index="0"/>
 			<MountPoints>
 				<MountPoint Side="Bottom" StartX="0" StartY="0" EndX="5" EndY="5" Default="true"/>
@@ -174,7 +172,7 @@
 		<Definition xsi:type="MyObjectBuilder_WeaponBlockDefinition">
 			<Id>
 				<TypeId>SmallGatlingGun</TypeId>
-				<SubtypeId/>
+				<SubtypeId>SmallGatlingGunTemp</SubtypeId> <!--<SubtypeId/>-->
 			</Id>
 			<DisplayName>DisplayName_Block_GatlingGun</DisplayName>
 			<Icon>Textures\GUI\Icons\Cubes\gatling_gun.dds</Icon>
@@ -184,7 +182,7 @@
 			<Size x="1" y="1" z="4"/>
 			<ModelOffset x="0" y="0" z="0"/>
 			<Model>Models\Cubes\Small\GatlingGun.mwm</Model>
-			<Components>
+            <Components>
                 <Component Subtype="SteelPlate" Count="1" />
                 <Component Subtype="Construction" Count="1" />
                 <Component Subtype="MetalGrid" Count="2" />
@@ -196,8 +194,8 @@
 
 
 
-            <BuildTimeSeconds>1</BuildTimeSeconds>
-            <PCU>1440</PCU>
+            <BuildTimeSeconds>2</BuildTimeSeconds>
+            <PCU>11470</PCU>
 			<CriticalComponent Subtype="Computer" Index="0"/>
 			<MountPoints>
 				<MountPoint Side="Back" StartX="0" StartY="0" EndX="1" EndY="1"/>

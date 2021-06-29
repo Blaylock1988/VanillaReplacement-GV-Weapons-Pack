@@ -22,7 +22,7 @@ namespace WeaponThread {
                         MuzzlePartId = "MissileTurretBarrels",
                         AzimuthPartId = "MissileTurretBase1",
                         ElevationPartId = "MissileTurretBarrels",
-						DurabilityMod = 0.25f,
+						DurabilityMod = 0.5f,
                         IconName = "filter_energy.dds" 
 					},
 				    new MountPointDef {
@@ -31,7 +31,7 @@ namespace WeaponThread {
                         MuzzlePartId = "MissileTurretBarrels",
                         AzimuthPartId = "MissileTurretBase1",
                         ElevationPartId = "MissileTurretBarrels",
-						DurabilityMod = 0.25f,
+						DurabilityMod = 0.5f,
                         IconName = "filter_energy.dds"
                     },
 
@@ -57,7 +57,7 @@ namespace WeaponThread {
                 MinimumDiameter = 0, // 0 = unlimited, Minimum radius of threat to engage.
                 MaximumDiameter = 0, // 0 = unlimited, Maximum radius of threat to engage.
                 MaxTargetDistance = 1000, // 0 = unlimited, Maximum target distance that targets will be automatically shot at.
-                MinTargetDistance = 10, // 0 = unlimited, Min target distance that targets will be automatically shot at.
+                MinTargetDistance = 0, // 0 = unlimited, Min target distance that targets will be automatically shot at.
                 TopTargets = 8, // 0 = unlimited, max number of top targets to randomize between.
                 TopBlocks = 0, // 0 = unlimited, max number of blocks to randomize between
                 StopTrackingSpeed = 0, // do not track target threats traveling faster than this speed
@@ -77,8 +77,8 @@ namespace WeaponThread {
                 Ai = new AiDef 
 				{
                     TrackTargets = true, //This Weapon will know there are targets in range
-                    TurretAttached = true, // This weapon is on a turret and moves
-                    TurretController = false, //The turret in this WeaponDefinition has control over where other turrets aim.
+                    TurretAttached = false, // This enables the ability for players to manually control
+                    TurretController = true, //The turret in this WeaponDefinition has control over where other turrets aim.
                     PrimaryTracking = false, //The turret in this WeaponDefinition selects targets for other turrets that do not have tracking capabilities.
                     LockOnFocus = false, // fires this weapon when something is locked using the WC hud reticle
                     SuppressFire = false, //prevent automatic firing

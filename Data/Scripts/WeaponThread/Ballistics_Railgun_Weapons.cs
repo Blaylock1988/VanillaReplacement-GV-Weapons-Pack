@@ -21,6 +21,7 @@ namespace WeaponThread {
                         MuzzlePartId = "MissileTurretBarrels",
                         AzimuthPartId = "MissileTurretBase1",
                         ElevationPartId = "MissileTurretBarrels",
+                        DurabilityMod = 0.5f,
                     },
 
                 },
@@ -142,6 +143,7 @@ namespace WeaponThread {
                         MuzzlePartId = "None",
                         AzimuthPartId = "None",
                         ElevationPartId = "None",
+                        DurabilityMod = 0.5f,
                     },
 
                 },

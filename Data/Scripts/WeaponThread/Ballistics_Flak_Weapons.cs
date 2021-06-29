@@ -1,4 +1,5 @@
-﻿using static WeaponThread.WeaponStructure;
+﻿using System.Collections.Generic;
+using static WeaponThread.WeaponStructure;
 using static WeaponThread.WeaponStructure.WeaponDefinition;
 using static WeaponThread.WeaponStructure.WeaponDefinition.HardPointDef;
 using static WeaponThread.WeaponStructure.WeaponDefinition.ModelAssignmentsDef;
@@ -24,6 +25,7 @@ namespace WeaponThread
                         MuzzlePartId = "MissileTurretBarrels",
                         AzimuthPartId = "MissileTurretBase1",
                         ElevationPartId = "MissileTurretBarrels",
+                        DurabilityMod = 0.5f,
                     },
 
                 },
@@ -61,21 +63,10 @@ namespace WeaponThread
                 DelayCeaseFire = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 AddToleranceToTracking = false,
 
-                Ui = new UiDef
-                {
-                    RateOfFire = false,
-                    DamageModifier = false,
-                    ToggleGuidance = false,
-                    EnableOverload = false,
-                },
-                Ai = new AiDef
-                {
-                    TrackTargets = true,
-                    TurretAttached = true,
-                    TurretController = true,
-                    PrimaryTracking = true,
-                    LockOnFocus = false,
-                },
+                Ui = Ballistics_Cannons_Hardpoint_Ui,
+				
+                Ai = Ballistics_Cannons_Hardpoint_Ai_Turret,
+				
                 HardWare = new HardwareDef
                 {
                     RotateRate = 0.075f,
@@ -125,9 +116,9 @@ namespace WeaponThread
                 Graphics = new HardPointParticleDef
                 {
 
-                    Barrel1 = new ParticleDef
+                    Barrel2 = new ParticleDef
                     {
-                        Name = "Smoke_LargeGunShot", // Smoke_LargeGunShot
+                        Name = "", // Smoke_LargeGunShot
                         Color = Color(red: 0, green: 0, blue: 0, alpha: 1),
                         Offset = Vector(x: 0, y: 0, z: 0),
 
@@ -140,19 +131,19 @@ namespace WeaponThread
                             Scale = 1f,
                         },
                     },
-                    Barrel2 = new ParticleDef
+                    Barrel1 = new ParticleDef
                     {
-                        Name = "recoil_Flash",//Muzzle_Flash_Large
-                        Color = Color(red: 2, green: 0.75f, blue: 0.625f, alpha: 1),
+                        Name = "MXA_SmallCoilgunMuzzleFlash",//Muzzle_Flash_Large
+                        Color = Color(red: 3, green: 0.75f, blue: 0.625f, alpha: 1),
                         Offset = Vector(x: 0, y: 0, z: 0),
 
                         Extras = new ParticleOptionDef
                         {
                             Loop = false,
                             Restart = false,
-                            MaxDistance = 150,
+                            MaxDistance = 800,
                             MaxDuration = 1,
-                            Scale = 2.5f,
+                            Scale = 0.5f,
                         },
                     },
                 },
@@ -161,7 +152,7 @@ namespace WeaponThread
                 AryxFlakAmmoWC,
 				AryxFlakAmmoWC_Shrapnel,
             },
-            //Animations = AdvancedAnimation,
+            Animations = AryxRiptideAnims,
             // Don't edit below this line
         };
     }

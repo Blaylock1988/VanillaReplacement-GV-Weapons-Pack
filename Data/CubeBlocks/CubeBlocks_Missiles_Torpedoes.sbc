@@ -18,20 +18,20 @@
 			<Model>Models\Missiles\MXA_Shiva.mwm</Model>
 			<MirroringY>Z</MirroringY>
 			<MirroringZ>Y</MirroringZ>
-			<Components>
-                <Component Subtype="SteelPlate" Count="100" />
-                <Component Subtype="Construction" Count="200" />
-                <Component Subtype="MetalGrid" Count="10" />
-                <Component Subtype="LargeTube" Count="1" />
-                <Component Subtype="Motor" Count="50" />
-                <Component Subtype="Computer" Count="150" />
-                <Component Subtype="Superconductor" Count="14" />
-                <Component Subtype="Construction" Count="50" />
-                <Component Subtype="SteelPlate" Count="25" />
+            <Components>
+                <Component Subtype="SteelPlate" Count="38" />
+                <Component Subtype="Construction" Count="77" />
+                <Component Subtype="MetalGrid" Count="4" />
+                <Component Subtype="LargeTube" Count="0" />
+                <Component Subtype="Motor" Count="19" />
+                <Component Subtype="Computer" Count="58" />
+                <Component Subtype="Superconductor" Count="5" />
+                <Component Subtype="Construction" Count="19" />
+                <Component Subtype="SteelPlate" Count="10" />
             </Components>
 
-            <BuildTimeSeconds>45</BuildTimeSeconds>
-            <PCU>6260</PCU>
+            <BuildTimeSeconds>25</BuildTimeSeconds>
+            <PCU>53100</PCU>
 			<CriticalComponent Subtype="Computer" Index="0"/>
 			<EdgeType>Light</EdgeType>
 			<WeaponDefinitionId Subtype="MXA_Shiva"/>

@@ -21,6 +21,7 @@
 						AryxRailgun,
 						SmallCannon122mm,
 						LargeCannon230mm,
+						VehicleTurret122mm,
 						MXA_CoilgunL,
 						MXA_MACL,
 						MXA_ArcherPods,

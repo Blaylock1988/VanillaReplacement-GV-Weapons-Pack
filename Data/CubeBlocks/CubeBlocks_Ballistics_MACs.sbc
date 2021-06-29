@@ -22,19 +22,19 @@
 			<UseModelIntersection>true</UseModelIntersection>
 			<MirroringY>Z</MirroringY>
 			<MirroringZ>Y</MirroringZ>
-			<Components>
-				<Component Subtype="SteelPlate" Count="102"/>
-				<Component Subtype="Construction" Count="26"/>
-				<Component Subtype="MetalGrid" Count="15"/>
-				<Component Subtype="LargeTube" Count="10"/>
-				<Component Subtype="Motor" Count="8"/>
-				<Component Subtype="Superconductor" Count="31"/>
-				<Component Subtype="PowerCell" Count="164"/>
-				<Component Subtype="Computer" Count="20"/>
-				<Component Subtype="SteelPlate" Count="128"/>
-			</Components>
-			<BuildTimeSeconds>67</BuildTimeSeconds>
-			<PCU>12280</PCU>
+            <Components>
+                <Component Subtype="SteelPlate" Count="102" />
+                <Component Subtype="Construction" Count="26" />
+                <Component Subtype="MetalGrid" Count="15" />
+                <Component Subtype="LargeTube" Count="10" />
+                <Component Subtype="Motor" Count="8" />
+                <Component Subtype="Superconductor" Count="31" />
+                <Component Subtype="PowerCell" Count="164" />
+                <Component Subtype="Computer" Count="20" />
+                <Component Subtype="SteelPlate" Count="128" />
+            </Components>
+            <BuildTimeSeconds>96</BuildTimeSeconds>
+            <PCU>73000</PCU>
 			<CriticalComponent Subtype="Computer" Index="0"/>
 			<EdgeType>Light</EdgeType>
 			<WeaponDefinitionId Subtype="MXA_MACL"/>

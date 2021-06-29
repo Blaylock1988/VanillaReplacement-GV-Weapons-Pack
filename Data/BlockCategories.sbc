@@ -19,13 +19,14 @@
 				<string>SmallGatlingTurretAutoGatling</string>
 				<string>LargeWarhead</string>
 				<string>LargeInteriorTurret</string>
-				<string>LargeGatlingTurret/(null)</string>
-				<string>LargeMissileTurret/(null)</string>
+				<string>LargeGatlingTurret/LargeGatlingTurretTemp</string> <!--<string>LargeGatlingTurret/(null)</string>-->
+
+				<string>LargeMissileTurret/LargeMissileTurretTemp</string>
 				<string>SmallGatlingTurret</string>
 				<string>SmallMissileTurret</string>
 				<string>LargeMissileLauncher</string>
-				<string>SmallGatlingGun/(null)</string>
-				<string>SmallMissileLauncher/(null)</string>
+				<string>SmallGatlingGun/SmallGatlingGunTemp</string>
+				<string>SmallMissileLauncher/SmallMissileLauncherTemp</string>
 				<string>SmallRocketLauncherReload</string>
 				<string>MA_PDX_sm</string>
 				<string>MA_T2PDX</string>
