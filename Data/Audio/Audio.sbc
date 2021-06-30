@@ -32,9 +32,9 @@
 			<DynamicMusicCategory>HeavyFight</DynamicMusicCategory>
 			<DynamicMusicAmount>3</DynamicMusicAmount>
 			<DistantSounds>
-				<DistantSound DistanceCrossfade="10" Distance="500" Sound="MD_GatlingLoopDistant"/>
+				<DistantSound DistanceCrossfade="1" Distance="400" Sound="MD_GatlingLoopDistant"/>
 			</DistantSounds>
-			<Volume>0.8</Volume>
+			<Volume>0.6</Volume>
 			<Loopable>true</Loopable>
 			<Waves>
 				<Wave Type="D3">
@@ -51,9 +51,9 @@
 			</Id>
 			<Category>SHOT</Category>
 			<MaxDistance>1500</MaxDistance>
-			<PitchVariation>100</PitchVariation>
+			<PitchVariation>50</PitchVariation>
 			<PreventSynchronization>3</PreventSynchronization>
-			<Volume>1.2</Volume>
+			<Volume>1</Volume>
 			<Loopable>true</Loopable>
 			<Waves>
 				<Wave Type="D3">
