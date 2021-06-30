@@ -4,7 +4,7 @@
 		<Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
 			<Id>
 				<TypeId>LargeMissileTurret</TypeId>
-				<SubtypeId>LargeMissileTurretTemp</SubtypeId> <!--<SubtypeId/>-->
+				<SubtypeId/>
 			</Id>
 			<DisplayName>DisplayName_Block_MissileTurret</DisplayName>
 			<Icon>Textures\GUI\Icons\Cubes\LGMissileBase.dds</Icon>
@@ -176,7 +176,7 @@
 		<Definition xsi:type="MyObjectBuilder_WeaponBlockDefinition">
 			<Id>
 				<TypeId>SmallMissileLauncher</TypeId>
-				<SubtypeId>SmallMissileLauncherTemp</SubtypeId> <!--<SubtypeId/>-->
+				<SubtypeId/>
 			</Id>
 			<DisplayName>DisplayName_Block_RocketLauncher</DisplayName>
 			<Icon>Textures\GUI\Icons\Cubes\missile_launcher_small.dds</Icon>

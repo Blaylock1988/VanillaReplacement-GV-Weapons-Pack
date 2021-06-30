@@ -4,7 +4,7 @@
 		<Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
 			<Id>
 				<TypeId>LargeGatlingTurret</TypeId>
-				<SubtypeId>LargeGatlingTurretTemp</SubtypeId> <!--<SubtypeId/>-->
+				<SubtypeId/>
 			</Id>
 			<DisplayName>DisplayName_Block_GatlingTurret</DisplayName>
 			<Icon>Textures\GUI\Icons\Cubes\OKI14mmCIWS_Turret.dds</Icon>
@@ -172,7 +172,7 @@
 		<Definition xsi:type="MyObjectBuilder_WeaponBlockDefinition">
 			<Id>
 				<TypeId>SmallGatlingGun</TypeId>
-				<SubtypeId>SmallGatlingGunTemp</SubtypeId> <!--<SubtypeId/>-->
+				<SubtypeId/>
 			</Id>
 			<DisplayName>DisplayName_Block_GatlingGun</DisplayName>
 			<Icon>Textures\GUI\Icons\Cubes\gatling_gun.dds</Icon>
