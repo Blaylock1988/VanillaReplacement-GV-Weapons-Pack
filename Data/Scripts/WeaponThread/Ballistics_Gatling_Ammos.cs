@@ -197,7 +197,7 @@ namespace WeaponThread
             AmmoGraphics = new GraphicDef
             {
                 ModelName = "",
-                VisualProbability = 0.98f,
+                VisualProbability = 0.5f,
                 ShieldHitDraw = true,
                 Particles = new AmmoParticleDef
                 {
@@ -236,49 +236,19 @@ namespace WeaponThread
                 Lines = new LineDef
                 {
                     ColorVariance = Random(start: 0f, end: 10f), // multiply the color by random values within range.
-                    WidthVariance = Random(start: 0f, end: 0.1f), // adds random value to default width (negatives shrinks width)
+                    WidthVariance = Random(start: 0f, end: 0.05f), // adds random value to default width (negatives shrinks width)
                     Tracer = new TracerBaseDef
                     {
                         Enable = true,
-                        Length = 6f,
-                        Width = 0.1f,
-                        Color = Color(red: 10.9f, green: 8.9f, blue: 7.5f, alpha: 1),
+                        Length = 10f,
+                        Width = 0.15f,
+                        Color = Color(red: 11f, green: 5f, blue: 5f, alpha: 1),
                         VisualFadeStart = 0, // Number of ticks the weapon has been firing before projectiles begin to fade their color
                         VisualFadeEnd = 0, // How many ticks after fade began before it will be invisible.
                         Textures = new[] {// WeaponLaser, ProjectileTrailLine, WarpBubble, etc..
                             "ProjectileTrailLine",
                         },
                         TextureMode = Normal, // Normal, Cycle, Chaos, Wave
-                        Segmentation = new SegmentDef
-                        {
-                            Enable = false, // If true Tracer TextureMode is ignored
-                            Textures = new[] {
-								"",
-                            },
-                            SegmentLength = 0f, // Uses the values below.
-                            SegmentGap = 0f, // Uses Tracer textures and values
-                            Speed = 1f, // meters per second
-                            Color = Color(red: 1, green: 2, blue: 2.5f, alpha: 1),
-                            WidthMultiplier = 1f,
-                            Reverse = false,
-                            UseLineVariance = true,
-                            WidthVariance = Random(start: 0f, end: 0f),
-                            ColorVariance = Random(start: 0f, end: 0f)
-                        }
-                    },
-                    Trail = new TrailDef
-                    {
-                        Enable = false,
-                        Textures = new[] {
-                            "WeaponLaser",
-                        },
-                        TextureMode = Normal,
-                        DecayTime = 1,
-                        Color = Color(red: 10.9f, green: 8.9f, blue: 7.5f, alpha: 1),
-                        Back = false,
-                        CustomWidth = 0,
-                        UseWidthVariance = true,
-                        UseColorFade = true,
                     },
                     OffsetEffect = new OffsetEffectDef
                     {
