@@ -167,8 +167,8 @@ namespace WeaponThread {
        
 			Ammos = new [] {
 
-                GV_Laser_JumpNull,
-				GV_Laser_JumpNull_Cosmetic,
+                Lasers_JumpNull,
+				Lasers_JumpNull_Pattern,
 				
             },
             // Animations = JDDT_Animations,

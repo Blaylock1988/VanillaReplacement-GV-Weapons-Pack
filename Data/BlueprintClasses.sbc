@@ -1,26 +1,19 @@
 <?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 	<BlueprintClassEntries>
-		<Entry Class="EliteConsumables" BlueprintSubtypeId="MXA_Coil155Ammo"/>
-		<Entry Class="Ammo" BlueprintSubtypeId="MXA_Coil155Ammo"/>
-		<Entry Class="Consumables" BlueprintSubtypeId="100mmFlakBP"/>
-		<Entry Class="EliteConsumables" BlueprintSubtypeId="100mmFlakBP"/>
-		<Entry Class="EliteConsumables" BlueprintSubtypeId="AryxRailgunAmmoBP"/>
-		<Entry Class="Components" BlueprintSubtypeId="JumpDriveDisruptorAmmoBlueprint"/>
-		<Entry Class="Ammo" BlueprintSubtypeId="JumpDriveDisruptorAmmoBlueprint"/>
-		<Entry Class="Ammo" BlueprintSubtypeId="MXA_ArcherPods_Ammo"/>
-		<Entry Class="Ammo" BlueprintSubtypeId="MXA_M58ArcherPods_Ammo"/>
-		<Entry Class="Ammo" BlueprintSubtypeId="MXA_Shiva_Ammo"/>
-		<Entry Class="Ammo" BlueprintSubtypeId="MXA_MACL_Ammo"/>
-		<Entry Class="Ammo" BlueprintSubtypeId="MXA_Moray_Ammo"/>
+		<!--AMMOS-->
+		<Entry Class="Ammo" BlueprintSubtypeId="NATO_5p56x45mm"/>
+		<Entry Class="Ammo" BlueprintSubtypeId="Ballistics_Flak"/>
+		<Entry Class="Ammo" BlueprintSubtypeId="Ballistics_Cannon"/>
+		<Entry Class="Ammo" BlueprintSubtypeId="Ballistics_Railgun"/>
+		<Entry Class="Ammo" BlueprintSubtypeId="Ballistics_MAC"/>
+		<Entry Class="Ammo" BlueprintSubtypeId="Missiles_Missile"/>
+		<Entry Class="Ammo" BlueprintSubtypeId="Missiles_Torpedo"/>
+		<Entry Class="Ammo" BlueprintSubtypeId="Lasers_JumpNull"/>
+		<Entry Class="Ammo" BlueprintSubtypeId="Others_Mine"/>
 		<!--BLOCKS-->
 		<Entry Class="LargeBlocks" BlueprintSubtypeId="LargeMissileTurret/ARYXFlakTurret"/>
 		<Entry Class="LargeBlocks" BlueprintSubtypeId="LargeMissileTurret/ARYXRailgunTurret"/>
 		<Entry Class="LargeBlocks" BlueprintSubtypeId="ConveyorSorter/ARYXRailgun"/>
-		<Entry Class="EliteConsumables" BlueprintSubtypeId="MXA_MACL_Ammo"/>
-		<Entry Class="EliteConsumables" BlueprintSubtypeId="MXA_Moray_Ammo"/>
-		<Entry Class="EliteConsumables" BlueprintSubtypeId="MXA_ArcherPods_Ammo"/>
-		<Entry Class="EliteConsumables" BlueprintSubtypeId="MXA_M58ArcherPods_Ammo"/>
-		<Entry Class="EliteConsumables" BlueprintSubtypeId="MXA_Shiva_Ammo"/>
 	</BlueprintClassEntries>
 </Definitions>

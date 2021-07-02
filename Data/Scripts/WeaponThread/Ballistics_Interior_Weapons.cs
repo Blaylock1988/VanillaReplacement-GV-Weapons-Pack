@@ -162,7 +162,7 @@ namespace WeaponThread
             },
 
             Ammos = new [] {
-                GatlingAmmoType3
+                Ballistics_Interior
             },
             //Animations = AdvancedAnimation,
             // Don't edit below this line

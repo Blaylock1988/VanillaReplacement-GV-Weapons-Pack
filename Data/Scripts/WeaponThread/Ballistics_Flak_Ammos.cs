@@ -17,10 +17,10 @@ namespace WeaponThread
 { // Don't edit above this line
     partial class Weapons
     {
-        private AmmoDef AryxFlakAmmoWC => new AmmoDef
+        private AmmoDef Ballistics_Flak => new AmmoDef
         {
-            AmmoMagazine = "100mmFlakMagazine",
-            AmmoRound = "AryxFlakAmmoWC",
+            AmmoMagazine = "Ballistics_Flak",
+            AmmoRound = "Ballistics_Flak",
             HybridRound = false, //AmmoMagazine based weapon with energy cost
             EnergyCost = 0f, //(((EnergyCost * DefaultDamage) * ShotsPerSecond) * BarrelsPerShot) * ShotsPerBarrel
             BaseDamage = 10f,
@@ -37,7 +37,7 @@ namespace WeaponThread
             },
             Shrapnel = new ShrapnelDef
             {
-                AmmoRound = "AryxFlakAmmoWC_Shrapnel", //AryxFlakAmmoWC_Shrapnel
+                AmmoRound = "Ballistics_Flak_Shrapnel",
                 Fragments = 1,
                 Degrees = 0,
                 Reverse = false,
@@ -134,10 +134,10 @@ namespace WeaponThread
             },
         };
 
-        private AmmoDef AryxFlakAmmoWC_Shrapnel => new AmmoDef
+        private AmmoDef Ballistics_Flak_Shrapnel => new AmmoDef
         {
             AmmoMagazine = "Energy",
-            AmmoRound = "AryxFlakAmmoWC_Shrapnel",
+            AmmoRound = "Ballistics_Flak_Shrapnel",
             BaseDamage = 1f,
             Mass = 100, // in kilograms
             Health = 0, // 0 = disabled, otherwise how much damage it can take from other trajectiles before dying.

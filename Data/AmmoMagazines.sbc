@@ -4,9 +4,33 @@
 		<AmmoMagazine>
 			<Id>
 				<TypeId>AmmoMagazine</TypeId>
+				<SubtypeId>NATO_25x184mm</SubtypeId>
+			</Id>
+			<DisplayName>[Gatling] 25mm KE x140</DisplayName>
+			<Icon>Textures\GUI\Icons\ammo\Ammo_Box.dds</Icon>
+			<Size>
+				<X>0.25</X>
+				<Y>0.2</Y>
+				<Z>0.2</Z>
+			</Size>
+			<Mass>35</Mass>
+			<Volume>16</Volume>
+			<Model>Models\Weapons\Ammo_Box.mwm</Model>
+			<PhysicalMaterial>Ammo</PhysicalMaterial>
+			<Capacity>140</Capacity>
+			<AmmoDefinitionId Subtype="Blank"/>
+			<MinimumOfferAmount>100</MinimumOfferAmount>
+			<MaximumOfferAmount>1000</MaximumOfferAmount>
+			<MinimumOrderAmount>100</MinimumOrderAmount>
+			<MaximumOrderAmount>2000</MaximumOrderAmount>
+			<CanPlayerOrder>true</CanPlayerOrder>
+		</AmmoMagazine>
+		<AmmoMagazine>
+			<Id>
+				<TypeId>AmmoMagazine</TypeId>
 				<SubtypeId>NATO_5p56x45mm</SubtypeId>
 			</Id>
-			<DisplayName>5.56mm KE</DisplayName>
+			<DisplayName>[Interior] 5.56mm KE x50</DisplayName>
 			<Icon>Textures\GUI\Icons\ammo\Rifle_Ammo.dds</Icon>
 			<Size>
 				<X>0.2</X>
@@ -28,28 +52,9 @@
 		<AmmoMagazine>
 			<Id>
 				<TypeId>AmmoMagazine</TypeId>
-				<SubtypeId>JumpDriveDisruptionMagazine</SubtypeId>
+				<SubtypeId>Ballistics_Flak</SubtypeId>
 			</Id>
-			<DisplayName>Jump Drive Disruption Cell</DisplayName>
-			<Icon>Textures\Icons\MD_Ammo.dds</Icon>
-			<Size>
-				<X>0.25</X>
-				<Y>0.2</Y>
-				<Z>0.2</Z>
-			</Size>
-			<Mass>35</Mass>
-			<Volume>16</Volume>
-			<Model>Models\MD_Discharge\MD_Ammo.mwm</Model>
-			<PhysicalMaterial>Ammo</PhysicalMaterial>
-			<Capacity>240</Capacity>
-			<AmmoDefinitionId Subtype="Blank"/>
-		</AmmoMagazine>
-		<AmmoMagazine>
-			<Id>
-				<TypeId>AmmoMagazine</TypeId>
-				<SubtypeId>100mmFlakMagazine</SubtypeId>
-			</Id>
-			<DisplayName>100mm Flak HE</DisplayName>
+			<DisplayName>[Flak] 100mm HE x40</DisplayName>
 			<Icon>Textures\GUI\Icons\ammo\Ammo_Box.dds</Icon>
 			<Size>
 				<X>0.2</X>
@@ -71,9 +76,27 @@
 		<AmmoMagazine>
 			<Id>
 				<TypeId>AmmoMagazine</TypeId>
-				<SubtypeId>AryxRailgunMagDef</SubtypeId>
+				<SubtypeId>Ballistics_Cannon</SubtypeId>
 			</Id>
-			<DisplayName>200mm Railgun SABOT</DisplayName>
+			<DisplayName>[Cannon] 155mm AP x4</DisplayName>
+			<Icon>Textures\GUI\Icons\MXA_AmmoBoxL.png</Icon>
+			<Size>
+				<X>0.25</X>
+				<Y>1.2</Y>
+				<Z>0.2</Z>
+			</Size>
+			<Mass>400</Mass>
+			<Volume>200</Volume>
+			<Model>Models\MXA_AmmoBoxL.mwm</Model>
+			<Capacity>4</Capacity>
+			<AmmoDefinitionId Subtype="Blank"/>
+		</AmmoMagazine>
+		<AmmoMagazine>
+			<Id>
+				<TypeId>AmmoMagazine</TypeId>
+				<SubtypeId>Ballistics_Railgun</SubtypeId>
+			</Id>
+			<DisplayName>[Railgun] 200mm SABOT</DisplayName>
 			<Icon>Textures\GUI\Icons\ammo\AWERailgunAmmo.dds</Icon>
 			<Size>
 				<X>2</X>
@@ -95,9 +118,53 @@
 		<AmmoMagazine>
 			<Id>
 				<TypeId>AmmoMagazine</TypeId>
-				<SubtypeId>MXA_ArcherPods_Ammo</SubtypeId>
+				<SubtypeId>Ballistics_MAC</SubtypeId>
 			</Id>
-			<DisplayName>Archer Missile x150</DisplayName>
+			<DisplayName>[MAC] 1000mm KE</DisplayName>
+			<Icon>Textures\GUI\Icons\MXA_MACL_Ammo.png</Icon>
+			<Size>
+				<X>0.25</X>
+				<Y>1.2</Y>
+				<Z>0.2</Z>
+			</Size>
+			<Mass>15000</Mass>
+			<!--500 per Round-->
+			<Volume>5000</Volume>
+			<!--250 per Round-->
+			<Model>Models\MXA_MACL_Ammo.mwm</Model>
+			<Capacity>1</Capacity>
+			<AmmoDefinitionId Subtype="Blank"/>
+		</AmmoMagazine>
+        <AmmoMagazine>
+            <Id>
+                <TypeId>AmmoMagazine</TypeId>
+                <SubtypeId>Missile200mm</SubtypeId>
+            </Id>
+            <DisplayName>[Rocket] Hydra HE</DisplayName>
+            <Icon>Textures\GUI\Icons\ammo\Small_Rocket.dds</Icon>
+            <Size>
+                <X>1.2</X>
+                <Y>0.2</Y>
+                <Z>0.2</Z>
+            </Size>
+            <Mass>45</Mass>
+            <Volume>60</Volume>
+            <Model>Models\Weapons\Projectile_Missile.mwm</Model>
+            <PhysicalMaterial>Ammo</PhysicalMaterial>
+            <Capacity>1</Capacity>
+            <AmmoDefinitionId Subtype="Blank" /> <!-- changing this causes a critical error, because KEEN -->
+            <MinimumOfferAmount>100</MinimumOfferAmount>
+            <MaximumOfferAmount>1000</MaximumOfferAmount>
+            <MinimumOrderAmount>100</MinimumOrderAmount>
+            <MaximumOrderAmount>2000</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+        </AmmoMagazine>
+		<AmmoMagazine>
+			<Id>
+				<TypeId>AmmoMagazine</TypeId>
+				<SubtypeId>Missiles_Missile</SubtypeId>
+			</Id>
+			<DisplayName>[Missile] Archer HE x150</DisplayName>
 			<Icon>Textures\GUI\Icons\MXA_Archer_Missile_Ammo.png</Icon>
 			<Size>
 				<X>0.25</X>
@@ -113,9 +180,9 @@
 		<AmmoMagazine>
 			<Id>
 				<TypeId>AmmoMagazine</TypeId>
-				<SubtypeId>MXA_Shiva_Ammo</SubtypeId>
+				<SubtypeId>Missiles_Torpedo</SubtypeId>
 			</Id>
-			<DisplayName>Shiva Torpedo</DisplayName>
+			<DisplayName>[Torpedo] Shiva EMP</DisplayName>
 			<Icon>Textures\GUI\Icons\MXA_Shiva_Missile.png</Icon>
 			<Size>
 				<X>0.25</X>
@@ -131,9 +198,28 @@
 		<AmmoMagazine>
 			<Id>
 				<TypeId>AmmoMagazine</TypeId>
-				<SubtypeId>MXA_Moray_Ammo</SubtypeId>
+				<SubtypeId>Lasers_JumpNull</SubtypeId>
 			</Id>
-			<DisplayName>Moray Space Mine</DisplayName>
+			<DisplayName>[Laser] Jump-Null Cell</DisplayName>
+			<Icon>Textures\Icons\MD_Ammo.dds</Icon>
+			<Size>
+				<X>0.25</X>
+				<Y>0.2</Y>
+				<Z>0.2</Z>
+			</Size>
+			<Mass>35</Mass>
+			<Volume>16</Volume>
+			<Model>Models\MD_Discharge\MD_Ammo.mwm</Model>
+			<PhysicalMaterial>Ammo</PhysicalMaterial>
+			<Capacity>240</Capacity>
+			<AmmoDefinitionId Subtype="Blank"/>
+		</AmmoMagazine>
+		<AmmoMagazine>
+			<Id>
+				<TypeId>AmmoMagazine</TypeId>
+				<SubtypeId>Others_Mine</SubtypeId>
+			</Id>
+			<DisplayName>[Mine] Moray Homing x8</DisplayName>
 			<Icon>Textures\GUI\Icons\MXA_Moray_Mine.png</Icon>
 			<Size>
 				<X>0.25</X>
@@ -148,91 +234,5 @@
 			<Capacity>8</Capacity>
 			<AmmoDefinitionId Subtype="Blank"/>
 		</AmmoMagazine>
-		<AmmoMagazine>
-			<Id>
-				<TypeId>AmmoMagazine</TypeId>
-				<SubtypeId>MXA_CoilgunL_Ammo</SubtypeId>
-			</Id>
-			<DisplayName>155mm Coilgun AP x4</DisplayName>
-			<Icon>Textures\GUI\Icons\MXA_AmmoBoxL.png</Icon>
-			<Size>
-				<X>0.25</X>
-				<Y>1.2</Y>
-				<Z>0.2</Z>
-			</Size>
-			<Mass>400</Mass>
-			<Volume>200</Volume>
-			<Model>Models\MXA_AmmoBoxL.mwm</Model>
-			<Capacity>4</Capacity>
-			<AmmoDefinitionId Subtype="Blank"/>
-		</AmmoMagazine>
-		<AmmoMagazine>
-			<Id>
-				<TypeId>AmmoMagazine</TypeId>
-				<SubtypeId>MXA_MACL_Ammo</SubtypeId>
-			</Id>
-			<DisplayName>1000mm MAC Round</DisplayName>
-			<Icon>Textures\GUI\Icons\MXA_MACL_Ammo.png</Icon>
-			<Size>
-				<X>0.25</X>
-				<Y>1.2</Y>
-				<Z>0.2</Z>
-			</Size>
-			<Mass>1500</Mass>
-			<!--500 per Round-->
-			<Volume>750</Volume>
-			<!--250 per Round-->
-			<Model>Models\MXA_MACL_Ammo.mwm</Model>
-			<Capacity>1</Capacity>
-			<AmmoDefinitionId Subtype="Blank"/>
-		</AmmoMagazine>
-		<AmmoMagazine>
-			<Id>
-				<TypeId>AmmoMagazine</TypeId>
-				<SubtypeId>NATO_25x184mm</SubtypeId>
-			</Id>
-			<DisplayName>DisplayName_Item_NATO_25x184mm</DisplayName>
-			<Icon>Textures\GUI\Icons\ammo\Ammo_Box.dds</Icon>
-			<Size>
-				<X>0.25</X>
-				<Y>0.2</Y>
-				<Z>0.2</Z>
-			</Size>
-			<Mass>35</Mass>
-			<Volume>16</Volume>
-			<Model>Models\Weapons\Ammo_Box.mwm</Model>
-			<PhysicalMaterial>Ammo</PhysicalMaterial>
-			<Capacity>140</Capacity>
-			<AmmoDefinitionId Subtype="Blank"/>
-			<MinimumOfferAmount>100</MinimumOfferAmount>
-			<MaximumOfferAmount>1000</MaximumOfferAmount>
-			<MinimumOrderAmount>100</MinimumOrderAmount>
-			<MaximumOrderAmount>2000</MaximumOrderAmount>
-			<CanPlayerOrder>true</CanPlayerOrder>
-		</AmmoMagazine>
-        <AmmoMagazine>
-            <Id>
-                <TypeId>AmmoMagazine</TypeId>
-                <SubtypeId>Missile200mm</SubtypeId>
-            </Id>
-            <DisplayName>DisplayName_Item_Missile200mm</DisplayName>
-            <Icon>Textures\GUI\Icons\ammo\Small_Rocket.dds</Icon>
-            <Size>
-                <X>1.2</X>
-                <Y>0.2</Y>
-                <Z>0.2</Z>
-            </Size>
-            <Mass>45</Mass>
-            <Volume>60</Volume>
-            <Model>Models\Weapons\Projectile_Missile.mwm</Model>
-            <PhysicalMaterial>Ammo</PhysicalMaterial>
-            <Capacity>1</Capacity>
-            <AmmoDefinitionId Subtype="Missile" /> <!-- changing this causes a critical error, because KEEN -->
-            <MinimumOfferAmount>100</MinimumOfferAmount>
-            <MaximumOfferAmount>1000</MaximumOfferAmount>
-            <MinimumOrderAmount>100</MinimumOrderAmount>
-            <MaximumOrderAmount>2000</MaximumOrderAmount>
-            <CanPlayerOrder>true</CanPlayerOrder>
-        </AmmoMagazine>
 	</AmmoMagazines>
 </Definitions>

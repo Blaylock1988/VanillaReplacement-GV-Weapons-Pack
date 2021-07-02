@@ -134,8 +134,8 @@ namespace WeaponThread
                 },
             },
             Ammos = new[] {
-                MXA_MACL_Ammo,
-                MXA_MACL_Shrapnel,
+                Ballistics_MAC,
+                Ballistics_MAC_Shrapnel,
             },
             Animations = MXA_MACL_Animation,
             //Upgrades = UpgradeModules,

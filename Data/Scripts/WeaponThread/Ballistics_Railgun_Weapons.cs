@@ -125,7 +125,7 @@ namespace WeaponThread {
                 },
             },
             Ammos = new [] {
-                AryxRailgunAmmoWC,
+                Ballistics_Railgun,
             },
 
             Animations = AryxRailgunAnims,
@@ -230,7 +230,7 @@ namespace WeaponThread {
                 },
             },
             Ammos = new [] {
-                AryxRailgunAmmoWC,
+                Ballistics_Railgun,
             },
 
             Animations = AryxRailgunAnims,

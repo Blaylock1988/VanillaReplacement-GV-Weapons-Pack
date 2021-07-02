@@ -14,7 +14,6 @@
                         LargeInteriorTurret,
                         SmallMissileLauncher,
                         SmallGatlingTurret,
-						//SmallAutoGatlingGun,
 						SmallRocketLauncherReload,
 						AryxRailgunTurret, 
 						AryxFlakTurret, 
@@ -30,8 +29,6 @@
 						MA_PDT,
 						MA_PDX,
 						MA_PDX_T2,
-						//Lotus,
-						//PGIFlareLauncherLarge,
 						GV_JDDT);
             
         }

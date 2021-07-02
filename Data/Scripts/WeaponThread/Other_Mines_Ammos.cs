@@ -19,10 +19,10 @@ namespace WeaponThread
 { // Don't edit above this line
     partial class Weapons
     {
-		private AmmoDef MXA_Moray_SAmmo => new AmmoDef
+		private AmmoDef Others_Mine => new AmmoDef
         {
-            AmmoMagazine = "MXA_Moray_Ammo",
-            AmmoRound = "Smart",
+            AmmoMagazine = "Others_Mine",
+            AmmoRound = "Others_Mine",
             HybridRound = false, //AmmoMagazine based weapon with energy cost
             EnergyCost = 0f, //(((EnergyCost * DefaultDamage) * ShotsPerSecond) * BarrelsPerShot) * ShotsPerBarrel
             BaseDamage = 1f,
@@ -41,7 +41,7 @@ namespace WeaponThread
             },
             Shrapnel = new ShrapnelDef
             {
-                AmmoRound = "MXA_Moray_Shrapnel",//MXA_Moray_SMine
+                AmmoRound = "Others_Mine_Shrapnel",//MXA_Moray_SMine
                 Fragments = 100,
                 Degrees = 360,
                 Reverse = false,
@@ -232,10 +232,10 @@ namespace WeaponThread
             },
         };
 
-		private AmmoDef MXA_Moray_Shrapnel => new AmmoDef
+		private AmmoDef Others_Mine_Shrapnel => new AmmoDef
         {
             AmmoMagazine = "Energy",
-            AmmoRound = "MXA_Moray_Shrapnel",
+            AmmoRound = "Others_Mine_Shrapnel",
             HybridRound = false, //AmmoMagazine based weapon with energy cost
             EnergyCost = 0f, //(((EnergyCost * DefaultDamage) * ShotsPerSecond) * BarrelsPerShot) * ShotsPerBarrel
             BaseDamage = 500f,

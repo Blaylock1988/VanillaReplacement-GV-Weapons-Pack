@@ -20,10 +20,10 @@ namespace WeaponThread
     partial class Weapons
     {
 
-		private AmmoDef MXA_MACL_Ammo => new AmmoDef
+		private AmmoDef Ballistics_MAC => new AmmoDef
         {
-            AmmoMagazine = "MXA_MACL_Ammo",
-            AmmoRound = "MXA_MACL_Ammo",
+            AmmoMagazine = "Ballistics_MAC",
+            AmmoRound = "Ballistics_MAC",
             HybridRound = true, //AmmoMagazine based weapon with energy cost
             EnergyCost = 0.32f, //(((EnergyCost * DefaultDamage) * ShotsPerSecond) * BarrelsPerShot) * ShotsPerBarrel
             BaseDamage = 57000f,
@@ -47,7 +47,7 @@ namespace WeaponThread
             },
             Shrapnel = new ShrapnelDef
             {
-                AmmoRound = "MXA_MACL_Shrapnel",
+                AmmoRound = "Ballistics_MAC_Shrapnel",
                 Fragments = 50,
                 Degrees = 270,
                 Reverse = false,
@@ -317,10 +317,10 @@ namespace WeaponThread
             },
         };
 		
-		private AmmoDef MXA_MACL_Shrapnel => new AmmoDef
+		private AmmoDef Ballistics_MAC_Shrapnel => new AmmoDef
         {
             AmmoMagazine = "Energy",
-            AmmoRound = "MXA_MACL_Shrapnel",
+            AmmoRound = "Ballistics_MAC_Shrapnel",
             HybridRound = false, //AmmoMagazine based weapon with energy cost
             EnergyCost = 0.00000000001f, //(((EnergyCost * DefaultDamage) * ShotsPerSecond) * BarrelsPerShot) * ShotsPerBarrel
             BaseDamage = 7500f,

@@ -149,8 +149,8 @@ namespace WeaponThread
                 },
             },
             Ammos = new[] {
-                AryxFlakAmmoWC,
-				AryxFlakAmmoWC_Shrapnel,
+                Ballistics_Flak,
+				Ballistics_Flak_Shrapnel,
             },
             Animations = AryxRiptideAnims,
             // Don't edit below this line

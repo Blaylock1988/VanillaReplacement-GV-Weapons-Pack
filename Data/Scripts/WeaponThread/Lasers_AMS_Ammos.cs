@@ -19,10 +19,10 @@ namespace WeaponThread
 { // Don't edit above this line
     partial class Weapons
     {
-        private AmmoDef MA_Laser_3 => new AmmoDef //purple pulse low power for PDT
+        private AmmoDef Lasers_AMS => new AmmoDef //purple pulse low power for PDT
         {
             AmmoMagazine = "Energy",
-            AmmoRound = "MA_Laser_3",
+            AmmoRound = "Lasers_AMS",
             EnergyCost = 0.1f, //(((EnergyCost * DefaultDamage) * ShotsPerSecond) * BarrelsPerShot) * ShotsPerBarrel    (15 * 0.05 * 3600/60/60 = 0.75MW per tick)
             BaseDamage = 50f,
             HardPointUsable = true,

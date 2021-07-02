@@ -19,10 +19,10 @@ namespace WeaponThread
 { // Don't edit above this line
     partial class Weapons
     {
-        private AmmoDef MXA_ArcherPods_Ammo => new AmmoDef
+        private AmmoDef Missiles_Missile => new AmmoDef
         {
-            AmmoMagazine = "MXA_ArcherPods_Ammo",
-            AmmoRound = "MXA_ArcherPods_Ammo",
+            AmmoMagazine = "Missiles_Missile",
+            AmmoRound = "Missiles_Missile",
             HybridRound = false, //AmmoMagazine based weapon with energy cost
             EnergyCost = 0.16f, //(((EnergyCost * DefaultDamage) * ShotsPerSecond) * BarrelsPerShot) * ShotsPerBarrel
             BaseDamage = 1f,
@@ -46,7 +46,7 @@ namespace WeaponThread
             },
             Shrapnel = new ShrapnelDef
             {
-                AmmoRound = "MXA_ArcherPods_Stage",
+                AmmoRound = "Missiles_Missile_FlightStage",
                 Fragments = 1,
                 Degrees = 0,
                 Reverse = false,
@@ -320,10 +320,10 @@ namespace WeaponThread
             },
         };
 
-        private AmmoDef MXA_ArcherPods_Stage => new AmmoDef
+        private AmmoDef Missiles_Missile_FlightStage => new AmmoDef
         {
             AmmoMagazine = "Energy",
-            AmmoRound = "MXA_ArcherPods_Stage",
+            AmmoRound = "Missiles_Missile_FlightStage",
             HybridRound = false, //AmmoMagazine based weapon with energy cost
             EnergyCost = 0f, //(((EnergyCost * DefaultDamage) * ShotsPerSecond) * BarrelsPerShot) * ShotsPerBarrel
             BaseDamage = 1f,

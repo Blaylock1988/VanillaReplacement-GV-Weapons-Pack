@@ -19,11 +19,11 @@ namespace WeaponThread
 { // Don't edit above this line
     partial class Weapons
     {
-        private AmmoDef MissileAmmos => new AmmoDef
+        private AmmoDef Missiles_Rocket => new AmmoDef
         {
             
 			AmmoMagazine = "Missile200mm",
-			AmmoRound = "MissileAmmos",
+			AmmoRound = "Missiles_Rocket",
 			HybridRound = false, //AmmoMagazine based weapon with energy cost
 			EnergyCost = 0f, //(((EnergyCost * DefaultDamage) * ShotsPerSecond) * BarrelsPerShot) * ShotsPerBarrel
 			BaseDamage = 1f,

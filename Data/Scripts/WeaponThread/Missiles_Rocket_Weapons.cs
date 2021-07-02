@@ -170,6 +170,7 @@ namespace WeaponThread
                     FixedOffset = true,
                     InventorySize = 1.14f,
                     Offset = Vector(x: 0, y: 0, z: 0),
+					Armor = IsWeapon, // IsWeapon, Passive, Active
                 },
 				
                 Other = Missiles_Rocket_Hardpoint_Other,
@@ -200,7 +201,7 @@ namespace WeaponThread
             },
 
 			Ammos = new [] {
-                MissileAmmos
+                Missiles_Rocket
             },
             //Animations = AdvancedAnimation,
             // Don't edit below this line
@@ -259,6 +260,7 @@ namespace WeaponThread
                     FixedOffset = false,
                     InventorySize = 0.768f,
                     Offset = Vector(x: 0, y: 0, z: 0),
+					Armor = IsWeapon, // IsWeapon, Passive, Active
                 },
 				
                 Other = Missiles_Rocket_Hardpoint_Other,
@@ -289,7 +291,7 @@ namespace WeaponThread
             },
 
 			Ammos = new [] {
-                MissileAmmos
+                Missiles_Rocket
             },
             //Animations = AdvancedAnimation,
             // Don't edit below this line
@@ -347,6 +349,7 @@ namespace WeaponThread
                     FixedOffset = true,
                     InventorySize = 1.14f,
                     Offset = Vector(x: 0, y: 0, z: 0),
+					Armor = IsWeapon, // IsWeapon, Passive, Active
                 },
 				
                 Other = Missiles_Rocket_Hardpoint_Other,
@@ -377,7 +380,7 @@ namespace WeaponThread
             },
 
 			Ammos = new [] {
-                MissileAmmos
+                Missiles_Rocket
             },
             //Animations = AdvancedAnimation,
             // Don't edit below this line
@@ -430,6 +433,7 @@ namespace WeaponThread
                     FixedOffset = false,
                     InventorySize = 0.360f,
                     Offset = Vector(x: 0, y: 0, z: 0),
+					Armor = IsWeapon, // IsWeapon, Passive, Active
                 },
 				
                 Other = Missiles_Rocket_Hardpoint_Other,
@@ -460,7 +464,7 @@ namespace WeaponThread
             },
 
 			Ammos = new [] {
-                MissileAmmos
+                Missiles_Rocket
             },
             //Animations = AdvancedAnimation,
             // Don't edit below this line

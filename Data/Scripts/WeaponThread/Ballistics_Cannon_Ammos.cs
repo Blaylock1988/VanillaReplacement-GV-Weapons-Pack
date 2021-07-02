@@ -19,10 +19,10 @@ namespace WeaponThread
 { // Don't edit above this line
     partial class Weapons
     {
-        private AmmoDef BallisticCannonAP => new AmmoDef
+        private AmmoDef Ballistics_Cannon => new AmmoDef
         {
-            AmmoMagazine = "MXA_CoilgunL_Ammo",
-            AmmoRound = "BallisticCannonAP",
+            AmmoMagazine = "Ballistics_Cannon",
+            AmmoRound = "Ballistics_Cannon",
             HybridRound = false, //AmmoMagazine based weapon with energy cost
             EnergyCost = 0f, //(((EnergyCost * DefaultDamage) * ShotsPerSecond) * BarrelsPerShot) * ShotsPerBarrel
             BaseDamage = 1f,

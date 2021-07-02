@@ -19,10 +19,10 @@ namespace WeaponThread
 { // Don't edit above this line
     partial class Weapons
     {
-        private AmmoDef GatlingAmmoType3 => new AmmoDef {
+        private AmmoDef Ballistics_Interior => new AmmoDef {
 
-            AmmoMagazine = "RapidFireAutomaticRifleGun_Mag_50rd",
-            AmmoRound = "GatlingAmmoType3",
+            AmmoMagazine = "NATO_5p56x45mm",
+            AmmoRound = "Ballistics_Interior",
             HybridRound = false, //AmmoMagazine based weapon with energy cost
             EnergyCost = 0f, //(((EnergyCost * DefaultDamage) * ShotsPerSecond) * BarrelsPerShot) * ShotsPerBarrel
             BaseDamage = 50f,

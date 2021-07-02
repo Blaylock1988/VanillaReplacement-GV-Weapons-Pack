@@ -17,10 +17,10 @@ namespace WeaponThread
 { // Don't edit above this line
     partial class Weapons
     {
-        private AmmoDef AryxRailgunAmmoWC => new AmmoDef
+        private AmmoDef Ballistics_Railgun => new AmmoDef
         {
-            AmmoMagazine = "AryxRailgunMagDef",
-            AmmoRound = "AryxRailgunAmmoWC",
+            AmmoMagazine = "Ballistics_Railgun",
+            AmmoRound = "Ballistics_Railgun",
             HybridRound = true, //AmmoMagazine based weapon with energy cost
             EnergyCost = 0.05f, //(((EnergyCost * DefaultDamage) * ShotsPerSecond) * BarrelsPerShot) * ShotsPerBarrel
             BaseDamage = 50000f,
@@ -203,6 +203,5 @@ namespace WeaponThread
                 HitPlayShield = true,
             }, // Don't edit below this line
         };
-        
     }
 }

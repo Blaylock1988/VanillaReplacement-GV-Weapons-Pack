@@ -162,7 +162,7 @@ namespace WeaponThread {
             },
        
 			Ammos = new [] {
-                MA_Laser_3,
+                Lasers_AMS,
             },
             //Animations = AdvancedAnimation,
             // Don't edit below this line

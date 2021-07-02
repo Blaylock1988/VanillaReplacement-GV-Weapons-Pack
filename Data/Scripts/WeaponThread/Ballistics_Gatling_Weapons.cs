@@ -191,6 +191,7 @@ namespace WeaponThread {
                     FixedOffset = false,
                     InventorySize = 0.658f,
                     Offset = Vector(x: 0, y: 0, z: 0),
+					Armor = IsWeapon, // IsWeapon, Passive, Active
                 },
 				
                 Other = Ballistics_Gatlings_Hardpoint_Other,
@@ -204,7 +205,7 @@ namespace WeaponThread {
             },
        
 			Ammos = new [] {
-                GatlingAmmoType2,
+                Ballistics_Gatling,
             },
             //Animations = AdvancedAnimation,
             // Don't edit below this line
@@ -274,7 +275,7 @@ namespace WeaponThread {
             },
 
 			Ammos = new [] {
-                GatlingAmmoType2,
+                Ballistics_Gatling,
             },
             //Animations = AdvancedAnimation,
             // Don't edit below this line
@@ -343,7 +344,7 @@ namespace WeaponThread {
             },
 
 			Ammos = new [] {
-                GatlingAmmoType2,
+                Ballistics_Gatling,
 
             },
             //Animations = AdvancedAnimation,
@@ -414,7 +415,7 @@ namespace WeaponThread {
             },
 
 			Ammos = new [] {
-                GatlingAmmoType2,
+                Ballistics_Gatling,
             },
             //Animations = AdvancedAnimation,
             // Don't edit below this line

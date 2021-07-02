@@ -202,8 +202,8 @@ namespace WeaponThread
 				
             },
             Ammos = new[] {
-                MXA_ArcherPods_Ammo,
-                MXA_ArcherPods_Stage,
+                Missiles_Missile,
+                Missiles_Missile_FlightStage,
             },
             Animations = MXA_ArcherPods_Animation,
             //Upgrades = UpgradeModules,
@@ -294,8 +294,8 @@ namespace WeaponThread
             },
 
 			Ammos = new [] {
-                MXA_ArcherPods_Ammo,
-                MXA_ArcherPods_Stage,
+                Missiles_Missile,
+                Missiles_Missile_FlightStage,
             },
             //Animations = AdvancedAnimation,
             // Don't edit below this line

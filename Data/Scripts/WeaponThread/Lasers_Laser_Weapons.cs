@@ -159,7 +159,7 @@ namespace WeaponThread
             },
        
 			Ammos = new [] {
-                MA_Laser_5
+                Lasers_Laser
             },
             //Animations = PDX_Animations,
             // Don't edit below this line
@@ -296,7 +296,7 @@ namespace WeaponThread
             },
        
 			Ammos = new [] {
-                MA_Laser_5
+                Lasers_Laser
             },
             Animations = PDX_Animations,
             // Don't edit below this line

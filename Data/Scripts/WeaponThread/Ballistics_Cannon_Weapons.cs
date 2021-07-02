@@ -195,7 +195,7 @@ namespace WeaponThread
 				
             },
             Ammos = new[] {
-                BallisticCannonAP,
+                Ballistics_Cannon,
             },
             Animations = MXA_CoilgunL_Animation,
             //Upgrades = UpgradeModules,
@@ -281,7 +281,7 @@ namespace WeaponThread
 				
             },
             Ammos = new [] {
-                BallisticCannonAP,
+                Ballistics_Cannon,
             },
             //Animations = AdvancedAnimation,
             //Upgrades = UpgradeModules,
@@ -368,7 +368,7 @@ namespace WeaponThread
 				
             },
             Ammos = new [] {
-                BallisticCannonAP,
+                Ballistics_Cannon,
             },
             //Animations = AdvancedAnimation,
             //Upgrades = UpgradeModules,
@@ -455,7 +455,7 @@ namespace WeaponThread
 				
             },
             Ammos = new [] {
-                BallisticCannonAP,
+                Ballistics_Cannon,
             },
             //Animations = AdvancedAnimation,
             //Upgrades = UpgradeModules,

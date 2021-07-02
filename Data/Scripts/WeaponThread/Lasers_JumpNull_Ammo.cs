@@ -19,10 +19,10 @@ namespace WeaponThread
 { // Don't edit above this line
     partial class Weapons
     {
-        private AmmoDef GV_Laser_JumpNull => new AmmoDef //Jump Null Rounds
+        private AmmoDef Lasers_JumpNull => new AmmoDef //Jump Null Rounds
         {
-            AmmoMagazine = "JumpDriveDisruptionMagazine",
-            AmmoRound = "JumpNull", // Display Name for switching ammo
+            AmmoMagazine = "Lasers_JumpNull",
+            AmmoRound = "Lasers_JumpNull", // Display Name for switching ammo
             HybridRound = true, //AmmoMagazine based weapon with energy cost
             EnergyCost = 15f, //(((EnergyCost * DefaultDamage) * ShotsPerSecond) * BarrelsPerShot) * ShotsPerBarrel
             BaseDamage = 1f,
@@ -37,8 +37,8 @@ namespace WeaponThread
             Pattern = new AmmoPatternDef
             {
                 Ammos = new[] {
-                    "JumpNullCosmetic",
-					"JumpNullCosmetic",
+                    "Lasers_JumpNull_Pattern",
+					"Lasers_JumpNull_Pattern",
                 },
                 Enable = true,
                 TriggerChance = 0.01f,
@@ -198,10 +198,10 @@ namespace WeaponThread
             }, // Don't edit below this line
         };
 
-        private AmmoDef GV_Laser_JumpNull_Cosmetic => new AmmoDef //Jump Null Rounds cosmetic blue offset beam
+        private AmmoDef Lasers_JumpNull_Pattern => new AmmoDef //Jump Null Rounds cosmetic blue offset beam
         {
             AmmoMagazine = "Energy",
-            AmmoRound = "JumpNullCosmetic", // Display Name for switching ammo
+            AmmoRound = "Lasers_JumpNull_Pattern", // Display Name for switching ammo
             HybridRound = false, //AmmoMagazine based weapon with energy cost
             EnergyCost = 0f, //(((EnergyCost * DefaultDamage) * ShotsPerSecond) * BarrelsPerShot) * ShotsPerBarrel    (15 * 0.05 * 3600/60/60 = 0.75MW per tick)
             HardPointUsable = false, // set to false if this is a shrapnel ammoType and you don't want the turret to be able to select it directly.

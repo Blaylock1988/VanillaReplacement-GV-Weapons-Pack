@@ -19,10 +19,10 @@ namespace WeaponThread
 { // Don't edit above this line
     partial class Weapons
     {
-        private AmmoDef MXA_Shiva_Ammo => new AmmoDef
+        private AmmoDef Missiles_Torpedo => new AmmoDef
         {
-            AmmoMagazine = "MXA_Shiva_Ammo",
-            AmmoRound = "MXA_Shiva_Ammo",
+            AmmoMagazine = "Missiles_Torpedo",
+            AmmoRound = "Missiles_Torpedo",
             HybridRound = false, //AmmoMagazine based weapon with energy cost
             EnergyCost = 0f, //(((EnergyCost * DefaultDamage) * ShotsPerSecond) * BarrelsPerShot) * ShotsPerBarrel
             BaseDamage = 10f,
@@ -46,7 +46,7 @@ namespace WeaponThread
             },
             Shrapnel = new ShrapnelDef
             {
-                AmmoRound = "MXA_Shiva_EMPStage",
+                AmmoRound = "Missiles_Torpedo_FlightStage",
                 Fragments = 1,
                 Degrees = 0,
                 Reverse = false,
@@ -340,10 +340,10 @@ namespace WeaponThread
             },
         };
 		
-		private AmmoDef MXA_Shiva_EMPStage => new AmmoDef
+		private AmmoDef Missiles_Torpedo_FlightStage => new AmmoDef
         {
             AmmoMagazine = "Energy",
-            AmmoRound = "MXA_Shiva_EMPStage",
+            AmmoRound = "Missiles_Torpedo_FlightStage",
             HybridRound = false, //AmmoMagazine based weapon with energy cost
             EnergyCost = 0f, //(((EnergyCost * DefaultDamage) * ShotsPerSecond) * BarrelsPerShot) * ShotsPerBarrel
             BaseDamage = 10f,
@@ -367,7 +367,7 @@ namespace WeaponThread
             },
             Shrapnel = new ShrapnelDef
             {
-                AmmoRound = "MXA_Shiva_AmmoE",
+                AmmoRound = "Missiles_Torpedo_ExplosionStage",
                 Fragments = 1,
                 Degrees = 0,
                 Reverse = false,
@@ -666,10 +666,10 @@ namespace WeaponThread
             },
         };
 
-        private AmmoDef MXA_Shiva_AmmoE => new AmmoDef
+        private AmmoDef Missiles_Torpedo_ExplosionStage => new AmmoDef
         {
             AmmoMagazine = "Energy",
-            AmmoRound = "MXA_Shiva_AmmoE",
+            AmmoRound = "Missiles_Torpedo_ExplosionStage",
             HybridRound = false, //AmmoMagazine based weapon with energy cost
             EnergyCost = 0f, //(((EnergyCost * DefaultDamage) * ShotsPerSecond) * BarrelsPerShot) * ShotsPerBarrel
             BaseDamage = 1f,
