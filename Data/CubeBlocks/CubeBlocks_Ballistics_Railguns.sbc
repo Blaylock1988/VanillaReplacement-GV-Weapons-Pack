@@ -49,6 +49,7 @@
 			<EdgeType>Light</EdgeType>
 			<InventoryMaxVolume>0.284</InventoryMaxVolume>
 			<DamageEffectId>213</DamageEffectId>
+			<WeaponDefinitionId Subtype="ARYXRailgunWepDef"/>
 			<DamagedSound>ParticleWeapExpl</DamagedSound>
 			<ResourceSinkGroup>Defense</ResourceSinkGroup>
 			<EmissiveColorPreset>Default</EmissiveColorPreset>
@@ -92,7 +93,7 @@
 			<MirroringY>Z</MirroringY>
 			<MirroringZ>Y</MirroringZ>
 			<EdgeType>Light</EdgeType>
-			<WeaponDefinitionId Subtype="AryxFlakTurretWepDef"/>
+			<WeaponDefinitionId Subtype="ARYXRailgunWepDef"/>
 			<ResourceSinkGroup>Defense</ResourceSinkGroup>
 			<InventoryMaxVolume>0.284</InventoryMaxVolume>
 			<DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>

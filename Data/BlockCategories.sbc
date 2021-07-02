@@ -19,14 +19,13 @@
 				<string>SmallGatlingTurretAutoGatling</string>
 				<string>LargeWarhead</string>
 				<string>LargeInteriorTurret</string>
-				<string>LargeGatlingTurret/LargeGatlingTurretTemp</string> <!--<string>LargeGatlingTurret/(null)</string>-->
-
-				<string>LargeMissileTurret/LargeMissileTurretTemp</string>
+				<string>LargeGatlingTurret/(null)</string>
+				<string>LargeMissileTurret/(null)</string>
 				<string>SmallGatlingTurret</string>
 				<string>SmallMissileTurret</string>
 				<string>LargeMissileLauncher</string>
-				<string>SmallGatlingGun/SmallGatlingGunTemp</string>
-				<string>SmallMissileLauncher/SmallMissileLauncherTemp</string>
+				<string>SmallGatlingGun/(null)</string>
+				<string>SmallMissileLauncher/(null)</string>
 				<string>SmallRocketLauncherReload</string>
 				<string>MA_PDX_sm</string>
 				<string>MA_T2PDX</string>
@@ -36,9 +35,6 @@
 				<string>OKI122mmVT</string>
 				<string>MXA_CoilgunL</string>
 				<string>OKI230mmBCfixed</string>
-				<string>Lotus</string>
-				<string>PGIFlareLauncherLarge</string>
-				<string>PGIFlareLauncherSmall</string>
 				<string>JumpDriveDisruptorTurret</string>
 			</ItemIds>
 		</Category>
