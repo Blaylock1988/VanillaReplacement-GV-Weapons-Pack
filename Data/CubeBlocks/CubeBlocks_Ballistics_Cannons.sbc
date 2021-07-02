@@ -44,7 +44,7 @@
 			<MirroringY>Z</MirroringY>
 			<MirroringZ>Y</MirroringZ>
 			<EdgeType>Light</EdgeType>
-			<WeaponDefinitionId Subtype="OKI122mmSGfixed"/>
+			<WeaponDefinitionId Subtype="Ballistics_Cannon"/>
 			<InventoryMaxVolume>0.30</InventoryMaxVolume>
 			<InventoryFillFactorMin>0.1</InventoryFillFactorMin>
 			<ResourceSinkGroup>Defense</ResourceSinkGroup>
@@ -97,7 +97,7 @@
 			<MirroringZ>Y</MirroringZ>
 			<EdgeType>Heavy</EdgeType>
 			<OverlayTexture>Textures\GUI\Screens\turret_overlay.dds</OverlayTexture>
-			<WeaponDefinitionId Subtype="OKI122mmVT"/>
+			<WeaponDefinitionId Subtype="Ballistics_Cannon"/>
 			<InventoryMaxVolume>0.720</InventoryMaxVolume>
 			<ResourceSinkGroup>Defense</ResourceSinkGroup>
 			<DamageEffectId>213</DamageEffectId>
@@ -113,71 +113,6 @@
 			<DeformationRatio>0.2</DeformationRatio>
 			<GeneralDamageMultiplier>0.8</GeneralDamageMultiplier>
 		</Definition>
-		<!-- <Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
-			<Id>
-				<TypeId>LargeMissileTurret</TypeId>
-				<SubtypeId>OKI76mmAG</SubtypeId>
-			</Id>
-			<DisplayName>OKI 122mm Assault Gun Turret</DisplayName>
-			<Icon>Textures\GUI\Icons\Cubes\OKI122mmASG_Turret.dds</Icon>
-			<Description>Large grid assault gun turret. The lack of range is more than compensated by the firepower and rate of fire of the weapon. Deals heavy damage to light armor and moderate damage to heavy armor.</Description>
-			<CubeSize>Large</CubeSize>
-			<BlockTopology>TriangleMesh</BlockTopology>
-			<Size x="3" y="2" z="3"/>
-			<ModelOffset x="0" y="0" z="0"/>
-			<Model>Models\Cubes\Large\122mmLGBase.mwm</Model>
-			<Components>
-				<Component Subtype="SteelPlate" Count="30"/>
-				<Component Subtype="Construction" Count="25"/>
-				<Component Subtype="MetalGrid" Count="15"/>
-				<Component Subtype="LargeTube" Count="8"/>
-				<Component Subtype="Motor" Count="6"/>
-				<Component Subtype="Computer" Count="10"/>
-				<Component Subtype="Construction" Count="10"/>
-				<Component Subtype="SteelPlate" Count="60"/>
-			</Components>
-			<CriticalComponent Subtype="Computer" Index="0"/>
-			<MountPoints>
-				<MountPoint Side="Bottom" StartX="1.0" StartY="1.0" EndX="2.0" EndY="2.0"/>
-			</MountPoints>
-			<BuildProgressModels>
-				<Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\122mmLGBase_BS1.mwm"/>
-				<Model BuildPercentUpperBound="0.67" File="Models\Cubes\Large\122mmLGBase_BS2.mwm"/>
-				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\122mmLGBase_BS3.mwm"/>
-			</BuildProgressModels>
-			<VoxelPlacement>
-				<StaticMode>
-					<PlacementMode>OutsideVoxel</PlacementMode>
-					<MaxAllowed>0.2</MaxAllowed>
-					<MinAllowed>0</MinAllowed>
-				</StaticMode>
-				<DynamicMode>
-					<PlacementMode>OutsideVoxel</PlacementMode>
-					<MaxAllowed>0.2</MaxAllowed>
-					<MinAllowed>0.01</MinAllowed>
-				</DynamicMode>
-			</VoxelPlacement>
-			<BlockPairName>Ballistics_Cannon</BlockPairName>
-			<MirroringY>Z</MirroringY>
-			<MirroringZ>Y</MirroringZ>
-			<EdgeType>Light</EdgeType>
-			<BuildTimeSeconds>40</BuildTimeSeconds>
-			<OverlayTexture>Textures\GUI\Screens\turret_overlay.dds</OverlayTexture>
-			<WeaponDefinitionId Subtype="OKI76mmAG"/>
-			<InventoryMaxVolume>0.360</InventoryMaxVolume>
-			<ResourceSinkGroup>Defense</ResourceSinkGroup>
-			<DamageEffectId>213</DamageEffectId>
-			<MinElevationDegrees>-10</MinElevationDegrees>
-			<MaxElevationDegrees>90</MaxElevationDegrees>
-			<MinAzimuthDegrees>-180</MinAzimuthDegrees>
-			<MaxAzimuthDegrees>180</MaxAzimuthDegrees>
-			<RotationSpeed>0.001</RotationSpeed>
-			<ElevationSpeed>0.001</ElevationSpeed>
-			<IdleRotation>false</IdleRotation>
-			<MaxRangeMeters>1000</MaxRangeMeters>
-			<AiEnabled>false</AiEnabled>
-			<DeformationRatio>0.2</DeformationRatio>
-		</Definition> -->
 		<Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
 			<Id>
 				<TypeId>LargeMissileTurret</TypeId>
@@ -213,7 +148,7 @@
             <PCU>73000</PCU>
 			<CriticalComponent Subtype="Computer" Index="0"/>
 			<EdgeType>Light</EdgeType>
-			<WeaponDefinitionId Subtype="MXA_CoilgunL"/>
+			<WeaponDefinitionId Subtype="Ballistics_Cannon"/>
 			<InventoryMaxVolume>4.0</InventoryMaxVolume>
 			<DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
 			<DamagedSound>ParticleWeapExpl</DamagedSound>
@@ -281,7 +216,7 @@
 			<MirroringY>Z</MirroringY>
 			<MirroringZ>Y</MirroringZ>
 			<EdgeType>Heavy</EdgeType>
-			<WeaponDefinitionId Subtype="OKI230mmFixedCannon" />
+			<WeaponDefinitionId Subtype="Ballistics_Cannon" />
 			<InventoryMaxVolume>0.960</InventoryMaxVolume>
 			<InventoryFillFactorMin>0.1</InventoryFillFactorMin>
 			<ResourceSinkGroup>Defense</ResourceSinkGroup>

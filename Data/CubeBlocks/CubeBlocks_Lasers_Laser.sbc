@@ -59,7 +59,7 @@
 				</DynamicMode>
 			</VoxelPlacement>
 			<EdgeType>Light</EdgeType>
-			<WeaponDefinitionId Subtype="MA_Laser"/>
+			<WeaponDefinitionId Subtype="Lasers_Laser"/>
 			<InventoryMaxVolume>0.384</InventoryMaxVolume>
 			<MinElevationDegrees>-30</MinElevationDegrees>
 			<MaxElevationDegrees>90</MaxElevationDegrees>
@@ -139,7 +139,7 @@
 				</DynamicMode>
 			</VoxelPlacement>
 			<EdgeType>Light</EdgeType>
-			<WeaponDefinitionId Subtype="MA_Laser"/>
+			<WeaponDefinitionId Subtype="Lasers_Laser"/>
 			<InventoryMaxVolume>0.384</InventoryMaxVolume>
 			<MinElevationDegrees>-20</MinElevationDegrees>
 			<MaxElevationDegrees>90</MaxElevationDegrees>

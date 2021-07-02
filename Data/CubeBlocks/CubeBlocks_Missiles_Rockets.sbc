@@ -58,7 +58,7 @@
 			<MirroringZ>Y</MirroringZ>
 			<EdgeType>Light</EdgeType>
 			<OverlayTexture>Textures\GUI\Screens\turret_overlay.dds</OverlayTexture>
-			<WeaponDefinitionId Subtype="LargeMissileTurret"/>
+			<WeaponDefinitionId Subtype="Missiles_Rocket"/>
 			<InventoryMaxVolume>0.384</InventoryMaxVolume>
 			<DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
 			<DamagedSound>ParticleWeapExpl</DamagedSound>
@@ -146,7 +146,7 @@
 			<MirroringZ>Y</MirroringZ>
 			<EdgeType>Light</EdgeType>
 			<OverlayTexture>Textures\GUI\Screens\turret_overlay.dds</OverlayTexture>
-			<WeaponDefinitionId Subtype="SmallMissileTurret"/>
+			<WeaponDefinitionId Subtype="Missiles_Rocket"/>
 			<InventoryMaxVolume>0.12</InventoryMaxVolume>
 			<DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
 			<DamagedSound>ParticleWeapExpl</DamagedSound>
@@ -217,7 +217,7 @@
 			<BlockPairName>RocketLauncher</BlockPairName>
 			<Center x="0" y="0" z="3"/>
 			<EdgeType>Light</EdgeType>
-			<WeaponDefinitionId Subtype="SmallMissileLauncher"/>
+			<WeaponDefinitionId Subtype="Missiles_Rocket"/>
 			<ResourceSinkGroup>Defense</ResourceSinkGroup>
 			<InventoryMaxVolume>0.24</InventoryMaxVolume>
 			<DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
@@ -270,7 +270,7 @@
 			<MirroringZ>Y</MirroringZ>
 			<Center x="0" y="0" z="1"/>
 			<EdgeType>Light</EdgeType>
-			<WeaponDefinitionId Subtype="LargeMissileLauncher"/>
+			<WeaponDefinitionId Subtype="Missiles_Rocket"/>
 			<ResourceSinkGroup>Defense</ResourceSinkGroup>
 			<InventoryMaxVolume>1.14</InventoryMaxVolume>
 			<DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>

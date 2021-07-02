@@ -37,7 +37,7 @@
             <PCU>73000</PCU>
 			<CriticalComponent Subtype="Computer" Index="0"/>
 			<EdgeType>Light</EdgeType>
-			<WeaponDefinitionId Subtype="MXA_MACL"/>
+			<!--<WeaponDefinitionId Subtype="Ballistics_MAC"/>-->
 			<InventoryMaxVolume>8.0</InventoryMaxVolume>
 			<DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
 			<DamagedSound>ParticleWeapExpl</DamagedSound>

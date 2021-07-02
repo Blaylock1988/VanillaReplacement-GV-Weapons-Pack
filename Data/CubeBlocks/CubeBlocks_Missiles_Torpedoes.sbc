@@ -34,7 +34,7 @@
             <PCU>53100</PCU>
 			<CriticalComponent Subtype="Computer" Index="0"/>
 			<EdgeType>Light</EdgeType>
-			<WeaponDefinitionId Subtype="MXA_Shiva"/>
+			<WeaponDefinitionId Subtype="Missiles_Torpedo"/>
 			<InventoryMaxVolume>0.250</InventoryMaxVolume>
 			<DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
 			<DamagedSound>ParticleWeapExpl</DamagedSound>

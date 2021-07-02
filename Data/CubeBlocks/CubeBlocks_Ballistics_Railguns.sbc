@@ -49,7 +49,7 @@
 			<EdgeType>Light</EdgeType>
 			<InventoryMaxVolume>0.284</InventoryMaxVolume>
 			<DamageEffectId>213</DamageEffectId>
-			<WeaponDefinitionId Subtype="ARYXRailgunWepDef"/>
+			<!--<WeaponDefinitionId Subtype="Ballistics_Railgun"/>-->
 			<DamagedSound>ParticleWeapExpl</DamagedSound>
 			<ResourceSinkGroup>Defense</ResourceSinkGroup>
 			<EmissiveColorPreset>Default</EmissiveColorPreset>
@@ -93,7 +93,7 @@
 			<MirroringY>Z</MirroringY>
 			<MirroringZ>Y</MirroringZ>
 			<EdgeType>Light</EdgeType>
-			<WeaponDefinitionId Subtype="ARYXRailgunWepDef"/>
+			<WeaponDefinitionId Subtype="Ballistics_Railgun"/>
 			<ResourceSinkGroup>Defense</ResourceSinkGroup>
 			<InventoryMaxVolume>0.284</InventoryMaxVolume>
 			<DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>

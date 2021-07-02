@@ -55,7 +55,7 @@
 			<MirroringZ>Y</MirroringZ>
 			<EdgeType>Light</EdgeType>
 			<OverlayTexture>Textures\GUI\Screens\turret_overlay.dds</OverlayTexture>
-			<WeaponDefinitionId Subtype="LargeGatlingTurret"/>
+			<WeaponDefinitionId Subtype="Ballistics_Gatling"/>
 			<InventoryMaxVolume>0.384</InventoryMaxVolume>
 			<DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
 			<DamagedSound>ParticleWeapExpl</DamagedSound>
@@ -142,7 +142,7 @@
 			<MirroringZ>Y</MirroringZ>
 			<EdgeType>Light</EdgeType>
 			<OverlayTexture>Textures\GUI\Screens\turret_overlay.dds</OverlayTexture>
-			<WeaponDefinitionId Subtype="SmallGatlingTurret"/>
+			<WeaponDefinitionId Subtype="Ballistics_Gatling"/>
 			<InventoryMaxVolume>0.084</InventoryMaxVolume>
 			<DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
 			<DamagedSound>ParticleWeapExpl</DamagedSound>
@@ -213,7 +213,7 @@
 			<MirroringY>Z</MirroringY>
 			<MirroringZ>Y</MirroringZ>
 			<EdgeType>Light</EdgeType>
-			<WeaponDefinitionId Subtype="GatlingGun"/>
+			<WeaponDefinitionId Subtype="Ballistics_Gatling"/>
 			<ResourceSinkGroup>Defense</ResourceSinkGroup>
 			<InventoryMaxVolume>0.064</InventoryMaxVolume>
 			<DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>

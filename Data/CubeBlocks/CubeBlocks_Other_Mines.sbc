@@ -35,7 +35,7 @@
             <PCU>38310</PCU>
 			<CriticalComponent Subtype="Computer" Index="0" />
 			<EdgeType>Light</EdgeType>
-			<WeaponDefinitionId Subtype="MXA_Moray" />
+			<!--<WeaponDefinitionId Subtype="Others_Mine" />-->
 			<InventoryMaxVolume>0.250</InventoryMaxVolume>
             <DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
             <DamagedSound>ParticleWeapExpl</DamagedSound>

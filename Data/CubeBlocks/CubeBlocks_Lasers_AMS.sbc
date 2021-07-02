@@ -59,7 +59,7 @@
 			<MirroringZ>Y</MirroringZ>
 			<EdgeType>Light</EdgeType>
 			<OverlayTexture>Textures\GUI\Screens\turret_overlay.dds</OverlayTexture>
-			<WeaponDefinitionId Subtype="AMSLaserWeaponDef"/>
+			<WeaponDefinitionId Subtype="Lasers_AMS"/>
 			<InventoryMaxVolume>0.5</InventoryMaxVolume>
 			<DamageEffectName>Damage_Electrical_Damaged</DamageEffectName>
 			<DamagedSound>ParticleElectrical</DamagedSound>
@@ -138,7 +138,7 @@
 			<MirroringZ>Y</MirroringZ>
 			<EdgeType>Light</EdgeType>
 			<OverlayTexture>Textures\GUI\Screens\turret_overlay.dds</OverlayTexture>
-			<WeaponDefinitionId Subtype="AMSLaserWeaponDef"/>
+			<WeaponDefinitionId Subtype="Lasers_AMS"/>
 			<InventoryMaxVolume>0.5</InventoryMaxVolume>
 			<DamageEffectName>Damage_Electrical_Damaged</DamageEffectName>
 			<DamagedSound>ParticleElectrical</DamagedSound>

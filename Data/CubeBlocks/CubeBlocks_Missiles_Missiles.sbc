@@ -46,7 +46,7 @@
 			<Center x="0" y="0" z="1"/>
 			<InventoryMaxVolume>0.24</InventoryMaxVolume>
 			<ResourceSinkGroup>Defense</ResourceSinkGroup>
-			<WeaponDefinitionId Subtype="SmallRocketLauncherReload"/>
+			<WeaponDefinitionId Subtype="Missiles_Missile"/>
 			<DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
 			<DamagedSound>ParticleWeapExpl</DamagedSound>
 			<DestroyEffect>BlockDestroyedExplosion_Small</DestroyEffect>
@@ -89,7 +89,7 @@
             <PCU>40300</PCU>
 			<CriticalComponent Subtype="Computer" Index="0"/>
 			<EdgeType>Light</EdgeType>
-			<WeaponDefinitionId Subtype="MXA_ArcherPods"/>
+			<!--<WeaponDefinitionId Subtype="Missiles_Missile"/>-->
 			<InventoryMaxVolume>0.250</InventoryMaxVolume>
 			<DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
 			<DamagedSound>ParticleWeapExpl</DamagedSound>
