@@ -178,8 +178,8 @@ namespace WeaponThread
                 },
             },
             Ammos = new[] {
-                MXA_Moray_SAmmo,
-                MXA_Moray_Shrapnel,
+                Others_Mine,
+                Others_Mine_Shrapnel,
             },
             Animations = MXA_Moray_Animation,
             //Upgrades = UpgradeModules,
