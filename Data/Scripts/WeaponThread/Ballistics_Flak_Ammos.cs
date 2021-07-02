@@ -19,7 +19,7 @@ namespace WeaponThread
     {
         private AmmoDef AryxFlakAmmoWC => new AmmoDef
         {
-            AmmoMagazine = "60mmFlakMagazine",
+            AmmoMagazine = "100mmFlakMagazine",
             AmmoRound = "AryxFlakAmmoWC",
             HybridRound = false, //AmmoMagazine based weapon with energy cost
             EnergyCost = 0f, //(((EnergyCost * DefaultDamage) * ShotsPerSecond) * BarrelsPerShot) * ShotsPerBarrel

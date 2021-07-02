@@ -4,7 +4,7 @@
 		<Blueprint>
 			<Id>
 				<TypeId>BlueprintDefinition</TypeId>
-				<SubtypeId>60mmFlakBP</SubtypeId>
+				<SubtypeId>100mmFlakBP</SubtypeId>
 			</Id>
 			<DisplayName>65mm Riptide Flak Ammo</DisplayName>
 			<Icon>Textures\GUI\Icons\ammo\Ammo_Box.dds</Icon>
@@ -13,7 +13,7 @@
 				<Item Amount="0.115" TypeId="Ingot" SubtypeId="Nickel"/>
 				<Item Amount="0.5" TypeId="Ingot" SubtypeId="Magnesium"/>
 			</Prerequisites>
-			<Result Amount="1" TypeId="AmmoMagazine" SubtypeId="60mmFlakMagazine"/>
+			<Result Amount="1" TypeId="AmmoMagazine" SubtypeId="100mmFlakMagazine"/>
 			<BaseProductionTimeInSeconds>20</BaseProductionTimeInSeconds>
 		</Blueprint>
 		<Blueprint>
@@ -135,35 +135,5 @@
 			<Result Amount="1" TypeId="AmmoMagazine" SubtypeId="MXA_Shiva_Ammo"/>
 			<BaseProductionTimeInSeconds>240.0</BaseProductionTimeInSeconds>
 		</Blueprint>
-		<!--<Blueprint>
-			<Id>
-				<TypeId>BlueprintDefinition</TypeId>
-				<SubtypeId>PGI_SmallFlareBox_Blueprint</SubtypeId>
-			</Id>
-			<DisplayName>Small Flare Box</DisplayName>
-			<Icon>Textures\GUI\Icons\component\BatteryComponent.dds</Icon>
-			<Prerequisites>
-				<Item Amount="20" TypeId="Ingot" SubtypeId="Iron"/>
-				<Item Amount="10" TypeId="Ingot" SubtypeId="Magnesium"/>
-				<Item Amount="2" TypeId="Ingot" SubtypeId="Silicon"/>
-			</Prerequisites>
-			<Result Amount="1" TypeId="AmmoMagazine" SubtypeId="PGI_SmallFlareBox"/>
-			<BaseProductionTimeInSeconds>2</BaseProductionTimeInSeconds>
-		</Blueprint>
-		<Blueprint>
-			<Id>
-				<TypeId>BlueprintDefinition</TypeId>
-				<SubtypeId>PGI_LargeFlareBox_Blueprint</SubtypeId>
-			</Id>
-			<DisplayName>Large Flare Box</DisplayName>
-			<Icon>Textures\GUI\Icons\component\BatteryComponent.dds</Icon>
-			<Prerequisites>
-				<Item Amount="100" TypeId="Ingot" SubtypeId="Iron"/>
-				<Item Amount="50" TypeId="Ingot" SubtypeId="Magnesium"/>
-				<Item Amount="10" TypeId="Ingot" SubtypeId="Silicon"/>
-			</Prerequisites>
-			<Result Amount="1" TypeId="AmmoMagazine" SubtypeId="PGI_LargeFlareBox"/>
-			<BaseProductionTimeInSeconds>2</BaseProductionTimeInSeconds>
-		</Blueprint>-->
 	</Blueprints>
 </Definitions>
