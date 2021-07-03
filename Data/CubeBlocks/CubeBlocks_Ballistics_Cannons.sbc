@@ -59,7 +59,7 @@
 			</Id>
 			<DisplayName>[Cannon] Small 155mm Vehicle Gun Turret</DisplayName>
 			<Icon>Textures\GUI\Icons\Cubes\OKI122mm_VehicleTurret.dds</Icon>
-			<Description>Powerful assault gun mounted on an armored small grid turret chassis. Good for swift crawlers that can get into effective range fast enough for this weapon to deliver its deadly punch. Deals heavy damage to light armor and moderate damage to heavy armor. Designed by Okim-Chipstix-Ash Federation.
+			<Description>Powerful assault gun mounted on an armored small grid turret chassis. Deals heavy damage to light armor and moderate damage to heavy armor. Designed by Okim-Chipstix-Ash Federation.
 			[Uses 155mm AP]</Description>
 			<CubeSize>Small</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
