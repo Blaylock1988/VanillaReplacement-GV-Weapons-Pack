@@ -6,10 +6,11 @@
 				<TypeId>SmallMissileLauncherReload</TypeId>
 				<SubtypeId>SmallRocketLauncherReload</SubtypeId>
 			</Id>
-			<DisplayName>DisplayName_Block_SmallRocketLauncherReload</DisplayName>
+			<DisplayName>[Missile] Small Archer Pod</DisplayName>
 			<BlockPairName>SmallRocketLauncherReload</BlockPairName>
 			<Icon>Textures\GUI\Icons\Cubes\RocketLauncherReload.dds</Icon>
-			<Description>Description_RocketLauncherReload</Description>
+			<Description>The Archer is a ship-to-ship homing missile carrying a simple HE charge. Archer missiles utilize advanced "drunken missile" manuvering to confuse enemy point defenses, and when used en-mass for extended periods can overwhelm any laser-based anti-missile systems.
+			[Uses Archer HE]</Description>
 			<CubeSize>Small</CubeSize>
 			<GuiVisible>true</GuiVisible>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -58,11 +59,9 @@
 				<TypeId>ConveyorSorter</TypeId>
 				<SubtypeId>MXA_ArcherPods</SubtypeId>
 			</Id>
-			<DisplayName>M42 Archer Missile Pods</DisplayName>
-			<Description>The Archer missile is a ship-to-ship missile used by the UNSC Navy.
-				This variant is larger than the M58 and carries 30 per pod.
-				Engagement Range: 5k
-				Ammo: M42 Archer Missiles
+			<DisplayName>[Missile] Large Archer Pod</DisplayName>
+			<Description>The Archer is a ship-to-ship homing missile carrying a simple HE charge. Archer missiles utilize advanced "drunken missile" manuvering to confuse enemy point defenses, and when used en-mass for extended periods can overwhelm any laser-based anti-missile systems. Designed by MXA-UNSC.
+			[Uses Archer HE]
 			</Description>
 			<Icon>Textures\GUI\Icons\MXA_ArcherPods.png</Icon>
 			<CubeSize>Large</CubeSize>

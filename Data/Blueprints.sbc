@@ -21,7 +21,7 @@
 				<TypeId>BlueprintDefinition</TypeId>
 				<SubtypeId>NATO_5p56x45mmMagazine</SubtypeId>
 			</Id>
-			<DisplayName>[Interior] 5.56mm KE x50</DisplayName>
+			<DisplayName>[Interior] 5.56mm KE x30</DisplayName>
 			<Icon>Textures\GUI\Icons\ammo\Rifle_Ammo.dds</Icon>
 			<Prerequisites>
 				<Item Amount="0.8" TypeId="Ingot" SubtypeId="Iron"/>
@@ -152,7 +152,7 @@
 				<TypeId>BlueprintDefinition</TypeId>
 				<SubtypeId>Lasers_JumpNull</SubtypeId>
 			</Id>
-			<DisplayName>[Laser] Jump-Null Cell</DisplayName>
+			<DisplayName>[JumpNull] JD Disruptor Cell</DisplayName>
 			<Icon>Textures\Icons\MD_Ammo.dds</Icon>
 			<Prerequisites>
 				<Item Amount="20" TypeId="Ingot" SubtypeId="Iron"/>

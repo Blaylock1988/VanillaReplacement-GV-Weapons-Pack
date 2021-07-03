@@ -6,8 +6,9 @@
 				<TypeId>ConveyorSorter</TypeId>
 				<SubtypeId>ARYXRailgun</SubtypeId>
 			</Id>
-			<DisplayName>Artemis-250 Railgun</DisplayName>
-			<Description>The Ares' little sister. Fires 250mm ferrous slugs, piercing armour and delivering devastating blows to ships. Substantially less powerful than the Ares, but still stands as a fearsome weapon. [Accepts 250mm Ferrous.]</Description>
+			<DisplayName>[Railgun] Artemis</DisplayName>
+			<Description>The Artemis railgun has a higher damage than the 155mm Field Gun but has a high energy use, and slower fire rate. Great for long-range manual fire support, or use on precision strike craft for disabling hardpoints on large targets in the hands of an extremely skilled pilot. Designed by ARYX Weapon Enterprises.
+			[Uses 250mm SABOT]</Description>
 			<Icon>Textures\GUI\Icons\AWERailgun.dds</Icon>
 			<GuiVisible>true</GuiVisible>
 			<CubeSize>Large</CubeSize>
@@ -61,7 +62,8 @@
 			</Id>
 			<DisplayName>Apollo-250 Railgun</DisplayName>
 			<Icon>Textures\GUI\Icons\AWERailgunTurret.dds</Icon>
-			<Description>A turreted version of the Artemis railgun, sporting an armoured base and automatic aiming system. Can be manually controlled by a gunner from any control seat. [Accepts 250mm Ferrous.]</Description>
+			<Description>A turreted version of the Artemis railgun, the Apollo shines with its high accuracy at medium to long range, but its slow firing rate and rotation speed, and limited elevation arc leaves makes the weapon suffer drastically at close range. Designed by ARYX Weapon Enterprises.
+			[Uses 200mm SABOT]</Description>
 			<CubeSize>Large</CubeSize>
 			<GuiVisible>true</GuiVisible>
 			<BlockTopology>TriangleMesh</BlockTopology>

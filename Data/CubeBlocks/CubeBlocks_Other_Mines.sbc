@@ -6,10 +6,9 @@
 				<TypeId>ConveyorSorter</TypeId>
 				<SubtypeId>MXA_Moray</SubtypeId>
 			</Id>
-			<DisplayName>CBU-R68 Moray System</DisplayName>
-			<Description>Moray space mines are explosives built by the UNSC for use in deep-space combat. These mines have chemical propellant drives that allow them to track specific targets or maintain a pre-defined location in space.
-			
-			Ammo: Moray Space Mine
+			<DisplayName>[Mine] Moray Launcher System</DisplayName>
+			<Description>Moray space mines are homing explosives for defensive counter-space operations. These mines have chemical propellant drives that allow them to track specific targets once that come within 250m of the device. Moray Mines have an extremely long reload time. Designed by MXA-UNSC.
+			[Uses Moray Homing]
 			</Description>
 			<Icon>Textures\GUI\Icons\MXA_Moray.png</Icon>
 			<CubeSize>Large</CubeSize>

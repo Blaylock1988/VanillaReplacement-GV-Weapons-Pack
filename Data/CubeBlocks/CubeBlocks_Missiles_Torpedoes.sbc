@@ -6,10 +6,9 @@
 				<TypeId>ConveyorSorter</TypeId>
 				<SubtypeId>MXA_Shiva</SubtypeId>
 			</Id>
-			<DisplayName>Shiva Missile Pod</DisplayName>
-			<Description>The Shiva-class nuclear missile is the most commonly used starship and starfighter launched thermonuclear weapon used by the UNSC. The Shiva can be outfitted with various payloads and explosive yields.
-				Engagement Range: 5k
-				Ammo: Shiva Missiles</Description>
+			<DisplayName>[Torpedo] Shiva Launcher Pod</DisplayName>
+			<Description>The Shiva-class Torpedo is matched only by the Mk-IX MAC in range, however this fire-and-forget torpedo can deliver a powerful EMP warhead on-target with no range penaulty, with an explosion so large it can be seen from low orbit. Designed by MXA-UNSC.
+			[Uses Shiva EMP]</Description>
 			<Icon>Textures\GUI\Icons\MXA_Shiva.png</Icon>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>

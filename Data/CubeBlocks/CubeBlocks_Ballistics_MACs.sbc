@@ -6,12 +6,9 @@
 				<TypeId>ConveyorSorter</TypeId>
 				<SubtypeId>MXA_MACL</SubtypeId>
 			</Id>
-			<DisplayName>Mark IX MAC</DisplayName>
-			<Description>Mark IX, Heavy Coil - 45J3D3 MAC
-				MACs serve as the primary armament of UNSC Navy warships and weapon platforms.
-				The Mark IX is a MAC version that uses heavy coils, a specialized upgrade from the Mark IV. It's enhanced with booster capacitors which allow it to be fired three times per charge
-				Engagement Range: 5km
-				Ammo: 1000mm MAC Slugs
+			<DisplayName>[MAC] Mark IX</DisplayName>
+			<Description>The Magnetic Accelerator Cannon fires a massive depleted uranium ferromagnetic round that provides unmatched speed, range, and damage. Its large size, recoil, and high operating costs makes it only suitable for the largest ships which are usually designed around the gun, also its damage is much lower at its maximum range. Designed by MXA-UNSC.
+			[Uses 1000mm KE]
 			</Description>
 			<Icon>Textures\GUI\Icons\MXA_MACL.png</Icon>
 			<CubeSize>Large</CubeSize>

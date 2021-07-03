@@ -2,7 +2,6 @@
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 	<BlueprintClassEntries>
 		<!--AMMOS-->
-		<Entry Class="Ammo" BlueprintSubtypeId="NATO_5p56x45mm"/>
 		<Entry Class="Ammo" BlueprintSubtypeId="Ballistics_Flak"/>
 		<Entry Class="Ammo" BlueprintSubtypeId="Ballistics_Cannon"/>
 		<Entry Class="Ammo" BlueprintSubtypeId="Ballistics_Railgun"/>
@@ -11,6 +10,15 @@
 		<Entry Class="Ammo" BlueprintSubtypeId="Missiles_Torpedo"/>
 		<Entry Class="Ammo" BlueprintSubtypeId="Lasers_JumpNull"/>
 		<Entry Class="Ammo" BlueprintSubtypeId="Others_Mine"/>
+		<!--CONSUMABLES-->
+		<Entry Class="EliteConsumables" BlueprintSubtypeId="Ballistics_Flak"/>
+		<Entry Class="EliteConsumables" BlueprintSubtypeId="Ballistics_Cannon"/>
+		<Entry Class="EliteConsumables" BlueprintSubtypeId="Ballistics_Railgun"/>
+		<Entry Class="EliteConsumables" BlueprintSubtypeId="Ballistics_MAC"/>
+		<Entry Class="EliteConsumables" BlueprintSubtypeId="Missiles_Missile"/>
+		<Entry Class="EliteConsumables" BlueprintSubtypeId="Missiles_Torpedo"/>
+		<Entry Class="EliteConsumables" BlueprintSubtypeId="Lasers_JumpNull"/>
+		<Entry Class="EliteConsumables" BlueprintSubtypeId="Others_Mine"/>
 		<!--BLOCKS-->
 		<Entry Class="LargeBlocks" BlueprintSubtypeId="LargeMissileTurret/ARYXFlakTurret"/>
 		<Entry Class="LargeBlocks" BlueprintSubtypeId="LargeMissileTurret/ARYXRailgunTurret"/>

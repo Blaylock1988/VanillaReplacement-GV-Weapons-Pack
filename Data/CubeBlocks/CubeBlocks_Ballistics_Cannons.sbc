@@ -6,9 +6,10 @@
 				<TypeId>SmallMissileLauncher</TypeId>
 				<SubtypeId>OKI122mmSGfixed</SubtypeId>
 			</Id>
-			<DisplayName>OKI 122mm Fixed Assault Cannon</DisplayName>
+			<DisplayName>[Cannon] Small 155mm Field Gun</DisplayName>
 			<Icon>Textures\GUI\Icons\Cubes\OKI122mmASG_fixed.dds</Icon>
-			<Description>Bulky fixed weapon for small vessels. Deals heavy damage to light armor and moderate damage to heavy armor. Very effective against small grid vessels.</Description>
+			<Description>Bulky fixed weapon for small vessels. Deals heavy damage to light armor and moderate damage to heavy armor. Very effective against small grid vessels. Designed by Okim-Chipstix-Ash Federation.
+			[Uses 155mm AP]</Description>
 			<CubeSize>Small</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
 			<Size x="2" y="3" z="11"/>
@@ -56,9 +57,10 @@
 				<TypeId>LargeMissileTurret</TypeId>
 				<SubtypeId>OKI122mmVT</SubtypeId>
 			</Id>
-			<DisplayName>OKI Vehicle 122mm Assault Gun</DisplayName>
+			<DisplayName>[Cannon] Small 155mm Vehicle Gun Turret</DisplayName>
 			<Icon>Textures\GUI\Icons\Cubes\OKI122mm_VehicleTurret.dds</Icon>
-			<Description>Powerful assault gun mounted on an armored small grid turret chassis. Good for swift crawlers that can get into effective range fast enough for this weapon to deliver its deadly punch. Deals heavy damage to light armor and moderate damage to heavy armor.</Description>
+			<Description>Powerful assault gun mounted on an armored small grid turret chassis. Good for swift crawlers that can get into effective range fast enough for this weapon to deliver its deadly punch. Deals heavy damage to light armor and moderate damage to heavy armor. Designed by Okim-Chipstix-Ash Federation.
+			[Uses 155mm AP]</Description>
 			<CubeSize>Small</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
 			<Size x="5" y="5" z="5"/>
@@ -118,11 +120,9 @@
 				<TypeId>LargeMissileTurret</TypeId>
 				<SubtypeId>MXA_CoilgunL</SubtypeId>
 			</Id>
-			<DisplayName>M66 Sentry</DisplayName>
-			<Description>The Sentry autocannon is a line of naval coilguns used by the UNSC Navy during and after the Human-Covenant War.
-				Engagement Range: 3.5k
-				Ammo: 155mm Coilgun Ammo Containers
-			</Description>
+			<DisplayName>[Cannon] 155mm Sentry Turret</DisplayName>
+			<Description>The Sentry Turret is an automated rapid-firing naval coilgun that delivers a large volume of AP slugs. Effective against frigates and cruises at medium range. Designed by MXA-UNSC.
+			[Uses 155mm AP]</Description>
 			<Icon>Textures\GUI\Icons\MXA_CoilgunL.png</Icon>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -174,8 +174,9 @@
 				<TypeId>SmallMissileLauncher</TypeId>
 				<SubtypeId>OKI230mmBCfixed</SubtypeId>
 			</Id>
-			<DisplayName>OKI 155mm Fixed Battlecannon</DisplayName>
-			<Description>Large caliber anti-capital ship cannon in fixed mount. Best used for large grid assault ships. Great range and damage against light and heavy armor.</Description>
+			<DisplayName>[Cannon] 155mm Fixed Battlecannon</DisplayName>
+			<Description>Large caliber anti-capital ship cannon in fixed mount. Best used for large grid assault ships. Great range and damage against light and heavy armor. Designed by Okim-Chipstix-Ash Federation.
+			[Uses 155mm AP]</Description>
 			<Icon>Textures\GUI\Icons\Cubes\OKI230mmBC_Fixed.dds</Icon>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>

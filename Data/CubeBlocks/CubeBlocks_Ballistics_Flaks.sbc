@@ -6,9 +6,10 @@
 				<TypeId>LargeMissileTurret</TypeId>
 				<SubtypeId>ARYXFlakTurret</SubtypeId>
 			</Id>
-			<DisplayName>100mm Riptide Flak Turret</DisplayName>
+			<DisplayName>[Flak] Riptide Turret</DisplayName>
 			<Icon>Textures\GUI\Icons\AryxRiptideFlak.dds</Icon>
-			<Description>Riptide FT's fire heavy flak shells that deal massive explosive damage to lightly armoured ships and strike craft, but poor damage against armoured targets. [Accepts 70mm Riptide Shells.]</Description>
+			<Description>Riptide delivers proximity-fused explosive shells. Used en-mass can provide an effective anti-strike and anti-missile screen, but yields poor damage against armoured targets. Designed by ARYX Weapon Enterprises.
+			[Uses 100mm HE]</Description>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
 			<Size x="1" y="1" z="1"/>

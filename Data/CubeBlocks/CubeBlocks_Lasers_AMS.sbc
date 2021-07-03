@@ -7,10 +7,10 @@
 				<TypeId>LargeMissileTurret</TypeId>
 				<SubtypeId>MA_PDT</SubtypeId>
 			</Id>
-			<DisplayName>Point Defense Turret</DisplayName>
+			<DisplayName>[AMS] Large PD-COIL Turret</DisplayName>
 			<Icon>Textures\Icons\MA_Designator.dds</Icon>
-			<Description>A low yield laser turret which only targets projectiles.
-				Made by AutoMcD Astronautical.</Description>
+			<Description>A low yield Chemical Oxygen Iodine Laser (COIL) turret which only targets projectiles. Capable of being placed anywhere, but has a moderate energy cost. Designed by AutoMcD Manufacturing.
+			[Uses Energy]</Description>
 			<CubeSize>Large</CubeSize>
 			<PlaceDecals>false</PlaceDecals>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -86,10 +86,10 @@
 				<TypeId>LargeMissileTurret</TypeId>
 				<SubtypeId>MA_PDT_sm</SubtypeId>
 			</Id>
-			<DisplayName>Point Defense Turret small grid</DisplayName>
+			<DisplayName>[AMS] Small PD-COIL Turret</DisplayName>
 			<Icon>Textures\Icons\MA_Designator.dds</Icon>
-			<Description>A low yield laser which only targets projectiles.
-				Made by AutoMcD Astronautical.</Description>
+			<Description>A low yield Chemical Oxygen Iodine Laser (COIL) turret which only targets projectiles. Capable of being placed anywhere, but has a moderate energy cost. Designed by AutoMcD Manufacturing.
+			[Uses Energy]</Description>
 			<CubeSize>Small</CubeSize>
 			<PlaceDecals>false</PlaceDecals>
 			<BlockTopology>TriangleMesh</BlockTopology>

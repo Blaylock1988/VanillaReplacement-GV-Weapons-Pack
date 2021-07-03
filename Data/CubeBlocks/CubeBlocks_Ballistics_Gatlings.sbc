@@ -6,9 +6,10 @@
 				<TypeId>LargeGatlingTurret</TypeId>
 				<SubtypeId/>
 			</Id>
-			<DisplayName>DisplayName_Block_GatlingTurret</DisplayName>
+			<DisplayName>[Gatling] Large 25mm Autocannon Turret</DisplayName>
 			<Icon>Textures\GUI\Icons\Cubes\OKI14mmCIWS_Turret.dds</Icon>
-			<Description>Description_GatlingTurret</Description>
+			<Description>Close-in weapon system for defense against small vehicles, ships, personnel, and anti-ship missiles.
+			[Uses 25mm KE]</Description>
 			<CubeSize>Large</CubeSize>
 			<PlaceDecals>false</PlaceDecals>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -88,9 +89,10 @@
 				<TypeId>LargeGatlingTurret</TypeId>
 				<SubtypeId>SmallGatlingTurret</SubtypeId>
 			</Id>
-			<DisplayName>DisplayName_Block_GatlingTurret</DisplayName>
+			<DisplayName>[Gatling] Small 25mm Autocannon Turret</DisplayName>
 			<Icon>Textures\GUI\Icons\Cubes\gatling_turret.dds</Icon>
-			<Description>Description_GatlingTurret</Description>
+			<Description>Close-in weapon system for defense against small vehicles, ships, personnel, and anti-ship missiles.
+			[Uses 25mm KE]</Description>
 			<CubeSize>Small</CubeSize>
 			<PlaceDecals>false</PlaceDecals>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -174,9 +176,10 @@
 				<TypeId>SmallGatlingGun</TypeId>
 				<SubtypeId/>
 			</Id>
-			<DisplayName>DisplayName_Block_GatlingGun</DisplayName>
+			<DisplayName>[Gatling] Small 25mm Autocannon</DisplayName>
 			<Icon>Textures\GUI\Icons\Cubes\gatling_gun.dds</Icon>
-			<Description>Description_GatlingGun</Description>
+			<Description>Electrically driven six-barrel rotary cannon, modified for use in zero-atmosphere environments.
+			[Uses 25mm KE]</Description>
 			<CubeSize>Small</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
 			<Size x="1" y="1" z="4"/>

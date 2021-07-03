@@ -7,11 +7,10 @@
 				<TypeId>LargeGatlingTurret</TypeId>
 				<SubtypeId>JumpDriveDisruptorTurret</SubtypeId>
 			</Id>
-			<DisplayName>Disruptor Turret</DisplayName>
+			<DisplayName>[JumpNull] Large ISUE Turret</DisplayName>
 			<Icon>Textures\Icons\MD_Discharge.dds</Icon>
-			<Description>Fire an energy beam that will disable the Jump Drives, or arrest a ship's motion. Deals no physical damage.
-			
-			Uses Disruptor Cells and Singularity Charges</Description>
+			<Description>An Ionizing Single-Event Upset (ISEU) projector laser that will temporarily disable the Jump Drives at short range. Designed by AutoMcD Manufacturing.
+			[Uses JD Disruptor Cell]</Description>
 			<CubeSize>Large</CubeSize>
 			<PlaceDecals>false</PlaceDecals>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -95,11 +94,10 @@
 				<TypeId>LargeGatlingTurret</TypeId>
 				<SubtypeId>JumpDriveDisruptorTurretSM</SubtypeId>
 			</Id>
-			<DisplayName>Disruptor Turret</DisplayName>
+			<DisplayName>[JumpNull] Small ISEU Turret</DisplayName>
 			<Icon>Textures\Icons\MD_Discharge.dds</Icon>
-			<Description>Fire an energy beam that will disable the Jump Drives, or arrest a ship's motion. Deals no physical damage.
-			
-			Uses Disruptor Cells and Singularity Charges</Description>
+			<Description>An Ionizing Single-Event Upset (ISEU) projector laser that will temporarily disable the Jump Drives at short range. Designed by AutoMcD Manufacturing.
+			[Uses JD Disruptor Cell]</Description>
 			<CubeSize>Small</CubeSize>
 			<PlaceDecals>false</PlaceDecals>
 			<BlockTopology>TriangleMesh</BlockTopology>

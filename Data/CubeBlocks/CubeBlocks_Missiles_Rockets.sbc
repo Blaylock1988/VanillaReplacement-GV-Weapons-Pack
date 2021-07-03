@@ -6,9 +6,10 @@
 				<TypeId>LargeMissileTurret</TypeId>
 				<SubtypeId/>
 			</Id>
-			<DisplayName>DisplayName_Block_MissileTurret</DisplayName>
+			<DisplayName>[Rocket] Large Hydra Turret</DisplayName>
 			<Icon>Textures\GUI\Icons\Cubes\LGMissileBase.dds</Icon>
-			<Description>Description_MissileTurret</Description>
+			<Description>Hydra rockets are a single stage self-propelled dumbfire rocket. They have an incredibly high acceleration and explosive damage output, but quickly lose control after a few seconds of flight making them useless outside short range engagements. Designed by Okim-Chipstix-Ash Federation.
+			[Uses Hydra HE]</Description>
 			<CubeSize>Large</CubeSize>
 			<GuiVisible>true</GuiVisible>
 			<PlaceDecals>false</PlaceDecals>
@@ -91,9 +92,10 @@
 				<TypeId>LargeMissileTurret</TypeId>
 				<SubtypeId>SmallMissileTurret</SubtypeId>
 			</Id>
-			<DisplayName>DisplayName_Block_MissileTurret</DisplayName>
+			<DisplayName>[Rocket] Small Hydra Turret</DisplayName>
 			<Icon>Textures\GUI\Icons\Cubes\missile_turret.dds</Icon>
-			<Description>Description_MissileTurret</Description>
+			<Description>Hydra rockets are a single stage self-propelled dumbfire rocket. They have an incredibly high acceleration and explosive damage output, but quickly lose control after a few seconds of flight making them useless outside short range engagements.
+			[Uses Hydra HE]</Description>
 			<CubeSize>Small</CubeSize>
 			<GuiVisible>false</GuiVisible>
 			<PlaceDecals>false</PlaceDecals>
@@ -178,9 +180,10 @@
 				<TypeId>SmallMissileLauncher</TypeId>
 				<SubtypeId/>
 			</Id>
-			<DisplayName>DisplayName_Block_RocketLauncher</DisplayName>
+			<DisplayName>[Rocket] Small Hydra launcher</DisplayName>
 			<Icon>Textures\GUI\Icons\Cubes\missile_launcher_small.dds</Icon>
-			<Description>Description_RocketLauncher</Description>
+			<Description>Hydra rockets are a single stage self-propelled dumbfire rocket. They have an incredibly high acceleration and explosive damage output, but quickly lose control after a few seconds of flight making them useless outside short range engagements. This Hydra launcher is manual reload only but holds 8 shots.
+			[Uses Hydra HE]</Description>
 			<CubeSize>Small</CubeSize>
 			<GuiVisible>false</GuiVisible>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -230,9 +233,10 @@
 				<TypeId>SmallMissileLauncher</TypeId>
 				<SubtypeId>LargeMissileLauncher</SubtypeId>
 			</Id>
-			<DisplayName>DisplayName_Block_RocketLauncher</DisplayName>
+			<DisplayName>[Rocket] Large Hydra Launcher</DisplayName>
 			<Icon>Textures\GUI\Icons\Cubes\missile_launcher.dds</Icon>
-			<Description>Description_RocketLauncher</Description>
+			<Description>Hydra rockets are a single stage self-propelled dumbfire rocket. They have an incredibly high acceleration and explosive damage output, but quickly lose control after a few seconds of flight making them useless outside short range engagements.
+			[Uses Hydra HE]</Description>
 			<CubeSize>Large</CubeSize>
 			<GuiVisible>false</GuiVisible>
 			<BlockTopology>TriangleMesh</BlockTopology>

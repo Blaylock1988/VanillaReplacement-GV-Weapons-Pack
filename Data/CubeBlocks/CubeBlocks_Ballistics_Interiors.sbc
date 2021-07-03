@@ -6,9 +6,10 @@
 				<TypeId>InteriorTurret</TypeId>
 				<SubtypeId>LargeInteriorTurret</SubtypeId>
 			</Id>
-			<DisplayName>DisplayName_Block_InteriorTurret</DisplayName>
+			<DisplayName>[Interior] Anti-personnel Carbine Turret</DisplayName>
 			<Icon>Textures\GUI\Icons\Cubes\interior_turret.dds</Icon>
-			<Description>Description_InteriorTurret</Description>
+			<Description>The anti-personnel turret is excellent for interior or exterior defense against attackers on-foot, but not good for much else.
+			[Uses 5.56mm KE]</Description>
 			<CubeSize>Large</CubeSize>
 			<GuiVisible>false</GuiVisible>
 			<PlaceDecals>false</PlaceDecals>
