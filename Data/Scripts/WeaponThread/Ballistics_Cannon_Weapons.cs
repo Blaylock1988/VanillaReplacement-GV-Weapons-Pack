@@ -142,7 +142,7 @@ namespace WeaponThread
             {
                 WeaponName = "M66 Sentry", // name of weapon in terminal
                 DeviateShotAngle = 0.4f,
-                AimingTolerance = 0.2f, // 0 - 180 firing angle
+                AimingTolerance = 0.5f, // 0 - 180 firing angle
                 AimLeadingPrediction = Advanced, // Off, Basic, Accurate, Advanced
                 DelayCeaseFire = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 AddToleranceToTracking = false,
@@ -230,7 +230,7 @@ namespace WeaponThread
             {
                 WeaponName = "Vehicle 122mm Assault Gun Turret", // name of weapon in terminal
                 DeviateShotAngle = 0.4f,
-                AimingTolerance = 0.2f, // 0 - 180 firing angle
+                AimingTolerance = 0.5f, // 0 - 180 firing angle
                 AimLeadingPrediction = Advanced, // Off, Basic, Accurate, Advanced
                 DelayCeaseFire = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 AddToleranceToTracking = false,
