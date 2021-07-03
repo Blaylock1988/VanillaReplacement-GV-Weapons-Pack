@@ -1,6 +1,55 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
+			<Id>
+				<TypeId>LargeMissileTurret</TypeId>
+				<SubtypeId>ARYXRailgunTurret</SubtypeId>
+			</Id>
+			<DisplayName>Apollo-250 Railgun</DisplayName>
+			<Icon>Textures\GUI\Icons\AWERailgunTurret.dds</Icon>
+			<Description>A turreted version of the Artemis railgun, the Apollo shines with its high accuracy at medium to long range, but its slow firing rate and rotation speed, and limited elevation arc leaves makes the weapon suffer drastically at close range. Designed by ARYX Weapon Enterprises.
+			[Uses 200mm SABOT]</Description>
+			<CubeSize>Large</CubeSize>
+			<GuiVisible>true</GuiVisible>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="3" y="2" z="5"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\AWERailTurret\LG_ARYXRailgunTurret_Base.mwm</Model>
+            <Components>
+                <Component Subtype="SteelPlate" Count="156" />
+                <Component Subtype="Construction" Count="105" />
+                <Component Subtype="MetalGrid" Count="47" />
+                <Component Subtype="PowerCell" Count="16" />
+                <Component Subtype="Superconductor" Count="31" />
+                <Component Subtype="SmallTube" Count="97" />
+                <Component Subtype="Motor" Count="156" />
+                <Component Subtype="Computer" Count="117" />
+                <Component Subtype="Construction" Count="86" />
+                <Component Subtype="SteelPlate" Count="233" />
+            </Components>
+            <BuildTimeSeconds>156</BuildTimeSeconds>
+            <PCU>12460</PCU>
+			<CriticalComponent Subtype="Computer" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="1.0" StartY="1.0" EndX="2.0" EndY="4.0"/>
+				<MountPoint Side="Bottom" StartX="2.0" StartY="1.6" EndX="2.5" EndY="4.0"/>
+				<MountPoint Side="Bottom" StartX="0.5" StartY="1.6" EndX="1.0" EndY="4.0"/>
+			</MountPoints>
+			<OverlayTexture>Textures\GUI\Screens\turret_overlay.dds</OverlayTexture>
+			<BlockPairName>ARYXRailgunTurret</BlockPairName>
+			<MirroringY>Z</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+			<EdgeType>Light</EdgeType>
+			<WeaponDefinitionId Subtype="Ballistics_Railgun"/>
+			<ResourceSinkGroup>Defense</ResourceSinkGroup>
+			<InventoryMaxVolume>0.284</InventoryMaxVolume>
+			<DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
+			<DamagedSound>ParticleWeapExpl</DamagedSound>
+			<DestroyEffect>BlockDestroyedExplosion_Small</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<AiEnabled>false</AiEnabled>
+		</Definition>
 		<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
 			<Id>
 				<TypeId>ConveyorSorter</TypeId>
@@ -18,19 +67,19 @@
 			<ModelOffset x="0" y="0" z="0"/>
 			<Model>Models\AWERailgun\LG_Railgun.mwm</Model>
             <Components>
-                <Component Subtype="SteelPlate" Count="59" />
-                <Component Subtype="Construction" Count="42" />
-                <Component Subtype="MetalGrid" Count="12" />
-                <Component Subtype="PowerCell" Count="9" />
-                <Component Subtype="Superconductor" Count="19" />
-                <Component Subtype="SmallTube" Count="35" />
-                <Component Subtype="Motor" Count="35" />
-                <Component Subtype="Computer" Count="47" />
-                <Component Subtype="Construction" Count="28" />
-                <Component Subtype="SteelPlate" Count="59" />
+                <Component Subtype="SteelPlate" Count="78" />
+                <Component Subtype="Construction" Count="56" />
+                <Component Subtype="MetalGrid" Count="16" />
+                <Component Subtype="PowerCell" Count="13" />
+                <Component Subtype="Superconductor" Count="25" />
+                <Component Subtype="SmallTube" Count="47" />
+                <Component Subtype="Motor" Count="47" />
+                <Component Subtype="Computer" Count="63" />
+                <Component Subtype="Construction" Count="38" />
+                <Component Subtype="SteelPlate" Count="78" />
             </Components>
-            <BuildTimeSeconds>48</BuildTimeSeconds>
-            <PCU>39210</PCU>
+            <BuildTimeSeconds>64</BuildTimeSeconds>
+            <PCU>8400</PCU>
 			<CriticalComponent Subtype="Computer" Index="0"/>
 			<MountPoints>
 				<MountPoint Side="Back" StartX="0.0" StartY="0.0" EndX="1.0" EndY="1.0"/>
@@ -54,55 +103,6 @@
 			<DamagedSound>ParticleWeapExpl</DamagedSound>
 			<ResourceSinkGroup>Defense</ResourceSinkGroup>
 			<EmissiveColorPreset>Default</EmissiveColorPreset>
-		</Definition>
-		<Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
-			<Id>
-				<TypeId>LargeMissileTurret</TypeId>
-				<SubtypeId>ARYXRailgunTurret</SubtypeId>
-			</Id>
-			<DisplayName>Apollo-250 Railgun</DisplayName>
-			<Icon>Textures\GUI\Icons\AWERailgunTurret.dds</Icon>
-			<Description>A turreted version of the Artemis railgun, the Apollo shines with its high accuracy at medium to long range, but its slow firing rate and rotation speed, and limited elevation arc leaves makes the weapon suffer drastically at close range. Designed by ARYX Weapon Enterprises.
-			[Uses 200mm SABOT]</Description>
-			<CubeSize>Large</CubeSize>
-			<GuiVisible>true</GuiVisible>
-			<BlockTopology>TriangleMesh</BlockTopology>
-			<Size x="3" y="2" z="5"/>
-			<ModelOffset x="0" y="0" z="0"/>
-			<Model>Models\AWERailTurret\LG_ARYXRailgunTurret_Base.mwm</Model>
-            <Components>
-                <Component Subtype="SteelPlate" Count="117" />
-                <Component Subtype="Construction" Count="79" />
-                <Component Subtype="MetalGrid" Count="35" />
-                <Component Subtype="PowerCell" Count="12" />
-                <Component Subtype="Superconductor" Count="23" />
-                <Component Subtype="SmallTube" Count="73" />
-                <Component Subtype="Motor" Count="117" />
-                <Component Subtype="Computer" Count="88" />
-                <Component Subtype="Construction" Count="64" />
-                <Component Subtype="SteelPlate" Count="175" />
-            </Components>
-            <BuildTimeSeconds>117</BuildTimeSeconds>
-            <PCU>63520</PCU>
-			<CriticalComponent Subtype="Computer" Index="0"/>
-			<MountPoints>
-				<MountPoint Side="Bottom" StartX="1.0" StartY="1.0" EndX="2.0" EndY="4.0"/>
-				<MountPoint Side="Bottom" StartX="2.0" StartY="1.6" EndX="2.5" EndY="4.0"/>
-				<MountPoint Side="Bottom" StartX="0.5" StartY="1.6" EndX="1.0" EndY="4.0"/>
-			</MountPoints>
-			<OverlayTexture>Textures\GUI\Screens\turret_overlay.dds</OverlayTexture>
-			<BlockPairName>ARYXRailgunTurret</BlockPairName>
-			<MirroringY>Z</MirroringY>
-			<MirroringZ>Y</MirroringZ>
-			<EdgeType>Light</EdgeType>
-			<WeaponDefinitionId Subtype="Ballistics_Railgun"/>
-			<ResourceSinkGroup>Defense</ResourceSinkGroup>
-			<InventoryMaxVolume>0.284</InventoryMaxVolume>
-			<DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
-			<DamagedSound>ParticleWeapExpl</DamagedSound>
-			<DestroyEffect>BlockDestroyedExplosion_Small</DestroyEffect>
-			<DestroySound>WepSmallWarheadExpl</DestroySound>
-			<AiEnabled>false</AiEnabled>
 		</Definition>
 	</CubeBlocks>
 </Definitions>

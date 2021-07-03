@@ -19,19 +19,19 @@
 			<MirroringY>Z</MirroringY>
 			<MirroringZ>Y</MirroringZ>
             <Components>
-                <Component Subtype="SteelPlate" Count="26" />
-                <Component Subtype="Construction" Count="51" />
-                <Component Subtype="MetalGrid" Count="3" />
-                <Component Subtype="LargeTube" Count="2" />
-                <Component Subtype="Motor" Count="31" />
-                <Component Subtype="Computer" Count="15" />
-                <Component Subtype="Superconductor" Count="6" />
-                <Component Subtype="Construction" Count="15" />
-                <Component Subtype="SteelPlate" Count="10" />
+                <Component Subtype="SteelPlate" Count="51" />
+                <Component Subtype="Construction" Count="103" />
+                <Component Subtype="MetalGrid" Count="6" />
+                <Component Subtype="LargeTube" Count="3" />
+                <Component Subtype="Motor" Count="62" />
+                <Component Subtype="Computer" Count="31" />
+                <Component Subtype="Superconductor" Count="12" />
+                <Component Subtype="Construction" Count="31" />
+                <Component Subtype="SteelPlate" Count="21" />
             </Components>
 
-            <BuildTimeSeconds>20</BuildTimeSeconds>
-            <PCU>38310</PCU>
+            <BuildTimeSeconds>40</BuildTimeSeconds>
+            <PCU>9580</PCU>
 			<CriticalComponent Subtype="Computer" Index="0" />
 			<EdgeType>Light</EdgeType>
 			<!--<WeaponDefinitionId Subtype="Others_Mine" />-->

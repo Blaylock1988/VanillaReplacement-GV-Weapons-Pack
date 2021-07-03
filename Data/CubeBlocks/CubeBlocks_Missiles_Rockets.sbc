@@ -19,19 +19,19 @@
 			<Model>Models\Cubes\Large\Missile\LGMissileBase.mwm</Model>
 			<UseModelIntersection>true</UseModelIntersection>
             <Components>
-                <Component Subtype="SteelPlate" Count="12" />
-                <Component Subtype="Construction" Count="73" />
-                <Component Subtype="MetalGrid" Count="12" />
-                <Component Subtype="LargeTube" Count="15" />
-                <Component Subtype="Motor" Count="39" />
-                <Component Subtype="Computer" Count="29" />
-                <Component Subtype="Construction" Count="24" />
-                <Component Subtype="SteelPlate" Count="36" />
+                <Component Subtype="SteelPlate" Count="24" />
+                <Component Subtype="Construction" Count="146" />
+                <Component Subtype="MetalGrid" Count="24" />
+                <Component Subtype="LargeTube" Count="29" />
+                <Component Subtype="Motor" Count="78" />
+                <Component Subtype="Computer" Count="58" />
+                <Component Subtype="Construction" Count="49" />
+                <Component Subtype="SteelPlate" Count="73" />
             </Components>
 
 
-            <BuildTimeSeconds>30</BuildTimeSeconds>
-            <PCU>38850</PCU>
+            <BuildTimeSeconds>61</BuildTimeSeconds>
+            <PCU>9710</PCU>
 			<CriticalComponent Subtype="Computer" Index="0"/>
 			<MountPoints>
 				<MountPoint Side="Bottom" StartX="1" StartY="1" EndX="2" EndY="2"/>
@@ -105,19 +105,19 @@
 			<Model>Models\Cubes\Small\MissileTurret.mwm</Model>
 			<UseModelIntersection>true</UseModelIntersection>
             <Components>
-                <Component Subtype="SteelPlate" Count="4" />
-                <Component Subtype="Construction" Count="21" />
-                <Component Subtype="MetalGrid" Count="1" />
-                <Component Subtype="LargeTube" Count="1" />
-                <Component Subtype="Motor" Count="6" />
-                <Component Subtype="Computer" Count="9" />
-                <Component Subtype="Construction" Count="7" />
-                <Component Subtype="SteelPlate" Count="4" />
+                <Component Subtype="SteelPlate" Count="7" />
+                <Component Subtype="Construction" Count="43" />
+                <Component Subtype="MetalGrid" Count="3" />
+                <Component Subtype="LargeTube" Count="3" />
+                <Component Subtype="Motor" Count="11" />
+                <Component Subtype="Computer" Count="17" />
+                <Component Subtype="Construction" Count="14" />
+                <Component Subtype="SteelPlate" Count="7" />
             </Components>
 
 
-            <BuildTimeSeconds>6</BuildTimeSeconds>
-            <PCU>21510</PCU>
+            <BuildTimeSeconds>11</BuildTimeSeconds>
+            <PCU>5380</PCU>
 			<CriticalComponent Subtype="Computer" Index="0"/>
 			<MountPoints>
 				<MountPoint Side="Bottom" StartX="0" StartY="0" EndX="5" EndY="5" Default="true"/>
@@ -178,59 +178,6 @@
 		<Definition xsi:type="MyObjectBuilder_WeaponBlockDefinition">
 			<Id>
 				<TypeId>SmallMissileLauncher</TypeId>
-				<SubtypeId/>
-			</Id>
-			<DisplayName>[Rocket] Small Hydra launcher</DisplayName>
-			<Icon>Textures\GUI\Icons\Cubes\missile_launcher_small.dds</Icon>
-			<Description>Hydra rockets are a single stage self-propelled dumbfire rocket. They have an incredibly high acceleration and explosive damage output, but quickly lose control after a few seconds of flight making them useless outside short range engagements. This Hydra launcher is manual reload only but holds 8 shots.
-			[Uses Hydra HE]</Description>
-			<CubeSize>Small</CubeSize>
-			<GuiVisible>false</GuiVisible>
-			<BlockTopology>TriangleMesh</BlockTopology>
-			<Size x="1" y="1" z="4"/>
-			<ModelOffset x="0" y="0" z="0"/>
-			<Model>Models\Cubes\Small\RocketLauncher.mwm</Model>
-            <Components>
-                <Component Subtype="SteelPlate" Count="1" />
-                <Component Subtype="Construction" Count="1" />
-                <Component Subtype="MetalGrid" Count="1" />
-                <Component Subtype="LargeTube" Count="2" />
-                <Component Subtype="Motor" Count="1" />
-                <Component Subtype="Computer" Count="1" />
-                <Component Subtype="SteelPlate" Count="2" />
-            </Components>
-
-
-
-            <BuildTimeSeconds>1</BuildTimeSeconds>
-            <PCU>11670</PCU>
-			<CriticalComponent Subtype="Computer" Index="0"/>
-			<MountPoints>
-				<MountPoint Side="Back" StartX="0" StartY="0" EndX="1" EndY="1"/>
-				<MountPoint Side="Top" StartX="0" StartY="0" EndX="1" EndY="1"/>
-				<MountPoint Side="Bottom" StartX="0" StartY="3" EndX="1" EndY="4"/>
-				<MountPoint Side="Right" StartX="0" StartY="0" EndX="1" EndY="1"/>
-				<MountPoint Side="Left" StartX="3" StartY="0" EndX="4" EndY="1"/>
-			</MountPoints>
-			<BuildProgressModels>
-				<Model BuildPercentUpperBound="0.50" File="Models\Cubes\Small\RocketLauncherConstruction_1.mwm"/>
-				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\Small\RocketLauncherConstruction_2.mwm"/>
-			</BuildProgressModels>
-			<MirroringZ>X</MirroringZ>
-			<BlockPairName>RocketLauncher</BlockPairName>
-			<Center x="0" y="0" z="3"/>
-			<EdgeType>Light</EdgeType>
-			<WeaponDefinitionId Subtype="Missiles_Rocket"/>
-			<ResourceSinkGroup>Defense</ResourceSinkGroup>
-			<InventoryMaxVolume>0.24</InventoryMaxVolume>
-			<DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
-			<DamagedSound>ParticleWeapExpl</DamagedSound>
-			<DestroyEffect>BlockDestroyedExplosion_Small</DestroyEffect>
-			<DestroySound>WepSmallWarheadExpl</DestroySound>
-		</Definition>
-		<Definition xsi:type="MyObjectBuilder_WeaponBlockDefinition">
-			<Id>
-				<TypeId>SmallMissileLauncher</TypeId>
 				<SubtypeId>LargeMissileLauncher</SubtypeId>
 			</Id>
 			<DisplayName>[Rocket] Large Hydra Launcher</DisplayName>
@@ -244,19 +191,19 @@
 			<ModelOffset x="0" y="0" z="0"/>
 			<Model>Models\Cubes\Large\RocketLauncher.mwm</Model>
             <Components>
-                <Component Subtype="SteelPlate" Count="11" />
-                <Component Subtype="Construction" Count="4" />
-                <Component Subtype="MetalGrid" Count="17" />
-                <Component Subtype="LargeTube" Count="14" />
-                <Component Subtype="Motor" Count="3" />
-                <Component Subtype="Computer" Count="2" />
-                <Component Subtype="SteelPlate" Count="8" />
+                <Component Subtype="SteelPlate" Count="22" />
+                <Component Subtype="Construction" Count="9" />
+                <Component Subtype="MetalGrid" Count="33" />
+                <Component Subtype="LargeTube" Count="28" />
+                <Component Subtype="Motor" Count="7" />
+                <Component Subtype="Computer" Count="4" />
+                <Component Subtype="SteelPlate" Count="17" />
             </Components>
 
 
 
-            <BuildTimeSeconds>10</BuildTimeSeconds>
-            <PCU>31580</PCU>
+            <BuildTimeSeconds>20</BuildTimeSeconds>
+            <PCU>7890</PCU>
 			<CriticalComponent Subtype="Computer" Index="0"/>
 			<MountPoints>
 				<MountPoint Side="Back" StartX="0" StartY="0" EndX="1" EndY="1"/>
@@ -277,6 +224,59 @@
 			<WeaponDefinitionId Subtype="Missiles_Rocket"/>
 			<ResourceSinkGroup>Defense</ResourceSinkGroup>
 			<InventoryMaxVolume>1.14</InventoryMaxVolume>
+			<DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
+			<DamagedSound>ParticleWeapExpl</DamagedSound>
+			<DestroyEffect>BlockDestroyedExplosion_Small</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_WeaponBlockDefinition">
+			<Id>
+				<TypeId>SmallMissileLauncher</TypeId>
+				<SubtypeId/>
+			</Id>
+			<DisplayName>[Rocket] Small Hydra launcher</DisplayName>
+			<Icon>Textures\GUI\Icons\Cubes\missile_launcher_small.dds</Icon>
+			<Description>Hydra rockets are a single stage self-propelled dumbfire rocket. They have an incredibly high acceleration and explosive damage output, but quickly lose control after a few seconds of flight making them useless outside short range engagements. This Hydra launcher is manual reload only but holds 8 shots.
+			[Uses Hydra HE]</Description>
+			<CubeSize>Small</CubeSize>
+			<GuiVisible>false</GuiVisible>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="1" z="4"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\Small\RocketLauncher.mwm</Model>
+            <Components>
+                <Component Subtype="SteelPlate" Count="1" />
+                <Component Subtype="Construction" Count="2" />
+                <Component Subtype="MetalGrid" Count="1" />
+                <Component Subtype="LargeTube" Count="5" />
+                <Component Subtype="Motor" Count="1" />
+                <Component Subtype="Computer" Count="1" />
+                <Component Subtype="SteelPlate" Count="3" />
+            </Components>
+
+
+
+            <BuildTimeSeconds>3</BuildTimeSeconds>
+            <PCU>2920</PCU>
+			<CriticalComponent Subtype="Computer" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Back" StartX="0" StartY="0" EndX="1" EndY="1"/>
+				<MountPoint Side="Top" StartX="0" StartY="0" EndX="1" EndY="1"/>
+				<MountPoint Side="Bottom" StartX="0" StartY="3" EndX="1" EndY="4"/>
+				<MountPoint Side="Right" StartX="0" StartY="0" EndX="1" EndY="1"/>
+				<MountPoint Side="Left" StartX="3" StartY="0" EndX="4" EndY="1"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.50" File="Models\Cubes\Small\RocketLauncherConstruction_1.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\Small\RocketLauncherConstruction_2.mwm"/>
+			</BuildProgressModels>
+			<MirroringZ>X</MirroringZ>
+			<BlockPairName>RocketLauncher</BlockPairName>
+			<Center x="0" y="0" z="3"/>
+			<EdgeType>Light</EdgeType>
+			<WeaponDefinitionId Subtype="Missiles_Rocket"/>
+			<ResourceSinkGroup>Defense</ResourceSinkGroup>
+			<InventoryMaxVolume>0.24</InventoryMaxVolume>
 			<DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
 			<DamagedSound>ParticleWeapExpl</DamagedSound>
 			<DestroyEffect>BlockDestroyedExplosion_Small</DestroyEffect>

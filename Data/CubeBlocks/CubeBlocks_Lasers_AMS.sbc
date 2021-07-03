@@ -19,19 +19,19 @@
 			<Model>Models\MA_Designator\MA_Designator.mwm</Model>
 			<UseModelIntersection>true</UseModelIntersection>
             <Components>
-                <Component Subtype="SteelPlate" Count="7" />
-                <Component Subtype="Construction" Count="43" />
-                <Component Subtype="MetalGrid" Count="7" />
-                <Component Subtype="LargeTube" Count="9" />
-                <Component Subtype="Motor" Count="23" />
-                <Component Subtype="Computer" Count="17" />
-                <Component Subtype="Construction" Count="14" />
-                <Component Subtype="SteelPlate" Count="21" />
+                <Component Subtype="SteelPlate" Count="14" />
+                <Component Subtype="Construction" Count="86" />
+                <Component Subtype="MetalGrid" Count="14" />
+                <Component Subtype="LargeTube" Count="17" />
+                <Component Subtype="Motor" Count="46" />
+                <Component Subtype="Computer" Count="34" />
+                <Component Subtype="Construction" Count="29" />
+                <Component Subtype="SteelPlate" Count="43" />
             </Components>
 
 
-            <BuildTimeSeconds>18</BuildTimeSeconds>
-            <PCU>17450</PCU>
+            <BuildTimeSeconds>36</BuildTimeSeconds>
+            <PCU>4360</PCU>
 			<CriticalComponent Subtype="Computer" Index="0"/>
 			<MountPoints>
 				<MountPoint Side="Bottom" StartX="0.25" StartY="0.25" EndX="0.75" EndY="0.75"/>
@@ -98,19 +98,19 @@
 			<Model>Models\MA_Designator\MA_Designator_sm.mwm</Model>
 			<UseModelIntersection>true</UseModelIntersection>
             <Components>
-                <Component Subtype="SteelPlate" Count="3" />
-                <Component Subtype="Construction" Count="31" />
-                <Component Subtype="MetalGrid" Count="3" />
-                <Component Subtype="LargeTube" Count="3" />
-                <Component Subtype="Motor" Count="6" />
-                <Component Subtype="Computer" Count="37" />
-                <Component Subtype="Construction" Count="16" />
                 <Component Subtype="SteelPlate" Count="6" />
+                <Component Subtype="Construction" Count="62" />
+                <Component Subtype="MetalGrid" Count="6" />
+                <Component Subtype="LargeTube" Count="6" />
+                <Component Subtype="Motor" Count="12" />
+                <Component Subtype="Computer" Count="75" />
+                <Component Subtype="Construction" Count="31" />
+                <Component Subtype="SteelPlate" Count="12" />
             </Components>
 
 
-            <BuildTimeSeconds>8</BuildTimeSeconds>
-            <PCU>14110</PCU>
+            <BuildTimeSeconds>17</BuildTimeSeconds>
+            <PCU>3530</PCU>
 			<CriticalComponent Subtype="Computer" Index="0"/>
 			<MountPoints>
 				<MountPoint Side="Bottom" StartX="0.04" StartY="0.04" EndX="0.96" EndY="0.96"/>
@@ -160,5 +160,4 @@
 			<IsAirTight>false</IsAirTight>
 		</Definition>
 	</CubeBlocks>
-	<BlockPositions/>
 </Definitions>

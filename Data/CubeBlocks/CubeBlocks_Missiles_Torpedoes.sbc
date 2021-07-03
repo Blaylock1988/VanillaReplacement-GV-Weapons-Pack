@@ -18,19 +18,19 @@
 			<MirroringY>Z</MirroringY>
 			<MirroringZ>Y</MirroringZ>
             <Components>
-                <Component Subtype="SteelPlate" Count="38" />
-                <Component Subtype="Construction" Count="77" />
-                <Component Subtype="MetalGrid" Count="4" />
-                <Component Subtype="LargeTube" Count="0" />
-                <Component Subtype="Motor" Count="19" />
-                <Component Subtype="Computer" Count="58" />
-                <Component Subtype="Superconductor" Count="5" />
-                <Component Subtype="Construction" Count="19" />
-                <Component Subtype="SteelPlate" Count="10" />
+                <Component Subtype="SteelPlate" Count="77" />
+                <Component Subtype="Construction" Count="153" />
+                <Component Subtype="MetalGrid" Count="8" />
+                <Component Subtype="LargeTube" Count="1" />
+                <Component Subtype="Motor" Count="38" />
+                <Component Subtype="Computer" Count="115" />
+                <Component Subtype="Superconductor" Count="11" />
+                <Component Subtype="Construction" Count="38" />
+                <Component Subtype="SteelPlate" Count="19" />
             </Components>
 
-            <BuildTimeSeconds>25</BuildTimeSeconds>
-            <PCU>53100</PCU>
+            <BuildTimeSeconds>49</BuildTimeSeconds>
+            <PCU>13280</PCU>
 			<CriticalComponent Subtype="Computer" Index="0"/>
 			<EdgeType>Light</EdgeType>
 			<WeaponDefinitionId Subtype="Missiles_Torpedo"/>

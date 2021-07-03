@@ -20,18 +20,19 @@
 			<MirroringY>Z</MirroringY>
 			<MirroringZ>Y</MirroringZ>
             <Components>
-                <Component Subtype="SteelPlate" Count="102" />
-                <Component Subtype="Construction" Count="26" />
-                <Component Subtype="MetalGrid" Count="15" />
-                <Component Subtype="LargeTube" Count="10" />
-                <Component Subtype="Motor" Count="8" />
-                <Component Subtype="Superconductor" Count="31" />
-                <Component Subtype="PowerCell" Count="164" />
-                <Component Subtype="Computer" Count="20" />
-                <Component Subtype="SteelPlate" Count="128" />
+                <Component Subtype="SteelPlate" Count="136" />
+                <Component Subtype="Construction" Count="34" />
+                <Component Subtype="MetalGrid" Count="20" />
+                <Component Subtype="LargeTube" Count="14" />
+                <Component Subtype="Motor" Count="10" />
+                <Component Subtype="Superconductor" Count="41" />
+                <Component Subtype="PowerCell" Count="218" />
+                <Component Subtype="Computer" Count="27" />
+                <Component Subtype="SteelPlate" Count="171" />
             </Components>
-            <BuildTimeSeconds>96</BuildTimeSeconds>
-            <PCU>73000</PCU>
+
+            <BuildTimeSeconds>128</BuildTimeSeconds>
+            <PCU>15460</PCU>
 			<CriticalComponent Subtype="Computer" Index="0"/>
 			<EdgeType>Light</EdgeType>
 			<!--<WeaponDefinitionId Subtype="Ballistics_MAC"/>-->

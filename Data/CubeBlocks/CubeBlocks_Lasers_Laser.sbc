@@ -1,85 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 	<CubeBlocks>
-		<!-- PDX small -->
-		<Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
-			<Id>
-				<TypeId>LargeMissileTurret</TypeId>
-				<SubtypeId>MA_PDX_sm</SubtypeId>
-			</Id>
-			<DisplayName>[Laser] Small XFEL Turret</DisplayName>
-			<Description>A general purpose X-ray Free-Electron Laser (XFEL) based turret that has pinpoint accuracy. It requires a large energy supply, and can overheat from continued use. Designed by AutoMcD Manufacturing.
-			[Uses Energy]</Description>
-			<Icon>Textures\GUI\Icons\Cubes\MA_PDX.dds</Icon>
-			<CubeSize>Small</CubeSize>
-			<BlockTopology>TriangleMesh</BlockTopology>
-			<Size x="5" y="5" z="5"/>
-			<ModelOffset x="0" y="0" z="0"/>
-			<ShowEdges>false</ShowEdges>
-			<GuiVisible>true</GuiVisible>
-			<Model>Models\MA_Laser2\MA_PDX.mwm</Model>
-			<UseModelIntersection>true</UseModelIntersection>
-            <Components>
-                <Component Subtype="SteelPlate" Count="14" />
-                <Component Subtype="Construction" Count="9" />
-                <Component Subtype="SmallTube" Count="7" />
-                <Component Subtype="LargeTube" Count="11" />
-                <Component Subtype="Motor" Count="15" />
-                <Component Subtype="Superconductor" Count="22" />
-                <Component Subtype="BulletproofGlass" Count="5" />
-                <Component Subtype="Computer" Count="11" />
-                <Component Subtype="MetalGrid" Count="5" />
-                <Component Subtype="SteelPlate" Count="27" />
-            </Components>
-            <BuildTimeSeconds>18</BuildTimeSeconds>
-            <PCU>21390</PCU>
-			<CriticalComponent Subtype="Computer" Index="0"/>
-			<BuildProgressModels>
-				<Model BuildPercentUpperBound="0.33" File="Models\MA_Laser2\MA_PDX_Constr1.mwm"/>
-				<Model BuildPercentUpperBound="0.67" File="Models\MA_Laser2\MA_PDX_Constr2.mwm"/>
-				<Model BuildPercentUpperBound="1.00" File="Models\MA_Laser2\MA_PDX_Constr3.mwm"/>
-			</BuildProgressModels>
-			<MountPoints>
-				<MountPoint Side="Bottom" StartX="0.38" StartY="0.38" EndX="4.62" EndY="4.62"/>
-			</MountPoints>
-			<MirroringX>None</MirroringX>
-			<MirroringY>Z</MirroringY>
-			<MirroringZ>Y</MirroringZ>
-			<BlockPairName>MA_PDX</BlockPairName>
-			<VoxelPlacement>
-				<StaticMode>
-					<PlacementMode>OutsideVoxel</PlacementMode>
-					<MaxAllowed>0.2</MaxAllowed>
-					<MinAllowed>0</MinAllowed>
-				</StaticMode>
-				<DynamicMode>
-					<PlacementMode>OutsideVoxel</PlacementMode>
-					<MaxAllowed>0.2</MaxAllowed>
-					<MinAllowed>0.01</MinAllowed>
-				</DynamicMode>
-			</VoxelPlacement>
-			<EdgeType>Light</EdgeType>
-			<WeaponDefinitionId Subtype="Lasers_Laser"/>
-			<InventoryMaxVolume>0.384</InventoryMaxVolume>
-			<MinElevationDegrees>-30</MinElevationDegrees>
-			<MaxElevationDegrees>90</MaxElevationDegrees>
-			<MinAzimuthDegrees>-180</MinAzimuthDegrees>
-			<MaxAzimuthDegrees>180</MaxAzimuthDegrees>
-			<IdleRotation>true</IdleRotation>
-			<MaxRangeMeters>8000</MaxRangeMeters>
-			<RotationSpeed>0.007</RotationSpeed>
-			<ElevationSpeed>0.005 </ElevationSpeed>
-			<EmissiveColorPreset>Default</EmissiveColorPreset>
-			<MinFov>0.1</MinFov>
-			<MaxFov>1.04719755</MaxFov>
-			<ShowEdges>false</ShowEdges>
-			<AiEnabled>false</AiEnabled>
-			<DamageEffectName>Damage_Electrical_Damaged</DamageEffectName>
-			<DamagedSound>ParticleElectrical</DamagedSound>
-			<EmissiveColorPreset>Default</EmissiveColorPreset>
-			<DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
-			<DestroySound>WepSmallWarheadExpl</DestroySound>
-		</Definition>
 		<!-- MA_T2PDX -->
 		<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
 			<Id>
@@ -99,19 +20,19 @@
 			<Model>Models\MA_Laser2\MA_T2PDX.mwm</Model>
 			<UseModelIntersection>true</UseModelIntersection>
             <Components>
-                <Component Subtype="SteelPlate" Count="15" />
-                <Component Subtype="Construction" Count="10" />
-                <Component Subtype="SmallTube" Count="8" />
-                <Component Subtype="LargeTube" Count="12" />
-                <Component Subtype="Motor" Count="16" />
-                <Component Subtype="Superconductor" Count="51" />
-                <Component Subtype="BulletproofGlass" Count="10" />
-                <Component Subtype="Computer" Count="12" />
-                <Component Subtype="MetalGrid" Count="5" />
-                <Component Subtype="SteelPlate" Count="133" />
+                <Component Subtype="SteelPlate" Count="31" />
+                <Component Subtype="Construction" Count="20" />
+                <Component Subtype="SmallTube" Count="16" />
+                <Component Subtype="LargeTube" Count="25" />
+                <Component Subtype="Motor" Count="33" />
+                <Component Subtype="Superconductor" Count="102" />
+                <Component Subtype="BulletproofGlass" Count="20" />
+                <Component Subtype="Computer" Count="25" />
+                <Component Subtype="MetalGrid" Count="10" />
+                <Component Subtype="SteelPlate" Count="266" />
             </Components>
-            <BuildTimeSeconds>51</BuildTimeSeconds>
-            <PCU>32820</PCU>
+            <BuildTimeSeconds>101</BuildTimeSeconds>
+            <PCU>8200</PCU>
 			<CriticalComponent Subtype="Computer" Index="0"/>
 			<MountPoints>
 				<MountPoint Side="Bottom" StartX="0.0" StartY="0.0" EndX="2.0" EndY="2.0"/>
@@ -141,6 +62,85 @@
 			<WeaponDefinitionId Subtype="Lasers_Laser"/>
 			<InventoryMaxVolume>0.384</InventoryMaxVolume>
 			<MinElevationDegrees>-20</MinElevationDegrees>
+			<MaxElevationDegrees>90</MaxElevationDegrees>
+			<MinAzimuthDegrees>-180</MinAzimuthDegrees>
+			<MaxAzimuthDegrees>180</MaxAzimuthDegrees>
+			<IdleRotation>true</IdleRotation>
+			<MaxRangeMeters>8000</MaxRangeMeters>
+			<RotationSpeed>0.007</RotationSpeed>
+			<ElevationSpeed>0.005 </ElevationSpeed>
+			<EmissiveColorPreset>Default</EmissiveColorPreset>
+			<MinFov>0.1</MinFov>
+			<MaxFov>1.04719755</MaxFov>
+			<ShowEdges>false</ShowEdges>
+			<AiEnabled>false</AiEnabled>
+			<DamageEffectName>Damage_Electrical_Damaged</DamageEffectName>
+			<DamagedSound>ParticleElectrical</DamagedSound>
+			<EmissiveColorPreset>Default</EmissiveColorPreset>
+			<DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+		</Definition>
+		<!-- PDX small -->
+		<Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
+			<Id>
+				<TypeId>LargeMissileTurret</TypeId>
+				<SubtypeId>MA_PDX_sm</SubtypeId>
+			</Id>
+			<DisplayName>[Laser] Small XFEL Turret</DisplayName>
+			<Description>A general purpose X-ray Free-Electron Laser (XFEL) based turret that has pinpoint accuracy. It requires a large energy supply, and can overheat from continued use. Designed by AutoMcD Manufacturing.
+			[Uses Energy]</Description>
+			<Icon>Textures\GUI\Icons\Cubes\MA_PDX.dds</Icon>
+			<CubeSize>Small</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="5" y="5" z="5"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<ShowEdges>false</ShowEdges>
+			<GuiVisible>true</GuiVisible>
+			<Model>Models\MA_Laser2\MA_PDX.mwm</Model>
+			<UseModelIntersection>true</UseModelIntersection>
+            <Components>
+                <Component Subtype="SteelPlate" Count="27" />
+                <Component Subtype="Construction" Count="18" />
+                <Component Subtype="SmallTube" Count="15" />
+                <Component Subtype="LargeTube" Count="22" />
+                <Component Subtype="Motor" Count="29" />
+                <Component Subtype="Superconductor" Count="44" />
+                <Component Subtype="BulletproofGlass" Count="9" />
+                <Component Subtype="Computer" Count="22" />
+                <Component Subtype="MetalGrid" Count="9" />
+                <Component Subtype="SteelPlate" Count="55" />
+            </Components>
+            <BuildTimeSeconds>36</BuildTimeSeconds>
+            <PCU>5350</PCU>
+			<CriticalComponent Subtype="Computer" Index="0"/>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\MA_Laser2\MA_PDX_Constr1.mwm"/>
+				<Model BuildPercentUpperBound="0.67" File="Models\MA_Laser2\MA_PDX_Constr2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\MA_Laser2\MA_PDX_Constr3.mwm"/>
+			</BuildProgressModels>
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0.38" StartY="0.38" EndX="4.62" EndY="4.62"/>
+			</MountPoints>
+			<MirroringX>None</MirroringX>
+			<MirroringY>Z</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+			<BlockPairName>MA_PDX</BlockPairName>
+			<VoxelPlacement>
+				<StaticMode>
+					<PlacementMode>OutsideVoxel</PlacementMode>
+					<MaxAllowed>0.2</MaxAllowed>
+					<MinAllowed>0</MinAllowed>
+				</StaticMode>
+				<DynamicMode>
+					<PlacementMode>OutsideVoxel</PlacementMode>
+					<MaxAllowed>0.2</MaxAllowed>
+					<MinAllowed>0.01</MinAllowed>
+				</DynamicMode>
+			</VoxelPlacement>
+			<EdgeType>Light</EdgeType>
+			<WeaponDefinitionId Subtype="Lasers_Laser"/>
+			<InventoryMaxVolume>0.384</InventoryMaxVolume>
+			<MinElevationDegrees>-30</MinElevationDegrees>
 			<MaxElevationDegrees>90</MaxElevationDegrees>
 			<MinAzimuthDegrees>-180</MinAzimuthDegrees>
 			<MaxAzimuthDegrees>180</MaxAzimuthDegrees>
