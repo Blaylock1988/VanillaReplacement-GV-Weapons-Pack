@@ -6,7 +6,7 @@ MajorXAce
 - Halo UNSC Ship Weapons (WeaponCore) https://steamcommunity.com/sharedfiles/filedetails/?id=2286546132
 
 AryxErin
-- AryxErin Weapon Pack (unlisted)
+- AryxErin Weapon Pack https://steamcommunity.com/workshop/filedetails/?id=2530716039
 
 Chipstix and Okim
 - OKI Grand Weapons Retextured [WeaponCore] [4] https://steamcommunity.com/sharedfiles/filedetails/?id=2481720426
