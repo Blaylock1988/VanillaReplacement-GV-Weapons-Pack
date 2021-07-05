@@ -26,9 +26,9 @@ namespace WeaponThread
             HybridRound = false, //AmmoMagazine based weapon with energy cost
             EnergyCost = 0f, //(((EnergyCost * DefaultDamage) * ShotsPerSecond) * BarrelsPerShot) * ShotsPerBarrel
             BaseDamage = 1f,
-            Mass = 1000f, // in kilograms
+            Mass = 2000f, // in kilograms
             Health = 0, // 0 = disabled, otherwise how much damage it can take from other trajectiles before dying.
-            BackKickForce = 10000f,
+            BackKickForce = 20000f,
             DecayPerShot = 0f,
             HardPointUsable = true, // set to false if this is a shrapnel ammoType and you don't want the turret to be able to select it directly.
             EnergyMagazineSize = 0,
@@ -83,14 +83,14 @@ namespace WeaponThread
                 Grids = new GridSizeDef
                 {
                     Large = -1f,
-                    Small = 0.1f,
+                    Small = 0.25f,
                 },
                 Armor = new ArmorDef
                 {
                     Armor = -1f,
                     Light = 0.25f,
                     Heavy = 2f,
-                    NonArmor = 0.1f,
+                    NonArmor = 0.25f,
                 },
                 Shields = new ShieldDef
                 {

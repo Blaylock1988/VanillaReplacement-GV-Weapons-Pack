@@ -346,7 +346,7 @@ namespace WeaponThread
             AmmoRound = "Missiles_Torpedo_FlightStage",
             HybridRound = false, //AmmoMagazine based weapon with energy cost
             EnergyCost = 0f, //(((EnergyCost * DefaultDamage) * ShotsPerSecond) * BarrelsPerShot) * ShotsPerBarrel
-            BaseDamage = 10f,
+            BaseDamage = 1f,
             Mass = 750f, // in kilograms
             Health = 40f, // 0 = disabled, otherwise how much damage it can take from other trajectiles before dying.
             BackKickForce = 5f,
@@ -443,7 +443,7 @@ namespace WeaponThread
                 Base = new AreaInfluence
                 {
                     Radius = 75f, // the sphere of influence of area effects
-                    EffectStrength = 25000f, // For ewar it applies this amount per pulse/hit, non-ewar applies this as damage per tick per entity in area of influence. For radiant 0 == use spillover from BaseDamage, otherwise use this value.
+                    EffectStrength = 50000f, // For ewar it applies this amount per pulse/hit, non-ewar applies this as damage per tick per entity in area of influence. For radiant 0 == use spillover from BaseDamage, otherwise use this value.
                 },
                 Pulse = new PulseDef // interval measured in game ticks (60 == 1 second), pulseChance chance (0 - 100) that an entity in field will be hit
                 {
@@ -482,8 +482,8 @@ namespace WeaponThread
                 {
                     DetonateOnEnd = false,
                     ArmOnlyOnHit = true,
-                    DetonationDamage = 4500f,
-                    DetonationRadius = 12f,
+                    DetonationDamage = 10000f,
+                    DetonationRadius = 25f,
                     MinArmingTime = 30, //Min time in ticks before projectile will arm for detonation (will also affect shrapnel spawning)
                 },
                 EwarFields = new EwarFieldsDef

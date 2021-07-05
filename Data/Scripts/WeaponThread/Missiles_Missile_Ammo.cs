@@ -402,7 +402,7 @@ namespace WeaponThread
             },
 			AreaEffect = new AreaDamageDef
 			{
-				AreaEffect = Radiant, // Disabled = do not use area effect at all, Explosive, Radiant, AntiSmart, JumpNullField, EnergySinkField, AnchorField, EmpField, OffenseField, NavField, DotField.
+				AreaEffect = Explosive, // Disabled = do not use area effect at all, Explosive, Radiant, AntiSmart, JumpNullField, EnergySinkField, AnchorField, EmpField, OffenseField, NavField, DotField.
 				Base = new AreaInfluence
 				{
 					Radius = 5f, // the sphere of influence of area effects
@@ -497,7 +497,7 @@ namespace WeaponThread
                     OverideTarget = true, // when set to true ammo picks its own target, does not use hardpoint's.
                     MaxTargets = 2, // Number of targets allowed before ending, 0 = unlimited
                     NoTargetExpire = false, // Expire without ever having a target at TargetLossTime
-					OffsetRatio = 0.4f, // The ratio to offset the random dir (0 to 1) 
+					OffsetRatio = 0.3f, // The ratio to offset the random dir (0 to 1) 
 					OffsetTime = 15, // how often to offset degree, measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     Roam = false, // Roam current area after target loss
                     KeepAliveAfterTargetLoss = true, // Whether to stop early death of projectile on target loss

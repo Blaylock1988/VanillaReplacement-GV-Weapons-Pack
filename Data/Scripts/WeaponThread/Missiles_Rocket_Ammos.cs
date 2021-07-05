@@ -27,7 +27,7 @@ namespace WeaponThread
 			HybridRound = false, //AmmoMagazine based weapon with energy cost
 			EnergyCost = 0f, //(((EnergyCost * DefaultDamage) * ShotsPerSecond) * BarrelsPerShot) * ShotsPerBarrel
 			BaseDamage = 1f,
-			Mass = 1000f, // in kilograms
+			Mass = 100f, // in kilograms
 			Health = 4, // 0 = disabled, otherwise how much damage it can take from other trajectiles before dying.
 			BackKickForce = 5f,
 			HardPointUsable = true, // set to false if this is a shrapnel ammoType and you don't want the turret to be able to select it directly.

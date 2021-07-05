@@ -679,7 +679,7 @@ namespace WeaponThread
                 {
                     Armor = -1f,
                     Light = .8f,
-                    Heavy = .4f,
+                    Heavy = .6f,
                     NonArmor = -1f,
                 },
                 Shields = new ShieldDef
