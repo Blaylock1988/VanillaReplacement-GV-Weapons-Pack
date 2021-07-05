@@ -16,7 +16,7 @@ namespace WeaponThread
             {
                 "MissileTurretBarrels",
             },
- /*           WeaponAnimationSets = new[]
+            WeaponAnimationSets = new[]
             {
                 new PartAnimationSetDef()
                 {
@@ -180,7 +180,7 @@ namespace WeaponThread
                             },
                     }
                 },
-            } */
+            }
         };
     }
 }

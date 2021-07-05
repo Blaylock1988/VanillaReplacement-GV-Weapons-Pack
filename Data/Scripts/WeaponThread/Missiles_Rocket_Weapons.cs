@@ -26,7 +26,7 @@ namespace WeaponThread
 			ClosestFirst = true, // tries to pick closest targets first (blocks on grids, projectiles, etc...).
 			IgnoreDumbProjectiles = true, // Don't fire at non-smart projectiles.
 			LockedSmartOnly = false, // Only fire at smart projectiles that are locked on to parent grid.
-			MinimumDiameter = 3, // 0 = unlimited, Minimum radius of threat to engage.
+			MinimumDiameter = 0, // 0 = unlimited, Minimum radius of threat to engage.
 			MaximumDiameter = 0, // 0 = unlimited, Maximum radius of threat to engage.
 			MaxTargetDistance = 1000, // 0 = unlimited, Maximum target distance that targets will be automatically shot at.
 			MinTargetDistance = 0, // 0 = unlimited, Min target distance that targets will be automatically shot at.
@@ -44,12 +44,12 @@ namespace WeaponThread
 
 		private AiDef Missiles_Rocket_Hardpoint_Ai_Turret = new AiDef 
 		{
-			TrackTargets = true,
-			TurretAttached = true,
-			TurretController = false,
-			PrimaryTracking = false,
-			LockOnFocus = true,
-			SuppressFire = false,
+			TrackTargets = true, //This Weapon will know there are targets in range
+			TurretAttached = true, // This enables the ability for players to manually control
+			TurretController = true, //The turret in this WeaponDefinition has control over where other turrets aim.
+			PrimaryTracking = false, //The turret in this WeaponDefinition selects targets for other turrets that do not have tracking capabilities.
+			LockOnFocus = false, // fires this weapon when something is locked using the WC hud reticle
+			SuppressFire = false, //prevent automatic firing
 			OverrideLeads = false, // Override default behavior for target leads
 		};
 
@@ -71,8 +71,8 @@ namespace WeaponThread
 			MuzzleCheck = false,
 			Debug = false,
 			RestrictionRadius = 0f, // Meters, radius of sphere disable this gun if another is present
-			CheckInflatedBox = false, // if true, the bounding box of the gun is expanded by the RestrictionRadius
-			CheckForAnyWeapon = false, // if true, the check will fail if ANY gun is present, false only looks for this subtype
+			CheckInflatedBox = true, // if true, the bounding box of the gun is expanded by the RestrictionRadius
+			CheckForAnyWeapon = true, // if true, the check will fail if ANY gun is present, false only looks for this subtype
 		};
 
 		private HardPointAudioDef Missiles_Rocket_Hardpoint_Audio = new HardPointAudioDef {

@@ -70,11 +70,11 @@ namespace WeaponThread
 			},
 			AreaEffect = new AreaDamageDef
 			{
-				AreaEffect = Explosive, // Disabled = do not use area effect at all, Explosive, Radiant, AntiSmart, JumpNullField, JumpNullField, EnergySinkField, AnchorField, EmpField, OffenseField, NavField, DotField.
+				AreaEffect = Radiant, // Disabled = do not use area effect at all, Explosive, Radiant, AntiSmart, JumpNullField, JumpNullField, EnergySinkField, AnchorField, EmpField, OffenseField, NavField, DotField.
 				Base = new AreaInfluence
 				{
 					Radius = 10f, // the sphere of influence of area effects, must be at least 1 for missiles
-					EffectStrength = 1500f, // For ewar it applies this amount per pulse/hit, non-ewar applies this as damage per tick per entity in area of influence. For radiant 0 == use spillover from BaseDamage, otherwise use this value.
+					EffectStrength = 500f, // For ewar it applies this amount per pulse/hit, non-ewar applies this as damage per tick per entity in area of influence. For radiant 0 == use spillover from BaseDamage, otherwise use this value.
 				},
 				Explosions = new ExplosionDef
 				{

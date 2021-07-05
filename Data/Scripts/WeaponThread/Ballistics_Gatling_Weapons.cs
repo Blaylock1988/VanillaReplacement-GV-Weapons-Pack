@@ -22,7 +22,7 @@ namespace WeaponThread {
 				Offense, Thrust, Utility, Power, Production, Jumping, Steering, Any, // subsystems the gun targets
 			},
 			ClosestFirst = true, // tries to pick closest targets first (blocks on grids, projectiles, etc...).
-			IgnoreDumbProjectiles = false, // Don't fire at non-smart projectiles.
+			IgnoreDumbProjectiles = true, // Don't fire at non-smart projectiles.
 			LockedSmartOnly = false, // Only fire at smart projectiles that are locked on to parent grid.
 			MinimumDiameter = 0, // 0 = unlimited, Minimum radius of threat to engage.
 			MaximumDiameter = 0, // 0 = unlimited, Maximum radius of threat to engage.
@@ -67,8 +67,8 @@ namespace WeaponThread {
 			MuzzleCheck = false,
 			Debug = false,
 			RestrictionRadius = 0f, // Meters, radius of sphere disable this gun if another is present
-			CheckInflatedBox = false, // if true, the bounding box of the gun is expanded by the RestrictionRadius
-			CheckForAnyWeapon = false, // if true, the check will fail if ANY gun is present, false only looks for this subtype
+			CheckInflatedBox = true, // if true, the bounding box of the gun is expanded by the RestrictionRadius
+			CheckForAnyWeapon = true, // if true, the check will fail if ANY gun is present, false only looks for this subtype
 		};
 
 		private LoadingDef Ballistics_Gatlings_Hardpoint_Loading_Turret = new LoadingDef {

@@ -57,15 +57,15 @@
 			<DisplayName>[Flak] 100mm HE x40</DisplayName>
 			<Icon>Textures\GUI\Icons\ammo\Ammo_Box.dds</Icon>
 			<Size>
-				<X>0.2</X>
-				<Y>0.05</Y>
-				<Z>0.02</Z>
+				<X>0.25</X>
+				<Y>0.2</Y>
+				<Z>0.2</Z>
 			</Size>
-			<Mass>0.45</Mass>
-			<Volume>0.2</Volume>
+			<Mass>40</Mass>
+			<Volume>20</Volume>
 			<Model>Models\Weapons\Ammo_Box.mwm</Model>
 			<PhysicalMaterial>Ammo</PhysicalMaterial>
-			<Capacity>50</Capacity>
+			<Capacity>40</Capacity>
 			<AmmoDefinitionId Subtype="Blank"/>
 			<MinimumOfferAmount>100</MinimumOfferAmount>
 			<MaximumOfferAmount>1000</MaximumOfferAmount>
@@ -226,9 +226,9 @@
 				<Y>0.2</Y>
 				<Z>0.2</Z>
 			</Size>
-			<Mass>20000</Mass>
+			<Mass>8000</Mass>
 			<!--250 Per Mine -->
-			<Volume>14400</Volume>
+			<Volume>15625</Volume>
 			<!--125 Per Mine -->
 			<Model>Models\Mines\MXA_Moray_Mine.mwm</Model>
 			<Capacity>8</Capacity>
