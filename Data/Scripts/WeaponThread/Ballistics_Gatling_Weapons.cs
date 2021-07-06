@@ -33,13 +33,6 @@ namespace WeaponThread {
 			StopTrackingSpeed = 0, // do not track target threats traveling faster than this speed
 		};
 
-		private UiDef Ballistics_Gatlings_Hardpoint_Ui = new UiDef {
-			RateOfFire = false,
-			DamageModifier = false,
-			ToggleGuidance = false,
-			EnableOverload =  false,
-		};
-
 		private AiDef Ballistics_Gatlings_Hardpoint_Ai_Turret = new AiDef {
 			TrackTargets = true, //This Weapon will know there are targets in range
 			TurretAttached = true, // This enables the ability for players to manually control
@@ -175,7 +168,7 @@ namespace WeaponThread {
                 AddToleranceToTracking = false,
                 CanShootSubmerged = false,
 				
-                Ui = Ballistics_Gatlings_Hardpoint_Ui,
+                Ui = Common_Weapons_Hardpoint_Ui_FullDisable,
 				
                 Ai = Ballistics_Gatlings_Hardpoint_Ai_Turret,
 				
@@ -189,7 +182,7 @@ namespace WeaponThread {
                     MinElevation = -10,
                     MaxElevation = 90,
                     FixedOffset = false,
-                    InventorySize = 0.658f,
+                    InventorySize = 1f,
                     Offset = Vector(x: 0, y: 0, z: 0),
 					Armor = IsWeapon, // IsWeapon, Passive, Active
                 },
@@ -246,7 +239,7 @@ namespace WeaponThread {
                 AddToleranceToTracking = false,
                 CanShootSubmerged = false,
 				
-                Ui = Ballistics_Gatlings_Hardpoint_Ui,
+                Ui = Common_Weapons_Hardpoint_Ui_FullDisable,
 				
                 Ai = Ballistics_Gatlings_Hardpoint_Ai_Turret,
 				
@@ -260,7 +253,7 @@ namespace WeaponThread {
                     MinElevation = -10,
                     MaxElevation = 90,
                     FixedOffset = false,
-                    InventorySize = 0.360f,
+                    InventorySize = 0.5f,
                     Offset = Vector(x: 0, y: 0, z: 0),
                 },
 				
@@ -316,7 +309,7 @@ namespace WeaponThread {
                 AddToleranceToTracking = false,
                 CanShootSubmerged = false,
 				
-                Ui = Ballistics_Gatlings_Hardpoint_Ui,
+                Ui = Common_Weapons_Hardpoint_Ui_FullDisable,
 				
                 Ai = Ballistics_Gatlings_Hardpoint_Ai_Gun,
 				
@@ -329,7 +322,7 @@ namespace WeaponThread {
                     MinElevation = 0,
                     MaxElevation = 0,
                     FixedOffset = true,
-                    InventorySize = 0.064f,
+                    InventorySize = 0.25f,
                     Offset = Vector(x: 0, y: 0, z: 0),
                 },
 				
@@ -386,7 +379,7 @@ namespace WeaponThread {
                 AddToleranceToTracking = false,
                 CanShootSubmerged = false,
 				
-                Ui = Ballistics_Gatlings_Hardpoint_Ui,
+                Ui = Common_Weapons_Hardpoint_Ui_FullDisable,
 				
                 Ai = Ballistics_Gatlings_Hardpoint_Ai_Turret,
 				

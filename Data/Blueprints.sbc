@@ -6,7 +6,7 @@
 				<TypeId>BlueprintDefinition</TypeId>
 				<SubtypeId>NATO_25x184mmMagazine</SubtypeId>
 			</Id>
-			<DisplayName>[Gatling] 25mm KE x140</DisplayName>
+			<DisplayName>[Gatling] 25mm KE x30</DisplayName>
 			<Icon>Textures\GUI\Icons\ammo\Ammo_Box.dds</Icon>
 			<Prerequisites>
 				<Item Amount="40" TypeId="Ingot" SubtypeId="Iron"/>
@@ -14,7 +14,7 @@
 				<Item Amount="3.0" TypeId="Ingot" SubtypeId="Magnesium"/>
 			</Prerequisites>
 			<Result Amount="1" TypeId="AmmoMagazine" SubtypeId="NATO_25x184mm"/>
-			<BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
+			<BaseProductionTimeInSeconds>6</BaseProductionTimeInSeconds>
 		</Blueprint>
 		<Blueprint>
 			<Id>
@@ -29,14 +29,14 @@
 				<Item Amount="0.15" TypeId="Ingot" SubtypeId="Magnesium"/>
 			</Prerequisites>
 			<Result Amount="1" TypeId="AmmoMagazine" SubtypeId="NATO_5p56x45mm"/>
-			<BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
+			<BaseProductionTimeInSeconds>7</BaseProductionTimeInSeconds>
 		</Blueprint>
 		<Blueprint>
 			<Id>
 				<TypeId>BlueprintDefinition</TypeId>
 				<SubtypeId>Ballistics_Flak</SubtypeId>
 			</Id>
-			<DisplayName>[Flak] 100mm HE x40</DisplayName>
+			<DisplayName>[Flak] 100mm HE x20</DisplayName>
 			<Icon>Textures\GUI\Icons\ammo\Ammo_Box.dds</Icon>
 			<Prerequisites>
 				<Item Amount="2.5" TypeId="Ingot" SubtypeId="Iron"/>
@@ -44,7 +44,7 @@
 				<Item Amount="0.5" TypeId="Ingot" SubtypeId="Magnesium"/>
 			</Prerequisites>
 			<Result Amount="1" TypeId="AmmoMagazine" SubtypeId="Ballistics_Flak"/>
-			<BaseProductionTimeInSeconds>20</BaseProductionTimeInSeconds>
+			<BaseProductionTimeInSeconds>31</BaseProductionTimeInSeconds>
 		</Blueprint>
 		<Blueprint>
 			<Id>
@@ -59,7 +59,7 @@
 				<Item Amount="15" TypeId="Ingot" SubtypeId="Cobalt"/>
 			</Prerequisites>
 			<Result Amount="1" TypeId="AmmoMagazine" SubtypeId="Ballistics_Cannon"/>
-			<BaseProductionTimeInSeconds>15</BaseProductionTimeInSeconds>
+			<BaseProductionTimeInSeconds>27</BaseProductionTimeInSeconds>
 		</Blueprint>
 		<Blueprint>
 			<Id>
@@ -76,7 +76,7 @@
 				<Item Amount="2" TypeId="Ingot" SubtypeId="Platinum"/>
 			</Prerequisites>
 			<Result Amount="1" TypeId="AmmoMagazine" SubtypeId="Ballistics_Railgun"/>
-			<BaseProductionTimeInSeconds>20</BaseProductionTimeInSeconds>
+			<BaseProductionTimeInSeconds>27</BaseProductionTimeInSeconds>
 		</Blueprint>
 		<Blueprint>
 			<Id>
@@ -94,7 +94,7 @@
 				<!--90 per Round-->
 			</Prerequisites>
 			<Result Amount="1" TypeId="AmmoMagazine" SubtypeId="Ballistics_MAC"/>
-			<BaseProductionTimeInSeconds>405</BaseProductionTimeInSeconds>
+			<BaseProductionTimeInSeconds>162</BaseProductionTimeInSeconds>
 		</Blueprint>
 		<Blueprint>
 			<Id>
@@ -115,7 +115,7 @@
 		<Blueprint>
 			<Id>
 				<TypeId>BlueprintDefinition</TypeId>
-				<SubtypeId>Missiles_Missile</SubtypeId>
+				<SubtypeId>Missiles_Missile_x150</SubtypeId>
 			</Id>
 			<DisplayName>[Missile] Archer HE x150</DisplayName>
 			<Icon>Textures\GUI\Icons\MXA_Archer_Missile_Ammo.png</Icon>
@@ -126,8 +126,25 @@
 				<Item Amount="125" TypeId="Ingot" SubtypeId="Cobalt"/>
 				<Item Amount="375" TypeId="Ingot" SubtypeId="Magnesium"/>
 			</Prerequisites>
-			<Result Amount="1" TypeId="AmmoMagazine" SubtypeId="Missiles_Missile"/>
-			<BaseProductionTimeInSeconds>90.0</BaseProductionTimeInSeconds>
+			<Result Amount="1" TypeId="AmmoMagazine" SubtypeId="Missiles_Missile_x150"/>
+			<BaseProductionTimeInSeconds>135</BaseProductionTimeInSeconds>
+		</Blueprint>
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>Missiles_Missile_x1</SubtypeId>
+			</Id>
+			<DisplayName>[Missile] Archer HE x1</DisplayName>
+			<Icon>Textures\GUI\Icons\MXA_Archer_Missile_Ammo.png</Icon>
+			<Prerequisites>
+				<Item Amount="275" TypeId="Ingot" SubtypeId="Iron"/>
+				<Item Amount="27" TypeId="Ingot" SubtypeId="Nickel"/>
+				<Item Amount="12" TypeId="Ingot" SubtypeId="Silicon"/>
+				<Item Amount="12" TypeId="Ingot" SubtypeId="Cobalt"/>
+				<Item Amount="37" TypeId="Ingot" SubtypeId="Magnesium"/>
+			</Prerequisites>
+			<Result Amount="1" TypeId="AmmoMagazine" SubtypeId="Missiles_Missile_x1"/>
+			<BaseProductionTimeInSeconds>6</BaseProductionTimeInSeconds>
 		</Blueprint>
 		<Blueprint>
 			<Id>
@@ -145,7 +162,7 @@
 				<Item Amount="150" TypeId="Ingot" SubtypeId="Magnesium"/>
 			</Prerequisites>
 			<Result Amount="1" TypeId="AmmoMagazine" SubtypeId="Missiles_Torpedo"/>
-			<BaseProductionTimeInSeconds>240.0</BaseProductionTimeInSeconds>
+			<BaseProductionTimeInSeconds>181</BaseProductionTimeInSeconds>
 		</Blueprint>
 		<Blueprint>
 			<Id>
@@ -163,7 +180,7 @@
 				<Item Amount="1" TypeId="Ingot" SubtypeId="ACCOIN"/>
 			</Prerequisites>
 			<Result Amount="1" TypeId="AmmoMagazine" SubtypeId="Lasers_JumpNull"/>
-			<BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
+			<BaseProductionTimeInSeconds>49</BaseProductionTimeInSeconds>
 		</Blueprint>
 		<Blueprint>
 			<Id>
@@ -179,7 +196,7 @@
 				<Item Amount="200" TypeId="Ingot" SubtypeId="Magnesium"/>
 			</Prerequisites>
 			<Result Amount="1" TypeId="AmmoMagazine" SubtypeId="Others_Mine"/>
-			<BaseProductionTimeInSeconds>120.0</BaseProductionTimeInSeconds>
+			<BaseProductionTimeInSeconds>247</BaseProductionTimeInSeconds>
 		</Blueprint>
 	</Blueprints>
 </Definitions>

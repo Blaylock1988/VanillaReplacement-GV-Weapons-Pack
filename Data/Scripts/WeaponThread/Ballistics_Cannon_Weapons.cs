@@ -14,9 +14,7 @@ namespace WeaponThread
     partial class Weapons
     {
 
-		//Common definitions
-		
-		private TargetingDef Ballistics_Cannons_Targeting => new TargetingDef {
+		private TargetingDef Ballistics_Cannons_Targeting_Turret => new TargetingDef {
 			Threats = new[] {
 				Grids,
 			},
@@ -33,55 +31,6 @@ namespace WeaponThread
 			TopTargets = 4, // 0 = unlimited, max number of top targets to randomize between.
 			TopBlocks = 4, // 0 = unlimited, max number of blocks to randomize between
 			StopTrackingSpeed = 0, // do not track target threats traveling faster than this speed
-		};
-
-		private UiDef Ballistics_Cannons_Hardpoint_Ui = new UiDef {
-			RateOfFire = false,
-			DamageModifier = false,
-			ToggleGuidance = false,
-			EnableOverload =  false,
-		};
-
-		private AiDef Ballistics_Cannons_Hardpoint_Ai_Turret = new AiDef {
-			TrackTargets = true, //This Weapon will know there are targets in range
-			TurretAttached = true, // This enables the ability for players to manually control
-			TurretController = true, //The turret in this WeaponDefinition has control over where other turrets aim.
-			PrimaryTracking = false, //The turret in this WeaponDefinition selects targets for other turrets that do not have tracking capabilities.
-			LockOnFocus = false, // fires this weapon when something is locked using the WC hud reticle
-			SuppressFire = false, //prevent automatic firing
-			OverrideLeads = false, // Override default behavior for target leads
-		};
-
-		private AiDef Ballistics_Cannons_Hardpoint_Ai_Gun = new AiDef {
-			TrackTargets = false,
-			TurretAttached = false,
-			TurretController = false,
-			PrimaryTracking = false,
-			LockOnFocus = false,
-			SuppressFire = true,
-			OverrideLeads = false, // Override default behavior for target leads
-		};
-
-		private OtherDef Ballistics_Cannons_Hardpoint_Other_Large = new OtherDef {
-			GridWeaponCap = 0,
-			RotateBarrelAxis = 0,
-			EnergyPriority = 0,
-			MuzzleCheck = false,
-			Debug = false,
-			RestrictionRadius = 2.5f, // Meters, radius of sphere disable this gun if another is present
-			CheckInflatedBox = true, // if true, the bounding box of the gun is expanded by the RestrictionRadius
-			CheckForAnyWeapon = true, // if true, the check will fail if ANY gun is present, false only looks for this subtype
-		};
-
-		private OtherDef Ballistics_Cannons_Hardpoint_Other_Small = new OtherDef {
-			GridWeaponCap = 0,
-			RotateBarrelAxis = 0,
-			EnergyPriority = 0,
-			MuzzleCheck = false,
-			Debug = false,
-			RestrictionRadius = 0f, // Meters, radius of sphere disable this gun if another is present
-			CheckInflatedBox = false, // if true, the bounding box of the gun is expanded by the RestrictionRadius
-			CheckForAnyWeapon = false, // if true, the check will fail if ANY gun is present, false only looks for this subtype
 		};
 
 		private HardPointAudioDef Ballistics_Cannons_Hardpoint_Audio = new HardPointAudioDef {
@@ -111,8 +60,6 @@ namespace WeaponThread
 			},
 		};
 
-		//Weapon Definitions
-
         WeaponDefinition MXA_CoilgunL => new WeaponDefinition {
 
             Assignments = new ModelAssignmentsDef
@@ -136,7 +83,7 @@ namespace WeaponThread
                 Scope = "scope", //Where line of sight checks are performed from must be clear of block collision
             },
 
-            Targeting = Ballistics_Cannons_Targeting,
+            Targeting = Ballistics_Cannons_Targeting_Turret,
 			
             HardPoint = new HardPointDef
             {
@@ -148,9 +95,9 @@ namespace WeaponThread
                 AddToleranceToTracking = false,
                 CanShootSubmerged = false,
 
-                Ui = Ballistics_Cannons_Hardpoint_Ui,
+                Ui = Common_Weapons_Hardpoint_Ui_FullDisable,
 				
-                Ai = Ballistics_Cannons_Hardpoint_Ai_Turret,
+                Ai = Common_Weapons_Hardpoint_Ai_BasicTurret_LockOn,
 				
                 HardWare = new HardwareDef
                 {
@@ -161,12 +108,12 @@ namespace WeaponThread
                     MinElevation = -4,
                     MaxElevation = 90,
                     FixedOffset = false,
-                    InventorySize = 1.10f,
+                    InventorySize = 1.5f,
                     Offset = Vector(x: 0, y: 0, z: 0),
                     Armor = IsWeapon, // IsWeapon, Passive, Active
                 },
                 
-				Other = Ballistics_Cannons_Hardpoint_Other_Large,
+				Other = Common_Weapons_Hardpoint_Other_Large,
 				
                 Loading = new LoadingDef
                 {
@@ -174,8 +121,8 @@ namespace WeaponThread
                     BarrelsPerShot = 1,
                     TrajectilesPerBarrel = 1, // Number of Trajectiles per barrel per fire event.
                     SkipBarrels = 0,
-                    ReloadTime = 180, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-                    DelayUntilFire = 60, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                    ReloadTime = 240, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                    DelayUntilFire = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     HeatPerShot = 0, //heat generated per shot
                     MaxHeat = 0, //max heat before weapon enters cooldown (70% of max heat)
                     Cooldown = 0, //percent of max heat to be under to start firing again after overheat accepts .2-.95
@@ -224,7 +171,7 @@ namespace WeaponThread
                 Scope = "", //Where line of sight checks are performed from must be clear of block collision
             },
 
-            Targeting = Ballistics_Cannons_Targeting,
+            Targeting = Ballistics_Cannons_Targeting_Turret,
 			
             HardPoint = new HardPointDef 
             {
@@ -236,9 +183,9 @@ namespace WeaponThread
                 AddToleranceToTracking = false,
                 CanShootSubmerged = false,
 
-                Ui = Ballistics_Cannons_Hardpoint_Ui,
+                Ui = Common_Weapons_Hardpoint_Ui_FullDisable,
 				
-                Ai = Ballistics_Cannons_Hardpoint_Ai_Turret,
+                Ai = Common_Weapons_Hardpoint_Ai_BasicTurret_LockOn,
 
                 HardWare = new HardwareDef {
                     RotateRate = 0.02f,
@@ -248,12 +195,12 @@ namespace WeaponThread
                     MinElevation = -15,
                     MaxElevation = 45,
                     FixedOffset = false,
-                    InventorySize = 0.8f,
+                    InventorySize = 1.2f,
                     Offset = Vector(x: 0, y: 0, z: 0),
                     Armor = IsWeapon, // IsWeapon, Passive, Active
                 },
 
-				Other = Ballistics_Cannons_Hardpoint_Other_Small,
+				Other = Common_Weapons_Hardpoint_Other_Small,
 
                 Loading = new LoadingDef {
                     RateOfFire = 120,
@@ -299,7 +246,7 @@ namespace WeaponThread
                         MuzzlePartId = "None",
                         AzimuthPartId = "None",
                         ElevationPartId = "None",
-                        DurabilityMod = 0.5f,
+                        DurabilityMod = 0.9f,
                         IconName = ""
                     },
 
@@ -311,7 +258,7 @@ namespace WeaponThread
                 Scope = "", //Where line of sight checks are performed from must be clear of block collision
             },
 
-            Targeting = Ballistics_Cannons_Targeting,
+            Targeting = Common_Weapons_Targeting_Fixed_NoTargeting,
 			
             HardPoint = new HardPointDef 
             {
@@ -323,9 +270,9 @@ namespace WeaponThread
                 AddToleranceToTracking = false,
                 CanShootSubmerged = false,
 
-                Ui = Ballistics_Cannons_Hardpoint_Ui,
+                Ui = Common_Weapons_Hardpoint_Ui_FullDisable,
 				
-                Ai = Ballistics_Cannons_Hardpoint_Ai_Gun,
+                Ai = Common_Weapons_Hardpoint_Ai_BasicFixed_NoTracking,
 
                 HardWare = new HardwareDef {
                     RotateRate = 0f,
@@ -340,7 +287,7 @@ namespace WeaponThread
                     Armor = IsWeapon, // IsWeapon, Passive, Active
                 },
 
-				Other = Ballistics_Cannons_Hardpoint_Other_Small,
+				Other = Common_Weapons_Hardpoint_Other_Small,
 
                 Loading = new LoadingDef {
                     RateOfFire = 120,
@@ -398,7 +345,7 @@ namespace WeaponThread
                 Scope = "", //Where line of sight checks are performed from must be clear of block collision
             },
 
-            Targeting = Ballistics_Cannons_Targeting,
+            Targeting = Common_Weapons_Targeting_Fixed_NoTargeting,
 			
             HardPoint = new HardPointDef 
             {
@@ -410,9 +357,9 @@ namespace WeaponThread
                 AddToleranceToTracking = false,
                 CanShootSubmerged = false,
 
-                Ui = Ballistics_Cannons_Hardpoint_Ui,
+                Ui = Common_Weapons_Hardpoint_Ui_FullDisable,
 				
-                Ai = Ballistics_Cannons_Hardpoint_Ai_Gun,
+                Ai = Common_Weapons_Hardpoint_Ai_BasicFixed_NoTracking,
 
                 HardWare = new HardwareDef {
                     RotateRate = 0f,
@@ -422,12 +369,12 @@ namespace WeaponThread
                     MinElevation = 0,
                     MaxElevation = 0,
                     FixedOffset = true,
-                    InventorySize = 0.96f,
+                    InventorySize = 1.5f,
                     Offset = Vector(x: 0, y: 0, z: 0),
                     Armor = IsWeapon, // IsWeapon, Passive, Active
                 },
                 
-				Other = Ballistics_Cannons_Hardpoint_Other_Large,
+				Other = Common_Weapons_Hardpoint_Other_Large,
 				
                 Loading = new LoadingDef {
                     RateOfFire = 120,

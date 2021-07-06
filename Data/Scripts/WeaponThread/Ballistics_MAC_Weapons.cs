@@ -35,7 +35,7 @@ namespace WeaponThread
                 Ejector = "",
             },
 
-            Targeting = Ballistics_Cannons_Targeting,
+            Targeting = Common_Weapons_Targeting_Fixed_NoTargeting,
 			
             HardPoint = new HardPointDef
             {
@@ -47,9 +47,9 @@ namespace WeaponThread
                 AddToleranceToTracking = false,
                 CanShootSubmerged = false,
 
-                Ui = Ballistics_Cannons_Hardpoint_Ui,
+                Ui = Common_Weapons_Hardpoint_Ui_FullDisable,
 				
-                Ai = Ballistics_Cannons_Hardpoint_Ai_Gun,
+                Ai = Common_Weapons_Hardpoint_Ai_BasicFixed_NoTracking,
 
                 HardWare = new HardwareDef
                 {
@@ -60,12 +60,12 @@ namespace WeaponThread
                     MinElevation = 0,
                     MaxElevation = 0,
                     FixedOffset = true,
-                    InventorySize = 5f,
+                    InventorySize = 11f,
                     Offset = Vector(x: 0, y: 0, z: 0),
-                    //Armor = IsWeapon, // IsWeapon, Passive, Active
+                    Armor = IsWeapon, // IsWeapon, Passive, Active
                 },
 				
-                Other = Ballistics_Cannons_Hardpoint_Other_Large,
+                Other = Common_Weapons_Hardpoint_Other_Large,
 				
                 Loading = new LoadingDef
                 {

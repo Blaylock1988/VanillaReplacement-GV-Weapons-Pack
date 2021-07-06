@@ -100,7 +100,7 @@ namespace WeaponThread {
                     MinElevation = -20,
                     MaxElevation = 90,
                     FixedOffset = false,
-                    InventorySize = 0.658f,
+                    InventorySize = 4.5f,
                     Offset = Vector(x: 0, y: 0, z: 0),
 					Armor = IsWeapon, // IsWeapon, Passive, Active
                 },

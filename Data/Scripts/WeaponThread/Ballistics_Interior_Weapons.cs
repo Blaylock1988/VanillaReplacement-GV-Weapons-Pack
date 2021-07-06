@@ -96,7 +96,7 @@ namespace WeaponThread
                     InventorySize = 0.08f,
                     Offset = Vector(x: 0, y: 0, z: 0),
                 },
-                Other = Ballistics_Cannons_Hardpoint_Other_Large,
+                Other = Common_Weapons_Hardpoint_Other_Large,
 				
                 Loading = new LoadingDef
                 {

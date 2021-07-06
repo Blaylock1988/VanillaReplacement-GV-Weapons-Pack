@@ -6,18 +6,18 @@
 				<TypeId>AmmoMagazine</TypeId>
 				<SubtypeId>NATO_25x184mm</SubtypeId>
 			</Id>
-			<DisplayName>[Gatling] 25mm KE x140</DisplayName>
+			<DisplayName>[Gatling] 25mm KE x30</DisplayName>
 			<Icon>Textures\GUI\Icons\ammo\Ammo_Box.dds</Icon>
 			<Size>
 				<X>0.25</X>
 				<Y>0.2</Y>
 				<Z>0.2</Z>
 			</Size>
-			<Mass>35</Mass>
-			<Volume>16</Volume>
+			<Mass>50</Mass>
+			<Volume>50</Volume>
 			<Model>Models\Weapons\Ammo_Box.mwm</Model>
 			<PhysicalMaterial>Ammo</PhysicalMaterial>
-			<Capacity>140</Capacity>
+			<Capacity>30</Capacity>
 			<AmmoDefinitionId Subtype="Blank"/>
 			<MinimumOfferAmount>100</MinimumOfferAmount>
 			<MaximumOfferAmount>1000</MaximumOfferAmount>
@@ -54,18 +54,18 @@
 				<TypeId>AmmoMagazine</TypeId>
 				<SubtypeId>Ballistics_Flak</SubtypeId>
 			</Id>
-			<DisplayName>[Flak] 100mm HE x40</DisplayName>
+			<DisplayName>[Flak] 100mm HE x20</DisplayName>
 			<Icon>Textures\GUI\Icons\ammo\Ammo_Box.dds</Icon>
 			<Size>
-				<X>0.25</X>
-				<Y>0.2</Y>
-				<Z>0.2</Z>
+				<X>0.5</X>
+				<Y>0.4</Y>
+				<Z>0.4</Z>
 			</Size>
-			<Mass>40</Mass>
-			<Volume>20</Volume>
+			<Mass>480</Mass>
+			<Volume>380</Volume>
 			<Model>Models\Weapons\Ammo_Box.mwm</Model>
 			<PhysicalMaterial>Ammo</PhysicalMaterial>
-			<Capacity>40</Capacity>
+			<Capacity>20</Capacity>
 			<AmmoDefinitionId Subtype="Blank"/>
 			<MinimumOfferAmount>100</MinimumOfferAmount>
 			<MaximumOfferAmount>1000</MaximumOfferAmount>
@@ -81,12 +81,12 @@
 			<DisplayName>[Cannon] 155mm AP x4</DisplayName>
 			<Icon>Textures\GUI\Icons\MXA_AmmoBoxL.png</Icon>
 			<Size>
-				<X>0.25</X>
-				<Y>1.2</Y>
-				<Z>0.2</Z>
+				<X>0.125</X>
+				<Y>0.6</Y>
+				<Z>0.1</Z>
 			</Size>
-			<Mass>400</Mass>
-			<Volume>200</Volume>
+			<Mass>450</Mass>
+			<Volume>300</Volume>
 			<Model>Models\MXA_AmmoBoxL.mwm</Model>
 			<Capacity>4</Capacity>
 			<AmmoDefinitionId Subtype="Blank"/>
@@ -103,7 +103,7 @@
 				<Y>1</Y>
 				<Z>1</Z>
 			</Size>
-			<Mass>200</Mass>
+			<Mass>1000</Mass>
 			<Volume>500</Volume>
 			<Model>Models\AWE_Ammo\AryxFerrous500mm.mwm</Model>
 			<PhysicalMaterial>Ammo</PhysicalMaterial>
@@ -127,7 +127,7 @@
 				<Y>1.2</Y>
 				<Z>0.2</Z>
 			</Size>
-			<Mass>15000</Mass>
+			<Mass>20000</Mass>
 			<!--500 per Round-->
 			<Volume>5000</Volume>
 			<!--250 per Round-->
@@ -147,8 +147,8 @@
                 <Y>0.2</Y>
                 <Z>0.2</Z>
             </Size>
-            <Mass>45</Mass>
-            <Volume>60</Volume>
+            <Mass>40</Mass>
+            <Volume>80</Volume>
             <Model>Models\Weapons\Projectile_Missile.mwm</Model>
             <PhysicalMaterial>Ammo</PhysicalMaterial>
             <Capacity>1</Capacity>
@@ -162,7 +162,7 @@
 		<AmmoMagazine>
 			<Id>
 				<TypeId>AmmoMagazine</TypeId>
-				<SubtypeId>Missiles_Missile</SubtypeId>
+				<SubtypeId>Missiles_Missile_x150</SubtypeId>
 			</Id>
 			<DisplayName>[Missile] Archer HE x150</DisplayName>
 			<Icon>Textures\GUI\Icons\MXA_Archer_Missile_Ammo.png</Icon>
@@ -171,10 +171,28 @@
 				<Y>0.2</Y>
 				<Z>0.2</Z>
 			</Size>
-			<Mass>1125</Mass>
-			<Volume>562.5</Volume>
+			<Mass>3000</Mass>
+			<Volume>3750</Volume>
 			<Model>Models\Missiles\MXA_Archer_Missile.mwm</Model>
 			<Capacity>150</Capacity>
+			<AmmoDefinitionId Subtype="Blank"/>
+		</AmmoMagazine>
+		<AmmoMagazine>
+			<Id>
+				<TypeId>AmmoMagazine</TypeId>
+				<SubtypeId>Missiles_Missile_x1</SubtypeId>
+			</Id>
+			<DisplayName>[Missile] Archer HE x1</DisplayName>
+			<Icon>Textures\GUI\Icons\MXA_Archer_Missile_Ammo.png</Icon>
+			<Size>
+				<X>0.25</X>
+				<Y>0.2</Y>
+				<Z>0.2</Z>
+			</Size>
+			<Mass>20</Mass>
+			<Volume>25</Volume>
+			<Model>Models\Missiles\MXA_Archer_Missile.mwm</Model>
+			<Capacity>1</Capacity>
 			<AmmoDefinitionId Subtype="Blank"/>
 		</AmmoMagazine>
 		<AmmoMagazine>
@@ -190,7 +208,7 @@
 				<Z>0.2</Z>
 			</Size>
 			<Mass>3000</Mass>
-			<Volume>2200</Volume>
+			<Volume>6000</Volume>
 			<Model>Models\Missiles\MXA_Shiva_Missile.mwm</Model>
 			<Capacity>1</Capacity>
 			<AmmoDefinitionId Subtype="Blank"/>
@@ -207,8 +225,8 @@
 				<Y>0.2</Y>
 				<Z>0.2</Z>
 			</Size>
-			<Mass>35</Mass>
-			<Volume>16</Volume>
+			<Mass>750</Mass>
+			<Volume>750</Volume>
 			<Model>Models\MD_Discharge\MD_Ammo.mwm</Model>
 			<PhysicalMaterial>Ammo</PhysicalMaterial>
 			<Capacity>240</Capacity>
@@ -226,9 +244,9 @@
 				<Y>0.2</Y>
 				<Z>0.2</Z>
 			</Size>
-			<Mass>8000</Mass>
+			<Mass>7500</Mass>
 			<!--250 Per Mine -->
-			<Volume>15625</Volume>
+			<Volume>10000</Volume>
 			<!--125 Per Mine -->
 			<Model>Models\Mines\MXA_Moray_Mine.mwm</Model>
 			<Capacity>8</Capacity>

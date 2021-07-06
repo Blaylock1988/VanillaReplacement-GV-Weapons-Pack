@@ -168,7 +168,7 @@ namespace WeaponThread
                     MinElevation = 0,
                     MaxElevation = 0,
                     FixedOffset = true,
-                    InventorySize = 2.5f,
+                    InventorySize = 8.250f,
                     Offset = Vector(x: 0, y: 0, z: 0),
                     Armor = IsWeapon, // IsWeapon, Passive, Active
                 },
@@ -181,7 +181,7 @@ namespace WeaponThread
                     BarrelsPerShot = 1,
                     TrajectilesPerBarrel = 1, // Number of Trajectiles per barrel per fire event.
                     SkipBarrels = 0,
-                    ReloadTime = 1200, //3600 // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                    ReloadTime = 2700, //1200-420 for animation reload delay // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     DelayUntilFire = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     HeatPerShot = 0, //heat generated per shot
                     MaxHeat = 0, //max heat before weapon enters cooldown (70% of max heat)
@@ -202,8 +202,8 @@ namespace WeaponThread
 				
             },
             Ammos = new[] {
-                Missiles_Missile,
-                Missiles_Missile_FlightStage,
+                Missiles_Missile_x150,
+                Missiles_Missile_x150_FlightStage,
             },
             Animations = MXA_ArcherPods_Animation,
             //Upgrades = UpgradeModules,
@@ -259,7 +259,7 @@ namespace WeaponThread
                     MinElevation = 0,
                     MaxElevation = 0,
                     FixedOffset = true,
-                    InventorySize = 0.57f,
+                    InventorySize = 0.4f,
                     Offset = Vector(x: 0, y: 0, z: 0),
                     Armor = IsWeapon, // IsWeapon, Passive, Active
                 },
@@ -294,8 +294,8 @@ namespace WeaponThread
             },
 
 			Ammos = new [] {
-                Missiles_Missile,
-                Missiles_Missile_FlightStage,
+                Missiles_Missile_x1,
+                Missiles_Missile_x1_FlightStage,
             },
             //Animations = AdvancedAnimation,
             // Don't edit below this line

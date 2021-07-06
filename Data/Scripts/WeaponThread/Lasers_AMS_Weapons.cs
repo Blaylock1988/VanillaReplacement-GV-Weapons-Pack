@@ -72,7 +72,7 @@ namespace WeaponThread {
                 AddToleranceToTracking = false,
                 CanShootSubmerged = false,
 				
-                Ui = Ballistics_Cannons_Hardpoint_Ui,
+                Ui = Common_Weapons_Hardpoint_Ui_FullDisable,
 				
                 Ai = new AiDef 
 				{
@@ -98,7 +98,7 @@ namespace WeaponThread {
                     Armor = IsWeapon, // IsWeapon, Passive, Active
                 },
 				
-                Other = Ballistics_Cannons_Hardpoint_Other_Large,
+                Other = Common_Weapons_Hardpoint_Other_Large,
 				
                 Loading = new LoadingDef
                 {

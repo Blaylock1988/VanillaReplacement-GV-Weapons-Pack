@@ -367,8 +367,8 @@ namespace WeaponThread
             },
             Shrapnel = new ShrapnelDef
             {
-                AmmoRound = "Missiles_Torpedo_ExplosionStage",
-                Fragments = 1,
+                AmmoRound = "", //mass = volume * ammo mass density
+                Fragments = 0,
                 Degrees = 0,
                 Reverse = false,
                 RandomizeDir = false, // randomzie between forward and backward directions
@@ -666,7 +666,7 @@ namespace WeaponThread
             },
         };
 
-        private AmmoDef Missiles_Torpedo_ExplosionStage => new AmmoDef
+        /*private AmmoDef Missiles_Torpedo_ExplosionStage => new AmmoDef
         {
             AmmoMagazine = "Energy",
             AmmoRound = "Missiles_Torpedo_ExplosionStage",
@@ -989,7 +989,7 @@ namespace WeaponThread
                     Delay = 0, // delay in ticks after shot before ejected
                 }
             },
-        };
+        };*/
 		
     }
 }

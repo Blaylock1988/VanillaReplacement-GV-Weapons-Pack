@@ -168,7 +168,7 @@ namespace WeaponThread
                     MinElevation = 0,
                     MaxElevation = 0,
                     FixedOffset = true,
-                    InventorySize = 1.14f,
+                    InventorySize = 3.52f,
                     Offset = Vector(x: 0, y: 0, z: 0),
 					Armor = IsWeapon, // IsWeapon, Passive, Active
                 },
@@ -258,7 +258,7 @@ namespace WeaponThread
                     MinElevation = -20,
                     MaxElevation = 90,
                     FixedOffset = false,
-                    InventorySize = 0.768f,
+                    InventorySize = 1.6f,
                     Offset = Vector(x: 0, y: 0, z: 0),
 					Armor = IsWeapon, // IsWeapon, Passive, Active
                 },
@@ -347,7 +347,7 @@ namespace WeaponThread
                     MinElevation = 0,
                     MaxElevation = 0,
                     FixedOffset = true,
-                    InventorySize = 1.14f,
+                    InventorySize = 0.64f,
                     Offset = Vector(x: 0, y: 0, z: 0),
 					Armor = IsWeapon, // IsWeapon, Passive, Active
                 },
@@ -431,7 +431,7 @@ namespace WeaponThread
                     MinElevation = -8,
                     MaxElevation = 90,
                     FixedOffset = false,
-                    InventorySize = 0.360f,
+                    InventorySize = 0.640f,
                     Offset = Vector(x: 0, y: 0, z: 0),
 					Armor = IsWeapon, // IsWeapon, Passive, Active
                 },

@@ -63,9 +63,9 @@ namespace WeaponThread
                 DelayCeaseFire = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 AddToleranceToTracking = false,
 
-                Ui = Ballistics_Cannons_Hardpoint_Ui,
+                Ui = Common_Weapons_Hardpoint_Ui_FullDisable,
 				
-                Ai = Ballistics_Cannons_Hardpoint_Ai_Turret,
+                Ai = Common_Weapons_Hardpoint_Ai_BasicTurret_LockOn,
 				
                 HardWare = new HardwareDef
                 {
@@ -76,12 +76,12 @@ namespace WeaponThread
                     MinElevation = -10,
                     MaxElevation = 90,
                     FixedOffset = false,
-                    InventorySize = 0.658f,
+                    InventorySize = 1.52f,
                     Offset = Vector(x: 0, y: 0, z: 0),
                     Armor = IsWeapon, // IsWeapon, Passive, Active
                 },
 				
-                Other = Ballistics_Cannons_Hardpoint_Other_Large,
+                Other = Common_Weapons_Hardpoint_Other_Large,
 				
                 Loading = new LoadingDef
                 {

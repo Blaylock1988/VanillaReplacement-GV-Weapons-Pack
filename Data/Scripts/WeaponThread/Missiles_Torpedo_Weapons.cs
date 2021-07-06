@@ -87,7 +87,7 @@ namespace WeaponThread
                     MinElevation = 0,
                     MaxElevation = 0,
                     FixedOffset = true,
-                    InventorySize = 2.25f,
+                    InventorySize = 13.2f,
                     Offset = Vector(x: 0, y: 0, z: 0),
                     //Armor = IsWeapon, // IsWeapon, Passive, Active
                 },
@@ -171,7 +171,7 @@ namespace WeaponThread
             Ammos = new[] {
                 Missiles_Torpedo,
                 Missiles_Torpedo_FlightStage,
-                Missiles_Torpedo_ExplosionStage,
+                //Missiles_Torpedo_ExplosionStage,
             },
             Animations = MXA_Shiva_Animation,
             //Upgrades = UpgradeModules,

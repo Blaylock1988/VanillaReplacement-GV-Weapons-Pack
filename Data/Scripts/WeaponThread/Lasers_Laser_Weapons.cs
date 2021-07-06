@@ -216,9 +216,9 @@ namespace WeaponThread
                 AimLeadingPrediction = Off, // Off, Basic, Accurate, Advanced
                 DelayCeaseFire = 20, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
 
-                Ui = Ballistics_Cannons_Hardpoint_Ui,
+                Ui = Common_Weapons_Hardpoint_Ui_FullDisable,
 				
-                Ai = Ballistics_Cannons_Hardpoint_Ai_Turret,
+                Ai = Common_Weapons_Hardpoint_Ai_BasicTurret_LockOn,
 				
                 HardWare = new HardwareDef
                 {
@@ -232,7 +232,7 @@ namespace WeaponThread
                     InventorySize = 0f,
                     Offset = Vector(x: 0, y: 0, z: 0),
                 },
-                Other = Ballistics_Cannons_Hardpoint_Other_Large,
+                Other = Common_Weapons_Hardpoint_Other_Large,
 				
                 Loading = new LoadingDef
                 {
