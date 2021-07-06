@@ -126,12 +126,12 @@
 			<DisplayName>[Cannon] 155mm Fixed Battlecannon</DisplayName>
 			<Description>Large caliber anti-capital ship cannon in fixed mount. Best used for large grid assault ships. Great range and damage against light and heavy armor. Designed by Okim-Chipstix-Ash Federation.
 			[Uses 155mm AP]</Description>
-			<Icon>Textures\GUI\Icons\Cubes\OKI230mmBC_Fixed.dds</Icon>
+			<Icon>Textures\GUI\Icons\Cubes\OKI50mmGAT_Fixed.dds</Icon>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
 			<Size x="1" y="1" z="5"/>
 			<ModelOffset x="0" y="0" z="0"/>
-			<Model>Models\Cubes\Large\Battlecannon.mwm</Model>
+			<Model>Models\Cubes\Large\Stormgun.mwm</Model>
             <Components>
                 <Component Subtype="SteelPlate" Count="80" />
                 <Component Subtype="Construction" Count="27" />
@@ -155,9 +155,9 @@
 				<MountPoint Side="Bottom" StartX="0.0" StartY="3.0" EndX="1.0" EndY="4.0"/>
 			</MountPoints>
 			<BuildProgressModels>
-				<Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\Battlecannon_BS1.mwm"/>
-				<Model BuildPercentUpperBound="0.66" File="Models\Cubes\Large\Battlecannon_BS2.mwm"/>
-				<Model BuildPercentUpperBound="1.0" File="Models\Cubes\Large\Battlecannon_BS3.mwm"/>
+				<Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\Stormgun_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.66" File="Models\Cubes\Large\Stormgun_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.0" File="Models\Cubes\Large\Stormgun_BS3.mwm"/>
 			</BuildProgressModels>
 			<StandbyPowerConsumption>0.001</StandbyPowerConsumption>
 			<OperationalPowerConsumption>0.2</OperationalPowerConsumption>

@@ -26,7 +26,7 @@ namespace WeaponThread {
 			LockedSmartOnly = false, // Only fire at smart projectiles that are locked on to parent grid.
 			MinimumDiameter = 0, // 0 = unlimited, Minimum radius of threat to engage.
 			MaximumDiameter = 0, // 0 = unlimited, Maximum radius of threat to engage.
-			MaxTargetDistance = 2000, // 0 = unlimited, Maximum target distance that targets will be automatically shot at.
+			MaxTargetDistance = 1500, // 0 = unlimited, Maximum target distance that targets will be automatically shot at.
 			MinTargetDistance = 0, // 0 = unlimited, Min target distance that targets will be automatically shot at.
 			TopTargets = 8, // 0 = unlimited, max number of top targets to randomize between.
 			TopBlocks = 8, // 0 = unlimited, max number of blocks to randomize between
@@ -175,8 +175,8 @@ namespace WeaponThread {
                 HardWare = new HardwareDef
                 {
 
-                    RotateRate = 0.02f,
-                    ElevateRate = 0.015f,
+                    RotateRate = 0.04f,
+                    ElevateRate = 0.03f,
                     MinAzimuth = -180,
                     MaxAzimuth = 180,
                     MinElevation = -10,
@@ -246,8 +246,8 @@ namespace WeaponThread {
                 HardWare = new HardwareDef
                 {
 
-                    RotateRate = 0.04f,
-                    ElevateRate = 0.02f,
+                    RotateRate = 0.05f,
+                    ElevateRate = 0.035f,
                     MinAzimuth = -180,
                     MaxAzimuth = 180,
                     MinElevation = -10,

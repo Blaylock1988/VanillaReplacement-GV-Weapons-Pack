@@ -27,6 +27,14 @@ namespace WeaponThread
                         ElevationPartId = "MissileTurretBarrels",
                         DurabilityMod = 0.5f,
                     },
+                    new MountPointDef {
+                        SubtypeId = "ARYXFlakTurret_small",
+                        AimPartId = "None",
+                        MuzzlePartId = "MissileTurretBarrels",
+                        AzimuthPartId = "MissileTurretBase1",
+                        ElevationPartId = "MissileTurretBarrels",
+                        DurabilityMod = 0.5f,
+                    },
 
                 },
                 Barrels = new[] {
@@ -48,7 +56,7 @@ namespace WeaponThread
                 LockedSmartOnly = false, // Only fire at smart projectiles that are locked on to parent grid.
                 MinimumDiameter = 0, // 0 = unlimited, Minimum radius of threat to engage.
                 MaximumDiameter = 0, // 0 = unlimited, Maximum radius of threat to engage.
-                MaxTargetDistance = 2000, // 0 = unlimited, Maximum target distance that targets will be automatically shot at.
+                MaxTargetDistance = 2500, // 0 = unlimited, Maximum target distance that targets will be automatically shot at.
                 MinTargetDistance = 0, // 0 = unlimited, Min target distance that targets will be automatically shot at.
                 TopTargets = 8, // 0 = unlimited, max number of top targets to randomize between.
                 TopBlocks = 8, // 0 = unlimited, max number of blocks to randomize between
@@ -69,8 +77,8 @@ namespace WeaponThread
 				
                 HardWare = new HardwareDef
                 {
-                    RotateRate = 0.075f,
-                    ElevateRate = 0.05f,
+                    RotateRate = 0.02f,
+                    ElevateRate = 0.015f,
                     MinAzimuth = -180,
                     MaxAzimuth = 180,
                     MinElevation = -10,
@@ -90,7 +98,7 @@ namespace WeaponThread
                     BarrelsPerShot = 1,
                     TrajectilesPerBarrel = 1, // Number of Trajectiles per barrel per fire event.
                     SkipBarrels = 0,
-                    ReloadTime = 240, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                    ReloadTime = 480, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     DelayUntilFire = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     HeatPerShot = 0, //heat generated per shot
                     MaxHeat = 0, //max heat before weapon enters cooldown (70% of max heat)

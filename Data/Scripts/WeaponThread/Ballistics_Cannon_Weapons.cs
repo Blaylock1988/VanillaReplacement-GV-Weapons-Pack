@@ -117,18 +117,18 @@ namespace WeaponThread
 				
                 Loading = new LoadingDef
                 {
-                    RateOfFire = 120, //180 // visual only, 0 disables and uses RateOfFire
+                    RateOfFire = 40, //180 // visual only, 0 disables and uses RateOfFire
                     BarrelsPerShot = 1,
                     TrajectilesPerBarrel = 1, // Number of Trajectiles per barrel per fire event.
                     SkipBarrels = 0,
-                    ReloadTime = 240, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                    ReloadTime = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     DelayUntilFire = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     HeatPerShot = 0, //heat generated per shot
                     MaxHeat = 0, //max heat before weapon enters cooldown (70% of max heat)
                     Cooldown = 0, //percent of max heat to be under to start firing again after overheat accepts .2-.95
                     HeatSinkRate = 0, //amount of heat lost per second
                     DegradeRof = false, // progressively lower rate of fire after 80% heat threshold (80% of max heat)
-                    ShotsInBurst = 4,
+                    ShotsInBurst = 0,
                     DelayAfterBurst = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     FireFullBurst = false,
                     GiveUpAfterBurst = false,
@@ -377,7 +377,7 @@ namespace WeaponThread
 				Other = Common_Weapons_Hardpoint_Other_Large,
 				
                 Loading = new LoadingDef {
-                    RateOfFire = 120,
+                    RateOfFire = 40,
                     BarrelsPerShot = 1,
                     TrajectilesPerBarrel = 1, // Number of Trajectiles per barrel per fire event.
                     SkipBarrels = 0,
@@ -388,8 +388,8 @@ namespace WeaponThread
                     Cooldown = 0f, //percent of max heat to be under to start firing again after overheat accepts .2-.95
                     HeatSinkRate = 0, //amount of heat lost per second
                     DegradeRof = false, // progressively lower rate of fire after 80% heat threshold (80% of max heat)
-                    ShotsInBurst = 2,
-                    DelayAfterBurst = 300, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                    ShotsInBurst = 0,
+                    DelayAfterBurst = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     FireFullBurst = false,
                     GiveUpAfterBurst = false,
                     BarrelSpinRate = 0, // visual only, 0 disables and uses RateOfFire
@@ -398,13 +398,28 @@ namespace WeaponThread
 
                 Audio = Ballistics_Cannons_Hardpoint_Audio,
 				
-                Graphics = Ballistics_Cannons_Hardpoint_Graphics,
-				
+                Graphics = new HardPointParticleDef 
+				{
+					Barrel1 = new ParticleDef
+					{
+						Name = "MXA_SmallCoilgunMuzzleFlash", // OKI_230mm_Muzzle_Flash 
+						Color = new Vector4(1f,1f,1f,1f), //RGBA
+						Offset = new Vector3D(0f,0f,-6f), //XYZ
+						Extras = new ParticleOptionDef
+						{
+							Loop = false,
+							Restart = false,
+							MaxDistance = 800,
+							MaxDuration = 1,
+							Scale = 1.0f,
+						}
+					},
+				},				
             },
             Ammos = new [] {
                 Ballistics_Cannon,
             },
-            //Animations = AdvancedAnimation,
+            Animations = GunBarrelAnimation,
             //Upgrades = UpgradeModules,
             // Don't edit below this line
         };
