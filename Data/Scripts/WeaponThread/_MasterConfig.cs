@@ -27,9 +27,10 @@
 						MXA_Shiva,
 						MXA_Moray,
 						MA_PDT,
-						MA_PDX,
 						MA_PDX_T2,
-						GV_JDDT);
+						GV_JDDT,
+						ReceptorCoilGun,
+						ReceptorTurret);
             
         }
     }

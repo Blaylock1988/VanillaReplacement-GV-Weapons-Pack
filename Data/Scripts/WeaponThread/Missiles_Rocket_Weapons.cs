@@ -119,7 +119,6 @@ namespace WeaponThread
                         DurabilityMod = 0.25f,
                         IconName = "TestIcon.dds",
                     },
-
                 },
                 Barrels = new []
                 {
@@ -222,7 +221,16 @@ namespace WeaponThread
                         DurabilityMod = 0.25f,
                         IconName = "TestIcon.dds",
                     },
-
+                    new MountPointDef
+                    {
+                        SubtypeId = "LargeMissileTurret_Temporary",
+                        AimPartId = "MissileTurretBarrels",
+                        MuzzlePartId = "MissileTurretBarrels",
+                        AzimuthPartId = "MissileTurretBase1",
+                        ElevationPartId = "MissileTurretBarrels",
+                        DurabilityMod = 0.25f,
+                        IconName = "TestIcon.dds",
+                    },
                 },
                 Barrels = new []
                 {
@@ -305,6 +313,16 @@ namespace WeaponThread
                     new MountPointDef
                     {
                         SubtypeId = "SmallMissileLauncher",
+                        AimPartId = "None",
+                        MuzzlePartId = "None",
+                        AzimuthPartId = "None",
+                        ElevationPartId = "None",
+                        DurabilityMod = 0.25f,
+                        IconName = "TestIcon.dds",
+                    },
+                    new MountPointDef
+                    {
+                        SubtypeId = "SmallMissileLauncher_Temporary",
                         AimPartId = "None",
                         MuzzlePartId = "None",
                         AzimuthPartId = "None",

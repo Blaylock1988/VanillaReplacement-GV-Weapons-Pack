@@ -77,8 +77,8 @@ namespace WeaponThread {
 			Cooldown = 0f, //percent of max heat to be under to start firing again after overheat accepts .2-.95
 			HeatSinkRate = 0, //amount of heat lost per second
 			DegradeRof = false, // progressively lower rate of fire after 80% heat threshold (80% of max heat)
-			ShotsInBurst = 28,
-			DelayAfterBurst = 120, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+			ShotsInBurst = 0,
+			DelayAfterBurst = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
 			FireFullBurst = false,
 			GiveUpAfterBurst = false,
 			DeterministicSpin = false, // Spin barrel position will always be relative to initial / starting positions (spin will not be as smooth).
@@ -148,7 +148,15 @@ namespace WeaponThread {
                         DurabilityMod = 0.25f,
                         IconName = "TestIcon.dds",
                     },
-
+                    new MountPointDef {
+                        SubtypeId = "LargeGatlingTurret_Temporary",
+                        AimPartId = "",
+                        MuzzlePartId = "GatlingBarrel",
+                        AzimuthPartId = "GatlingTurretBase1",
+                        ElevationPartId = "GatlingTurretBase2",
+                        DurabilityMod = 0.25f,
+                        IconName = "TestIcon.dds",
+                    },
                 },
                 Barrels = new []
                 {
@@ -289,6 +297,16 @@ namespace WeaponThread {
                         DurabilityMod = 0.25f,
                         IconName = "TestIcon.dds",
                     },
+                    new MountPointDef
+                    {
+                        SubtypeId = "SmallGatlingGun_Temporary",
+                        AimPartId = "Barrel",
+                        MuzzlePartId = "Barrel",
+                        ElevationPartId = "None",
+                        AzimuthPartId = "None",
+                        DurabilityMod = 0.25f,
+                        IconName = "TestIcon.dds",
+                    },
 
                 },
                 Barrels = new []
@@ -339,76 +357,6 @@ namespace WeaponThread {
 			Ammos = new [] {
                 Ballistics_Gatling,
 
-            },
-            //Animations = AdvancedAnimation,
-            // Don't edit below this line
-        };
-
-        WeaponDefinition SmallAutoGatlingGun => new WeaponDefinition {
-            Assignments = new ModelAssignmentsDef
-            {
-                MountPoints = new[]
-                {
-                    new MountPointDef
-                    {
-                        SubtypeId = "SmallGatlingTurretAutoGatling",
-                        AimPartId = "GatlingTurretBase2",
-                        MuzzlePartId = "GatlingBarrel",
-                        AzimuthPartId = "GatlingTurretBase1",
-                        ElevationPartId = "GatlingTurretBase2",
-                        DurabilityMod = 0.25f,
-                        IconName = "TestIcon.dds",
-                    },
-
-                },
-                Barrels = new []
-                {
-                    "muzzle_projectile",
-                },
-            },
-
-            Targeting = Ballistics_Gatlings_Targeting,
-
-            HardPoint = new HardPointDef
-            {
-                WeaponName = "SmallAutoGatlingGun", // name of weapon in terminal
-                DeviateShotAngle = 1f,
-                AimingTolerance = 10f, // 0 - 180 firing angle
-                AimLeadingPrediction = Accurate, // Off, Basic, Accurate, Advanced
-                DelayCeaseFire = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-                AddToleranceToTracking = false,
-                CanShootSubmerged = false,
-				
-                Ui = Common_Weapons_Hardpoint_Ui_FullDisable,
-				
-                Ai = Ballistics_Gatlings_Hardpoint_Ai_Turret,
-				
-                HardWare = new HardwareDef
-                {
-
-                    RotateRate = 0.02f,
-                    ElevateRate = 0.01f,
-                    MinAzimuth = -10,
-                    MaxAzimuth = 10,
-                    MinElevation = -10,
-                    MaxElevation = 10,
-                    FixedOffset = false,
-                    InventorySize = 0.064f,
-                    Offset = Vector(x: 0, y: 0, z: 0),
-                },
-				
-                Other = Ballistics_Gatlings_Hardpoint_Other,
-				
-                Loading = Ballistics_Gatlings_Hardpoint_Loading_Gun,
-                
-				Audio = Ballistics_Gatlings_Hardpoint_Audio,
-				
-                Graphics = Ballistics_Gatlings_Hardpoint_Graphics,
-				
-            },
-
-			Ammos = new [] {
-                Ballistics_Gatling,
             },
             //Animations = AdvancedAnimation,
             // Don't edit below this line

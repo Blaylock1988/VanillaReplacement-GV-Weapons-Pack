@@ -46,15 +46,15 @@ namespace WeaponThread
 		private HardPointParticleDef Ballistics_Cannons_Hardpoint_Graphics = new HardPointParticleDef {
 			Barrel1 = new ParticleDef
 			{
-				Name = "MXA_SmallCoilgunMuzzleFlash", // OKI_230mm_Muzzle_Flash 
+				Name = "MD_CannonMuzzleFlash", // OKI_230mm_Muzzle_Flash   MXA_SmallCoilgunMuzzleFlash
 				Color = new Vector4(1f,1f,1f,1f), //RGBA
-				Offset = new Vector3D(0f,0f,-1f), //XYZ
+				Offset = new Vector3D(0f,0f,1f), //XYZ
 				Extras = new ParticleOptionDef
 				{
 					Loop = false,
 					Restart = false,
 					MaxDistance = 800,
-					MaxDuration = 1,
+					MaxDuration = 0,
 					Scale = 1.0f,
 				}
 			},
@@ -105,7 +105,7 @@ namespace WeaponThread
                     ElevateRate = 0.005f,
                     MinAzimuth = -180,
                     MaxAzimuth = 180,
-                    MinElevation = -4,
+                    MinElevation = -5,
                     MaxElevation = 90,
                     FixedOffset = false,
                     InventorySize = 1.5f,
@@ -246,7 +246,7 @@ namespace WeaponThread
                         MuzzlePartId = "None",
                         AzimuthPartId = "None",
                         ElevationPartId = "None",
-                        DurabilityMod = 0.9f,
+                        DurabilityMod = 0.5f,
                         IconName = ""
                     },
 
@@ -402,7 +402,7 @@ namespace WeaponThread
 				{
 					Barrel1 = new ParticleDef
 					{
-						Name = "MXA_SmallCoilgunMuzzleFlash", // OKI_230mm_Muzzle_Flash 
+						Name = "MD_CannonMuzzleFlash", // OKI_230mm_Muzzle_Flash 
 						Color = new Vector4(1f,1f,1f,1f), //RGBA
 						Offset = new Vector3D(0f,0f,-6f), //XYZ
 						Extras = new ParticleOptionDef
@@ -410,7 +410,7 @@ namespace WeaponThread
 							Loop = false,
 							Restart = false,
 							MaxDistance = 800,
-							MaxDuration = 1,
+							MaxDuration = 0,
 							Scale = 1.0f,
 						}
 					},
