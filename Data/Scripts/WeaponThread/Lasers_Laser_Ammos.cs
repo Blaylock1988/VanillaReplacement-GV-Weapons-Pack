@@ -89,7 +89,7 @@ namespace WeaponThread
                 {
                     Hit = new ParticleDef
                     {
-                        Name = "LaserHitParticlesGimbal",//LaserHitParticlesGimbal
+                        Name = "Lasers_Laser_BlueHit",//LaserHitParticlesGimbal
                         ApplyToShield = true,
                         ShrinkByDistance = true,
                         Color = Color(red: 1, green: 1, blue: 1, alpha: 1f),
