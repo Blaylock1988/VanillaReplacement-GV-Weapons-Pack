@@ -25,7 +25,7 @@ namespace WeaponThread
             AmmoRound = "Lasers_Laser",
             HybridRound = false, //AmmoMagazine based weapon with energy cost
             EnergyCost = 0.1f, //(((EnergyCost * DefaultDamage) * ShotsPerSecond) * BarrelsPerShot) * ShotsPerBarrel    (15 * 0.05 * 3600/60/60 = 0.75MW per tick)
-            BaseDamage = 25f,
+            BaseDamage = 50f,
             Mass = 0f, // in kilograms
             Health = 0, // 0 = disabled, otherwise how much damage it can take from other trajectiles before dying.
             BackKickForce = 0f,
