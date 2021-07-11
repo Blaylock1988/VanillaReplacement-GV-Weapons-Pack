@@ -31,7 +31,7 @@
 
 
             <BuildTimeSeconds>61</BuildTimeSeconds>
-            <PCU>9710</PCU>
+            <PCU>1940</PCU>
 			<CriticalComponent Subtype="Computer" Index="0"/>
 			<MountPoints>
 				<MountPoint Side="Bottom" StartX="1" StartY="1" EndX="2" EndY="2"/>
@@ -117,7 +117,7 @@
 
 
             <BuildTimeSeconds>61</BuildTimeSeconds>
-            <PCU>9710</PCU>
+            <PCU>1940</PCU>
 			<CriticalComponent Subtype="Computer" Index="0"/>
 			<MountPoints>
 				<MountPoint Side="Bottom" StartX="1" StartY="1" EndX="2" EndY="2"/>
@@ -203,7 +203,7 @@
 
 
             <BuildTimeSeconds>11</BuildTimeSeconds>
-            <PCU>5380</PCU>
+            <PCU>1080</PCU>
 			<CriticalComponent Subtype="Computer" Index="0"/>
 			<MountPoints>
 				<MountPoint Side="Bottom" StartX="0" StartY="0" EndX="5" EndY="5" Default="true"/>
@@ -289,7 +289,7 @@
 
 
             <BuildTimeSeconds>20</BuildTimeSeconds>
-            <PCU>7890</PCU>
+            <PCU>1580</PCU>
 			<CriticalComponent Subtype="Computer" Index="0"/>
 			<MountPoints>
 				<MountPoint Side="Back" StartX="0" StartY="0" EndX="1" EndY="1"/>
@@ -343,7 +343,7 @@
 
 
             <BuildTimeSeconds>3</BuildTimeSeconds>
-            <PCU>2920</PCU>
+            <PCU>580</PCU>
 			<CriticalComponent Subtype="Computer" Index="0"/>
 			<MountPoints>
 				<MountPoint Side="Back" StartX="0" StartY="0" EndX="1" EndY="1"/>
@@ -396,7 +396,7 @@
 
 
             <BuildTimeSeconds>3</BuildTimeSeconds>
-            <PCU>2920</PCU>
+            <PCU>580</PCU>
 			<CriticalComponent Subtype="Computer" Index="0"/>
 			<MountPoints>
 				<MountPoint Side="Back" StartX="0" StartY="0" EndX="1" EndY="1"/>

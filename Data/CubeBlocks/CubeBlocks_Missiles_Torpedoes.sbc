@@ -30,7 +30,7 @@
             </Components>
 
             <BuildTimeSeconds>49</BuildTimeSeconds>
-            <PCU>13280</PCU>
+            <PCU>3250</PCU>
 			<CriticalComponent Subtype="Computer" Index="0"/>
 			<EdgeType>Light</EdgeType>
 			<WeaponDefinitionId Subtype="Missiles_Torpedo"/>

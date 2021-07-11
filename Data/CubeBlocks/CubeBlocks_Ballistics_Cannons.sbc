@@ -31,7 +31,7 @@
             </Components>
 
             <BuildTimeSeconds>148</BuildTimeSeconds>
-            <PCU>15000</PCU>
+            <PCU>2430</PCU>
 			<CriticalComponent Subtype="Computer" Index="0"/>
 			<EdgeType>Light</EdgeType>
 			<WeaponDefinitionId Subtype="Ballistics_Cannon"/>
@@ -83,7 +83,7 @@
             </Components>
 
             <BuildTimeSeconds>29</BuildTimeSeconds>
-            <PCU>7700</PCU>
+            <PCU>1060</PCU>
 			<CriticalComponent Subtype="Computer" Index="0"/>
 			<MountPoints>
 				<MountPoint Side="Bottom" StartX="0" StartY="0" EndX="5" EndY="5"/>
@@ -145,7 +145,7 @@
             </Components>
 
             <BuildTimeSeconds>64</BuildTimeSeconds>
-            <PCU>10450</PCU>
+            <PCU>1690</PCU>
 			<CriticalComponent Subtype="Computer" Index="0" />
 			<MountPoints>
 				<MountPoint Side="Back" StartX="0.0" StartY="0.0" EndX="1.0" EndY="1.0"/>
@@ -200,7 +200,7 @@
             </Components>
 
             <BuildTimeSeconds>21</BuildTimeSeconds>
-            <PCU>7360</PCU>
+            <PCU>990</PCU>
 			<CriticalComponent Subtype="Computer" Index="0"/>
 			<MountPoints>
 				<MountPoint Side="Top" StartX="0" StartY="2" EndX="2" EndY="6"/>

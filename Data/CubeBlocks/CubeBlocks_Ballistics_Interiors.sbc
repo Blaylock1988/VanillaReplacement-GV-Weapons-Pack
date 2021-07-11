@@ -31,7 +31,7 @@
 
 
             <BuildTimeSeconds>14</BuildTimeSeconds>
-            <PCU>2270</PCU>
+            <PCU>450</PCU>
 			<CriticalComponent Subtype="Computer" Index="0"/>
 			<MountPoints>
 				<MountPoint Side="Bottom" StartX="0.46" StartY="0.46" EndX="0.54" EndY="0.54"/>

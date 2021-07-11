@@ -32,7 +32,7 @@
             </Components>
 
             <BuildTimeSeconds>128</BuildTimeSeconds>
-            <PCU>15460</PCU>
+            <PCU>2320</PCU>
 			<CriticalComponent Subtype="Computer" Index="0"/>
 			<EdgeType>Light</EdgeType>
 			<WeaponDefinitionId Subtype="Ballistics_MAC"/>

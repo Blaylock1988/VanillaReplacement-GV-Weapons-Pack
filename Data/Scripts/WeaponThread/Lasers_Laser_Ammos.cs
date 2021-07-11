@@ -19,7 +19,7 @@ namespace WeaponThread
 { // Don't edit above this line
     partial class Weapons
     {
-        private AmmoDef Laser_Laser_Small => new AmmoDef //T1 red pulse gimbal, pdx
+        private AmmoDef Laser_Laser_Small => new AmmoDef //Blue Receptor laser
         {
             AmmoMagazine = "Energy",
             AmmoRound = "Lasers_Laser",
@@ -76,8 +76,8 @@ namespace WeaponThread
             Trajectory = new TrajectoryDef
             {
                 Guidance = TravelTo,
-				MaxTrajectory = 1750f,
-                RangeVariance = Random(start: 0, end: 10), // subtracts value from MaxTrajectory
+				MaxTrajectory = 1650f,
+                RangeVariance = Random(start: 0, end: 20), // subtracts value from MaxTrajectory
 				MaxTrajectoryTime = 10, // How long the weapon must fire before it reaches MaxTrajectory.
             },
             AmmoGraphics = new GraphicDef
@@ -502,7 +502,7 @@ namespace WeaponThread
                 Grids = new GridSizeDef
                 {
                     Large = -1f,
-                    Small = -1f,
+                    Small = -0.5f,
                 },
                 Armor = new ArmorDef
                 {

@@ -31,7 +31,7 @@
             </Components>
 
             <BuildTimeSeconds>40</BuildTimeSeconds>
-            <PCU>9580</PCU>
+            <PCU>1920</PCU>
 			<CriticalComponent Subtype="Computer" Index="0" />
 			<EdgeType>Light</EdgeType>
 			<!--<WeaponDefinitionId Subtype="Others_Mine" />-->

@@ -190,7 +190,7 @@ namespace WeaponThread
             },
             HardPoint = new HardPointDef 
             {
-                WeaponName = "Receptor Plasma Launcher", // name of weapon in terminal
+                WeaponName = "Receptor Laser", // name of weapon in terminal
                 DeviateShotAngle = 0,
                 AimingTolerance = 0, // 0 - 180 firing angle
                 AimLeadingPrediction = Off, // Off, Basic, Accurate, Advanced
@@ -328,7 +328,7 @@ namespace WeaponThread
             },
             HardPoint = new HardPointDef
             {
-                WeaponName = "Receptor Plasma Launcher Turret", // name of weapon in terminal
+                WeaponName = "Receptor Laser Turret", // name of weapon in terminal
                 DeviateShotAngle = 0f,
                 AimingTolerance = 30f, // 0 - 180 firing angle
                 AimLeadingPrediction = Off, // Off, Basic, Accurate, Advanced

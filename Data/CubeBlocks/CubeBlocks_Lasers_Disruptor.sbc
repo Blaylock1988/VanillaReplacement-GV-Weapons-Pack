@@ -33,7 +33,7 @@
             </Components>
 
             <BuildTimeSeconds>36</BuildTimeSeconds>
-            <PCU>16460</PCU>
+            <PCU>3290</PCU>
 			<CriticalComponent Subtype="Computer" Index="0"/>
 			<MountPoints>
 				<MountPoint Side="Bottom" StartX="0.11" StartY="0.11" EndX="0.89" EndY="0.89"/>
@@ -120,7 +120,7 @@
             </Components>
 
             <BuildTimeSeconds>36</BuildTimeSeconds>
-            <PCU>16460</PCU>
+            <PCU>3290</PCU>
 			<CriticalComponent Subtype="Computer" Index="0"/>
 			<MountPoints>
 				<MountPoint Side="Bottom" StartX="0.38" StartY="0.38" EndX="4.62" EndY="4.62"/>

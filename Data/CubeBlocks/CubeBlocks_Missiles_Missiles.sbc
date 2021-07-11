@@ -32,7 +32,7 @@
             </Components>
 
             <BuildTimeSeconds>99</BuildTimeSeconds>
-            <PCU>10070</PCU>
+            <PCU>2010</PCU>
 			<CriticalComponent Subtype="Computer" Index="0"/>
 			<EdgeType>Light</EdgeType>
 			<!--<WeaponDefinitionId Subtype="Missiles_Missile"/>-->
@@ -94,7 +94,7 @@
             </Components>
 
             <BuildTimeSeconds>19</BuildTimeSeconds>
-            <PCU>5540</PCU>
+            <PCU>1110</PCU>
 			<CriticalComponent Subtype="Computer" Index="0"/>
 			<BuildProgressModels>
 				<Model BuildPercentUpperBound="0.50" File="Models\Cubes\small\RocketLauncherReloadConstruction_1.mwm"/>
