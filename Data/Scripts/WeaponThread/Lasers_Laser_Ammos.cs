@@ -19,10 +19,10 @@ namespace WeaponThread
 { // Don't edit above this line
     partial class Weapons
     {
-        private AmmoDef Laser_Laser_Small => new AmmoDef //Blue Receptor laser
+        private AmmoDef Lasers_Laser_Small => new AmmoDef //Blue Receptor laser
         {
             AmmoMagazine = "Energy",
-            AmmoRound = "Lasers_Laser",
+            AmmoRound = "Lasers_Laser_Small",
             HybridRound = false, //AmmoMagazine based weapon with energy cost
             EnergyCost = 0.1f, //(((EnergyCost * DefaultDamage) * ShotsPerSecond) * BarrelsPerShot) * ShotsPerBarrel    (15 * 0.05 * 3600/60/60 = 0.75MW per tick)
             BaseDamage = 50f,
@@ -470,10 +470,10 @@ namespace WeaponThread
             },
         };*/
 
-        private AmmoDef Lasers_Laser => new AmmoDef //T2 orange pulse for turrets
+        private AmmoDef Lasers_Laser_Large => new AmmoDef //T2 orange pulse for turrets
         {
             AmmoMagazine = "Energy",
-            AmmoRound = "Lasers_Laser",
+            AmmoRound = "Lasers_Laser_Large",
             HybridRound = false, //AmmoMagazine based weapon with energy cost
             EnergyCost = 0.3f, //(((EnergyCost * DefaultDamage) * ShotsPerSecond) * BarrelsPerShot) * ShotsPerBarrel    (15 * 0.05 * 3600/60/60 = 0.75MW per tick)
             BaseDamage = 75f,

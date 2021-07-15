@@ -63,7 +63,13 @@ namespace WeaponThread
                 AimLeadingPrediction = Off, // Off, Basic, Accurate, Advanced
                 DelayCeaseFire = 20, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
 
-                Ui = Common_Weapons_Hardpoint_Ui_FullDisable,
+                Ui = new UiDef
+                {
+                    RateOfFire = false,
+                    DamageModifier = true,
+                    ToggleGuidance = false,
+                    EnableOverload = true,
+                },
 				
                 Ai = Common_Weapons_Hardpoint_Ai_BasicTurret_LockOn,
 				
@@ -143,9 +149,9 @@ namespace WeaponThread
             },
        
 			Ammos = new [] {
-                Lasers_Laser
+                Lasers_Laser_Large
             },
-            Animations = PDX_Animations,
+            //Animations = PDX_Animations,
             // Don't edit below this line
         };
 
@@ -160,7 +166,7 @@ namespace WeaponThread
                         AzimuthPartId = "None",
                         ElevationPartId = "None",
                         DurabilityMod = 0.5f,
-                        IconName = "None"
+                        IconName = "filter_energy.dds"
                     },
                 },
                 Barrels = new [] {
@@ -280,9 +286,9 @@ namespace WeaponThread
                 },
             },
             Ammos = new [] {
-                Laser_Laser_Small,
+                Lasers_Laser_Small,
             },
-             Animations= Receptor_Emissive
+            //Animations= Receptor_Emissive
             //Upgrades = UpgradeModules,
             // Don't edit below this line
         };
@@ -299,7 +305,7 @@ namespace WeaponThread
                         AzimuthPartId = "MissileTurretBase1",
                         ElevationPartId = "MissileTurretBarrels",
                         DurabilityMod = 0.5f,
-                        IconName = "None",
+                        IconName = "filter_energy.dds"
                     },
 
                 },
@@ -418,9 +424,9 @@ namespace WeaponThread
                 },
             },
             Ammos = new [] {
-                Laser_Laser_Small,
+                Lasers_Laser_Small,
             },
-             Animations= Receptor_Emissive
+            //Animations= Receptor_Emissive
             //Upgrades = UpgradeModules,
             // Don't edit below this line
         };
