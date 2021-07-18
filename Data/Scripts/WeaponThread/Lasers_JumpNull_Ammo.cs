@@ -24,10 +24,10 @@ namespace WeaponThread
             AmmoMagazine = "Lasers_JumpNull",
             AmmoRound = "Lasers_JumpNull", // Display Name for switching ammo
             HybridRound = true, //AmmoMagazine based weapon with energy cost
-            EnergyCost = 15f, //(((EnergyCost * DefaultDamage) * ShotsPerSecond) * BarrelsPerShot) * ShotsPerBarrel
-            BaseDamage = 1f,
+            EnergyCost = 0.075f, //(((EnergyCost * DefaultDamage) * ShotsPerSecond) * BarrelsPerShot) * ShotsPerBarrel
+            BaseDamage = 0f,
             Mass = 0f, // in kilograms
-            Health = 10, // 0 = disabled, otherwise how much damage it can take from other trajectiles before dying.
+            Health = 1, // 0 = disabled, otherwise how much damage it can take from other trajectiles before dying.
             BackKickForce = 0f,
             DecayPerShot = 0f,
             HardPointUsable = true, // set to false if this is a shrapnel ammoType and you don't want the turret to be able to select it directly.
@@ -58,8 +58,8 @@ namespace WeaponThread
                 // modifier values: -1 = disabled (higher performance), 0 = no damage, 0.01 = 1% damage, 2 = 200% damage.
                 FallOff = new FallOffDef
                 {
-                    Distance = 1200f, // Distance at which max damage begins falling off.
-                    MinMultipler = 1f, // value from 0.0f to 1f where 0.1f would be a min damage of 10% of max damage.
+                    Distance = 1000f, // Distance at which max damage begins falling off.
+                    MinMultipler = 0.5f, // value from 0.0f to 1f where 0.1f would be a min damage of 10% of max damage.
                 },
                 Grids = new GridSizeDef
                 {
@@ -80,39 +80,22 @@ namespace WeaponThread
                     BypassModifier = -1f,
                 },
                 // first true/false (ignoreOthers) will cause projectiles to pass through all blocks that do not match the custom subtypeIds.
-                Custom = new CustomScalesDef
-                {
-                    IgnoreAllOthers = false,
-                    Types = new[]
-                    {
-                        new CustomBlocksDef
-                        {
-                            SubTypeId = "Test1",
-                            Modifier = -1f,
-                        },
-                        new CustomBlocksDef
-                        {
-                            SubTypeId = "Test2",
-                            Modifier = -1f,
-                        },
-                    },
-                },
             },
             AreaEffect = new AreaDamageDef
             {
                 AreaEffect = JumpNullField, // Disabled = do not use area effect at all, Explosive, Radiant, AntiSmart, JumpNullField, JumpNullField, EnergySinkField, AnchorField, EmpField, OffenseField, NavField, DotField.
                 Base = new AreaInfluence
                 {
-                    Radius = 25f, // the sphere of influence of area effects
-                    EffectStrength = 100f, // For ewar it applies this amount per pulse/hit, non-ewar applies this as damage per tick per entity in area of influence. For radiant 0 == use spillover from BaseDamage, otherwise use this value.
+                    Radius = 1f, // the sphere of influence of area effects
+                    EffectStrength = 200f, // For ewar it applies this amount per pulse/hit, non-ewar applies this as damage per tick per entity in area of influence. For radiant 0 == use spillover from BaseDamage, otherwise use this value.
                 },
                 EwarFields = new EwarFieldsDef
                 {
-                    Duration = 480,
+                    Duration = 240, 
                     StackDuration = true,
                     Depletable = false,
-                    MaxStacks = 1,
-                    TriggerRange = 10f,
+                    MaxStacks = 60,
+                    TriggerRange = 25f,
                     DisableParticleEffect = false,
                 },
             },

@@ -24,7 +24,7 @@ namespace WeaponThread {
                         AzimuthPartId = "GatlingTurretBase1",
                         ElevationPartId = "GatlingTurretBase2",
 						DurabilityMod = 0.5f,
-                        IconName = "filter_energy.dds"
+                        IconName = ""// filter_energy.dds
                     },
  
 
@@ -35,7 +35,7 @@ namespace WeaponThread {
                         AzimuthPartId = "GatlingTurretBase1",
                         ElevationPartId = "GatlingTurretBase2",
 						DurabilityMod = 0.5f,
-                        IconName = "filter_energy.dds"
+                        IconName = ""
                     },				
 					
                 },				
@@ -52,7 +52,7 @@ namespace WeaponThread {
                     Grids,
                 },
                 SubSystems = new[] {
-                    Jumping,
+                    Any,
                 },
                 ClosestFirst = false, // tries to pick closest targets first (blocks on grids, projectiles, etc...).
                 IgnoreDumbProjectiles = true, // Don't fire at non-smart projectiles.
@@ -71,13 +71,13 @@ namespace WeaponThread {
                 DeviateShotAngle = 0f,
                 AimingTolerance = 5f, // 0 - 180 firing angle
                 AimLeadingPrediction = Off, // Off, Basic, Accurate, Advanced
-                DelayCeaseFire = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                DelayCeaseFire = 10, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 AddToleranceToTracking = false,
                 CanShootSubmerged = false,
 				
                 Ui = new UiDef
                 {
-                    RateOfFire = false,
+                    RateOfFire = true,
                     DamageModifier = false,
                     ToggleGuidance = false,
                     EnableOverload =  false,
@@ -121,17 +121,17 @@ namespace WeaponThread {
                     BarrelsPerShot = 1,
                     TrajectilesPerBarrel = 1, // Number of Trajectiles per barrel per fire event.
                     SkipBarrels = 0,
-                    ReloadTime = 240, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-                    DelayUntilFire = 30, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-                    HeatPerShot = 2, //10 heat generated per shot
-                    MaxHeat = 300, //max heat before weapon enters cooldown (70% of max heat)
+                    ReloadTime = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                    DelayUntilFire = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                    HeatPerShot = 1, //10 heat generated per shot
+                    MaxHeat = 240, //max heat before weapon enters cooldown (70% of max heat)
                     Cooldown = 0.5f, //percent of max heat to be under to start firing again after overheat accepts .2-.95
-                    HeatSinkRate = 30, //amount of heat lost per second
+                    HeatSinkRate = 10, //amount of heat lost per second
                     DegradeRof = false, // progressively lower rate of fire after 80% heat threshold (80% of max heat)
                     ShotsInBurst = 0,
-                    DelayAfterBurst = 30, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                    DelayAfterBurst = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     FireFullBurst = false,
-                    GiveUpAfterBurst = true,
+                    GiveUpAfterBurst = false,
                     BarrelSpinRate = 500, // visual only, 0 disables and uses RateOfFire
                     DeterministicSpin = false, // Spin barrel position will always be relative to initial / starting positions (spin will not be as smooth).
 				},

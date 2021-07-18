@@ -225,8 +225,8 @@
 				<Y>0.2</Y>
 				<Z>0.2</Z>
 			</Size>
-			<Mass>750</Mass>
-			<Volume>750</Volume>
+			<Mass>480</Mass>
+			<Volume>480</Volume>
 			<Model>Models\MD_Discharge\MD_Ammo.mwm</Model>
 			<PhysicalMaterial>Ammo</PhysicalMaterial>
 			<Capacity>240</Capacity>
