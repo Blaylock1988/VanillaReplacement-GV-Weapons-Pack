@@ -86,23 +86,6 @@
 		<Sound>
 			<Id>
 				<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
-				<SubtypeId>ArcWepShipARYXRailgun_Fire</SubtypeId>
-			</Id>
-			<Category>SHOT</Category>
-			<MaxDistance>300</MaxDistance>
-			<PreventSynchronization>0</PreventSynchronization>
-			<DynamicMusicCategory>HeavyFight</DynamicMusicCategory>
-			<DynamicMusicAmount>3</DynamicMusicAmount>
-			<Volume>2</Volume>
-			<Waves>
-				<Wave Type="D3">
-					<Start>Audio\Aryx\aryx_railgun_fire_01.wav</Start>
-				</Wave>
-			</Waves>
-		</Sound>
-		<Sound>
-			<Id>
-				<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
 				<SubtypeId>ArcWepShipARYXRailgun_Windup</SubtypeId>
 			</Id>
 			<Category>SHOT</Category>

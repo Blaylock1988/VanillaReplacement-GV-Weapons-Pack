@@ -68,6 +68,46 @@
 		<Sound>
 			<Id>
 				<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+				<SubtypeId>MD_GatlingBlisterFire</SubtypeId>
+			</Id>
+			<Category>SHOT</Category>
+			<MaxDistance>500</MaxDistance>
+			<PitchVariation>50</PitchVariation>
+			<SoundLimit>30</SoundLimit>
+			<PreventSynchronization>3</PreventSynchronization>
+			<DynamicMusicCategory>HeavyFight</DynamicMusicCategory>
+			<DynamicMusicAmount>3</DynamicMusicAmount>
+			<DistantSounds>
+				<DistantSound DistanceCrossfade="1" Distance="400" Sound="MD_GatlingBlisterFire_Distant"/>
+			</DistantSounds>
+			<Volume>0.6</Volume>
+			<Loopable>false</Loopable>
+			<Waves>
+				<Wave Type="D3">
+					<Start>Audio\MD\Blister_Shot_4.wav</Start>
+				</Wave>
+			</Waves>
+		</Sound>
+		<Sound>
+			<Id>
+				<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+				<SubtypeId>MD_GatlingBlisterFire_Distant</SubtypeId>
+			</Id>
+			<Category>SHOT</Category>
+			<MaxDistance>1500</MaxDistance>
+			<PitchVariation>50</PitchVariation>
+			<PreventSynchronization>3</PreventSynchronization>
+			<Volume>0.6</Volume>
+			<Loopable>false</Loopable>
+			<Waves>
+				<Wave Type="D3">
+					<Start>Audio\MD\Blister_Shot_4_Distant_2.wav</Start>
+				</Wave>
+			</Waves>
+		</Sound>
+		<Sound>
+			<Id>
+				<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
 				<SubtypeId>HWR_MediumLaserPreFiring</SubtypeId>
 			</Id>
 			<Category>SHOT</Category>
@@ -361,6 +401,90 @@
 				</Wave>
 				<Wave Type="D3">
 					<Start>Audio\MXA\ImpactExplosion3.xwm</Start>
+				</Wave>
+			</Waves>
+		</Sound>
+		<Sound>
+			<Id>
+				<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+				<SubtypeId>MD_BulletHit</SubtypeId>
+			</Id>
+			<Category>SHOT</Category>
+			<MaxDistance>50</MaxDistance>
+			<VolumeVariation>0.1</VolumeVariation>
+			<PreventSynchronization>0</PreventSynchronization>
+			<PitchVariation>300</PitchVariation>
+			<SoundLimit>10</SoundLimit>
+			<DynamicMusicCategory>HeavyFight</DynamicMusicCategory>
+			<DynamicMusicAmount>3</DynamicMusicAmount>
+			<Volume>0.5</Volume>
+			<Waves>
+				<Wave Type="D3">
+					<Start>Audio\MD\Bullet_Ricochet_1.wav</Start>
+				</Wave>
+				<Wave Type="D3">
+					<Start>Audio\MD\Bullet_Ricochet_2.wav</Start>
+				</Wave>
+				<Wave Type="D3">
+					<Start>Audio\MD\Bullet_Ricochet_3.wav</Start>
+				</Wave>
+				<Wave Type="D3">
+					<Start>Audio\MD\Bullet_Ricochet_4.wav</Start>
+				</Wave>
+				<Wave Type="D3">
+					<Start>Audio\MD\Bullet_Ricochet_5.wav</Start>
+				</Wave>
+				<Wave Type="D3">
+					<Start>Audio\MD\Bullet_Ricochet_6.wav</Start>
+				</Wave>
+				<Wave Type="D3">
+					<Start>Audio\MD\Bullet_Ricochet_7.wav</Start>
+				</Wave>
+			</Waves>
+		</Sound>
+		<Sound>
+			<Id>
+				<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+				<SubtypeId>MD_RailgunFire</SubtypeId>
+			</Id>
+			<Category>SHOT</Category>
+			<MaxDistance>500</MaxDistance>
+			<PitchVariation>100</PitchVariation>
+			<SoundLimit>10</SoundLimit>
+			<PreventSynchronization>3</PreventSynchronization>
+			<DynamicMusicCategory>HeavyFight</DynamicMusicCategory>
+			<DynamicMusicAmount>3</DynamicMusicAmount>
+			<DistantSounds>
+				<DistantSound DistanceCrossfade="1" Distance="500" Sound="MD_RailgunFire_Distant"/>
+			</DistantSounds>
+			<Volume>2</Volume>
+			<Loopable>false</Loopable>
+			<Waves>
+				<Wave Type="D3">
+					<Start>Audio\MD\Laser_Cannon_Fire_Long_1.wav</Start>
+				</Wave>
+				<Wave Type="D3">
+					<Start>Audio\MD\Laser_Cannon_Fire_Long_2.wav</Start>
+				</Wave>
+			</Waves>
+		</Sound>
+		<Sound>
+			<Id>
+				<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+				<SubtypeId>MD_RailgunFire_Distant</SubtypeId>
+			</Id>
+			<Category>SHOT</Category>
+			<MaxDistance>2500</MaxDistance>
+			<PitchVariation>100</PitchVariation>
+			<PreventSynchronization>3</PreventSynchronization>
+			<Volume>1.5</Volume>
+			<Loopable>false</Loopable>
+			<Waves>
+				<Wave Type="D3">
+					<Start>Audio\MD\Laser_Cannon_Fire_Long_Distant_1.wav</Start>
+				</Wave>
+				<Wave Type="D3">
+					<Start>Audio\MD\Laser_Cannon_Fire_Long_Distant_2.wav</Start>
 				</Wave>
 			</Waves>
 		</Sound>
