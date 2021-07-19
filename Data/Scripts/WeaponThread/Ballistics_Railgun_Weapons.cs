@@ -98,7 +98,7 @@ namespace WeaponThread {
                 },
                 Audio = new HardPointAudioDef {
                     PreFiringSound = "ArcWepShipARYXRailgun_Windup",
-                    FiringSound = "ArcWepShipARYXRailgun_Fire", // WepShipGatlingShot
+                    FiringSound = "MD_RailgunFire", // WepShipGatlingShot
                     FiringSoundPerShot = true,
                     ReloadSound = "",
                     NoAmmoSound = "",
@@ -203,7 +203,7 @@ namespace WeaponThread {
                 },
                 Audio = new HardPointAudioDef {
                     PreFiringSound = "ArcWepShipARYXRailgun_Windup",
-                    FiringSound = "ArcWepShipARYXRailgun_Fire", // WepShipGatlingShot
+                    FiringSound = "MD_RailgunFire", // WepShipGatlingShot
                     FiringSoundPerShot = true,
                     ReloadSound = "",
                     NoAmmoSound = "",
