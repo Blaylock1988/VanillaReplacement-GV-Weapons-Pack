@@ -70,14 +70,9 @@ namespace WeaponThread
                     ToggleGuidance = true,
                     EnableOverload = false,
                 },
-                Ai = new AiDef
-                {
-                    TrackTargets = false,
-                    TurretAttached = false,
-                    TurretController = false,
-                    PrimaryTracking = false,
-                    LockOnFocus = true,
-                },
+
+                Ai = Common_Weapons_Hardpoint_Ai_BasicTurret_LockOn,
+				
                 HardWare = new HardwareDef
                 {
                     RotateRate = 0f,

@@ -210,14 +210,9 @@ namespace WeaponThread
                     ToggleGuidance = false,
                     EnableOverload = true,
                 },
-                Ai = new AiDef {
-                    TrackTargets = false,
-                    TurretAttached = false,
-                    TurretController = false,
-                    PrimaryTracking = false,
-                    LockOnFocus = false,
-                    SuppressFire = false,
-                },
+
+                Ai = Common_Weapons_Hardpoint_Ai_BasicFixed_NoTracking,
+
                 HardWare = new HardwareDef {
                     RotateRate = 0,
                     ElevateRate = 0,
@@ -348,14 +343,9 @@ namespace WeaponThread
                     ToggleGuidance = false,
                     EnableOverload = true,
                 },
-                Ai = new AiDef
-                {
-                    TrackTargets = true,
-                    TurretAttached = true,
-                    TurretController = true,
-                    PrimaryTracking = true,
-                    LockOnFocus = false,
-                },
+
+                Ai = Common_Weapons_Hardpoint_Ai_BasicTurret_LockOn,
+
                 HardWare = new HardwareDef
                 {
                     RotateRate = 0.015f,

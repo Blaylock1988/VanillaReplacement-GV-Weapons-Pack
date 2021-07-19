@@ -35,25 +35,8 @@ namespace WeaponThread
 			StopTrackingSpeed = 0, // do not track target threats traveling faster than this speed
 		};
 
-		private UiDef Missiles_Missile_Hardpoint_Ui = new UiDef {
-			RateOfFire = false,
-			DamageModifier = false,
-			ToggleGuidance = false,
-			EnableOverload =  false,
-		};
-
-		private AiDef Missiles_Missile_Hardpoint_Ai = new AiDef {
-			TrackTargets = true,
-			TurretAttached = true,
-			TurretController = true,
-			PrimaryTracking = true,
-			LockOnFocus = true,
-			SuppressFire = true,
-			OverrideLeads = false, // Override default behavior for target leads
-		};
-
 		private OtherDef Missiles_Missile_Hardpoint_Other = new OtherDef {
-			GridWeaponCap = 0,
+			GridWeaponCap = 8,
 			RotateBarrelAxis = 0,
 			EnergyPriority = 0,
 			MuzzleCheck = false,
@@ -155,9 +138,9 @@ namespace WeaponThread
                 AddToleranceToTracking = false,
                 CanShootSubmerged = false,
 
-                Ui = Missiles_Missile_Hardpoint_Ui,
+                Ui = Common_Weapons_Hardpoint_Ui_FullDisable,
 				
-                Ai = Missiles_Missile_Hardpoint_Ai,
+                Ai = Common_Weapons_Hardpoint_Ai_BasicTurret_LockOn,
 				
                 HardWare = new HardwareDef
                 {
@@ -246,9 +229,9 @@ namespace WeaponThread
                 AimLeadingPrediction = Off, // Off, Basic, Accurate, Advanced
                 DelayCeaseFire = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
 
-                Ui = Missiles_Missile_Hardpoint_Ui,
+                Ui = Common_Weapons_Hardpoint_Ui_FullDisable,
 				
-                Ai = Missiles_Missile_Hardpoint_Ai,
+                Ai = Common_Weapons_Hardpoint_Ai_BasicTurret_LockOn,
 				
                 HardWare = new HardwareDef
                 {
