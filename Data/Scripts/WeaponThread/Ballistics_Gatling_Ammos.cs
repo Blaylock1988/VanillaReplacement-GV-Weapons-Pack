@@ -197,7 +197,7 @@ namespace WeaponThread
             AmmoGraphics = new GraphicDef
             {
                 ModelName = "",
-                VisualProbability = 0.5f,
+                VisualProbability = 1f,
                 ShieldHitDraw = true,
                 Particles = new AmmoParticleDef
                 {
@@ -217,32 +217,32 @@ namespace WeaponThread
                     },
                     Hit = new ParticleDef
                     {
-                        Name = "MaterialHit_Stone", //MaterialHit_Metal
+                        Name = "Collision_Sparks", //MaterialHit_Metal
                         ApplyToShield = true,
                         ShrinkByDistance = true,
-                        Color = Color(red: 3, green: 2, blue: 1, alpha: 1),
+                        Color = Color(red: 1, green: 1, blue: 1, alpha: 1),
                         Offset = Vector(x: 0, y: 0, z: 0),
                         Extras = new ParticleOptionDef
                         {
-                            Loop = true,
-                            Restart = true,
+                            Loop = false,
+                            Restart = false,
                             MaxDistance = 500,
-                            MaxDuration = 0.1f,
-                            Scale = 0.5f,
-                            HitPlayChance = 0.5f,
+                            MaxDuration = 0.5f,
+                            Scale = 0.75f,
+                            HitPlayChance = 0.2f,
                         },
                     },
                 },
                 Lines = new LineDef
                 {
-                    ColorVariance = Random(start: 0f, end: 10f), // multiply the color by random values within range.
+                    ColorVariance = Random(start: 0f, end: 0.5f), // multiply the color by random values within range.
                     WidthVariance = Random(start: 0f, end: 0.05f), // adds random value to default width (negatives shrinks width)
                     Tracer = new TracerBaseDef
                     {
                         Enable = true,
                         Length = 10f,
                         Width = 0.15f,
-                        Color = Color(red: 11f, green: 5f, blue: 5f, alpha: 1),
+                        Color = Color(red: 22f, green: 10f, blue: 10f, alpha: 1),
                         VisualFadeStart = 0, // Number of ticks the weapon has been firing before projectiles begin to fade their color
                         VisualFadeEnd = 0, // How many ticks after fade began before it will be invisible.
                         Textures = new[] {// WeaponLaser, ProjectileTrailLine, WarpBubble, etc..
@@ -261,12 +261,12 @@ namespace WeaponThread
             AmmoAudio = new AmmoAudioDef
             {
                 TravelSound = "",
-                HitSound = "ArcImpMetalMetalCat0",
+                HitSound = "MD_BulletHit",
                 ShieldHitSound = "",
                 PlayerHitSound = "",
                 VoxelHitSound = "",
                 FloatingHitSound = "",
-                HitPlayChance = 0.1f,
+                HitPlayChance = 0.15f,
                 HitPlayShield = true,
 			}, // Don't edit below this line
         };

@@ -64,38 +64,18 @@ namespace WeaponThread {
 			CheckForAnyWeapon = true, // if true, the check will fail if ANY gun is present, false only looks for this subtype
 		};
 
-		private LoadingDef Ballistics_Gatlings_Hardpoint_Loading_Turret = new LoadingDef {
+		private LoadingDef Ballistics_Gatlings_Hardpoint_Loading = new LoadingDef {
 			RateOfFire = 1200,
 			BarrelSpinRate = 0, // visual only, 0 disables and uses RateOfFire
 			BarrelsPerShot = 1,
 			TrajectilesPerBarrel = 1, // Number of Trajectiles per barrel per fire event.
 			SkipBarrels = 0,
-			ReloadTime = 240, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+			ReloadTime = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
 			DelayUntilFire = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-			HeatPerShot = 0, //heat generated per shot
-			MaxHeat = 0, //max heat before weapon enters cooldown (70% of max heat)
-			Cooldown = 0f, //percent of max heat to be under to start firing again after overheat accepts .2-.95
-			HeatSinkRate = 0, //amount of heat lost per second
-			DegradeRof = false, // progressively lower rate of fire after 80% heat threshold (80% of max heat)
-			ShotsInBurst = 0,
-			DelayAfterBurst = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-			FireFullBurst = false,
-			GiveUpAfterBurst = false,
-			DeterministicSpin = false, // Spin barrel position will always be relative to initial / starting positions (spin will not be as smooth).
-		};
-
-		private LoadingDef Ballistics_Gatlings_Hardpoint_Loading_Gun = new LoadingDef {
-			RateOfFire = 1200,
-			BarrelSpinRate = 0, // visual only, 0 disables and uses RateOfFire
-			BarrelsPerShot = 1,
-			TrajectilesPerBarrel = 1, // Number of Trajectiles per barrel per fire event.
-			SkipBarrels = 0,
-			ReloadTime = 240, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-			DelayUntilFire = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-			HeatPerShot = 0, //heat generated per shot
-			MaxHeat = 0, //max heat before weapon enters cooldown (70% of max heat)
-			Cooldown = 0f, //percent of max heat to be under to start firing again after overheat accepts .2-.95
-			HeatSinkRate = 0, //amount of heat lost per second
+			HeatPerShot = 3, //heat generated per shot
+			MaxHeat = 240, //max heat before weapon enters cooldown (70% of max heat)
+			Cooldown = 0.75f, //percent of max heat to be under to start firing again after overheat accepts .2-.95
+			HeatSinkRate = 25, //amount of heat lost per second
 			DegradeRof = false, // progressively lower rate of fire after 80% heat threshold (80% of max heat)
 			ShotsInBurst = 0,
 			DelayAfterBurst = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
@@ -106,10 +86,10 @@ namespace WeaponThread {
 
 		private HardPointAudioDef Ballistics_Gatlings_Hardpoint_Audio = new HardPointAudioDef {
 			PreFiringSound = "",
-			FiringSound = "MD_GatlingLoop", // WM_Lightning, WepTurretInteriorFire, ArcWepShipGatlingShot
-			FiringSoundPerShot = false,
+			FiringSound = "MD_GatlingBlisterFire", // WM_Lightning, WepTurretInteriorFire, ArcWepShipGatlingShot, MD_GatlingLoop
+			FiringSoundPerShot = true,
 			ReloadSound = "",
-			NoAmmoSound = "WepShipGatlingNoAmmo",
+			NoAmmoSound = "WepShipGatlingNoAmmo", 
 			HardPointRotationSound = "WepTurretGatlingRotate", 
 			BarrelRotationSound = "MD_GatlingBarrelLoop",
 			FireSoundEndDelay = 0, // Measured in game ticks(6 = 100ms, 60 = 1 seconds, etc..).
@@ -125,7 +105,7 @@ namespace WeaponThread {
 				{
 					Loop = false,
 					Restart = false,
-					MaxDistance = 800,
+					MaxDistance = 500,
 					MaxDuration = 0,
 					Scale = 2f,
 				}
@@ -169,14 +149,14 @@ namespace WeaponThread {
             HardPoint = new HardPointDef
             {
                 WeaponName = "LargeGatlingTurret", // name of weapon in terminal
-                DeviateShotAngle = 1f,
+                DeviateShotAngle = 0.5f,
                 AimingTolerance = 4f, // 0 - 180 firing angle
                 AimLeadingPrediction = Advanced, // Off, Basic, Accurate, Advanced
-                DelayCeaseFire = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                DelayCeaseFire = 10, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 AddToleranceToTracking = false,
                 CanShootSubmerged = false,
 				
-                Ui = Common_Weapons_Hardpoint_Ui_FullDisable,
+                Ui = Common_Weapons_Hardpoint_Ui_ROFOnly,
 				
                 Ai = Ballistics_Gatlings_Hardpoint_Ai_Turret,
 				
@@ -197,7 +177,7 @@ namespace WeaponThread {
 				
                 Other = Ballistics_Gatlings_Hardpoint_Other,
 				
-                Loading = Ballistics_Gatlings_Hardpoint_Loading_Turret,
+                Loading = Ballistics_Gatlings_Hardpoint_Loading,
                 
 				Audio = Ballistics_Gatlings_Hardpoint_Audio,
 				
@@ -240,14 +220,14 @@ namespace WeaponThread {
             HardPoint = new HardPointDef
             {
                 WeaponName = "SmallGatlingTurret", // name of weapon in terminal
-                DeviateShotAngle = 1f,
+                DeviateShotAngle = 0.5f,
                 AimingTolerance = 4f, // 0 - 180 firing angle
                 AimLeadingPrediction = Accurate, // Off, Basic, Accurate, Advanced
                 DelayCeaseFire = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 AddToleranceToTracking = false,
                 CanShootSubmerged = false,
 				
-                Ui = Common_Weapons_Hardpoint_Ui_FullDisable,
+                Ui = Common_Weapons_Hardpoint_Ui_ROFOnly,
 				
                 Ai = Ballistics_Gatlings_Hardpoint_Ai_Turret,
 				
@@ -267,7 +247,7 @@ namespace WeaponThread {
 				
                 Other = Ballistics_Gatlings_Hardpoint_Other,
 				
-                Loading = Ballistics_Gatlings_Hardpoint_Loading_Turret,
+                Loading = Ballistics_Gatlings_Hardpoint_Loading,
                 
 				Audio = Ballistics_Gatlings_Hardpoint_Audio,
 				
@@ -320,14 +300,14 @@ namespace WeaponThread {
             HardPoint = new HardPointDef
             {
                 WeaponName = "SmallGatlingGun", // name of weapon in terminal
-                DeviateShotAngle = 1f,
+                DeviateShotAngle = 0.5f,
                 AimingTolerance = 4f, // 0 - 180 firing angle
                 AimLeadingPrediction = Off, // Off, Basic, Accurate, Advanced
                 DelayCeaseFire = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 AddToleranceToTracking = false,
                 CanShootSubmerged = false,
 				
-                Ui = Common_Weapons_Hardpoint_Ui_FullDisable,
+                Ui = Common_Weapons_Hardpoint_Ui_ROFOnly,
 				
                 Ai = Ballistics_Gatlings_Hardpoint_Ai_Gun,
 				
@@ -346,7 +326,7 @@ namespace WeaponThread {
 				
                 Other = Ballistics_Gatlings_Hardpoint_Other,
 				
-                Loading = Ballistics_Gatlings_Hardpoint_Loading_Gun,
+                Loading = Ballistics_Gatlings_Hardpoint_Loading,
                 
 				Audio = Ballistics_Gatlings_Hardpoint_Audio,
 				

@@ -41,6 +41,12 @@ namespace WeaponThread
 			ToggleGuidance = false,
 			EnableOverload =  false,
 		};
+		private UiDef Common_Weapons_Hardpoint_Ui_ROFOnly = new UiDef {
+			RateOfFire = true, //not recommended for beams
+			DamageModifier = false, //only works on energy
+			ToggleGuidance = false,
+			EnableOverload =  false, //only works on energy
+		};
 
 		private AiDef Common_Weapons_Hardpoint_Ai_BasicTurret_LockOn = new AiDef {
 			TrackTargets = true, //This Weapon will know there are targets in range
