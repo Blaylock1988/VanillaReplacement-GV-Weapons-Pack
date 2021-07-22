@@ -32,7 +32,7 @@ namespace WeaponThread
                 FallOff = new FallOffDef
                 {
                     Distance = 500f, // Distance at which max damage begins falling off.
-                    MinMultipler = 0.5f, // value from 0.0f to 1f where 0.1f would be a min damage of 10% of max damage.
+                    MinMultipler = 0.75f, // value from 0.0f to 1f where 0.1f would be a min damage of 10% of max damage.
                 },
             },
             Beams = new BeamDef

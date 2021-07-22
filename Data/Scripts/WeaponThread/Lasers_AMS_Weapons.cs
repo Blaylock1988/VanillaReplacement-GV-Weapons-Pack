@@ -58,7 +58,7 @@ namespace WeaponThread {
                 MaximumDiameter = 0, // 0 = unlimited, Maximum radius of threat to engage.
                 MaxTargetDistance = 1000, // 0 = unlimited, Maximum target distance that targets will be automatically shot at.
                 MinTargetDistance = 0, // 0 = unlimited, Min target distance that targets will be automatically shot at.
-                TopTargets = 8, // 0 = unlimited, max number of top targets to randomize between.
+                TopTargets = 0, // 0 = unlimited, max number of top targets to randomize between.
                 TopBlocks = 0, // 0 = unlimited, max number of blocks to randomize between
                 StopTrackingSpeed = 0, // do not track target threats traveling faster than this speed
 			},
@@ -74,16 +74,8 @@ namespace WeaponThread {
 				
                 Ui = Common_Weapons_Hardpoint_Ui_FullDisable,
 				
-                Ai = new AiDef 
-				{
-                    TrackTargets = true, //This Weapon will know there are targets in range
-                    TurretAttached = false, // This enables the ability for players to manually control
-                    TurretController = true, //The turret in this WeaponDefinition has control over where other turrets aim.
-                    PrimaryTracking = false, //The turret in this WeaponDefinition selects targets for other turrets that do not have tracking capabilities.
-                    LockOnFocus = false, // fires this weapon when something is locked using the WC hud reticle
-                    SuppressFire = false, //prevent automatic firing
-                    OverrideLeads = false, // Override default behavior for target leads
-                },
+                Ai = Common_Weapons_Hardpoint_Ai_BasicTurret_NoLockOn,
+
                 HardWare = new HardwareDef
                 {
                     RotateRate = 0.15f,
@@ -111,8 +103,8 @@ namespace WeaponThread {
                     DelayUntilFire = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     HeatPerShot = 2, //heat generated per shot
                     MaxHeat = 240, //max heat before weapon enters cooldown (70% of max heat)
-                    Cooldown = 0.8f, //percent of max heat to be under to start firing again after overheat accepts .2-.95
-                    HeatSinkRate = 5, //amount of heat lost per second
+                    Cooldown = 0.6f, //percent of max heat to be under to start firing again after overheat accepts .2-.95
+                    HeatSinkRate = 2, //amount of heat lost per second
                     DegradeRof = true, // progressively lower rate of fire after 80% heat threshold (80% of max heat)
                     ShotsInBurst = 0,
                     DelayAfterBurst = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
