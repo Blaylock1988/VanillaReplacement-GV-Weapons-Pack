@@ -41,6 +41,7 @@ namespace WeaponThread
 			ToggleGuidance = false,
 			EnableOverload =  false,
 		};
+		
 		private UiDef Common_Weapons_Hardpoint_Ui_ROFOnly = new UiDef {
 			RateOfFire = true, //not recommended for beams
 			DamageModifier = false, //only works on energy
@@ -52,7 +53,7 @@ namespace WeaponThread
 			TrackTargets = true, //This Weapon will know there are targets in range
 			TurretAttached = true, // This enables the ability for players to manually control
 			TurretController = true, //The turret in this WeaponDefinition has control over where other turrets aim.
-			PrimaryTracking = false, //The turret in this WeaponDefinition selects targets for other turrets that do not have tracking capabilities.
+			PrimaryTracking = true, //The turret in this WeaponDefinition selects targets for other turrets that do not have tracking capabilities.
 			LockOnFocus = true, // fires this weapon when something is locked using the WC hud reticle
 			SuppressFire = false, //prevent automatic firing
 			OverrideLeads = false, // Override default behavior for target leads
@@ -71,10 +72,10 @@ namespace WeaponThread
 		private AiDef Common_Weapons_Hardpoint_Ai_BasicFixed_Tracking = new AiDef {
 			TrackTargets = true,
 			TurretAttached = false,
-			TurretController = false,
-			PrimaryTracking = false,
+			TurretController = true,
+			PrimaryTracking = true,
 			LockOnFocus = false,
-			SuppressFire = true,
+			SuppressFire = false,
 			OverrideLeads = false, // Override default behavior for target leads
 		};
 

@@ -33,26 +33,6 @@ namespace WeaponThread {
 			StopTrackingSpeed = 0, // do not track target threats traveling faster than this speed
 		};
 
-		private AiDef Ballistics_Gatlings_Hardpoint_Ai_Turret = new AiDef {
-			TrackTargets = true, //This Weapon will know there are targets in range
-			TurretAttached = true, // This enables the ability for players to manually control
-			TurretController = true, //The turret in this WeaponDefinition has control over where other turrets aim.
-			PrimaryTracking = false, //The turret in this WeaponDefinition selects targets for other turrets that do not have tracking capabilities.
-			LockOnFocus = false, // fires this weapon when something is locked using the WC hud reticle
-			SuppressFire = false, //prevent automatic firing
-			OverrideLeads = false, // Override default behavior for target leads
-		};
-
-		private AiDef Ballistics_Gatlings_Hardpoint_Ai_Gun = new AiDef {
-			TrackTargets = false,
-			TurretAttached = false,
-			TurretController = false,
-			PrimaryTracking = false,
-			LockOnFocus = false,
-			SuppressFire = true,
-			OverrideLeads = false, // Override default behavior for target leads
-		};
-
 		private OtherDef Ballistics_Gatlings_Hardpoint_Other = new OtherDef {
 			GridWeaponCap = 0,
 			RotateBarrelAxis = 3,
@@ -158,7 +138,7 @@ namespace WeaponThread {
 				
                 Ui = Common_Weapons_Hardpoint_Ui_ROFOnly,
 				
-                Ai = Ballistics_Gatlings_Hardpoint_Ai_Turret,
+                Ai = Common_Weapons_Hardpoint_Ai_BasicTurret_LockOn,
 				
                 HardWare = new HardwareDef
                 {
@@ -222,14 +202,14 @@ namespace WeaponThread {
                 WeaponName = "SmallGatlingTurret", // name of weapon in terminal
                 DeviateShotAngle = 0.5f,
                 AimingTolerance = 4f, // 0 - 180 firing angle
-                AimLeadingPrediction = Accurate, // Off, Basic, Accurate, Advanced
+                AimLeadingPrediction = Advanced, // Off, Basic, Accurate, Advanced
                 DelayCeaseFire = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 AddToleranceToTracking = false,
                 CanShootSubmerged = false,
 				
                 Ui = Common_Weapons_Hardpoint_Ui_ROFOnly,
 				
-                Ai = Ballistics_Gatlings_Hardpoint_Ai_Turret,
+                Ai = Common_Weapons_Hardpoint_Ai_BasicTurret_LockOn,
 				
                 HardWare = new HardwareDef
                 {
@@ -309,7 +289,7 @@ namespace WeaponThread {
 				
                 Ui = Common_Weapons_Hardpoint_Ui_ROFOnly,
 				
-                Ai = Ballistics_Gatlings_Hardpoint_Ai_Gun,
+                Ai = Common_Weapons_Hardpoint_Ai_BasicFixed_NoTracking,
 				
                 HardWare = new HardwareDef
                 {
