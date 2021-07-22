@@ -26,12 +26,12 @@ namespace WeaponThread
 			ClosestFirst = true, // tries to pick closest targets first (blocks on grids, projectiles, etc...).
 			IgnoreDumbProjectiles = true, // Don't fire at non-smart projectiles.
 			LockedSmartOnly = false, // Only fire at smart projectiles that are locked on to parent grid.
-			MinimumDiameter = 1, // 0 = unlimited, Minimum radius of threat to engage.
+			MinimumDiameter = 0, // 0 = unlimited, Minimum radius of threat to engage.
 			MaximumDiameter = 0, // 0 = unlimited, Maximum radius of threat to engage.
-			MaxTargetDistance = 3500, // 0 = unlimited, Maximum target distance that targets will be automatically shot at.
+			MaxTargetDistance = 0, // 0 = unlimited, Maximum target distance that targets will be automatically shot at.
 			MinTargetDistance = 0, // 0 = unlimited, Min target distance that targets will be automatically shot at.
-			TopTargets = 4, // 0 = unlimited, max number of top targets to randomize between.
-			TopBlocks = 10, // 0 = unlimited, max number of blocks to randomize between
+			TopTargets = 0, // 0 = unlimited, max number of top targets to randomize between.
+			TopBlocks = 0, // 0 = unlimited, max number of blocks to randomize between
 			StopTrackingSpeed = 0, // do not track target threats traveling faster than this speed
 		};
 
@@ -132,15 +132,15 @@ namespace WeaponThread
             {
                 WeaponName = "M42 Archer Missile Pods", // name of weapon in terminal
                 DeviateShotAngle = 1f,
-                AimingTolerance = 0f, // 0 - 180 firing angle
+                AimingTolerance = 180f, // 0 - 180 firing angle
                 AimLeadingPrediction = Off, // Off, Basic, Accurate, Advanced
-                DelayCeaseFire = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-                AddToleranceToTracking = false,
+                DelayCeaseFire = 1, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                AddToleranceToTracking = true,
                 CanShootSubmerged = false,
 
                 Ui = Common_Weapons_Hardpoint_Ui_FullDisable,
 				
-                Ai = Common_Weapons_Hardpoint_Ai_BasicTurret_LockOn,
+                Ai = Common_Weapons_Hardpoint_Ai_BasicTurret_LockOn, //Common_Weapons_Hardpoint_Ai_BasicTurret_LockOn
 				
                 HardWare = new HardwareDef
                 {
@@ -225,9 +225,11 @@ namespace WeaponThread
             {
                 WeaponName = "SmallRocketLauncherReload", // name of weapon in terminal
                 DeviateShotAngle = 1f,
-                AimingTolerance = 0f, // 0 - 180 firing angle
+                AimingTolerance = 180f, // 0 - 180 firing angle
                 AimLeadingPrediction = Off, // Off, Basic, Accurate, Advanced
-                DelayCeaseFire = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                DelayCeaseFire = 1, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                AddToleranceToTracking = true,
+                CanShootSubmerged = false,
 
                 Ui = Common_Weapons_Hardpoint_Ui_FullDisable,
 				
@@ -278,7 +280,7 @@ namespace WeaponThread
 
 			Ammos = new [] {
                 Missiles_Missile_x1,
-                Missiles_Missile_x1_FlightStage,
+                Missiles_Missile_x150_FlightStage,
             },
             //Animations = AdvancedAnimation,
             // Don't edit below this line

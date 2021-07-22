@@ -24,7 +24,7 @@ namespace WeaponThread
             HybridRound = false, //AmmoMagazine based weapon with energy cost
             EnergyCost = 0f, //(((EnergyCost * DefaultDamage) * ShotsPerSecond) * BarrelsPerShot) * ShotsPerBarrel
             BaseDamage = 1f,
-            Mass = 500, // in kilograms
+            Mass = 250, // in kilograms
             Health = 0, // 0 = disabled, otherwise how much damage it can take from other trajectiles before dying.
             BackKickForce = 1000f,
             DecayPerShot = 0,
@@ -81,7 +81,7 @@ namespace WeaponThread
                 AreaEffect = AntiSmart, // Disabled = do not use area effect at all, Explosive, Radiant, AntiSmart, JumpNullField, JumpNullField, EnergySinkField, AnchorField, EmpField, OffenseField, NavField, DotField.
                 Base = new AreaInfluence
                 {
-                    Radius = 100f, // the sphere of influence of area effects
+                    Radius = 250f, // the sphere of influence of area effects
                     EffectStrength = 2f, // For ewar it applies this amount per pulse/hit, non-ewar applies this as damage per tick per entity in area of influence. For radiant 0 == use spillover from BaseDamage, otherwise use this value.
                 },                
                 Detonation = new DetonateDef
@@ -95,16 +95,16 @@ namespace WeaponThread
             },
             Trajectory = new TrajectoryDef
             {
-                Guidance = TravelTo,
+                Guidance = TravelTo,  //TravelTo
                 TargetLossDegree = 0f,
                 TargetLossTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 MaxLifeTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 AccelPerSec = 0f,
-                DesiredSpeed = 800,
+                DesiredSpeed = 850,
                 MaxTrajectory = 2500f,
                 FieldTime = 0, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
                 GravityMultiplier = 0f, // Gravity multiplier, influences the trajectory of the projectile, value greater than 0 to enable.
-                SpeedVariance = Random(start: 0, end: 50), // subtracts value from DesiredSpeed
+                SpeedVariance = Random(start: -25f, end: 25), // subtracts value from DesiredSpeed
                 RangeVariance = Random(start: -15f, end: 15), // subtracts value from MaxTrajectory
                 MaxTrajectoryTime = 0, // How long the weapon must fire before it reaches MaxTrajectory.
             },
