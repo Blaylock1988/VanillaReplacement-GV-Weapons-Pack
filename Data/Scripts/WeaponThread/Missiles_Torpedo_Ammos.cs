@@ -26,7 +26,7 @@ namespace WeaponThread
             HybridRound = false, //AmmoMagazine based weapon with energy cost
             EnergyCost = 0f, //(((EnergyCost * DefaultDamage) * ShotsPerSecond) * BarrelsPerShot) * ShotsPerBarrel
             BaseDamage = 10f,
-            Mass = 2000f, // in kilograms
+            Mass = 750f, // in kilograms
             Health = 0f, // 0 = disabled, otherwise how much damage it can take from other trajectiles before dying.
             BackKickForce = 5f,
             DecayPerShot = 0f,
@@ -442,7 +442,7 @@ namespace WeaponThread
                 AreaEffect = EmpField, // Disabled = do not use area effect at all, Explosive, Radiant, AntiSmart, JumpNullField, JumpNullField, EnergySinkField, AnchorField, EmpField, OffenseField, NavField, DotField.
                 Base = new AreaInfluence
                 {
-                    Radius = 75f, // the sphere of influence of area effects
+                    Radius = 150f, // the sphere of influence of area effects
                     EffectStrength = 50000f, // For ewar it applies this amount per pulse/hit, non-ewar applies this as damage per tick per entity in area of influence. For radiant 0 == use spillover from BaseDamage, otherwise use this value.
                 },
                 Pulse = new PulseDef // interval measured in game ticks (60 == 1 second), pulseChance chance (0 - 100) that an entity in field will be hit
@@ -488,10 +488,10 @@ namespace WeaponThread
                 },
                 EwarFields = new EwarFieldsDef
                 {
-                    Duration = 900,
-                    StackDuration = false,
+                    Duration = 6000,
+                    StackDuration = true,
                     Depletable = false,
-                    MaxStacks = 0,
+                    MaxStacks = 1,
                     TriggerRange = 0f,
                     DisableParticleEffect = true,
                     Force = new PushPullDef // AreaEffectDamage is multiplied by target mass.
