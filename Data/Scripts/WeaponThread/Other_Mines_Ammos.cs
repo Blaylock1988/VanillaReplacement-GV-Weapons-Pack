@@ -114,19 +114,19 @@ namespace WeaponThread
                 TargetLossTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 MaxLifeTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 AccelPerSec = 7.5f,
-                DesiredSpeed = 50, // DO NOT SET HIGHER THAN 4100
-                MaxTrajectory = 100f,
+                DesiredSpeed = 200, // DO NOT SET HIGHER THAN 4100
+                MaxTrajectory = 1000f,
                 FieldTime = 54000, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
                 GravityMultiplier = 0f, // Gravity multiplier, influences the trajectory of the projectile, value greater than 0 to enable.
-                SpeedVariance = Random(start: 0, end: 10), // subtracts value from DesiredSpeed
-                RangeVariance = Random(start: 0, end: 50), // subtracts value from MaxTrajectory
+                SpeedVariance = Random(start: 0, end: 20), // subtracts value from DesiredSpeed
+                RangeVariance = Random(start: -500, end: 500), // subtracts value from MaxTrajectory
                 MaxTrajectoryTime = 0, // How long the weapon must fire before it reaches MaxTrajectory.
                 Smarts = new SmartsDef
                 {
                     Inaccuracy = 0f, // 0 is perfect, hit accuracy will be a random num of meters between 0 and this value.
                     Aggressiveness = 2f, // controls how responsive tracking is.
                     MaxLateralThrust = 0.5, // controls how sharp the trajectile may turn
-                    TrackingDelay = 10, // Measured in Shape diameter units traveled.
+                    TrackingDelay = 3600, // Measured in Shape diameter units traveled.
                     MaxChaseTime = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     OverideTarget = true, // when set to true ammo picks its own target, does not use hardpoint's.
                     MaxTargets = 1, // Number of targets allowed before ending, 0 = unlimited
