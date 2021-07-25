@@ -64,7 +64,7 @@ namespace WeaponThread
             HardPoint = new HardPointDef
             {
                 WeaponName = "CBU-R68 Moray System", // name of weapon in terminal
-                DeviateShotAngle = 20f,
+                DeviateShotAngle = 30f,
                 AimingTolerance = 0f, // 0 - 180 firing angle
                 AimLeadingPrediction = Off, // Off, Basic, Accurate, Advanced
                 DelayCeaseFire = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
@@ -179,7 +179,7 @@ namespace WeaponThread
             },
             Ammos = new[] {
                 Others_Mine,
-                Others_Mine_Shrapnel,
+                Others_Mine_Shrapnel
             },
             Animations = MXA_Moray_Animation,
             //Upgrades = UpgradeModules,
