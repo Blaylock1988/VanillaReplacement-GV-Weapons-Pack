@@ -263,7 +263,7 @@ namespace WeaponThread
                     ElevateRate = 0.005f,
                     MinAzimuth = -180,
                     MaxAzimuth = 180,
-                    MinElevation = -20,
+                    MinElevation = -5,
                     MaxElevation = 90,
                     FixedOffset = false,
                     InventorySize = 1.6f,
