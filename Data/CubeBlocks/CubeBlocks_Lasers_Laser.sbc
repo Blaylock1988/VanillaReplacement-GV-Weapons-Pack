@@ -86,10 +86,10 @@
 				<TypeId>ConveyorSorter</TypeId>
 				<SubtypeId>MA_T2PDX</SubtypeId>
 			</Id>
-			<DisplayName>PDX Laser T2</DisplayName>
-			<Description>General purpose laser turret, upgraded for more damage capability.
-				Lasers are strong against shields and weak against armor.
-				Made by AutoMcD Astronautical and CriegWarfare.</Description>
+			<DisplayName>[Laser] Large PDX-T2 Turret</DisplayName>
+			<Description>A general purpose X-ray Free-Electron Laser (XFEL) based turret that has pinpoint accuracy. It requires a large energy supply, and can overheat from continued use. Designed by AutoMcD Manufacturing.
+				[Uses Energy]
+			</Description>
 			<Icon>Textures\GUI\Icons\Cubes\MA_T2PDX.png</Icon>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>

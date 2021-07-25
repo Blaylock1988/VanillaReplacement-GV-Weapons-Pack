@@ -27,10 +27,10 @@
 				<string>SmallGatlingGun/(null)</string>
 				<string>SmallMissileLauncher/(null)</string>
 				<string>SmallRocketLauncherReload</string>
-				<string>MA_PDX_sm</string>
 				<string>MA_T2PDX</string>
 				<string>MA_PDT</string>
-				<string>MA_PDT_sm</string>
+				<string>ReceptorCoilGun</string>
+				<string>ReceptorTurret</string>
 				<string>OKI122mmSGfixed</string>
 				<string>OKI122mmVT</string>
 				<string>MXA_CoilgunL</string>
