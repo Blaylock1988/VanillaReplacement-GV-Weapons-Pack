@@ -165,7 +165,7 @@
 				<SubtypeId>Missiles_Missile_x150</SubtypeId>
 			</Id>
 			<DisplayName>[Missile] Archer HE x150</DisplayName>
-			<Icon>Textures\GUI\Icons\MXA_Archer_Missile_Ammo.png</Icon>
+			<Icon>Textures\GUI\Icons\MXA_Archer_Missile_Ammo_Stack.png</Icon>
 			<Size>
 				<X>0.25</X>
 				<Y>0.2</Y>

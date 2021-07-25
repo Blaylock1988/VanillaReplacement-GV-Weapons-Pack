@@ -118,7 +118,7 @@
 				<SubtypeId>Missiles_Missile_x150</SubtypeId>
 			</Id>
 			<DisplayName>[Missile] Archer HE x150</DisplayName>
-			<Icon>Textures\GUI\Icons\MXA_Archer_Missile_Ammo.png</Icon>
+			<Icon>Textures\GUI\Icons\MXA_Archer_Missile_Ammo_Stack.png</Icon>
 			<Prerequisites>
 				<Item Amount="2750" TypeId="Ingot" SubtypeId="Iron"/>
 				<Item Amount="275" TypeId="Ingot" SubtypeId="Nickel"/>
