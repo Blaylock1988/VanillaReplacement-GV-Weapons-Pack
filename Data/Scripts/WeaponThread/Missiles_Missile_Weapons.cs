@@ -26,12 +26,12 @@ namespace WeaponThread
 			ClosestFirst = true, // tries to pick closest targets first (blocks on grids, projectiles, etc...).
 			IgnoreDumbProjectiles = true, // Don't fire at non-smart projectiles.
 			LockedSmartOnly = false, // Only fire at smart projectiles that are locked on to parent grid.
-			MinimumDiameter = 0, // 0 = unlimited, Minimum radius of threat to engage.
+			MinimumDiameter = 1, // 0 = unlimited, Minimum radius of threat to engage.
 			MaximumDiameter = 0, // 0 = unlimited, Maximum radius of threat to engage.
-			MaxTargetDistance = 0, // 0 = unlimited, Maximum target distance that targets will be automatically shot at.
-			MinTargetDistance = 0, // 0 = unlimited, Min target distance that targets will be automatically shot at.
-			TopTargets = 0, // 0 = unlimited, max number of top targets to randomize between.
-			TopBlocks = 0, // 0 = unlimited, max number of blocks to randomize between
+			MaxTargetDistance = 3500, // 0 = unlimited, Maximum target distance that targets will be automatically shot at.
+			MinTargetDistance = 10, // 0 = unlimited, Min target distance that targets will be automatically shot at.
+			TopTargets = 5, // 0 = unlimited, max number of top targets to randomize between.
+			TopBlocks = 5, // 0 = unlimited, max number of blocks to randomize between
 			StopTrackingSpeed = 0, // do not track target threats traveling faster than this speed
 		};
 
@@ -130,17 +130,17 @@ namespace WeaponThread
 			
             HardPoint = new HardPointDef
             {
-                WeaponName = "M42 Archer Missile Pods", // name of weapon in terminal
+                WeaponName = "Large Archer Missile Pod", // name of weapon in terminal
                 DeviateShotAngle = 1f,
-                AimingTolerance = 180f, // 0 - 180 firing angle
+                AimingTolerance = 179f, // 0 - 180 firing angle
                 AimLeadingPrediction = Off, // Off, Basic, Accurate, Advanced
                 DelayCeaseFire = 1, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 AddToleranceToTracking = true,
                 CanShootSubmerged = false,
 
-                Ui = Common_Weapons_Hardpoint_Ui_FullDisable,
+				Ui = Common_Weapons_Hardpoint_Ui_FullDisable,
 				
-                Ai = Common_Weapons_Hardpoint_Ai_BasicTurret_LockOn, //Common_Weapons_Hardpoint_Ai_BasicTurret_LockOn
+                Ai = Common_Weapons_Hardpoint_Ai_BasicFixed_Tracking, //Common_Weapons_Hardpoint_Ai_BasicTurret_LockOn
 				
                 HardWare = new HardwareDef
                 {
@@ -150,7 +150,7 @@ namespace WeaponThread
                     MaxAzimuth = 0,
                     MinElevation = 0,
                     MaxElevation = 0,
-                    FixedOffset = true,
+                    FixedOffset = false,
                     InventorySize = 8.250f,
                     Offset = Vector(x: 0, y: 0, z: 0),
                     Armor = IsWeapon, // IsWeapon, Passive, Active
@@ -186,7 +186,6 @@ namespace WeaponThread
             },
             Ammos = new[] {
                 Missiles_Missile_x150,
-                Missiles_Missile_x150_FlightStage,
             },
             Animations = MXA_ArcherPods_Animation,
             //Upgrades = UpgradeModules,
@@ -280,7 +279,6 @@ namespace WeaponThread
 
 			Ammos = new [] {
                 Missiles_Missile_x1,
-                Missiles_Missile_x150_FlightStage,
             },
             //Animations = AdvancedAnimation,
             // Don't edit below this line

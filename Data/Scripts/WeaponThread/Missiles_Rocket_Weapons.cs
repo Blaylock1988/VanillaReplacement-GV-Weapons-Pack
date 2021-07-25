@@ -149,7 +149,7 @@ namespace WeaponThread
 			HardPoint = new HardPointDef
             {
                 WeaponName = "LargeMissileLauncher", // name of weapon in terminal
-                DeviateShotAngle = 2f,
+                DeviateShotAngle = 4f,
                 AimingTolerance = 0f, // 0 - 180 firing angle
                 AimLeadingPrediction = Off, // Off, Basic, Accurate, Advanced
                 DelayCeaseFire = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
@@ -248,7 +248,7 @@ namespace WeaponThread
             HardPoint = new HardPointDef
             {
                 WeaponName = "LargeMissileTurret", // name of weapon in terminal
-                DeviateShotAngle = 2f,
+                DeviateShotAngle = 4f,
                 AimingTolerance = 4f, // 0 - 180 firing angle
                 AimLeadingPrediction = Advanced, // Off, Basic, Accurate, Advanced
                 DelayCeaseFire = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
@@ -346,7 +346,7 @@ namespace WeaponThread
             HardPoint = new HardPointDef
             {
                 WeaponName = "SmallMissileLauncher", // name of weapon in terminal
-                DeviateShotAngle = 2f,
+                DeviateShotAngle = 4f,
                 AimingTolerance = 4f, // 0 - 180 firing angle
                 AimLeadingPrediction = Off, // Off, Basic, Accurate, Advanced
                 DelayCeaseFire = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
@@ -431,7 +431,7 @@ namespace WeaponThread
             HardPoint = new HardPointDef
             {
                 WeaponName = "SmallMissileTurret", // name of weapon in terminal
-                DeviateShotAngle = 2f,
+                DeviateShotAngle = 4f,
                 AimingTolerance = 4f, // 0 - 180 firing angle
                 AimLeadingPrediction = Advanced, // Off, Basic, Accurate, Advanced
                 DelayCeaseFire = 10, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).

@@ -63,15 +63,9 @@ namespace WeaponThread
                 AddToleranceToTracking = true,
                 CanShootSubmerged = false,
 
-                Ui = new UiDef
-                {
-                    RateOfFire = false,
-                    DamageModifier = false,
-                    ToggleGuidance = true,
-                    EnableOverload = false,
-                },
-
-                Ai = Common_Weapons_Hardpoint_Ai_BasicTurret_LockOn,
+				Ui = Common_Weapons_Hardpoint_Ui_GuidanceOnly,
+				
+                Ai = Common_Weapons_Hardpoint_Ai_BasicFixed_Tracking, //Common_Weapons_Hardpoint_Ai_BasicTurret_LockOn
 				
                 HardWare = new HardwareDef
                 {
@@ -165,8 +159,7 @@ namespace WeaponThread
             },
             Ammos = new[] {
                 Missiles_Torpedo,
-                Missiles_Torpedo_FlightStage,
-                //Missiles_Torpedo_ExplosionStage,
+                Missiles_Torpedo_Shrapnel,
             },
             Animations = MXA_Shiva_Animation,
             //Upgrades = UpgradeModules,

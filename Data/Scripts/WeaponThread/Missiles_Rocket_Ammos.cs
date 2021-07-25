@@ -63,7 +63,7 @@ namespace WeaponThread
 				Shields = new ShieldDef
 				{
 					Modifier = -1f,
-					Type = Kinetic,
+					Type = Energy,
 					BypassModifier = -1f,
 				},
 				// first true/false (ignoreOthers) will cause projectiles to pass through all blocks that do not match the custom subtypeIds.
@@ -73,7 +73,7 @@ namespace WeaponThread
 				AreaEffect = Radiant, // Disabled = do not use area effect at all, Explosive, Radiant, AntiSmart, JumpNullField, JumpNullField, EnergySinkField, AnchorField, EmpField, OffenseField, NavField, DotField.
 				Base = new AreaInfluence
 				{
-					Radius = 10f, // the sphere of influence of area effects, must be at least 1 for missiles
+					Radius = 5f, // the sphere of influence of area effects, must be at least 1 for missiles
 					EffectStrength = 500f, // For ewar it applies this amount per pulse/hit, non-ewar applies this as damage per tick per entity in area of influence. For radiant 0 == use spillover from BaseDamage, otherwise use this value.
 				},
 				Explosions = new ExplosionDef
@@ -97,7 +97,7 @@ namespace WeaponThread
 			},
 			Trajectory = new TrajectoryDef
 			{
-				Guidance = Smart,
+				Guidance = None,
 				TargetLossDegree = 1f,
 				TargetLossTime = 1, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
 				MaxLifeTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
@@ -155,7 +155,7 @@ namespace WeaponThread
 				Lines = new LineDef
 				{
                     ColorVariance = Random(start: 0f, end: 2f), // multiply the color by random values within range.
-                    WidthVariance = Random(start: 0f, end: 0.1f), // adds random value to default width (negatives shrinks width)
+                    WidthVariance = Random(start: -0.2f, end: 0.2f), // adds random value to default width (negatives shrinks width)
                     Tracer = new TracerBaseDef
                     {
                         Enable = true,
