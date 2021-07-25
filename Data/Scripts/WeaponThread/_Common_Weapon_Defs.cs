@@ -49,6 +49,13 @@ namespace WeaponThread
 			EnableOverload =  false, //only works on energy
 		};
 
+		private UiDef Common_Weapons_Hardpoint_Ui_GuidanceOnly = new UiDef {
+			RateOfFire = false, //not recommended for beams
+			DamageModifier = false, //only works on energy
+			ToggleGuidance = true,
+			EnableOverload =  false, //only works on energy
+		};
+
 		private AiDef Common_Weapons_Hardpoint_Ai_BasicTurret_LockOn = new AiDef {
 			TrackTargets = true, //This Weapon will know there are targets in range
 			TurretAttached = true, // This enables the ability for players to manually control
@@ -73,8 +80,8 @@ namespace WeaponThread
 			TrackTargets = true,
 			TurretAttached = false,
 			TurretController = true,
-			PrimaryTracking = true,
-			LockOnFocus = false,
+			PrimaryTracking = false,
+			LockOnFocus = true,
 			SuppressFire = false,
 			OverrideLeads = false, // Override default behavior for target leads
 		};
