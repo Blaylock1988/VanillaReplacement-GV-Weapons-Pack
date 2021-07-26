@@ -194,7 +194,7 @@ namespace WeaponThread
                     },
                     Trail = new TrailDef
                     {
-                        Enable = true,
+                        Enable = false,
                         Textures = new[] {
 							"WeaponLaser",
                         },
