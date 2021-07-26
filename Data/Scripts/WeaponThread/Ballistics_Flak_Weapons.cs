@@ -65,7 +65,7 @@ namespace WeaponThread
             HardPoint = new HardPointDef
             {
                 WeaponName = "70mm Flak Turret", // name of weapon in terminal
-                DeviateShotAngle = 2f,
+                DeviateShotAngle = 1.5f,
                 AimingTolerance = 2f, // 0 - 180 firing angle
                 AimLeadingPrediction = Advanced, // Off, Basic, Accurate, Advanced
                 DelayCeaseFire = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
