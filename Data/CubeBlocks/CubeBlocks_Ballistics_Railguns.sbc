@@ -6,7 +6,7 @@
 				<TypeId>LargeMissileTurret</TypeId>
 				<SubtypeId>ARYXRailgunTurret</SubtypeId>
 			</Id>
-			<DisplayName>Apollo-250 Railgun</DisplayName>
+			<DisplayName>[Railgun] Apollo</DisplayName>
 			<Icon>Textures\GUI\Icons\AWERailgunTurret.dds</Icon>
 			<Description>A turreted version of the Artemis railgun, the Apollo shines with its high accuracy at medium to long range, but its slow firing rate and rotation speed, and limited elevation arc leaves makes the weapon suffer drastically at close range. Designed by ARYX Weapon Enterprises.
 			[Uses 200mm SABOT]</Description>
