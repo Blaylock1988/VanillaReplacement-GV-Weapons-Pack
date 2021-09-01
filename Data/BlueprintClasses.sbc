@@ -2,29 +2,18 @@
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 	<BlueprintClassEntries>
 		<!--AMMOS-->
-		<Entry Class="Ammo" BlueprintSubtypeId="NATO_25x184mmMagazine"/>
-		<Entry Class="Ammo" BlueprintSubtypeId="NATO_5p56x45mmMagazine"/>
-		<Entry Class="Ammo" BlueprintSubtypeId="Ballistics_Flak"/>
-		<Entry Class="Ammo" BlueprintSubtypeId="Ballistics_Cannon"/>
-		<Entry Class="Ammo" BlueprintSubtypeId="Ballistics_Railgun"/>
-		<Entry Class="Ammo" BlueprintSubtypeId="Ballistics_MAC"/>
-		<Entry Class="Ammo" BlueprintSubtypeId="Missiles_Missile_x150"/>
-		<Entry Class="Ammo" BlueprintSubtypeId="Missiles_Missile_x1"/>
-		<Entry Class="Ammo" BlueprintSubtypeId="Missiles_Torpedo"/>
-		<Entry Class="Ammo" BlueprintSubtypeId="Lasers_JumpNull"/>
-		<Entry Class="Ammo" BlueprintSubtypeId="Others_Mine"/>
-		<!--CONSUMABLES-->
-		<Entry Class="EliteConsumables" BlueprintSubtypeId="NATO_25x184mmMagazine"/>
-		<Entry Class="EliteConsumables" BlueprintSubtypeId="NATO_5p56x45mmMagazine"/>
-		<Entry Class="EliteConsumables" BlueprintSubtypeId="Ballistics_Flak"/>
-		<Entry Class="EliteConsumables" BlueprintSubtypeId="Ballistics_Cannon"/>
-		<Entry Class="EliteConsumables" BlueprintSubtypeId="Ballistics_Railgun"/>
-		<Entry Class="EliteConsumables" BlueprintSubtypeId="Ballistics_MAC"/>
-		<Entry Class="EliteConsumables" BlueprintSubtypeId="Missiles_Missile_x150"/>
-		<Entry Class="EliteConsumables" BlueprintSubtypeId="Missiles_Missile_x1"/>
-		<Entry Class="EliteConsumables" BlueprintSubtypeId="Missiles_Torpedo"/>
-		<Entry Class="EliteConsumables" BlueprintSubtypeId="Lasers_JumpNull"/>
-		<Entry Class="EliteConsumables" BlueprintSubtypeId="Others_Mine"/>
+		<Entry Class="ShipConsumables" BlueprintSubtypeId="NATO_25x184mmMagazine"/>
+		<Entry Class="ShipConsumables" BlueprintSubtypeId="NATO_5p56x45mmMagazine"/>
+		<Entry Class="ShipConsumables" BlueprintSubtypeId="Ballistics_Flak"/>
+		<Entry Class="ShipConsumables" BlueprintSubtypeId="Ballistics_Cannon"/>
+		<Entry Class="ShipConsumables" BlueprintSubtypeId="Ballistics_Railgun"/>
+		<Entry Class="ShipConsumables" BlueprintSubtypeId="Ballistics_MAC"/>
+		<Entry Class="ShipConsumables" BlueprintSubtypeId="Missiles_Missile_x150"/>
+		<Entry Class="ShipConsumables" BlueprintSubtypeId="Missiles_Missile_x1"/>
+		<Entry Class="ShipConsumables" BlueprintSubtypeId="Missiles_Torpedo"/>
+		<Entry Class="ShipConsumables" BlueprintSubtypeId="Lasers_JumpNull"/>
+		<Entry Class="ShipConsumables" BlueprintSubtypeId="Others_Mine"/>
+		<Entry Class="ShipConsumables" BlueprintSubtypeId="Missile200mm"/>
 		<!--LARGE BLOCKS-->
 		<Entry Class="LargeBlocks" BlueprintSubtypeId="LargeMissileTurret/ARYXFlakTurret"/>
 		<Entry Class="LargeBlocks" BlueprintSubtypeId="LargeMissileTurret/ARYXRailgunTurret"/>
