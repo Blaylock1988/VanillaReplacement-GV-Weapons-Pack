@@ -24,6 +24,7 @@
 				<string>SmallGatlingTurret</string>
 				<string>SmallMissileTurret</string>
 				<string>LargeMissileLauncher</string>
+				<string>SmallGatlingGun_Gimbal</string>
 				<string>SmallGatlingGun/(null)</string>
 				<string>SmallMissileLauncher/(null)</string>
 				<string>SmallRocketLauncherReload</string>

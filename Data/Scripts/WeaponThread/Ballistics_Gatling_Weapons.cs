@@ -14,9 +14,9 @@ namespace WeaponThread {
 
 		//Common definitions
 		
-		private TargetingDef Ballistics_Gatlings_Targeting => new TargetingDef {
+		private TargetingDef Ballistics_Gatlings_Targeting_Turret => new TargetingDef {
 			Threats = new[] {
-				Grids, Characters, Projectiles, // threats percieved automatically without changing menu settings
+				Projectiles, Characters, Grids,   // threats percieved automatically without changing menu settings
 			},
 			SubSystems = new[] {
 				Offense, Thrust, Utility, Power, Production, Jumping, Steering, Any, // subsystems the gun targets
@@ -27,6 +27,25 @@ namespace WeaponThread {
 			MinimumDiameter = 0, // 0 = unlimited, Minimum radius of threat to engage.
 			MaximumDiameter = 0, // 0 = unlimited, Maximum radius of threat to engage.
 			MaxTargetDistance = 1500, // 0 = unlimited, Maximum target distance that targets will be automatically shot at.
+			MinTargetDistance = 0, // 0 = unlimited, Min target distance that targets will be automatically shot at.
+			TopTargets = 8, // 0 = unlimited, max number of top targets to randomize between.
+			TopBlocks = 8, // 0 = unlimited, max number of blocks to randomize between
+			StopTrackingSpeed = 0, // do not track target threats traveling faster than this speed
+		};
+
+		private TargetingDef Ballistics_Gatlings_Targeting_Fixed => new TargetingDef {
+			Threats = new[] {
+				Grids, // threats percieved automatically without changing menu settings
+			},
+			SubSystems = new[] {
+				Any, // subsystems the gun targets
+			},
+			ClosestFirst = true, // tries to pick closest targets first (blocks on grids, projectiles, etc...).
+			IgnoreDumbProjectiles = true, // Don't fire at non-smart projectiles.
+			LockedSmartOnly = false, // Only fire at smart projectiles that are locked on to parent grid.
+			MinimumDiameter = 0, // 0 = unlimited, Minimum radius of threat to engage.
+			MaximumDiameter = 0, // 0 = unlimited, Maximum radius of threat to engage.
+			MaxTargetDistance = 1000, // 0 = unlimited, Maximum target distance that targets will be automatically shot at.
 			MinTargetDistance = 0, // 0 = unlimited, Min target distance that targets will be automatically shot at.
 			TopTargets = 8, // 0 = unlimited, max number of top targets to randomize between.
 			TopBlocks = 8, // 0 = unlimited, max number of blocks to randomize between
@@ -108,15 +127,6 @@ namespace WeaponThread {
                         DurabilityMod = 0.25f,
                         IconName = "TestIcon.dds",
                     },
-                    new MountPointDef {
-                        SubtypeId = "LargeGatlingTurret_Temporary",
-                        AimPartId = "",
-                        MuzzlePartId = "GatlingBarrel",
-                        AzimuthPartId = "GatlingTurretBase1",
-                        ElevationPartId = "GatlingTurretBase2",
-                        DurabilityMod = 0.25f,
-                        IconName = "TestIcon.dds",
-                    },
                 },
                 Barrels = new []
                 {
@@ -124,7 +134,7 @@ namespace WeaponThread {
                 },
             },
 			
-            Targeting = Ballistics_Gatlings_Targeting,
+            Targeting = Ballistics_Gatlings_Targeting_Turret,
 			
             HardPoint = new HardPointDef
             {
@@ -150,7 +160,7 @@ namespace WeaponThread {
                     MinElevation = -10,
                     MaxElevation = 90,
                     FixedOffset = false,
-                    InventorySize = 1f,
+                    InventorySize = 0.8f,
                     Offset = Vector(x: 0, y: 0, z: 0),
 					Armor = IsWeapon, // IsWeapon, Passive, Active
                 },
@@ -195,7 +205,7 @@ namespace WeaponThread {
                 },
             },
 
-            Targeting = Ballistics_Gatlings_Targeting,
+            Targeting = Ballistics_Gatlings_Targeting_Turret,
 
             HardPoint = new HardPointDef
             {
@@ -221,7 +231,7 @@ namespace WeaponThread {
                     MinElevation = -10,
                     MaxElevation = 90,
                     FixedOffset = false,
-                    InventorySize = 0.5f,
+                    InventorySize = 0.8f,
                     Offset = Vector(x: 0, y: 0, z: 0),
                 },
 				
@@ -257,17 +267,6 @@ namespace WeaponThread {
                         DurabilityMod = 0.25f,
                         IconName = "TestIcon.dds",
                     },
-                    new MountPointDef
-                    {
-                        SubtypeId = "SmallGatlingGun_Temporary",
-                        AimPartId = "Barrel",
-                        MuzzlePartId = "Barrel",
-                        ElevationPartId = "None",
-                        AzimuthPartId = "None",
-                        DurabilityMod = 0.25f,
-                        IconName = "TestIcon.dds",
-                    },
-
                 },
                 Barrels = new []
                 {
@@ -275,7 +274,7 @@ namespace WeaponThread {
                 },
             },
 
-            Targeting = Ballistics_Gatlings_Targeting,
+            Targeting = Ballistics_Gatlings_Targeting_Fixed,
 
             HardPoint = new HardPointDef
             {
@@ -300,7 +299,7 @@ namespace WeaponThread {
                     MinElevation = 0,
                     MaxElevation = 0,
                     FixedOffset = true,
-                    InventorySize = 0.25f,
+                    InventorySize = 0.5f,
                     Offset = Vector(x: 0, y: 0, z: 0),
                 },
 				
@@ -322,5 +321,74 @@ namespace WeaponThread {
             // Don't edit below this line
         };
 
+        WeaponDefinition SmallGatlingGun_Gimbal => new WeaponDefinition {
+            Assignments = new ModelAssignmentsDef
+            {
+                MountPoints = new[]
+                {
+                    new MountPointDef
+                    {
+                        SubtypeId = "SmallGatlingGun_Gimbal",
+                        AimPartId = "GatlingTurretBase2",
+                        MuzzlePartId = "GatlingBarrel",
+                        AzimuthPartId = "GatlingTurretBase1",
+                        ElevationPartId = "GatlingTurretBase2",
+                        DurabilityMod = 0.5f,
+                        IconName = "TestIcon.dds",
+                    },
+
+                },
+                Barrels = new []
+                {
+                    "muzzle_projectile",
+                },
+            },
+
+            Targeting = Ballistics_Gatlings_Targeting_Fixed,
+
+            HardPoint = new HardPointDef
+            {
+                WeaponName = "SmallGatling Gimballed", // name of weapon in terminal
+                DeviateShotAngle = 0.5f,
+                AimingTolerance = 5f, // 0 - 180 firing angle
+                AimLeadingPrediction = Advanced, // Off, Basic, Accurate, Advanced
+                DelayCeaseFire = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                AddToleranceToTracking = false,
+                CanShootSubmerged = false,
+				
+                Ui = Common_Weapons_Hardpoint_Ui_ROFOnly,
+				
+                Ai = Common_Weapons_Hardpoint_Ai_BasicTurret_LockOn,
+				
+                HardWare = new HardwareDef
+                {
+
+                    RotateRate = 0.01f,
+                    ElevateRate = 0.01f,
+                    MinAzimuth = -15,
+                    MaxAzimuth = 15,
+                    MinElevation = -15,
+                    MaxElevation = 15,
+                    FixedOffset = false,
+                    InventorySize = 0.5f,
+                    Offset = Vector(x: 0, y: 0, z: 0),
+                },
+				
+                Other = Ballistics_Gatlings_Hardpoint_Other,
+				
+                Loading = Ballistics_Gatlings_Hardpoint_Loading,
+                
+				Audio = Ballistics_Gatlings_Hardpoint_Audio,
+				
+                Graphics = Ballistics_Gatlings_Hardpoint_Graphics,
+				
+            },
+
+			Ammos = new [] {
+                Ballistics_Gatling,
+            },
+            //Animations = AdvancedAnimation,
+            // Don't edit below this line
+        };
     }
 }
