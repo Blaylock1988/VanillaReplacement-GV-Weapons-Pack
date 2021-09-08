@@ -13,16 +13,12 @@
 				<Y>0.2</Y>
 				<Z>0.2</Z>
 			</Size>
-			<Mass>50</Mass>
-			<Volume>50</Volume>
+			<Mass>40</Mass>
+			<Volume>40</Volume>
 			<Model>Models\Weapons\Ammo_Box.mwm</Model>
 			<PhysicalMaterial>Ammo</PhysicalMaterial>
 			<Capacity>30</Capacity>
 			<AmmoDefinitionId Subtype="Blank"/>
-			<MinimumOfferAmount>100</MinimumOfferAmount>
-			<MaximumOfferAmount>1000</MaximumOfferAmount>
-			<MinimumOrderAmount>100</MinimumOrderAmount>
-			<MaximumOrderAmount>2000</MaximumOrderAmount>
 			<CanPlayerOrder>true</CanPlayerOrder>
 		</AmmoMagazine>
 		<AmmoMagazine>
@@ -37,17 +33,13 @@
 				<Y>0.05</Y>
 				<Z>0.02</Z>
 			</Size>
-			<Mass>0.45</Mass>
-			<Volume>0.2</Volume>
+			<Mass>30</Mass>
+			<Volume>30</Volume>
 			<Model>Models\Weapons\Rifle_Ammo.mwm</Model>
 			<PhysicalMaterial>Ammo</PhysicalMaterial>
 			<Capacity>30</Capacity>
 			<AmmoDefinitionId Subtype="Blank"/>
-			<MinimumOfferAmount>100</MinimumOfferAmount>
-			<MaximumOfferAmount>1000</MaximumOfferAmount>
-			<MinimumOrderAmount>100</MinimumOrderAmount>
-			<MaximumOrderAmount>2000</MaximumOrderAmount>
-			<CanPlayerOrder>false</CanPlayerOrder>
+			<CanPlayerOrder>true</CanPlayerOrder>
 		</AmmoMagazine>
 		<AmmoMagazine>
 			<Id>
@@ -61,16 +53,12 @@
 				<Y>0.4</Y>
 				<Z>0.4</Z>
 			</Size>
-			<Mass>480</Mass>
-			<Volume>380</Volume>
+			<Mass>440</Mass>
+			<Volume>350</Volume>
 			<Model>Models\Weapons\Ammo_Box.mwm</Model>
 			<PhysicalMaterial>Ammo</PhysicalMaterial>
 			<Capacity>20</Capacity>
 			<AmmoDefinitionId Subtype="Blank"/>
-			<MinimumOfferAmount>100</MinimumOfferAmount>
-			<MaximumOfferAmount>1000</MaximumOfferAmount>
-			<MinimumOrderAmount>100</MinimumOrderAmount>
-			<MaximumOrderAmount>2000</MaximumOrderAmount>
 			<CanPlayerOrder>true</CanPlayerOrder>
 		</AmmoMagazine>
 		<AmmoMagazine>
@@ -85,11 +73,12 @@
 				<Y>0.6</Y>
 				<Z>0.1</Z>
 			</Size>
-			<Mass>450</Mass>
-			<Volume>300</Volume>
+			<Mass>480</Mass>
+			<Volume>320</Volume>
 			<Model>Models\MXA_AmmoBoxL.mwm</Model>
 			<Capacity>4</Capacity>
 			<AmmoDefinitionId Subtype="Blank"/>
+			<CanPlayerOrder>true</CanPlayerOrder>
 		</AmmoMagazine>
 		<AmmoMagazine>
 			<Id>
@@ -103,16 +92,12 @@
 				<Y>1</Y>
 				<Z>1</Z>
 			</Size>
-			<Mass>1000</Mass>
+			<Mass>880</Mass>
 			<Volume>500</Volume>
 			<Model>Models\AWE_Ammo\AryxFerrous500mm.mwm</Model>
 			<PhysicalMaterial>Ammo</PhysicalMaterial>
 			<Capacity>1</Capacity>
 			<AmmoDefinitionId Subtype="Blank"/>
-			<MinimumOfferAmount>10</MinimumOfferAmount>
-			<MaximumOfferAmount>100</MaximumOfferAmount>
-			<MinimumOrderAmount>10</MinimumOrderAmount>
-			<MaximumOrderAmount>100</MaximumOrderAmount>
 			<CanPlayerOrder>true</CanPlayerOrder>
 		</AmmoMagazine>
 		<AmmoMagazine>
@@ -127,13 +112,12 @@
 				<Y>1.2</Y>
 				<Z>0.2</Z>
 			</Size>
-			<Mass>20000</Mass>
-			<!--500 per Round-->
-			<Volume>5000</Volume>
-			<!--250 per Round-->
+			<Mass>5000</Mass>
+			<Volume>2500</Volume>
 			<Model>Models\MXA_MACL_Ammo.mwm</Model>
 			<Capacity>1</Capacity>
 			<AmmoDefinitionId Subtype="Blank"/>
+			<CanPlayerOrder>true</CanPlayerOrder>
 		</AmmoMagazine>
         <AmmoMagazine>
             <Id>
@@ -153,10 +137,6 @@
             <PhysicalMaterial>Ammo</PhysicalMaterial>
             <Capacity>1</Capacity>
             <AmmoDefinitionId Subtype="Missile" /> <!-- changing this causes a critical error, because KEEN -->
-            <MinimumOfferAmount>100</MinimumOfferAmount>
-            <MaximumOfferAmount>1000</MaximumOfferAmount>
-            <MinimumOrderAmount>100</MinimumOrderAmount>
-            <MaximumOrderAmount>2000</MaximumOrderAmount>
             <CanPlayerOrder>true</CanPlayerOrder>
         </AmmoMagazine>
 		<AmmoMagazine>
@@ -207,8 +187,8 @@
 				<Y>1.2</Y>
 				<Z>0.2</Z>
 			</Size>
-			<Mass>3000</Mass>
-			<Volume>6000</Volume>
+			<Mass>3440</Mass>
+			<Volume>6880</Volume>
 			<Model>Models\Missiles\MXA_Shiva_Missile.mwm</Model>
 			<Capacity>1</Capacity>
 			<AmmoDefinitionId Subtype="Blank"/>
@@ -244,10 +224,8 @@
 				<Y>0.2</Y>
 				<Z>0.2</Z>
 			</Size>
-			<Mass>7500</Mass>
-			<!--250 Per Mine -->
-			<Volume>10000</Volume>
-			<!--125 Per Mine -->
+			<Mass>3450</Mass>
+			<Volume>4600</Volume>
 			<Model>Models\Mines\MXA_Moray_Mine.mwm</Model>
 			<Capacity>8</Capacity>
 			<AmmoDefinitionId Subtype="Blank"/>
