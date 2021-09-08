@@ -7,8 +7,8 @@
 				<SubtypeId>MXA_MACL</SubtypeId>
 			</Id>
 			<DisplayName>[MAC] Mark IX</DisplayName>
-			<Description>The Magnetic Accelerator Cannon fires a massive depleted uranium ferromagnetic round that provides unmatched speed, range, and damage. Its large size, recoil, and high operating costs makes it only suitable for the largest ships which are usually designed around the gun, also its damage is much lower at its maximum range. Designed by MXA-UNSC.
-			[Uses 1000mm KE]
+			<Description>The Magnetic Accelerator Cannon fires a massive depleted uranium ferromagnetic round that provides unmatched speed, range, and damage. Only suitable for the largest ships, and damage drops with range. Designed by MXA-UNSC.
+				[Uses 1000mm KE]
 			</Description>
 			<Icon>Textures\GUI\Icons\MXA_MACL.png</Icon>
 			<CubeSize>Large</CubeSize>
@@ -19,20 +19,20 @@
 			<UseModelIntersection>true</UseModelIntersection>
 			<MirroringY>Z</MirroringY>
 			<MirroringZ>Y</MirroringZ>
-            <Components>
-                <Component Subtype="SteelPlate" Count="136" />
-                <Component Subtype="Construction" Count="34" />
-                <Component Subtype="MetalGrid" Count="20" />
-                <Component Subtype="LargeTube" Count="14" />
-                <Component Subtype="Motor" Count="10" />
-                <Component Subtype="Superconductor" Count="41" />
-                <Component Subtype="PowerCell" Count="218" />
-                <Component Subtype="Computer" Count="27" />
-                <Component Subtype="SteelPlate" Count="171" />
-            </Components>
-
-            <BuildTimeSeconds>128</BuildTimeSeconds>
-            <PCU>2320</PCU>
+			<Components>
+				<Component Subtype="SteelPlate" Count="177"/>
+				<Component Subtype="Construction" Count="120"/>
+				<Component Subtype="MetalGrid" Count="53"/>
+				<Component Subtype="PowerCell" Count="18"/>
+				<Component Subtype="Superconductor" Count="35"/>
+				<Component Subtype="Motor" Count="35"/>
+				<Component Subtype="Reactor" Count="44"/>
+				<Component Subtype="Computer" Count="133"/>
+				<Component Subtype="Construction" Count="97"/>
+				<Component Subtype="SteelPlate" Count="266"/>
+			</Components>
+			<BuildTimeSeconds>160</BuildTimeSeconds>
+			<PCU>2600</PCU>
 			<CriticalComponent Subtype="Computer" Index="0"/>
 			<EdgeType>Light</EdgeType>
 			<WeaponDefinitionId Subtype="Ballistics_MAC"/>

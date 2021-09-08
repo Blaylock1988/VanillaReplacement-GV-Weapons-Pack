@@ -46,7 +46,7 @@ namespace WeaponThread
             Targeting = new TargetingDef
             {
                 Threats = new[] {
-                    Grids, Characters, Projectiles, 
+                    Projectiles, Characters, Grids, 
                 },
                 SubSystems = new[] {
                     Any,

@@ -26,7 +26,7 @@ namespace WeaponThread
             HybridRound = false, //AmmoMagazine based weapon with energy cost
             EnergyCost = 0f, //(((EnergyCost * DefaultDamage) * ShotsPerSecond) * BarrelsPerShot) * ShotsPerBarrel
             BaseDamage = 150f,
-            Mass = 10f, // in kilograms
+            Mass = 5f, // in kilograms
             Health = 0, // 0 = disabled, otherwise how much damage it can take from other trajectiles before dying.
             BackKickForce = 300f,
             DecayPerShot = 0f,
@@ -57,7 +57,7 @@ namespace WeaponThread
                 MaxIntegrity = 0f, // 0 = disabled, 1000 = any blocks with currently integrity above 1000 will be immune to damage.
                 DamageVoxels = false, // true = voxels are vulnerable to this weapon
                 SelfDamage = false, // true = allow self damage.
-                HealthHitModifier = 1, // defaults to a value of 1, this setting modifies how much Health is subtracted from a projectile per hit (1 = per hit).
+                HealthHitModifier = 2, // defaults to a value of 1, this setting modifies how much Health is subtracted from a projectile per hit (1 = per hit).
                 VoxelHitModifier = -1,
                 // modifier values: -1 = disabled (higher performance), 0 = no damage, 0.01 = 1% damage, 2 = 200% damage.
                 Characters = 0.2f,
@@ -83,24 +83,6 @@ namespace WeaponThread
                     Modifier = -1f,
                     Type = Kinetic,
                     BypassModifier = -1f,
-                },
-                // first true/false (ignoreOthers) will cause projectiles to pass through all blocks that do not match the custom subtypeIds.
-                Custom = new CustomScalesDef
-                {
-                    IgnoreAllOthers = false,
-                    Types = new[]
-                        {
-                            new CustomBlocksDef
-                            {
-                                SubTypeId = "Test1",
-                                Modifier = -1f,
-                            },
-                            new CustomBlocksDef
-                            {
-                                SubTypeId = "Test2",
-                                Modifier = -1f,
-                            },
-                        },
                 },
             },
             AreaEffect = new AreaDamageDef

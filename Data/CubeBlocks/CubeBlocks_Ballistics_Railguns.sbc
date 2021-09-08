@@ -9,27 +9,27 @@
 			<DisplayName>[Railgun] Apollo</DisplayName>
 			<Icon>Textures\GUI\Icons\AWERailgunTurret.dds</Icon>
 			<Description>A turreted version of the Artemis railgun, the Apollo shines with its high accuracy at medium to long range, but its slow firing rate and rotation speed, and limited elevation arc leaves makes the weapon suffer drastically at close range. Designed by ARYX Weapon Enterprises.
-			[Uses 200mm SABOT]</Description>
+				[Uses 200mm SABOT]</Description>
 			<CubeSize>Large</CubeSize>
 			<GuiVisible>true</GuiVisible>
 			<BlockTopology>TriangleMesh</BlockTopology>
 			<Size x="3" y="2" z="5"/>
 			<ModelOffset x="0" y="0" z="0"/>
 			<Model>Models\AWERailTurret\LG_ARYXRailgunTurret_Base.mwm</Model>
-            <Components>
-                <Component Subtype="SteelPlate" Count="156" />
-                <Component Subtype="Construction" Count="105" />
-                <Component Subtype="MetalGrid" Count="47" />
-                <Component Subtype="PowerCell" Count="16" />
-                <Component Subtype="Superconductor" Count="31" />
-                <Component Subtype="SmallTube" Count="97" />
-                <Component Subtype="Motor" Count="156" />
-                <Component Subtype="Computer" Count="117" />
-                <Component Subtype="Construction" Count="86" />
-                <Component Subtype="SteelPlate" Count="233" />
-            </Components>
-            <BuildTimeSeconds>156</BuildTimeSeconds>
-            <PCU>2490</PCU>
+			<Components>
+				<Component Subtype="SteelPlate" Count="217"/>
+				<Component Subtype="Construction" Count="146"/>
+				<Component Subtype="MetalGrid" Count="65"/>
+				<Component Subtype="PowerCell" Count="22"/>
+				<Component Subtype="Superconductor" Count="43"/>
+				<Component Subtype="Motor" Count="43"/>
+				<Component Subtype="Reactor" Count="54"/>
+				<Component Subtype="Computer" Count="163"/>
+				<Component Subtype="Construction" Count="119"/>
+				<Component Subtype="SteelPlate" Count="326"/>
+			</Components>
+			<BuildTimeSeconds>196</BuildTimeSeconds>
+			<PCU>2830</PCU>
 			<CriticalComponent Subtype="Computer" Index="0"/>
 			<MountPoints>
 				<MountPoint Side="Bottom" StartX="1.0" StartY="1.0" EndX="2.0" EndY="4.0"/>
@@ -57,7 +57,7 @@
 			</Id>
 			<DisplayName>[Railgun] Artemis</DisplayName>
 			<Description>The Artemis railgun has a higher damage than the 155mm Field Gun but has a high energy use, and slower fire rate. Great for long-range manual fire support, or use on precision strike craft for disabling hardpoints on large targets in the hands of an extremely skilled pilot. Designed by ARYX Weapon Enterprises.
-			[Uses 250mm SABOT]</Description>
+				[Uses 250mm SABOT]</Description>
 			<Icon>Textures\GUI\Icons\AWERailgun.dds</Icon>
 			<GuiVisible>true</GuiVisible>
 			<CubeSize>Large</CubeSize>
@@ -66,20 +66,20 @@
 			<Center x="0" y="0" z="4"/>
 			<ModelOffset x="0" y="0" z="0"/>
 			<Model>Models\AWERailgun\LG_Railgun.mwm</Model>
-            <Components>
-                <Component Subtype="SteelPlate" Count="78" />
-                <Component Subtype="Construction" Count="56" />
-                <Component Subtype="MetalGrid" Count="16" />
-                <Component Subtype="PowerCell" Count="13" />
-                <Component Subtype="Superconductor" Count="25" />
-                <Component Subtype="SmallTube" Count="47" />
-                <Component Subtype="Motor" Count="47" />
-                <Component Subtype="Computer" Count="63" />
-                <Component Subtype="Construction" Count="38" />
-                <Component Subtype="SteelPlate" Count="78" />
-            </Components>
-            <BuildTimeSeconds>64</BuildTimeSeconds>
-            <PCU>1680</PCU>
+			<Components>
+				<Component Subtype="SteelPlate" Count="89"/>
+				<Component Subtype="Construction" Count="60"/>
+				<Component Subtype="MetalGrid" Count="27"/>
+				<Component Subtype="PowerCell" Count="9"/>
+				<Component Subtype="Superconductor" Count="18"/>
+				<Component Subtype="Motor" Count="18"/>
+				<Component Subtype="Reactor" Count="22"/>
+				<Component Subtype="Computer" Count="66"/>
+				<Component Subtype="Construction" Count="49"/>
+				<Component Subtype="SteelPlate" Count="133"/>
+			</Components>
+			<BuildTimeSeconds>80</BuildTimeSeconds>
+			<PCU>1820</PCU>
 			<CriticalComponent Subtype="Computer" Index="0"/>
 			<MountPoints>
 				<MountPoint Side="Back" StartX="0.0" StartY="0.0" EndX="1.0" EndY="1.0"/>

@@ -9,26 +9,24 @@
 			<DisplayName>[Flak] Large Riptide Turret</DisplayName>
 			<Icon>Textures\GUI\Icons\AryxRiptideFlak.dds</Icon>
 			<Description>Riptide delivers proximity-fused explosive shells. Used en-mass can provide an effective anti-strike and anti-missile screen, but yields poor damage against armoured targets. Designed by ARYX Weapon Enterprises.
-			[Uses 100mm HE]</Description>
+				[Uses 100mm HE]</Description>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
 			<Size x="1" y="1" z="1"/>
 			<ModelOffset x="0" y="0" z="0"/>
 			<Model>Models\Flak\LG_ARYX_FlakBase.mwm</Model>
-            <Components>
-                <Component Subtype="SteelPlate" Count="64" />
-                <Component Subtype="Construction" Count="14" />
-                <Component Subtype="MetalGrid" Count="8" />
-                <Component Subtype="SmallTube" Count="14" />
-                <Component Subtype="Motor" Count="14" />
-                <Component Subtype="Computer" Count="20" />
-                <Component Subtype="SteelPlate" Count="22" />
-            </Components>
-
-
-
-            <BuildTimeSeconds>29</BuildTimeSeconds>
-            <PCU>1620</PCU>
+			<Components>
+				<Component Subtype="SteelPlate" Count="17"/>
+				<Component Subtype="Construction" Count="83"/>
+				<Component Subtype="SmallTube" Count="20"/>
+				<Component Subtype="Motor" Count="27"/>
+				<Component Subtype="Computer" Count="33"/>
+				<Component Subtype="MetalGrid" Count="50"/>
+				<Component Subtype="Construction" Count="17"/>
+				<Component Subtype="SteelPlate" Count="50"/>
+			</Components>
+			<BuildTimeSeconds>36</BuildTimeSeconds>
+			<PCU>1680</PCU>
 			<CriticalComponent Subtype="Computer" Index="0"/>
 			<MountPoints>
 				<MountPoint Side="Bottom" StartX="0.0" StartY="0.0" EndX="1.0" EndY="1.0"/>
@@ -59,26 +57,23 @@
 			<DisplayName>[Flak] Small Riptide Turret</DisplayName>
 			<Icon>Textures\GUI\Icons\AryxRiptideFlak.dds</Icon>
 			<Description>Riptide delivers proximity-fused explosive shells. Used en-mass can provide an effective anti-strike and anti-missile screen, but yields poor damage against armoured targets. Designed by ARYX Weapon Enterprises.
-			[Uses 100mm HE]</Description>
+				[Uses 100mm HE]</Description>
 			<CubeSize>Small</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
 			<Size x="5" y="5" z="5"/>
 			<ModelOffset x="0" y="0" z="0"/>
 			<Model>Models\Flak\LG_ARYX_FlakBase.mwm</Model>
-            <Components>
-                <Component Subtype="SteelPlate" Count="64" />
-                <Component Subtype="Construction" Count="14" />
-                <Component Subtype="MetalGrid" Count="8" />
-                <Component Subtype="SmallTube" Count="14" />
-                <Component Subtype="Motor" Count="14" />
-                <Component Subtype="Computer" Count="20" />
-                <Component Subtype="SteelPlate" Count="22" />
-            </Components>
-
-
-
-            <BuildTimeSeconds>29</BuildTimeSeconds>
-            <PCU>1620</PCU>
+			<Components>
+				<Component Subtype="SteelPlate" Count="64"/>
+				<Component Subtype="Construction" Count="14"/>
+				<Component Subtype="MetalGrid" Count="8"/>
+				<Component Subtype="SmallTube" Count="14"/>
+				<Component Subtype="Motor" Count="14"/>
+				<Component Subtype="Computer" Count="20"/>
+				<Component Subtype="SteelPlate" Count="22"/>
+			</Components>
+			<BuildTimeSeconds>29</BuildTimeSeconds>
+			<PCU>1620</PCU>
 			<CriticalComponent Subtype="Computer" Index="0"/>
 			<MountPoints>
 				<MountPoint Side="Bottom" StartX="0.0" StartY="0.0" EndX="5.0" EndY="5.0"/>

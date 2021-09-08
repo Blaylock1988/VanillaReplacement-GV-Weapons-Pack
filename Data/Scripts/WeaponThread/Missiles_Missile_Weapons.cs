@@ -26,10 +26,10 @@ namespace WeaponThread
 			ClosestFirst = true, // tries to pick closest targets first (blocks on grids, projectiles, etc...).
 			IgnoreDumbProjectiles = true, // Don't fire at non-smart projectiles.
 			LockedSmartOnly = false, // Only fire at smart projectiles that are locked on to parent grid.
-			MinimumDiameter = 1, // 0 = unlimited, Minimum radius of threat to engage.
+			MinimumDiameter = 0, // 0 = unlimited, Minimum radius of threat to engage.
 			MaximumDiameter = 0, // 0 = unlimited, Maximum radius of threat to engage.
 			MaxTargetDistance = 3500, // 0 = unlimited, Maximum target distance that targets will be automatically shot at.
-			MinTargetDistance = 10, // 0 = unlimited, Min target distance that targets will be automatically shot at.
+			MinTargetDistance = 0, // 0 = unlimited, Min target distance that targets will be automatically shot at.
 			TopTargets = 5, // 0 = unlimited, max number of top targets to randomize between.
 			TopBlocks = 5, // 0 = unlimited, max number of blocks to randomize between
 			StopTrackingSpeed = 0, // do not track target threats traveling faster than this speed
@@ -140,7 +140,7 @@ namespace WeaponThread
 
 				Ui = Common_Weapons_Hardpoint_Ui_FullDisable,
 				
-                Ai = Common_Weapons_Hardpoint_Ai_BasicFixed_Tracking, //Common_Weapons_Hardpoint_Ai_BasicTurret_LockOn
+                Ai = Common_Weapons_Hardpoint_Ai_BasicTurret_LockOn, //Common_Weapons_Hardpoint_Ai_BasicTurret_LockOn, Common_Weapons_Hardpoint_Ai_BasicFixed_Tracking
 				
                 HardWare = new HardwareDef
                 {

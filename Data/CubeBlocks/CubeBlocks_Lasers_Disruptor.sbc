@@ -10,7 +10,7 @@
 			<DisplayName>[JumpNull] Large ISUE Turret</DisplayName>
 			<Icon>Textures\Icons\MD_Discharge.dds</Icon>
 			<Description>An Ionizing Single-Event Upset (ISEU) projector laser that will temporarily disable the Jump Drives at short range. Designed by AutoMcD Manufacturing.
-			[Uses JD Disruptor Cell]</Description>
+				[Uses JD Disruptor Cell]</Description>
 			<CubeSize>Large</CubeSize>
 			<PlaceDecals>false</PlaceDecals>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -20,20 +20,20 @@
 			<GuiVisible>true</GuiVisible>
 			<Model>Models\MD_Discharge\MD_Discharge.mwm</Model>
 			<UseModelIntersection>true</UseModelIntersection>
-            <Components>
-                <Component Subtype="SteelPlate" Count="12" />
-                <Component Subtype="GravityGenerator" Count="2" />
-                <Component Subtype="Superconductor" Count="12" />
-                <Component Subtype="Reactor" Count="72" />
-                <Component Subtype="Thrust" Count="72" />
-                <Component Subtype="Motor" Count="24" />
-                <Component Subtype="Computer" Count="24" />
-                <Component Subtype="Construction" Count="24" />
-                <Component Subtype="SteelPlate" Count="48" />
-            </Components>
-
-            <BuildTimeSeconds>36</BuildTimeSeconds>
-            <PCU>3290</PCU>
+			<Components>
+				<Component Subtype="SteelPlate" Count="11"/>
+				<Component Subtype="Lens" Count="23"/>
+				<Component Subtype="GravityGenerator" Count="2"/>
+				<Component Subtype="Superconductor" Count="11"/>
+				<Component Subtype="Reactor" Count="69"/>
+				<Component Subtype="Thrust" Count="69"/>
+				<Component Subtype="Motor" Count="23"/>
+				<Component Subtype="Computer" Count="23"/>
+				<Component Subtype="Construction" Count="23"/>
+				<Component Subtype="SteelPlate" Count="46"/>
+			</Components>
+			<BuildTimeSeconds>36</BuildTimeSeconds>
+			<PCU>780</PCU>
 			<CriticalComponent Subtype="Computer" Index="0"/>
 			<MountPoints>
 				<MountPoint Side="Bottom" StartX="0.11" StartY="0.11" EndX="0.89" EndY="0.89"/>
@@ -97,7 +97,7 @@
 			<DisplayName>[JumpNull] Small ISEU Turret</DisplayName>
 			<Icon>Textures\Icons\MD_Discharge.dds</Icon>
 			<Description>An Ionizing Single-Event Upset (ISEU) projector laser that will temporarily disable the Jump Drives at short range. Designed by AutoMcD Manufacturing.
-			[Uses JD Disruptor Cell]</Description>
+				[Uses JD Disruptor Cell]</Description>
 			<CubeSize>Small</CubeSize>
 			<PlaceDecals>false</PlaceDecals>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -107,20 +107,20 @@
 			<GuiVisible>true</GuiVisible>
 			<Model>Models\MD_Discharge\MD_Discharge.mwm</Model>
 			<UseModelIntersection>true</UseModelIntersection>
-            <Components>
-                <Component Subtype="SteelPlate" Count="13" />
-                <Component Subtype="GravityGenerator" Count="4" />
-                <Component Subtype="Superconductor" Count="13" />
-                <Component Subtype="Reactor" Count="64" />
-                <Component Subtype="Thrust" Count="64" />
-                <Component Subtype="Motor" Count="21" />
-                <Component Subtype="Computer" Count="21" />
-                <Component Subtype="Construction" Count="21" />
-                <Component Subtype="SteelPlate" Count="43" />
-            </Components>
-
-            <BuildTimeSeconds>36</BuildTimeSeconds>
-            <PCU>3290</PCU>
+			<Components>
+				<Component Subtype="SteelPlate" Count="11"/>
+				<Component Subtype="Lens" Count="23"/>
+				<Component Subtype="GravityGenerator" Count="2"/>
+				<Component Subtype="Superconductor" Count="11"/>
+				<Component Subtype="Reactor" Count="69"/>
+				<Component Subtype="Thrust" Count="69"/>
+				<Component Subtype="Motor" Count="23"/>
+				<Component Subtype="Computer" Count="23"/>
+				<Component Subtype="Construction" Count="23"/>
+				<Component Subtype="SteelPlate" Count="46"/>
+			</Components>
+			<BuildTimeSeconds>36</BuildTimeSeconds>
+			<PCU>780</PCU>
 			<CriticalComponent Subtype="Computer" Index="0"/>
 			<MountPoints>
 				<MountPoint Side="Bottom" StartX="0.38" StartY="0.38" EndX="4.62" EndY="4.62"/>

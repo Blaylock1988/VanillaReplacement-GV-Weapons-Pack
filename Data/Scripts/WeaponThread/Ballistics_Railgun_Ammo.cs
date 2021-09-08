@@ -9,6 +9,8 @@ using static WeaponThread.WeaponStructure.WeaponDefinition.AmmoDef.TrajectoryDef
 using static WeaponThread.WeaponStructure.WeaponDefinition.AmmoDef.DamageScaleDef;
 using static WeaponThread.WeaponStructure.WeaponDefinition.AmmoDef.DamageScaleDef.ShieldDef.ShieldType;
 using static WeaponThread.WeaponStructure.WeaponDefinition.AmmoDef.AreaDamageDef;
+using static WeaponThread.WeaponStructure.WeaponDefinition.AmmoDef.AreaDamageDef.EwarFieldsDef;
+using static WeaponThread.WeaponStructure.WeaponDefinition.AmmoDef.AreaDamageDef.EwarFieldsDef.PushPullDef.Force;
 using static WeaponThread.WeaponStructure.WeaponDefinition.AmmoDef.AreaDamageDef.AreaEffectType;
 using static WeaponThread.WeaponStructure.WeaponDefinition.AmmoDef.GraphicDef.LineDef;
 using static WeaponThread.WeaponStructure.WeaponDefinition.AmmoDef.GraphicDef.LineDef.Texture;
@@ -33,7 +35,7 @@ namespace WeaponThread
             Shape = new ShapeDef //defines the collision shape of projectile, defaults line and visual Line Length if set to 0
             {
                 Shape = LineShape,
-                Diameter = 3,
+                Diameter = 5,
             },
             Shrapnel = new ShrapnelDef
             {
@@ -74,24 +76,9 @@ namespace WeaponThread
                     Type = Kinetic,
                     BypassModifier = -1f,
                 },
-                // first true/false (ignoreOthers) will cause projectiles to pass through all blocks that do not match the custom subtypeIds.
-                Custom = new CustomScalesDef
-                {
-                    IgnoreAllOthers = false,
-                    Types = new[]
-                    {
-                        new CustomBlocksDef
-                        {
-                            SubTypeId = "Test1",
-                            Modifier = -1f,
-                        },
-                        new CustomBlocksDef
-                        {
-                            SubTypeId = "Test2",
-                            Modifier = -1f,
-                        },
-                    },
-                },
+
+                Custom = Common_Ammos_DamageScales_Custom_Cockpits,
+
             },
             AreaEffect = new AreaDamageDef
             {
@@ -123,8 +110,8 @@ namespace WeaponThread
                 MaxTrajectory = 4000,
                 FieldTime = 0, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
                 GravityMultiplier = 0f, // Gravity multiplier, influences the trajectory of the projectile, value greater than 0 to enable.
-                SpeedVariance = Random(start: 0, end: 0), // subtracts value from DesiredSpeed
-                RangeVariance = Random(start: 0, end: 0), // subtracts value from MaxTrajectory
+                SpeedVariance = Random(start: 0, end: 100), // subtracts value from DesiredSpeed
+                RangeVariance = Random(start: 0, end: 200), // subtracts value from MaxTrajectory
                 MaxTrajectoryTime = 0, // How long the weapon must fire before it reaches MaxTrajectory.
             },
             AmmoGraphics = new GraphicDef

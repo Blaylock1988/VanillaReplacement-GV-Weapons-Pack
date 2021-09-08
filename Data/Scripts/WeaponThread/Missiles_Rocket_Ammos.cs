@@ -92,7 +92,7 @@ namespace WeaponThread
 					ArmOnlyOnHit = false,
 					DetonationDamage = 0,
 					DetonationRadius = 0,
-					MinArmingTime = 10, //Min time in ticks before projectile will arm for detonation (will also affect shrapnel spawning)
+					MinArmingTime = 30, //Min time in ticks before projectile will arm for detonation (will also affect shrapnel spawning)
 				},
 			},
 			Trajectory = new TrajectoryDef

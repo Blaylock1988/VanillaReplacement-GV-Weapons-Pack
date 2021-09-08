@@ -45,7 +45,7 @@ namespace WeaponThread
                 Fragments = 1,
                 Degrees = 0,
                 Reverse = false,
-                RandomizeDir = true, // randomize between forward and backward directions
+                RandomizeDir = false, // randomize between forward and backward directions
             },
             DamageScales = new DamageScaleDef
             {
@@ -86,7 +86,7 @@ namespace WeaponThread
                 Base = new AreaInfluence
                 {
                     Radius = 1000f, // the sphere of influence of area effects
-                    EffectStrength = 1000f, // For ewar it applies this amount per pulse/hit, non-ewar applies this as damage per tick per entity in area of influence. For radiant 0 == use spillover from BaseDamage, otherwise use this value.
+                    EffectStrength = 100f, // For ewar it applies this amount per pulse/hit, non-ewar applies this as damage per tick per entity in area of influence. For radiant 0 == use spillover from BaseDamage, otherwise use this value.
                 },                
                 Detonation = new DetonateDef
                 {

@@ -10,7 +10,7 @@
 			<Blocks>
 				<Block Type="MyObjectBuilder_SmallGatlingGun" Subtype=""/>
 				<Block Type="MyObjectBuilder_LargeGatlingTurret" Subtype="SmallGatlingTurret"/>
-				<Block Type="MyObjectBuilder_LargeGatlingTurret" Subtype="SmallGatlingTurretAutoGatling"/>
+				<Block Type="MyObjectBuilder_LargeGatlingTurret" Subtype="SmallGatlingGun_Gimbal"/>
 				<Block Type="MyObjectBuilder_LargeGatlingTurret" Subtype=""/>
 			</Blocks>
 		</BlockVariantGroup>

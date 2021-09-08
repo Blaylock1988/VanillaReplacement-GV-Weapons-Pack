@@ -44,7 +44,7 @@ namespace WeaponThread
                 AmmoRound = "Missiles_Torpedo_Shrapnel",
                 Fragments = 1,
                 Degrees = 0,
-                Reverse = true,
+                Reverse = false,
                 RandomizeDir = false, // randomzie between forward and backward directions
             },
             DamageScales = new DamageScaleDef
@@ -78,24 +78,6 @@ namespace WeaponThread
                     Modifier = -1f,
                     Type = Energy,
                     BypassModifier = -1f,
-                },
-                // first true/false (ignoreOthers) will cause projectiles to pass through all blocks that do not match the custom subtypeIds.
-                Custom = new CustomScalesDef
-                {
-                    IgnoreAllOthers = false,
-                    Types = new[]
-                    {
-                        new CustomBlocksDef
-                        {
-                            SubTypeId = "Test1",
-                            Modifier = -1f,
-                        },
-                        new CustomBlocksDef
-                        {
-                            SubTypeId = "Test2",
-                            Modifier = -1f,
-                        },
-                    },
                 },
             },
             AreaEffect = new AreaDamageDef
@@ -134,8 +116,8 @@ namespace WeaponThread
                 MaxLifeTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 AccelPerSec = 25f,
                 DesiredSpeed = 350,
-                MaxTrajectory = 5000f,
-                FieldTime = 30, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
+                MaxTrajectory = 5500f,
+                FieldTime = 0, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
                 GravityMultiplier = 0f, // Gravity multiplier, influences the trajectory of the projectile, value greater than 0 to enable.
                 SpeedVariance = Random(start: 0, end: 15), // subtracts value from DesiredSpeed
                 RangeVariance = Random(start: 0, end: 0), // subtracts value from MaxTrajectory
@@ -147,7 +129,7 @@ namespace WeaponThread
                     MaxLateralThrust = .49f, // controls how sharp the trajectile may turn
                     TrackingDelay = 20, // Measured in Shape diameter units traveled.
                     MaxChaseTime = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-                    OverideTarget = false, // when set to true ammo picks its own target, does not use hardpoint's.
+                    OverideTarget = true, // when set to true ammo picks its own target, does not use hardpoint's.
                     MaxTargets = 3, // Number of targets allowed before ending, 0 = unlimited
                     NoTargetExpire = false, // Expire without ever having a target at TargetLossTime
                     Roam = true, // Roam current area after target loss

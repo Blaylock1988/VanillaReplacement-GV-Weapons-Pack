@@ -9,7 +9,7 @@
 			<DisplayName>[Interior] Anti-personnel Carbine Turret</DisplayName>
 			<Icon>Textures\GUI\Icons\Cubes\interior_turret.dds</Icon>
 			<Description>The anti-personnel turret is excellent for interior or exterior defense against attackers on-foot, but not good for much else.
-			[Uses 5.56mm KE]</Description>
+				[Uses 5.56mm KE]</Description>
 			<CubeSize>Large</CubeSize>
 			<GuiVisible>false</GuiVisible>
 			<PlaceDecals>false</PlaceDecals>
@@ -18,20 +18,17 @@
 			<ModelOffset x="0" y="0" z="0"/>
 			<Model>Models\Cubes\Large\InteriorTurret.mwm</Model>
 			<UseModelIntersection>true</UseModelIntersection>
-            <Components>
-                <Component Subtype="InteriorPlate" Count="25" />
-                <Component Subtype="Construction" Count="63" />
-                <Component Subtype="SmallTube" Count="4" />
-                <Component Subtype="Motor" Count="8" />
-                <Component Subtype="Computer" Count="21" />
-                <Component Subtype="Construction" Count="21" />
-                <Component Subtype="SteelPlate" Count="17" />
-            </Components>
-
-
-
-            <BuildTimeSeconds>14</BuildTimeSeconds>
-            <PCU>450</PCU>
+			<Components>
+				<Component Subtype="InteriorPlate" Count="29"/>
+				<Component Subtype="Construction" Count="73"/>
+				<Component Subtype="SmallTube" Count="5"/>
+				<Component Subtype="Motor" Count="10"/>
+				<Component Subtype="Computer" Count="24"/>
+				<Component Subtype="Construction" Count="24"/>
+				<Component Subtype="SteelPlate" Count="24"/>
+			</Components>
+			<BuildTimeSeconds>18</BuildTimeSeconds>
+			<PCU>520</PCU>
 			<CriticalComponent Subtype="Computer" Index="0"/>
 			<MountPoints>
 				<MountPoint Side="Bottom" StartX="0.46" StartY="0.46" EndX="0.54" EndY="0.54"/>

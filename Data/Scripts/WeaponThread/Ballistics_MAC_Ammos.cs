@@ -19,7 +19,6 @@ namespace WeaponThread
 { // Don't edit above this line
     partial class Weapons
     {
-
 		private AmmoDef Ballistics_MAC => new AmmoDef
         {
             AmmoMagazine = "Ballistics_MAC",
@@ -38,7 +37,7 @@ namespace WeaponThread
             Shape = new ShapeDef //defines the collision shape of projectile, defaults line and visual Line Length if set to 0
             {
                 Shape = LineShape,
-                Diameter = 1,
+                Diameter = 5,
             },
             ObjectsHit = new ObjectsHitDef
             {
@@ -48,23 +47,10 @@ namespace WeaponThread
             Shrapnel = new ShrapnelDef
             {
                 AmmoRound = "",//Ballistics_MAC_Shrapnel
-                Fragments = 50,
-                Degrees = 270,
+                Fragments = 0,
+                Degrees = 0,
                 Reverse = false,
                 RandomizeDir = false, // randomzie between forward and backward directions
-            },
-            Pattern = new AmmoPatternDef
-            {
-                Ammos = new[] {
-                    "",
-                },
-                Enable = false,
-                TriggerChance = 1f,
-                Random = false,
-                RandomMin = 1,
-                RandomMax = 1,
-                SkipParent = false,
-                PatternSteps = 1, // Number of Ammos activated per round, will progress in order and loop.  Ignored if Random = true.
             },
             DamageScales = new DamageScaleDef
             {
@@ -98,24 +84,9 @@ namespace WeaponThread
                     Type = Kinetic,
                     BypassModifier = -1f,
                 },
-                // first true/false (ignoreOthers) will cause projectiles to pass through all blocks that do not match the custom subtypeIds.
-                Custom = new CustomScalesDef
-                {
-                    IgnoreAllOthers = false,
-                    Types = new[]
-                    {
-                        new CustomBlocksDef
-                        {
-                            SubTypeId = "Test1",
-                            Modifier = -1f,
-                        },
-                        new CustomBlocksDef
-                        {
-                            SubTypeId = "Test2",
-                            Modifier = -1f,
-                        },
-                    },
-                },
+
+                Custom = Common_Ammos_DamageScales_Custom_Cockpits,
+
             },
             AreaEffect = new AreaDamageDef
             {
@@ -123,25 +94,7 @@ namespace WeaponThread
                 Base = new AreaInfluence
                 {
                     Radius = 5f, // the sphere of influence of area effects
-                    EffectStrength = 0f, // For ewar it applies this amount per pulse/hit, non-ewar applies this as damage per tick per entity in area of influence. For radiant 0 == use spillover from BaseDamage, otherwise use this value.
-                },
-                Pulse = new PulseDef // interval measured in game ticks (60 == 1 second), pulseChance chance (0 - 100) that an entity in field will be hit
-                {
-                    Interval = 0,
-                    PulseChance = 0,
-                    GrowTime = 0,
-                    HideModel = false,
-                    ShowParticle = false,
-                },
-                Explosions = new ExplosionDef
-                {
-                    NoVisuals = false,
-                    NoSound = false,
-                    NoShrapnel = false,
-                    NoDeformation = false,
-                    Scale = 1,
-                    CustomParticle = "",
-                    CustomSound = "",
+                    EffectStrength = 1000f, // For ewar it applies this amount per pulse/hit, non-ewar applies this as damage per tick per entity in area of influence. For radiant 0 == use spillover from BaseDamage, otherwise use this value.
                 },
                 Detonation = new DetonateDef
                 {
@@ -160,7 +113,7 @@ namespace WeaponThread
                 MaxLifeTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 AccelPerSec = 0f,
                 DesiredSpeed = 2000f,
-                MaxTrajectory = 5000f,
+                MaxTrajectory = 5500f,
                 FieldTime = 0, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
                 GravityMultiplier = 0f, // Gravity multiplier, influences the trajectory of the projectile, value greater than 0 to enable.
                 SpeedVariance = Random(start: 0, end: 200), // subtracts value from DesiredSpeed

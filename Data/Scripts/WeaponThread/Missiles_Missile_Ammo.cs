@@ -121,15 +121,15 @@ namespace WeaponThread
                     Inaccuracy = 0f, // 0 is perfect, hit accuracy will be a random num of meters between 0 and this value.
                     Aggressiveness = 3f, // controls how responsive tracking is.
                     MaxLateralThrust = 0.5f, // controls how sharp the trajectile may turn
-                    TrackingDelay = 30, // Measured in Shape diameter units traveled.
+                    TrackingDelay = 40, // Measured in Shape diameter units traveled.
                     MaxChaseTime = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     OverideTarget = true, // when set to true ammo picks its own target, does not use hardpoint's.
                     MaxTargets = 2, // Number of targets allowed before ending, 0 = unlimited
                     NoTargetExpire = false, // Expire without ever having a target at TargetLossTime
-					OffsetRatio = 0.4f, // The ratio to offset the random dir (0 to 1) 
+					OffsetRatio = 0.45f, // The ratio to offset the random dir (0 to 1) 
 					OffsetTime = 15, // how often to offset degree, measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-                    Roam = true, // Roam current area after target loss
-                    KeepAliveAfterTargetLoss = true, // Whether to stop early death of projectile on target loss
+                    Roam = false, // Roam current area after target loss
+                    KeepAliveAfterTargetLoss = false, // Whether to stop early death of projectile on target loss
                 },
             },
             AmmoGraphics = new GraphicDef

@@ -8,7 +8,7 @@
 			</Id>
 			<DisplayName>[Torpedo] Shiva Launcher Pod</DisplayName>
 			<Description>The Shiva-class Torpedo is matched only by the Mk-IX MAC in range, however this fire-and-forget torpedo can deliver a powerful EMP warhead on-target with no range penaulty, with an explosion so large it can be seen from low orbit. Designed by MXA-UNSC.
-			[Uses Shiva EMP]</Description>
+				[Uses Shiva EMP]</Description>
 			<Icon>Textures\GUI\Icons\MXA_Shiva.png</Icon>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -17,20 +17,19 @@
 			<Model>Models\Missiles\MXA_Shiva.mwm</Model>
 			<MirroringY>Z</MirroringY>
 			<MirroringZ>Y</MirroringZ>
-            <Components>
-                <Component Subtype="SteelPlate" Count="77" />
-                <Component Subtype="Construction" Count="153" />
-                <Component Subtype="MetalGrid" Count="8" />
-                <Component Subtype="LargeTube" Count="1" />
-                <Component Subtype="Motor" Count="38" />
-                <Component Subtype="Computer" Count="115" />
-                <Component Subtype="Superconductor" Count="11" />
-                <Component Subtype="Construction" Count="38" />
-                <Component Subtype="SteelPlate" Count="19" />
-            </Components>
-
-            <BuildTimeSeconds>49</BuildTimeSeconds>
-            <PCU>3250</PCU>
+			<Components>
+				<Component Subtype="SteelPlate" Count="95"/>
+				<Component Subtype="Construction" Count="47"/>
+				<Component Subtype="MetalGrid" Count="9"/>
+				<Component Subtype="LargeTube" Count="5"/>
+				<Component Subtype="Motor" Count="47"/>
+				<Component Subtype="InteriorPlate" Count="6"/>
+				<Component Subtype="Computer" Count="95"/>
+				<Component Subtype="Construction" Count="47"/>
+				<Component Subtype="SteelPlate" Count="24"/>
+			</Components>
+			<BuildTimeSeconds>49</BuildTimeSeconds>
+			<PCU>3250</PCU>
 			<CriticalComponent Subtype="Computer" Index="0"/>
 			<EdgeType>Light</EdgeType>
 			<WeaponDefinitionId Subtype="Missiles_Torpedo"/>

@@ -8,6 +8,9 @@ using static WeaponThread.WeaponStructure.WeaponDefinition.HardPointDef.Hardware
 using static WeaponThread.WeaponStructure.WeaponDefinition.HardPointDef.Prediction;
 using static WeaponThread.WeaponStructure.WeaponDefinition.TargetingDef.BlockTypes;
 using static WeaponThread.WeaponStructure.WeaponDefinition.TargetingDef.Threat;
+using static WeaponThread.WeaponStructure.WeaponDefinition.AmmoDef;
+using static WeaponThread.WeaponStructure.WeaponDefinition.AmmoDef.DamageScaleDef;
+using static WeaponThread.WeaponStructure.WeaponDefinition.AmmoDef.DamageScaleDef.ShieldDef.ShieldType;
 
 namespace WeaponThread
 {
@@ -118,5 +121,76 @@ namespace WeaponThread
 			CheckForAnyWeapon = true, // if true, the check will fail if ANY gun is present, false only looks for this subtype
 		};
 
+		private CustomScalesDef Common_Ammos_DamageScales_Custom_Cockpits = new CustomScalesDef {
+			IgnoreAllOthers = false, //pass through everything else
+			Types = new[]
+			{
+				new CustomBlocksDef
+				{
+					SubTypeId = "LargeBlockCockpit",
+					Modifier = 0.1f,
+				},
+				new CustomBlocksDef
+				{
+					SubTypeId = "LargeBlockCockpitSeat",
+					Modifier = 0.1f,
+				},
+				new CustomBlocksDef
+				{
+					SubTypeId = "SmallBlockCockpit",
+					Modifier = 0.1f,
+				},
+				new CustomBlocksDef
+				{
+					SubTypeId = "DBSmallBlockFighterCockpit",
+					Modifier = 0.1f,
+				},
+				new CustomBlocksDef
+				{
+					SubTypeId = "CockpitOpen",
+					Modifier = 0.1f,
+				},
+				new CustomBlocksDef
+				{
+					SubTypeId = "RoverCockpit",
+					Modifier = 0.1f,
+				},
+				new CustomBlocksDef
+				{
+					SubTypeId = "OpenCockpitSmall",
+					Modifier = 0.1f,
+				},
+				new CustomBlocksDef
+				{
+					SubTypeId = "OpenCockpitLarge",
+					Modifier = 0.1f,
+				},
+				new CustomBlocksDef
+				{
+					SubTypeId = "SmallBlockCockpitIndustrial",
+					Modifier = 0.1f,
+				},
+				new CustomBlocksDef
+				{
+					SubTypeId = "LargeBlockCockpitIndustrial",
+					Modifier = 0.1f,
+				},
+				new CustomBlocksDef
+				{
+					SubTypeId = "BuggyCockpit",
+					Modifier = 0.1f,
+				},
+				new CustomBlocksDef
+				{
+					SubTypeId = "RivalAIRemoteControlLarge",
+					Modifier = 0.1f,
+				},
+				new CustomBlocksDef
+				{
+					SubTypeId = "RivalAIRemoteControlSmall",
+					Modifier = 0.1f,
+				},
+			},
+		};
     }
 }

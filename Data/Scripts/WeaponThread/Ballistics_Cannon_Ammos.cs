@@ -52,19 +52,6 @@ namespace WeaponThread
                 Reverse = false,
                 RandomizeDir = false, // randomize between forward and backward directions
             },
-            Pattern = new AmmoPatternDef
-            {
-                Ammos = new[] {
-                    "",
-                },
-                Enable = false,
-                TriggerChance = 1f,
-                Random = false,
-                RandomMin = 1,
-                RandomMax = 1,
-                SkipParent = false,
-                PatternSteps = 1, // Number of Ammos activated per round, will progress in order and loop.  Ignored if Random = true.
-            },
             DamageScales = new DamageScaleDef 
             {
                 //This is additional damage done and does not directly affect the speed that the ammo's health pool depletes.
@@ -183,7 +170,7 @@ namespace WeaponThread
                 MaxLifeTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 AccelPerSec = 0f,
                 DesiredSpeed = 550f, // DO NOT SET HIGHER THAN 4100
-                MaxTrajectory = 3250f,
+                MaxTrajectory = 3300f,
                 FieldTime = 0, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
                 GravityMultiplier = 0f, // Gravity multiplier, influences the trajectory of the projectile, value greater than 0 to enable.
                 SpeedVariance = Random(start: 0, end: 20), // subtracts value from DesiredSpeed

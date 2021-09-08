@@ -11,6 +11,7 @@
                         SmallMissileTurret,
                         LargeMissileLauncher,
                         SmallGatlingGun,
+                        SmallGatlingGun_Gimbal,
                         LargeInteriorTurret,
                         SmallMissileLauncher,
                         SmallGatlingTurret,

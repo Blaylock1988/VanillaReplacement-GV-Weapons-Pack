@@ -20,20 +20,19 @@
 			<MirroringZ>Y</MirroringZ>
 			<MirroringX>X</MirroringX>
             <Components>
-                <Component Subtype="SteelPlate" Count="122" />
-                <Component Subtype="Construction" Count="244" />
-                <Component Subtype="MetalGrid" Count="15" />
-                <Component Subtype="LargeTube" Count="73" />
-                <Component Subtype="Motor" Count="73" />
-                <Component Subtype="Computer" Count="73" />
-                <Component Subtype="Superconductor" Count="29" />
-                <Component Subtype="Construction" Count="73" />
-                <Component Subtype="SteelPlate" Count="49" />
+                <Component Subtype="SteelPlate" Count="189" />
+                <Component Subtype="Construction" Count="95" />
+                <Component Subtype="MetalGrid" Count="19" />
+                <Component Subtype="LargeTube" Count="9" />
+                <Component Subtype="Motor" Count="95" />
+                <Component Subtype="InteriorPlate" Count="11" />
+                <Component Subtype="Computer" Count="189" />
+                <Component Subtype="Construction" Count="95" />
+                <Component Subtype="SteelPlate" Count="47" />
             </Components>
 
             <BuildTimeSeconds>99</BuildTimeSeconds>
-            <PCU>2010</PCU>
-			<CriticalComponent Subtype="Computer" Index="0"/>
+            <PCU>2010</PCU>			<CriticalComponent Subtype="Computer" Index="0"/>
 			<EdgeType>Light</EdgeType>
 			<!--<WeaponDefinitionId Subtype="Missiles_Missile"/>-->
 			<InventoryMaxVolume>0.250</InventoryMaxVolume>
@@ -82,20 +81,19 @@
 				<MountPoint Side="Left" StartX="0" StartY="0" EndX="3" EndY="3"/>
 			</MountPoints>
             <Components>
-                <Component Subtype="SmallTube" Count="85" />
-                <Component Subtype="InteriorPlate" Count="68" />
-                <Component Subtype="Construction" Count="41" />
-                <Component Subtype="LargeTube" Count="14" />
-                <Component Subtype="MetalGrid" Count="17" />
-                <Component Subtype="Motor" Count="7" />
-                <Component Subtype="Computer" Count="3" />
-                <Component Subtype="SteelPlate" Count="14" />
-                <Component Subtype="InteriorPlate" Count="17" />
+                <Component Subtype="SteelPlate" Count="37" />
+                <Component Subtype="Construction" Count="18" />
+                <Component Subtype="MetalGrid" Count="4" />
+                <Component Subtype="LargeTube" Count="2" />
+                <Component Subtype="Motor" Count="18" />
+                <Component Subtype="InteriorPlate" Count="2" />
+                <Component Subtype="Computer" Count="37" />
+                <Component Subtype="Construction" Count="18" />
+                <Component Subtype="SteelPlate" Count="9" />
             </Components>
 
             <BuildTimeSeconds>19</BuildTimeSeconds>
-            <PCU>1110</PCU>
-			<CriticalComponent Subtype="Computer" Index="0"/>
+            <PCU>1110</PCU>			<CriticalComponent Subtype="Computer" Index="0"/>
 			<BuildProgressModels>
 				<Model BuildPercentUpperBound="0.50" File="Models\Cubes\small\RocketLauncherReloadConstruction_1.mwm"/>
 				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\small\RocketLauncherReloadConstruction_2.mwm"/>

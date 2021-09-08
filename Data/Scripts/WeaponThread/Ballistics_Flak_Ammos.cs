@@ -50,7 +50,7 @@ namespace WeaponThread
                 SelfDamage = false, // true = allow self damage.
                 HealthHitModifier = 1, // defaults to a value of 1, this setting modifies how much Health is subtracted from a projectile per hit (1 = per hit).
                 VoxelHitModifier = -1,
-                Characters = -1f,
+                Characters = 0.25f,
                 FallOff = new FallOffDef
                 {
                     Distance = 0f, // Distance at which max damage begins falling off.
@@ -74,7 +74,6 @@ namespace WeaponThread
                     Type = Kinetic,
                     BypassModifier = -1f,
                 },
-                // first true/false (ignoreOthers) will cause projectiles to pass through all blocks that do not match the custom subtypeIds.
             },
             AreaEffect = new AreaDamageDef
             {
@@ -100,6 +99,7 @@ namespace WeaponThread
                     ArmOnlyOnHit = false,
                     DetonationDamage = 0,
                     DetonationRadius = 10,
+					MinArmingTime = 10,
                 },
             },
             Trajectory = new TrajectoryDef
@@ -205,7 +205,7 @@ namespace WeaponThread
                 Grids = new GridSizeDef
                 {
                     Large = -1f,
-                    Small = 0.5f,
+                    Small = -1f,
                 },
                 Armor = new ArmorDef
                 {
@@ -255,7 +255,7 @@ namespace WeaponThread
                 TargetLossTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 MaxLifeTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 AccelPerSec = 0f,
-                DesiredSpeed = 800,
+                DesiredSpeed = 850,
                 MaxTrajectory = 50f,
                 FieldTime = 0, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
                 GravityMultiplier = 0f, // Gravity multiplier, influences the trajectory of the projectile, value greater than 0 to enable.
