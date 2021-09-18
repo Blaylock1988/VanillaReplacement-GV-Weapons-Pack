@@ -97,10 +97,10 @@
 			</AmmoMagazines>
 			<ReloadTime>0</ReloadTime>
 		</Weapon>
-		<Weapon>
+		<Weapon> <!-- DO NOT USE THIS ONE, Missile200mm is hard coded and causes init errors -->
 			<Id>
 				<TypeId>WeaponDefinition</TypeId>
-				<SubtypeId>Missiles_Rocket</SubtypeId>
+				<SubtypeId>Missile200mm</SubtypeId>
 			</Id>
 			<MissileAmmoData RateOfFire="1" ShootSoundName="WepShipSmallMissileShot" ShotsInBurst="0"/>
 			<DeviateShotAngle>0</DeviateShotAngle>
@@ -108,6 +108,22 @@
 			<NoAmmoSoundName>WepShipGatlingNoAmmo</NoAmmoSoundName>
 			<AmmoMagazines>
 				<AmmoMagazine Subtype="Missile200mm"/>
+			</AmmoMagazines>
+			<ReloadTime>0</ReloadTime>
+		</Weapon>
+		<Weapon>
+			<Id>
+				<TypeId>WeaponDefinition</TypeId>
+				<SubtypeId>Missiles_Rocket</SubtypeId>
+			</Id>
+			<ProjectileAmmoData RateOfFire="1" ShootSoundName="" ShotsInBurst="1"/>
+			<ReleaseTimeAfterFire>0</ReleaseTimeAfterFire>
+			<DeviateShotAngle>0</DeviateShotAngle>
+			<MuzzleFlashLifeSpan>0</MuzzleFlashLifeSpan>
+			<NoAmmoSoundName>WepShipGatlingNoAmmo</NoAmmoSoundName>
+			<SecondarySoundName>WepShipGatlingRotation</SecondarySoundName>
+			<AmmoMagazines>
+				<AmmoMagazine Subtype="Blank"/>
 			</AmmoMagazines>
 			<ReloadTime>0</ReloadTime>
 		</Weapon>
@@ -172,7 +188,7 @@
 			<NoAmmoSoundName>WepShipGatlingNoAmmo</NoAmmoSoundName>
 			<SecondarySoundName>WepShipGatlingRotation</SecondarySoundName>
 			<AmmoMagazines>
-				<AmmoMagazine Subtype="Lasers_JumpNull"/>
+				<AmmoMagazine Subtype="Energy"/>
 			</AmmoMagazines>
 			<ReloadTime>0</ReloadTime>
 		</Weapon>

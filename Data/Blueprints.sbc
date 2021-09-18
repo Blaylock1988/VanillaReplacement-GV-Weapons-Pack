@@ -37,7 +37,7 @@
 				<SubtypeId>Ballistics_Flak</SubtypeId>
 			</Id>
 			<DisplayName>[Flak] 100mm HE x8</DisplayName>
-			<Icon>Textures\GUI\Icons\ammo\Ammo_Box.dds</Icon>
+			<Icon>Textures\GUI\Icons\ammo\AWEFlak.dds</Icon>
 			<Prerequisites>
 				<Item Amount="56" TypeId="Ingot" SubtypeId="Iron"/>
 				<Item Amount="14" TypeId="Ingot" SubtypeId="Nickel"/>
@@ -161,23 +161,6 @@
 			</Prerequisites>
 			<BaseProductionTimeInSeconds>144</BaseProductionTimeInSeconds>
 			<Result Amount="1" TypeId="AmmoMagazine" SubtypeId="Missiles_Torpedo"/>
-		</Blueprint>
-		<Blueprint>
-			<Id>
-				<TypeId>BlueprintDefinition</TypeId>
-				<SubtypeId>Lasers_JumpNull</SubtypeId>
-			</Id>
-			<DisplayName>[JumpNull] JD Disruptor Cell</DisplayName>
-			<Icon>Textures\Icons\MD_Ammo.dds</Icon>
-			<Prerequisites>
-				<Item Amount="100" TypeId="Ingot" SubtypeId="Iron"/>
-				<Item Amount="20" TypeId="Ingot" SubtypeId="Nickel"/>
-				<Item Amount="0.28" TypeId="Ingot" SubtypeId="Stalinium"/>
-				<Item Amount="60" TypeId="Ore" SubtypeId="Ice"/>
-				<Item Amount="6" TypeId="Ingot" SubtypeId="Silver"/>
-			</Prerequisites>
-			<BaseProductionTimeInSeconds>55</BaseProductionTimeInSeconds>
-			<Result Amount="1" TypeId="AmmoMagazine" SubtypeId="Lasers_JumpNull"/>
 		</Blueprint>
 		<Blueprint>
 			<Id>

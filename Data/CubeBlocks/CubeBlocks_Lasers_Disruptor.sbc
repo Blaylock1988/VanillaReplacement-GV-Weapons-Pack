@@ -1,25 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 	<CubeBlocks>
-		<!-- large JDDT -->
-		<Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
+		<!-- large JDDT Oculus -->
+		<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
 			<Id>
-				<TypeId>LargeGatlingTurret</TypeId>
+				<TypeId>ConveyorSorter</TypeId>
 				<SubtypeId>JumpDriveDisruptorTurret</SubtypeId>
 			</Id>
 			<DisplayName>[JumpNull] Large ISUE Turret</DisplayName>
-			<Icon>Textures\Icons\MD_Discharge.dds</Icon>
-			<Description>An Ionizing Single-Event Upset (ISEU) projector laser that will temporarily disable the Jump Drives at short range. Designed by AutoMcD Manufacturing.
-				[Uses JD Disruptor Cell]</Description>
+			<Description>An Ionizing Single-Event Upset (ISEU) projector laser that will temporarily disable the Jump Drives at short range. Designed by Aryx Weapon Enterprises.
+				[Uses Energy]</Description>
+			<Icon>Textures\GUI\Icons\AWEOculusPD.dds</Icon>
 			<CubeSize>Large</CubeSize>
-			<PlaceDecals>false</PlaceDecals>
 			<BlockTopology>TriangleMesh</BlockTopology>
 			<Size x="1" y="1" z="1"/>
 			<ModelOffset x="0" y="0" z="0"/>
-			<ShowEdges>false</ShowEdges>
-			<GuiVisible>true</GuiVisible>
-			<Model>Models\MD_Discharge\MD_Discharge.mwm</Model>
-			<UseModelIntersection>true</UseModelIntersection>
+			<Model>Models\AWE_Oculus\ARYXOculusLaserBase.mwm</Model>
 			<Components>
 				<Component Subtype="SteelPlate" Count="11"/>
 				<Component Subtype="Lens" Count="23"/>
@@ -36,77 +32,40 @@
 			<PCU>780</PCU>
 			<CriticalComponent Subtype="Computer" Index="0"/>
 			<MountPoints>
-				<MountPoint Side="Bottom" StartX="0.11" StartY="0.11" EndX="0.89" EndY="0.89"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
 			</MountPoints>
 			<BuildProgressModels>
-				<Model BuildPercentUpperBound="0.33" File="Models\MD_Discharge\MD_Discharge_Constr1.mwm"/>
-				<Model BuildPercentUpperBound="0.67" File="Models\MD_Discharge\MD_Discharge_Constr2.mwm"/>
-				<Model BuildPercentUpperBound="1.00" File="Models\MD_Discharge\MD_Discharge_Constr3.mwm"/>
+				<Model BuildPercentUpperBound="0.33" File="Models\AWE_Oculus\ARYXOculusLaserBase_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.67" File="Models\AWE_Oculus\ARYXOculusLaserBase_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\AWE_Oculus\ARYXOculusLaserBase_BS3.mwm"/>
 			</BuildProgressModels>
-			<VoxelPlacement>
-				<!--Possible settings Both,InVoxel,OutsideVoxel,Volumetric. If volumetric set than MaxAllowed and MinAllowed will be used.-->
-				<StaticMode>
-					<PlacementMode>OutsideVoxel</PlacementMode>
-					<MaxAllowed>0.2</MaxAllowed>
-					<MinAllowed>0</MinAllowed>
-				</StaticMode>
-				<DynamicMode>
-					<PlacementMode>OutsideVoxel</PlacementMode>
-					<MaxAllowed>0.2</MaxAllowed>
-					<MinAllowed>0.01</MinAllowed>
-				</DynamicMode>
-			</VoxelPlacement>
 			<BlockPairName>JumpDriveDisruptorTurret</BlockPairName>
 			<MirroringY>Z</MirroringY>
 			<MirroringZ>Y</MirroringZ>
 			<EdgeType>Light</EdgeType>
 			<OverlayTexture>Textures\GUI\Screens\turret_overlay.dds</OverlayTexture>
 			<WeaponDefinitionId Subtype="Lasers_JumpNull"/>
-			<InventoryMaxVolume>0.384</InventoryMaxVolume>
+			<ResourceSinkGroup>Defense</ResourceSinkGroup>
 			<DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
 			<DamagedSound>ParticleWeapExpl</DamagedSound>
-			<ResourceSinkGroup>Defense</ResourceSinkGroup>
-			<MinElevationDegrees>-5</MinElevationDegrees>
-			<MaxElevationDegrees>90</MaxElevationDegrees>
-			<MinAzimuthDegrees>-180</MinAzimuthDegrees>
-			<MaxAzimuthDegrees>180</MaxAzimuthDegrees>
-			<RotationSpeed>0.002</RotationSpeed>
-			<ElevationSpeed>0.002 </ElevationSpeed>
-			<IdleRotation>false</IdleRotation>
-			<MaxRangeMeters>1200</MaxRangeMeters>
-			<MinFov>0.1</MinFov>
-			<MaxFov>1.04719755</MaxFov>
-			<EmissiveColorPreset>Default</EmissiveColorPreset>
-			<DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+			<DestroyEffect>BlockDestroyedExplosion_Small</DestroyEffect>
 			<DestroySound>WepSmallWarheadExpl</DestroySound>
-			<IsAirTight>false</IsAirTight>
-			<AmmoPullAmountPerTick>3</AmmoPullAmountPerTick>
-			<InventoryFillFactorMin>.25</InventoryFillFactorMin>
-			<InventoryFillFactorMax>.5</InventoryFillFactorMax>
-			<TieredUpdateTimes>
-				<unsignedInt>10</unsignedInt>
-				<unsignedInt>0</unsignedInt>
-			</TieredUpdateTimes>
 		</Definition>
-		<!-- small JDDT -->
-		<Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
+		<!-- small JDDT Oculus -->
+		<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
 			<Id>
-				<TypeId>LargeGatlingTurret</TypeId>
+				<TypeId>ConveyorSorter</TypeId>
 				<SubtypeId>JumpDriveDisruptorTurretSM</SubtypeId>
 			</Id>
-			<DisplayName>[JumpNull] Small ISEU Turret</DisplayName>
-			<Icon>Textures\Icons\MD_Discharge.dds</Icon>
-			<Description>An Ionizing Single-Event Upset (ISEU) projector laser that will temporarily disable the Jump Drives at short range. Designed by AutoMcD Manufacturing.
-				[Uses JD Disruptor Cell]</Description>
+			<DisplayName>[JumpNull] Small ISUE Turret</DisplayName>
+			<Description>An Ionizing Single-Event Upset (ISEU) projector laser that will temporarily disable the Jump Drives at short range. Designed by Aryx Weapon Enterprises.
+				[Uses Energy]</Description>
+			<Icon>Textures\GUI\Icons\AWEOculusPD.dds</Icon>
 			<CubeSize>Small</CubeSize>
-			<PlaceDecals>false</PlaceDecals>
 			<BlockTopology>TriangleMesh</BlockTopology>
 			<Size x="5" y="5" z="5"/>
 			<ModelOffset x="0" y="0" z="0"/>
-			<ShowEdges>false</ShowEdges>
-			<GuiVisible>true</GuiVisible>
-			<Model>Models\MD_Discharge\MD_Discharge.mwm</Model>
-			<UseModelIntersection>true</UseModelIntersection>
+			<Model>Models\AWE_Oculus\ARYXOculusLaserBase.mwm</Model>
 			<Components>
 				<Component Subtype="SteelPlate" Count="11"/>
 				<Component Subtype="Lens" Count="23"/>
@@ -123,57 +82,24 @@
 			<PCU>780</PCU>
 			<CriticalComponent Subtype="Computer" Index="0"/>
 			<MountPoints>
-				<MountPoint Side="Bottom" StartX="0.38" StartY="0.38" EndX="4.62" EndY="4.62"/>
+				<MountPoint Side="Bottom" StartX="0" StartY="0" EndX="5" EndY="5"/>
 			</MountPoints>
 			<BuildProgressModels>
-				<Model BuildPercentUpperBound="0.33" File="Models\MD_Discharge\MD_Discharge_Constr1.mwm"/>
-				<Model BuildPercentUpperBound="0.67" File="Models\MD_Discharge\MD_Discharge_Constr2.mwm"/>
-				<Model BuildPercentUpperBound="1.00" File="Models\MD_Discharge\MD_Discharge_Constr3.mwm"/>
+				<Model BuildPercentUpperBound="0.33" File="Models\AWE_Oculus\ARYXOculusLaserBase_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.67" File="Models\AWE_Oculus\ARYXOculusLaserBase_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\AWE_Oculus\ARYXOculusLaserBase_BS3.mwm"/>
 			</BuildProgressModels>
-			<VoxelPlacement>
-				<!--Possible settings Both,InVoxel,OutsideVoxel,Volumetric. If volumetric set than MaxAllowed and MinAllowed will be used.-->
-				<StaticMode>
-					<PlacementMode>OutsideVoxel</PlacementMode>
-					<MaxAllowed>0.2</MaxAllowed>
-					<MinAllowed>0</MinAllowed>
-				</StaticMode>
-				<DynamicMode>
-					<PlacementMode>OutsideVoxel</PlacementMode>
-					<MaxAllowed>0.2</MaxAllowed>
-					<MinAllowed>0.01</MinAllowed>
-				</DynamicMode>
-			</VoxelPlacement>
 			<BlockPairName>JumpDriveDisruptorTurret</BlockPairName>
 			<MirroringY>Z</MirroringY>
 			<MirroringZ>Y</MirroringZ>
 			<EdgeType>Light</EdgeType>
 			<OverlayTexture>Textures\GUI\Screens\turret_overlay.dds</OverlayTexture>
-			<WeaponDefinitionId Subtype="JumpDriveDisruptionWeapon"/>
-			<InventoryMaxVolume>0.084</InventoryMaxVolume>
+			<WeaponDefinitionId Subtype="Lasers_JumpNull"/>
+			<ResourceSinkGroup>Defense</ResourceSinkGroup>
 			<DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
 			<DamagedSound>ParticleWeapExpl</DamagedSound>
-			<ResourceSinkGroup>Defense</ResourceSinkGroup>
-			<MinElevationDegrees>-5</MinElevationDegrees>
-			<MaxElevationDegrees>90</MaxElevationDegrees>
-			<MinAzimuthDegrees>-180</MinAzimuthDegrees>
-			<MaxAzimuthDegrees>180</MaxAzimuthDegrees>
-			<RotationSpeed>0.002</RotationSpeed>
-			<ElevationSpeed>0.002 </ElevationSpeed>
-			<IdleRotation>true</IdleRotation>
-			<MaxRangeMeters>1000</MaxRangeMeters>
-			<MinFov>0.1</MinFov>
-			<MaxFov>1.04719755</MaxFov>
-			<EmissiveColorPreset>Default</EmissiveColorPreset>
-			<DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+			<DestroyEffect>BlockDestroyedExplosion_Small</DestroyEffect>
 			<DestroySound>WepSmallWarheadExpl</DestroySound>
-			<IsAirTight>false</IsAirTight>
-			<AmmoPullAmountPerTick>3</AmmoPullAmountPerTick>
-			<InventoryFillFactorMin>.25</InventoryFillFactorMin>
-			<InventoryFillFactorMax>.5</InventoryFillFactorMax>
-			<TieredUpdateTimes>
-				<unsignedInt>10</unsignedInt>
-				<unsignedInt>0</unsignedInt>
-			</TieredUpdateTimes>
 		</Definition>
 	</CubeBlocks>
 </Definitions>
