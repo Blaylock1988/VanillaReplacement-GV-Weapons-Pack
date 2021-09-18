@@ -200,7 +200,7 @@ namespace WeaponThread
             },
 
 			Ammos = new [] {
-                Missiles_Rocket
+                Missiles_Rocket,
             },
             //Animations = AdvancedAnimation,
             // Don't edit below this line
@@ -299,7 +299,7 @@ namespace WeaponThread
             },
 
 			Ammos = new [] {
-                Missiles_Rocket
+                Missiles_Rocket,
             },
             //Animations = AdvancedAnimation,
             // Don't edit below this line
@@ -398,7 +398,7 @@ namespace WeaponThread
             },
 
 			Ammos = new [] {
-                Missiles_Rocket
+                Missiles_Rocket,
             },
             //Animations = AdvancedAnimation,
             // Don't edit below this line
@@ -482,7 +482,7 @@ namespace WeaponThread
             },
 
 			Ammos = new [] {
-                Missiles_Rocket
+                Missiles_Rocket,
             },
             //Animations = AdvancedAnimation,
             // Don't edit below this line
