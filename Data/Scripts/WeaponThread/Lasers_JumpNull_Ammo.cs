@@ -21,10 +21,10 @@ namespace WeaponThread
     {
         private AmmoDef Lasers_JumpNull => new AmmoDef //Jump Null Rounds
         {
-            AmmoMagazine = "Lasers_JumpNull",
+            AmmoMagazine = "Energy",
             AmmoRound = "Lasers_JumpNull", // Display Name for switching ammo
             HybridRound = true, //AmmoMagazine based weapon with energy cost
-            EnergyCost = 0.075f, //(((EnergyCost * DefaultDamage) * ShotsPerSecond) * BarrelsPerShot) * ShotsPerBarrel
+            EnergyCost = 0.15f, //(((EnergyCost * DefaultDamage) * ShotsPerSecond) * BarrelsPerShot) * ShotsPerBarrel
             BaseDamage = 0f,
             Mass = 0f, // in kilograms
             Health = 1, // 0 = disabled, otherwise how much damage it can take from other trajectiles before dying.
@@ -238,12 +238,12 @@ namespace WeaponThread
             Trajectory = new TrajectoryDef
             {
                 Guidance = None,
-                TargetLossDegree = 80f,
+                TargetLossDegree = 0f,
                 TargetLossTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 MaxLifeTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-                AccelPerSec = 300f,
-                DesiredSpeed = 300,
-                MaxTrajectory = 1500f,
+                AccelPerSec = 0,
+                DesiredSpeed = 0,
+                MaxTrajectory = 1650f,
                 FieldTime = 0, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
                 GravityMultiplier = 0f, // Gravity multiplier, influences the trajectory of the projectile, value greater than 0 to enable.
                 SpeedVariance = Random(start: 0, end: 0), // subtracts value from DesiredSpeed

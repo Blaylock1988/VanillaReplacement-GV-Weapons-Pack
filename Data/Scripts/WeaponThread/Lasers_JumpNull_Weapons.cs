@@ -19,30 +19,30 @@ namespace WeaponThread {
                 {
                     new MountPointDef {
                         SubtypeId = "JumpDriveDisruptorTurret",
-                        AimPartId = "",
-                        MuzzlePartId = "GatlingBarrel",
-                        AzimuthPartId = "GatlingTurretBase1",
-                        ElevationPartId = "GatlingTurretBase2",
+                        AimPartId = "None",
+                        MuzzlePartId = "MissileTurretBarrels",
+                        AzimuthPartId = "MissileTurretBase1",
+                        ElevationPartId = "MissileTurretBarrels",
 						DurabilityMod = 0.5f,
-                        IconName = ""// filter_energy.dds
+                        IconName = "filter_energy.dds"// filter_energy.dds
                     },
  
 
                     new MountPointDef {
                         SubtypeId = "JumpDriveDisruptorTurretSM",
-                        AimPartId = "",
-                        MuzzlePartId = "GatlingBarrel",
-                        AzimuthPartId = "GatlingTurretBase1",
-                        ElevationPartId = "GatlingTurretBase2",
+                        AimPartId = "None",
+                        MuzzlePartId = "MissileTurretBarrels",
+                        AzimuthPartId = "MissileTurretBase1",
+                        ElevationPartId = "MissileTurretBarrels",
 						DurabilityMod = 0.5f,
-                        IconName = ""
+                        IconName = "filter_energy.dds"
                     },				
 					
                 },				
 				
                 Barrels = new []
                 {
-                    "muzzle_projectile_001",
+                    "muzzle_projectile_1",
 					
                 },
             },
@@ -107,7 +107,7 @@ namespace WeaponThread {
                 Other = new OtherDef
                 {
                     GridWeaponCap = 0,
-                    RotateBarrelAxis = 3,
+                    RotateBarrelAxis = 0,
                     EnergyPriority = 0,
                     MuzzleCheck = false,
                     Debug = false,
@@ -152,7 +152,7 @@ namespace WeaponThread {
                     {
 						Name = "MA_laserhit_reversed",
 						Color = Color(red: 1, green: 3, blue: 5, alpha: 1),
-                        Offset = Vector(x: 0, y: 0, z: 0f),
+                        Offset = Vector(x: 0, y: 0, z: -0.25f),
 						Extras = new ParticleOptionDef
 						{
 							Loop = true,

@@ -31,7 +31,9 @@
 						MA_PDX_T2,
 						GV_JDDT,
 						ReceptorCoilGun,
-						ReceptorTurret);
+						ReceptorTurret,
+						AryxRadar,
+						AryxSmallRadar);
             
         }
     }
