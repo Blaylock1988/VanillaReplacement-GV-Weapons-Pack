@@ -6,15 +6,11 @@
         {
             //WeaponDefinition goes here.
 
-            ConfigFiles(LargeGatlingTurret,
-						LargeMissileTurret,
+            ConfigFiles(LargeMissileTurret,
                         SmallMissileTurret,
                         LargeMissileLauncher,
-                        SmallGatlingGun,
-                        SmallGatlingGun_Gimbal,
                         LargeInteriorTurret,
                         SmallMissileLauncher,
-                        SmallGatlingTurret,
 						SmallRocketLauncherReload,
 						AryxRailgunTurret, 
 						AryxFlakTurret, 

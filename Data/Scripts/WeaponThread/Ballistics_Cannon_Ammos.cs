@@ -259,14 +259,14 @@ namespace WeaponThread
                 },
                 Lines = new LineDef
                 {
-                    ColorVariance = Random(start: 0.75f, end: 2f), // multiply the color by random values within range.
-                    WidthVariance = Random(start: 0f, end: 0f), // adds random value to default width (negatives shrinks width)
+                    ColorVariance = Random(start: 0f, end: 0f), // multiply the color by random values within range.
+                    WidthVariance = Random(start: -0.25f, end: 0.25f), // adds random value to default width (negatives shrinks width)
                     Tracer = new TracerBaseDef
                     {
                         Enable = true,
-                        Length = 15f,
-                        Width = 0.3f,
-                        Color = Color(red: 60, green: 20, blue: 5, alpha: 10),
+                        Length = 20f,
+                        Width = 0.5f,
+                        Color = Color(red: 60, green: 20, blue: 5, alpha: 1),
                         VisualFadeStart = 0, // Number of ticks the weapon has been firing before projectiles begin to fade their color
                         VisualFadeEnd = 0, // How many ticks after fade began before it will be invisible.
                         Textures = new[] {// WeaponLaser, ProjectileTrailLine, WarpBubble, etc..
