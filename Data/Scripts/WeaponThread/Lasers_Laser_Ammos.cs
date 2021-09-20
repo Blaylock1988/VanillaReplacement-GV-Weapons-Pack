@@ -39,7 +39,7 @@ namespace WeaponThread
                 MaxIntegrity = 0f, // 0 = disabled, 1000 = any blocks with currently integrity above 1000 will be immune to damage.
                 DamageVoxels = false, // true = voxels are vulnerable to this weapon
                 SelfDamage = false, // true = allow self damage.
-				HealthHitModifier = 0.25f,
+				HealthHitModifier = 0.1f,
 				VoxelHitModifier = -1,
                 // modifier values: -1 = disabled (higher performance), 0 = no damage, 0.01 = 1% damage, 2 = 200% damage.
                 Characters = 0.25f,
@@ -75,9 +75,9 @@ namespace WeaponThread
             },
             Trajectory = new TrajectoryDef
             {
-                Guidance = TravelTo,
+                Guidance = None,
 				MaxTrajectory = 1650f,
-                RangeVariance = Random(start: 0, end: 20), // subtracts value from MaxTrajectory
+                RangeVariance = Random(start: 0, end: 50), // subtracts value from MaxTrajectory
 				MaxTrajectoryTime = 10, // How long the weapon must fire before it reaches MaxTrajectory.
             },
             AmmoGraphics = new GraphicDef
@@ -87,9 +87,24 @@ namespace WeaponThread
                 ShieldHitDraw = true,
                 Particles = new AmmoParticleDef
                 {
+                    Ammo = new ParticleDef
+                    {
+                        Name = "MD_BulletGlowBigBlue", //Archer_MissileSmokeTrail
+                        ShrinkByDistance = false,
+                        Color = Color(red: 1, green: 1, blue: 1, alpha: 1),
+                        Offset = Vector(x: 0, y: 0, z: 0f),
+                        Extras = new ParticleOptionDef
+                        {
+                            Loop = true,
+                            Restart = false,
+                            MaxDistance = 2000,
+                            MaxDuration = 0,
+                            Scale = 1f,
+                        },
+                    },
                     Hit = new ParticleDef
                     {
-                        Name = "Lasers_Laser_BlueHit",//LaserHitParticlesGimbal
+                        Name = "Lasers_Laser_BlueHit",//MD_BulletGlowBigBlue
                         ApplyToShield = true,
                         ShrinkByDistance = true,
                         Color = Color(red: 1, green: 1, blue: 1, alpha: 1f),
@@ -114,7 +129,7 @@ namespace WeaponThread
                     Tracer = new TracerBaseDef
                     {
                         Enable = true,
-                        Length = 1f,
+                        Length = 5f,
                         Width = .15f,
                         Color = Color(red: 2, green: 5, blue: 20, alpha: .9f),
                         VisualFadeStart = 0, // Number of ticks the weapon has been firing before projectiles begin to fade their color
@@ -216,14 +231,14 @@ namespace WeaponThread
                 Lines = new LineDef
                 {
                     TracerMaterial = "WeaponLaser", // WeaponLaser, ProjectileTrailLine, WarpBubble, etc..
-                    ColorVariance = Random(start: 0.85f, end: 1f), // multiply the color by random values within range.
-                    WidthVariance = Random(start: -.05f, end: 0f), // adds random value to default width (negatives shrinks width)
+                    ColorVariance = Random(start: 0.5f, end: 1f), // multiply the color by random values within range.
+                    WidthVariance = Random(start: -0.1f, end: 0.1f), // adds random value to default width (negatives shrinks width)
 
-                   Tracer = new TracerBaseDef
+                    Tracer = new TracerBaseDef
                     {
                         Enable = true,
-                        Length = 1f,
-                        Width = .25f,
+                        Length = 5f,
+                        Width = .4f,
                         Color = Color(red: 10, green: 1, blue: 0, alpha: .9f),
                         VisualFadeStart = 280, // Number of ticks the weapon has been firing before projectiles begin to fade their color
                         VisualFadeEnd = 300, // How many ticks after fade began before it will be invisible.
