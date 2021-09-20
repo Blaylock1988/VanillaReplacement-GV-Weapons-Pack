@@ -46,6 +46,20 @@ namespace WeaponThread
 		private HardPointParticleDef Ballistics_Cannons_Hardpoint_Graphics = new HardPointParticleDef {
 			Barrel1 = new ParticleDef
 			{
+				Name = "", // OKI_230mm_Muzzle_Flash   MXA_SmallCoilgunMuzzleFlash
+				Color = new Vector4(1f,1f,1f,1f), //RGBA
+				Offset = new Vector3D(0f,0f,1f), //XYZ
+				Extras = new ParticleOptionDef
+				{
+					Loop = false,
+					Restart = false,
+					MaxDistance = 800,
+					MaxDuration = 0,
+					Scale = 1.0f,
+				}
+			},
+			Barrel2 = new ParticleDef
+			{
 				Name = "MD_CannonMuzzleFlash", // OKI_230mm_Muzzle_Flash   MXA_SmallCoilgunMuzzleFlash
 				Color = new Vector4(1f,1f,1f,1f), //RGBA
 				Offset = new Vector3D(0f,0f,1f), //XYZ
@@ -117,7 +131,7 @@ namespace WeaponThread
 				
                 Loading = new LoadingDef
                 {
-                    RateOfFire = 40, //180 // visual only, 0 disables and uses RateOfFire
+                    RateOfFire = 80, //180 // visual only, 0 disables and uses RateOfFire
                     BarrelsPerShot = 1,
                     TrajectilesPerBarrel = 1, // Number of Trajectiles per barrel per fire event.
                     SkipBarrels = 0,
@@ -203,7 +217,7 @@ namespace WeaponThread
 				Other = Common_Weapons_Hardpoint_Other_Small,
 
                 Loading = new LoadingDef {
-                    RateOfFire = 120,
+                    RateOfFire = 60,
                     BarrelsPerShot = 1,
                     TrajectilesPerBarrel = 1, // Number of Trajectiles per barrel per fire event.
                     SkipBarrels = 0,
@@ -290,7 +304,7 @@ namespace WeaponThread
 				Other = Common_Weapons_Hardpoint_Other_Small,
 
                 Loading = new LoadingDef {
-                    RateOfFire = 120,
+                    RateOfFire = 60,
                     BarrelsPerShot = 1,
                     TrajectilesPerBarrel = 1, // Number of Trajectiles per barrel per fire event.
                     SkipBarrels = 0,
@@ -377,7 +391,7 @@ namespace WeaponThread
 				Other = Common_Weapons_Hardpoint_Other_Large,
 				
                 Loading = new LoadingDef {
-                    RateOfFire = 40,
+                    RateOfFire = 80,
                     BarrelsPerShot = 1,
                     TrajectilesPerBarrel = 1, // Number of Trajectiles per barrel per fire event.
                     SkipBarrels = 0,

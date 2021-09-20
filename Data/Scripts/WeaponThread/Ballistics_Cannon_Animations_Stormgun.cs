@@ -46,9 +46,9 @@ namespace WeaponThread
                                 new RelMove
                                 {
                                     CenterEmpty = "",//Specifiy an empty on the subpart to rotate around
-                                    TicksToMove = 35, //number of ticks to complete motion, 60 = 1 second
+                                    TicksToMove = 15, //number of ticks to complete motion, 60 = 1 second
 
-                                    MovementType = ExpoGrowth, // ExpoGrowth (speedsup),  ExpoDecay (slows down), Linear, Delay, Show, Hide
+                                    MovementType = Linear, // ExpoGrowth (speedsup),  ExpoDecay (slows down), Linear, Delay, Show, Hide
                                     //EmissiveName = "LaserEmissive",//name of defined emissive 
                                     LinearPoints = new[]
                                     {
@@ -60,7 +60,7 @@ namespace WeaponThread
                                 new RelMove
                                 {
                                     CenterEmpty = "",//Specifiy an empty on the subpart to rotate around
-                                    TicksToMove = 35, //number of ticks to complete motion, 60 = 1 second
+                                    TicksToMove = 15, //number of ticks to complete motion, 60 = 1 second
 
                                     MovementType = ExpoDecay, // ExpoGrowth (speedsup),  ExpoDecay (slows down), Linear, Delay, Show, Hide
                                     //EmissiveName = "LaserEmissive",//name of defined emissive 
@@ -74,7 +74,7 @@ namespace WeaponThread
                                 new RelMove
                                 {
                                     CenterEmpty = "",//Specifiy an empty on the subpart to rotate around
-                                    TicksToMove = 17, //number of ticks to complete motion, 60 = 1 second
+                                    TicksToMove = 12, //number of ticks to complete motion, 60 = 1 second
 
                                     MovementType = Delay, // ExpoGrowth (speedsup),  ExpoDecay (slows down), Linear, Delay, Show, Hide
                                     //EmissiveName = "LaserEmissive",//name of defined emissive 

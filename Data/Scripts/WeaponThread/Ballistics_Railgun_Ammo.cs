@@ -35,7 +35,7 @@ namespace WeaponThread
             Shape = new ShapeDef //defines the collision shape of projectile, defaults line and visual Line Length if set to 0
             {
                 Shape = LineShape,
-                Diameter = 5,
+                Diameter = 0,
             },
             Shrapnel = new ShrapnelDef
             {
@@ -106,8 +106,8 @@ namespace WeaponThread
                 TargetLossTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 MaxLifeTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 AccelPerSec = 0f,
-                DesiredSpeed = 1500,
-                MaxTrajectory = 4000,
+                DesiredSpeed = 1500, //1500
+                MaxTrajectory = 4400,
                 FieldTime = 0, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
                 GravityMultiplier = 0f, // Gravity multiplier, influences the trajectory of the projectile, value greater than 0 to enable.
                 SpeedVariance = Random(start: 0, end: 100), // subtracts value from DesiredSpeed
@@ -121,6 +121,21 @@ namespace WeaponThread
                 ShieldHitDraw = true,
                 Particles = new AmmoParticleDef
                 {
+                    Ammo = new ParticleDef
+                    {
+                        Name = "MD_BulletGlowBigBlue", //ShipWelderArc
+                        ShrinkByDistance = false,
+                        Color = Color(red: 1, green: 1, blue: 1, alpha: 1),
+                        Offset = Vector(x: 0, y: 0, z: 0),
+                        Extras = new ParticleOptionDef
+                        {
+                            Loop = true,
+                            Restart = false,
+                            MaxDistance = 2000,
+                            MaxDuration = 1,
+                            Scale = 1,
+                        },
+                    },
                     Hit = new ParticleDef
                     {
                         Name = "RailgunHitBlue",
@@ -141,18 +156,18 @@ namespace WeaponThread
                 },
                 Lines = new LineDef
                 {
-                    ColorVariance = Random(start: 0.75f, end: 2f), // multiply the color by random values within range.
-                    WidthVariance = Random(start: 0f, end: 1.025f), // adds random value to default width (negatives shrinks width)
+                    ColorVariance = Random(start: 0f, end: 0f), // multiply the color by random values within range.
+                    WidthVariance = Random(start: 0f, end: 0f), // adds random value to default width (negatives shrinks width)
                     Tracer = new TracerBaseDef
                     {
                         Enable = true,
                         Length = 50f,
-                        Width = 0.0216f,
-                        Color = Color(red: 5, green: 10, blue: 25, alpha: 1),
+                        Width = 0.01f,
+                        Color = Color(red: 11, green: 16, blue: 25, alpha: 1),
                         VisualFadeStart = 0, // Number of ticks the weapon has been firing before projectiles begin to fade their color
                         VisualFadeEnd = 0, // How many ticks after fade began before it will be invisible.
                         Textures = new[] {// WeaponLaser, ProjectileTrailLine, WarpBubble, etc..
-                            "AryxBallisticTracer",
+                            "WeaponLaser",
                         },
                         TextureMode = Normal, // Normal, Cycle, Chaos, Wave
                     },
@@ -166,15 +181,15 @@ namespace WeaponThread
                         DecayTime = 24,
                         Color = Color(red: 11, green: 16, blue: 25, alpha: 1),
                         Back = false,
-                        CustomWidth = 0.1f,
-                        UseWidthVariance = false,
+                        CustomWidth = 0.25f,
+                        UseWidthVariance = true,
                         UseColorFade = true,
                     },
                     OffsetEffect = new OffsetEffectDef
                     {
                         MaxOffset = 3,// 0 offset value disables this effect
                         MinLength = 0.2f,
-                        MaxLength = 5,
+                        MaxLength = 10,
                     },
                 },
             },

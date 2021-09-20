@@ -118,7 +118,7 @@ namespace WeaponThread
 			Debug = false,
 			RestrictionRadius = 0.5f, // Meters, radius of sphere disable this gun if another is present
 			CheckInflatedBox = true, // if true, the bounding box of the gun is expanded by the RestrictionRadius
-			CheckForAnyWeapon = true, // if true, the check will fail if ANY gun is present, false only looks for this subtype
+			CheckForAnyWeapon = false, // if true, the check will fail if ANY gun is present, false only looks for this subtype
 		};
 
 		private CustomScalesDef Common_Ammos_DamageScales_Custom_Cockpits = new CustomScalesDef {

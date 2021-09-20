@@ -25,7 +25,7 @@ namespace WeaponThread
             AmmoRound = "Ballistics_Cannon",
             HybridRound = false, //AmmoMagazine based weapon with energy cost
             EnergyCost = 0f, //(((EnergyCost * DefaultDamage) * ShotsPerSecond) * BarrelsPerShot) * ShotsPerBarrel
-            BaseDamage = 6000f,
+            BaseDamage = 5000f,
             Mass = 500f, // in kilograms
             Health = 0, // 0 = disabled, otherwise how much damage it can take from other trajectiles before dying.
             BackKickForce = 100000f,
@@ -75,9 +75,9 @@ namespace WeaponThread
                 Armor = new ArmorDef
                 {
                     Armor = -1f,
-                    Light = 0.25f,
+                    Light = 0.5f,
                     Heavy = 2f,
-                    NonArmor = 0.25f,
+                    NonArmor = 0.5f,
                 },
                 Shields = new ShieldDef
                 {
@@ -209,15 +209,15 @@ namespace WeaponThread
                 {
                     Ammo = new ParticleDef
                     {
-                        Name = "", //ShipWelderArc
+                        Name = "MD_BulletGlowMedRed", //ShipWelderArc
                         ShrinkByDistance = false,
-                        Color = Color(red: 128, green: 0, blue: 0, alpha: 32),
-                        Offset = Vector(x: 0, y: -1, z: 0),
+                        Color = Color(red: 1, green: 1, blue: 1, alpha: 1),
+                        Offset = Vector(x: 0, y: 0, z: 0),
                         Extras = new ParticleOptionDef
                         {
                             Loop = true,
                             Restart = false,
-                            MaxDistance = 5000,
+                            MaxDistance = 2000,
                             MaxDuration = 1,
                             Scale = 1,
                         },

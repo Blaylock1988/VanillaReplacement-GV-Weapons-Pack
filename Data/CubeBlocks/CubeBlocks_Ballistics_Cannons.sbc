@@ -7,7 +7,8 @@
 				<SubtypeId>MXA_CoilgunL</SubtypeId>
 			</Id>
 			<DisplayName>[Cannon] 155mm Sentry Turret</DisplayName>
-			<Description>The Sentry Turret is an automated rapid-firing naval coilgun that delivers a large volume of AP slugs. Effective against frigates and cruises at medium range. Designed by MXA-UNSC.
+			<Description>The Sentry Turret is an automated rapid-firing naval coilgun. Effective against heavy armor frigates and cruisers. Designed by MXA-UNSC.
+				[Range 3km]
 				[Uses 155mm AP]</Description>
 			<Icon>Textures\GUI\Icons\MXA_CoilgunL.png</Icon>
 			<CubeSize>Large</CubeSize>
@@ -61,7 +62,8 @@
 			</Id>
 			<DisplayName>[Cannon] Small 155mm Vehicle Gun Turret</DisplayName>
 			<Icon>Textures\GUI\Icons\Cubes\OKI122mm_VehicleTurret.dds</Icon>
-			<Description>Powerful assault gun mounted on an armored small grid turret chassis. Deals heavy damage to light armor and moderate damage to heavy armor. Designed by Okim-Chipstix-Ash Federation.
+			<Description>Powerful assault gun mounted on an armored small grid turret chassis. Effective against heavy armor frigates and cruisers. Designed by Okim-Chipstix-Ash Federation.
+				[Range 3km]
 				[Uses 155mm AP]</Description>
 			<CubeSize>Small</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -122,7 +124,8 @@
 				<SubtypeId>OKI230mmBCfixed</SubtypeId>
 			</Id>
 			<DisplayName>[Cannon] 155mm Fixed Battlecannon</DisplayName>
-			<Description>Large caliber anti-capital ship cannon in fixed mount. Best used for large grid assault ships. Great range and damage against light and heavy armor. Designed by Okim-Chipstix-Ash Federation.
+			<Description>Large caliber anti-capital ship cannon in fixed mount. Effective against heavy armor frigates and cruisers. Designed by Okim-Chipstix-Ash Federation.
+				[Range 3km]
 				[Uses 155mm AP]</Description>
 			<Icon>Textures\GUI\Icons\Cubes\OKI50mmGAT_Fixed.dds</Icon>
 			<CubeSize>Large</CubeSize>
@@ -177,7 +180,8 @@
 			</Id>
 			<DisplayName>[Cannon] Small 155mm Field Gun</DisplayName>
 			<Icon>Textures\GUI\Icons\Cubes\OKI122mmASG_fixed.dds</Icon>
-			<Description>Bulky fixed weapon for small vessels. Deals heavy damage to light armor and moderate damage to heavy armor. Very effective against small grid vessels. Designed by Okim-Chipstix-Ash Federation.
+			<Description>Bulky fixed weapon for small vessels. Effective against heavy armor frigates and cruisers. Designed by Okim-Chipstix-Ash Federation.
+				[Range 3km]
 				[Uses 155mm AP]</Description>
 			<CubeSize>Small</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>

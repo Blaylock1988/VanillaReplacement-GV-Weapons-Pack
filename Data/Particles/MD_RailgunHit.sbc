@@ -2685,10 +2685,10 @@
 								<Key>
 									<Time>0</Time>
 									<ValueVector4>
-									<X>0.2</X>
-									<Y>0.4</Y>
-									<Z>1</Z>
-									<W>1</W>
+										<X>0.2</X>
+										<Y>0.4</Y>
+										<Z>1</Z>
+										<W>1</W>
 									</ValueVector4>
 									<Value2D/>
 								</Key>
