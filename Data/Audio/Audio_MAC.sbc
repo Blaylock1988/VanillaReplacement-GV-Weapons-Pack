@@ -1,85 +1,99 @@
 <?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Sounds>
-
-    <Sound>
-      <Id>
-        <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
-        <SubtypeId>MXA_MAC_Fire</SubtypeId>
-      </Id>
-      <Category>SHOT</Category>
-      <MaxDistance>2500</MaxDistance>
-	  <VolumeVariation>0.05</VolumeVariation>
-
-      <PreventSynchronization>1</PreventSynchronization>
-	  
-      <DynamicMusicCategory>HeavyFight</DynamicMusicCategory>
-      <DynamicMusicAmount>3</DynamicMusicAmount>
-      <DistantSounds>
-        <DistantSound DistanceCrossfade="300" Distance="2500" Sound="MXA_MAC_Fire_Distant" />
-      </DistantSounds>
-      <Volume>1</Volume>
-      <Waves>
-        <Wave Type="D3">
-          <Start>Audio\MXA\MAC_Fire_1.xwm</Start>
-        </Wave> 
-		<Wave Type="D3">
-          <Start>Audio\MXA\MAC_Fire_2.xwm</Start>
-        </Wave>
-		<Wave Type="D3">
-          <Start>Audio\MXA\MAC_Fire_3.xwm</Start>
-        </Wave> 
-      </Waves>
-    </Sound>
-	
-	
-    <Sound>
-      <Id>
-        <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
-        <SubtypeId>MXA_MAC_Fire_Distant</SubtypeId>
-      </Id>
-      <Category>SHOT</Category>
-      <MaxDistance>25000</MaxDistance>
-	  <VolumeVariation>0.02</VolumeVariation>
-	  
-      <PreventSynchronization>1</PreventSynchronization>
-      
-	  <Volume>1</Volume>
-      <Waves>
-        <Wave Type="D3">
-          <Start>Audio\MXA\MAC_Fire_Distant_1.xwm</Start>
-        </Wave>
-		<Wave Type="D3">
-          <Start>Audio\MXA\MAC_Fire_Distant_2.xwm</Start>
-        </Wave>
-		<Wave Type="D3">
-          <Start>Audio\MXA\MAC_Fire_Distant_3.xwm</Start>
-        </Wave>
-      </Waves>
-    </Sound>
-
-	<Sound>
-      <Id>
-        <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
-        <SubtypeId>MXA_MAC_Charge</SubtypeId>
-      </Id>
-      <Category>SHOT</Category>
-      <MaxDistance>2500</MaxDistance>
-	  <VolumeVariation>0.05</VolumeVariation>
-
-	  <Pitch>1</Pitch>
-      <PitchVariation>2</PitchVariation>
-      <PreventSynchronization>1</PreventSynchronization>
-	  
-      <DynamicMusicCategory>HeavyFight</DynamicMusicCategory>
-      <DynamicMusicAmount>3</DynamicMusicAmount>
-      <Volume>1</Volume>
-      <Waves>
-        <Wave Type="D3">
-          <Start>Audio\MXA\MAC_Charge.xwm</Start>
-        </Wave> 
-      </Waves>
-    </Sound>
-	
-  </Sounds>
+	<Sounds>
+		<Sound>
+			<Id>
+				<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+				<SubtypeId>MXA_MAC_Fire</SubtypeId>
+			</Id>
+			<Category>SHOT</Category>
+			<MaxDistance>2500</MaxDistance>
+			<VolumeVariation>0.05</VolumeVariation>
+			<PreventSynchronization>1</PreventSynchronization>
+			<DynamicMusicCategory>HeavyFight</DynamicMusicCategory>
+			<DynamicMusicAmount>3</DynamicMusicAmount>
+			<DistantSounds>
+				<DistantSound DistanceCrossfade="300" Distance="2500" Sound="MXA_MAC_Fire_Distant"/>
+			</DistantSounds>
+			<Volume>1</Volume>
+			<Waves>
+				<Wave Type="D3">
+					<Start>Audio\MXA\MAC_Fire_1.xwm</Start>
+				</Wave>
+				<Wave Type="D3">
+					<Start>Audio\MXA\MAC_Fire_2.xwm</Start>
+				</Wave>
+				<Wave Type="D3">
+					<Start>Audio\MXA\MAC_Fire_3.xwm</Start>
+				</Wave>
+			</Waves>
+		</Sound>
+		<Sound>
+			<Id>
+				<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+				<SubtypeId>MXA_MAC_Fire_Distant</SubtypeId>
+			</Id>
+			<Category>SHOT</Category>
+			<MaxDistance>25000</MaxDistance>
+			<VolumeVariation>0.02</VolumeVariation>
+			<PreventSynchronization>1</PreventSynchronization>
+			<Volume>1</Volume>
+			<Waves>
+				<Wave Type="D3">
+					<Start>Audio\MXA\MAC_Fire_Distant_1.xwm</Start>
+				</Wave>
+				<Wave Type="D3">
+					<Start>Audio\MXA\MAC_Fire_Distant_2.xwm</Start>
+				</Wave>
+				<Wave Type="D3">
+					<Start>Audio\MXA\MAC_Fire_Distant_3.xwm</Start>
+				</Wave>
+			</Waves>
+		</Sound>
+		<Sound>
+			<Id>
+				<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+				<SubtypeId>MXA_MAC_Charge</SubtypeId>
+			</Id>
+			<Category>SHOT</Category>
+			<MaxDistance>2500</MaxDistance>
+			<VolumeVariation>0.05</VolumeVariation>
+			<Pitch>1</Pitch>
+			<PitchVariation>2</PitchVariation>
+			<PreventSynchronization>1</PreventSynchronization>
+			<DynamicMusicCategory>HeavyFight</DynamicMusicCategory>
+			<DynamicMusicAmount>3</DynamicMusicAmount>
+			<Volume>1</Volume>
+			<Waves>
+				<Wave Type="D3">
+					<Start>Audio\MXA\MAC_Charge.xwm</Start>
+				</Wave>
+			</Waves>
+		</Sound>
+		<Sound>
+			<Id>
+				<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+				<SubtypeId>MXA_ImpactExplosion</SubtypeId>
+			</Id>
+			<Category>SHOT</Category>
+			<MaxDistance>500</MaxDistance>
+			<VolumeVariation>0.05</VolumeVariation>
+			<PreventSynchronization>0</PreventSynchronization>
+			<SoundLimit>10</SoundLimit>
+			<DynamicMusicCategory>HeavyFight</DynamicMusicCategory>
+			<DynamicMusicAmount>3</DynamicMusicAmount>
+			<Volume>1</Volume>
+			<Waves>
+				<Wave Type="D3">
+					<Start>Audio\MXA\ImpactExplosion1.xwm</Start>
+				</Wave>
+				<Wave Type="D3">
+					<Start>Audio\MXA\ImpactExplosion2.xwm</Start>
+				</Wave>
+				<Wave Type="D3">
+					<Start>Audio\MXA\ImpactExplosion3.xwm</Start>
+				</Wave>
+			</Waves>
+		</Sound>
+	</Sounds>
 </Definitions>

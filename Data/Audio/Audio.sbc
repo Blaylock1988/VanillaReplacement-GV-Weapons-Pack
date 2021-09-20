@@ -24,50 +24,6 @@
 		<Sound>
 			<Id>
 				<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
-				<SubtypeId>MD_GatlingLoop</SubtypeId>
-			</Id>
-			<Category>SHOT</Category>
-			<MaxDistance>500</MaxDistance>
-			<PitchVariation>50</PitchVariation>
-			<SoundLimit>10</SoundLimit>
-			<PreventSynchronization>3</PreventSynchronization>
-			<DynamicMusicCategory>HeavyFight</DynamicMusicCategory>
-			<DynamicMusicAmount>3</DynamicMusicAmount>
-			<DistantSounds>
-				<DistantSound DistanceCrossfade="1" Distance="400" Sound="MD_GatlingLoopDistant"/>
-			</DistantSounds>
-			<Volume>0.6</Volume>
-			<Loopable>true</Loopable>
-			<Waves>
-				<Wave Type="D3">
-					<Start>Audio\MD\GatlingStart.wav</Start>
-					<Loop>Audio\MD\GatlingLoop.wav</Loop>
-					<End>Audio\MD\GatlingEnd.wav</End>
-				</Wave>
-			</Waves>
-		</Sound>
-		<Sound>
-			<Id>
-				<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
-				<SubtypeId>MD_GatlingLoopDistant</SubtypeId>
-			</Id>
-			<Category>SHOT</Category>
-			<MaxDistance>1500</MaxDistance>
-			<PitchVariation>50</PitchVariation>
-			<PreventSynchronization>3</PreventSynchronization>
-			<Volume>0.7</Volume>
-			<Loopable>true</Loopable>
-			<Waves>
-				<Wave Type="D3">
-					<Start>Audio\MD\GatlingStartDistant.wav</Start>
-					<Loop>Audio\MD\GatlingLoopDistant.wav</Loop>
-					<End>Audio\MD\GatlingEndDistant.wav</End>
-				</Wave>
-			</Waves>
-		</Sound>
-		<Sound>
-			<Id>
-				<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
 				<SubtypeId>MD_GatlingBlisterFire</SubtypeId>
 			</Id>
 			<Category>SHOT</Category>
@@ -382,31 +338,6 @@
 		<Sound>
 			<Id>
 				<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
-				<SubtypeId>MXA_ImpactExplosion</SubtypeId>
-			</Id>
-			<Category>SHOT</Category>
-			<MaxDistance>500</MaxDistance>
-			<VolumeVariation>0.05</VolumeVariation>
-			<PreventSynchronization>0</PreventSynchronization>
-			<SoundLimit>10</SoundLimit>
-			<DynamicMusicCategory>HeavyFight</DynamicMusicCategory>
-			<DynamicMusicAmount>3</DynamicMusicAmount>
-			<Volume>1</Volume>
-			<Waves>
-				<Wave Type="D3">
-					<Start>Audio\MXA\ImpactExplosion1.xwm</Start>
-				</Wave>
-				<Wave Type="D3">
-					<Start>Audio\MXA\ImpactExplosion2.xwm</Start>
-				</Wave>
-				<Wave Type="D3">
-					<Start>Audio\MXA\ImpactExplosion3.xwm</Start>
-				</Wave>
-			</Waves>
-		</Sound>
-		<Sound>
-			<Id>
-				<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
 				<SubtypeId>MD_BulletHit</SubtypeId>
 			</Id>
 			<Category>SHOT</Category>
@@ -455,7 +386,7 @@
 			<DynamicMusicCategory>HeavyFight</DynamicMusicCategory>
 			<DynamicMusicAmount>3</DynamicMusicAmount>
 			<DistantSounds>
-				<DistantSound DistanceCrossfade="1" Distance="500" Sound="MD_RailgunFire_Distant"/>
+				<DistantSound DistanceCrossfade="10" Distance="500" Sound="MD_RailgunFire_Distant"/>
 			</DistantSounds>
 			<Volume>2</Volume>
 			<Loopable>false</Loopable>
@@ -474,7 +405,7 @@
 				<SubtypeId>MD_RailgunFire_Distant</SubtypeId>
 			</Id>
 			<Category>SHOT</Category>
-			<MaxDistance>2500</MaxDistance>
+			<MaxDistance>3000</MaxDistance>
 			<PitchVariation>100</PitchVariation>
 			<PreventSynchronization>3</PreventSynchronization>
 			<Volume>1.5</Volume>
@@ -485,6 +416,50 @@
 				</Wave>
 				<Wave Type="D3">
 					<Start>Audio\MD\Laser_Cannon_Fire_Long_Distant_2.wav</Start>
+				</Wave>
+			</Waves>
+		</Sound>
+		<Sound>
+			<Id>
+				<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+				<SubtypeId>MD_SmallLaserFire</SubtypeId>
+			</Id>
+			<Category>SHOT</Category>
+			<MaxDistance>500</MaxDistance>
+			<PitchVariation>10</PitchVariation>
+			<SoundLimit>10</SoundLimit>
+			<PreventSynchronization>3</PreventSynchronization>
+			<DynamicMusicCategory>HeavyFight</DynamicMusicCategory>
+			<DynamicMusicAmount>3</DynamicMusicAmount>
+			<DistantSounds>
+				<DistantSound DistanceCrossfade="10" Distance="500" Sound="MD_SmallLaserFire_Distant"/>
+			</DistantSounds>
+			<Volume>1</Volume>
+			<Loopable>true</Loopable>
+			<Waves>
+				<Wave Type="D3">
+					<Start>Audio\MD\DRAGONGAVER_loop_start_3.wav</Start>
+					<Loop>Audio\MD\DRAGONGAVER_loop_3.wav</Loop>
+					<End>Audio\MD\DRAGONGAVER_loop_end_3.wav</End>
+				</Wave>
+			</Waves>
+		</Sound>
+		<Sound>
+			<Id>
+				<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+				<SubtypeId>MD_SmallLaserFire_Distant</SubtypeId>
+			</Id>
+			<Category>SHOT</Category>
+			<MaxDistance>2000</MaxDistance>
+			<PitchVariation>10</PitchVariation>
+			<PreventSynchronization>3</PreventSynchronization>
+			<Volume>1</Volume>
+			<Loopable>true</Loopable>
+			<Waves>
+				<Wave Type="D3">
+					<Start>Audio\MD\DRAGONGAVER_loop_start_3_Distant.wav</Start>
+					<Loop>Audio\MD\DRAGONGAVER_loop_3_Distant.wav</Loop>
+					<End>Audio\MD\DRAGONGAVER_loop_end_3_Distant.wav</End>
 				</Wave>
 			</Waves>
 		</Sound>

@@ -7,7 +7,7 @@
 				<SubtypeId>JumpDisruptHitSound</SubtypeId>
 			</Id>
 			<Category>SHOT</Category>
-			<MaxDistance>250</MaxDistance>
+			<MaxDistance>500</MaxDistance>
 			<PitchVariation>100</PitchVariation>
 			<PreventSynchronization>0</PreventSynchronization>
 			<DynamicMusicCategory>HeavyFight</DynamicMusicCategory>
@@ -15,7 +15,8 @@
 			<Volume>0.5</Volume>
 			<Waves>
 				<Wave Type="D3">
-					<Start>Audio\shield_buster_effecthit.wav</Start>
+					<Start>Audio\MD\JDDisrupt_1.wav</Start>
+					<Start>Audio\MD\JDDisrupt_2.wav</Start>
 				</Wave>
 			</Waves>
 		</Sound>
@@ -37,9 +38,9 @@
 			<Loopable>true</Loopable>
 			<Waves>
 				<Wave Type="D3">
-					<Start>Audio\LaserTurretStart.wav</Start>
-					<Loop>Audio\LaserTurretLoop.wav</Loop>
-					<End>Audio\LaserTurretEnd.wav</End>
+					<Start>Audio\MD\LaserTurretStart.wav</Start>
+					<Loop>Audio\MD\LaserTurretLoop.wav</Loop>
+					<End>Audio\MD\LaserTurretEnd.wav</End>
 				</Wave>
 			</Waves>
 		</Sound>
@@ -55,51 +56,9 @@
 			<Loopable>true</Loopable>
 			<Waves>
 				<Wave Type="D3">
-					<Start>Audio\LaserTurretStartDist.wav</Start>
-					<Loop>Audio\LaserTurretLoopDist.wav</Loop>
-					<End>Audio\LaserTurretEndDist.wav</End>
-				</Wave>
-			</Waves>
-		</Sound>
-		<Sound>
-			<Id>
-				<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
-				<SubtypeId>WebberSpinSound</SubtypeId>
-			</Id>
-			<Category>SHOT</Category>
-			<MaxDistance>250</MaxDistance>
-			<PitchVariation>100</PitchVariation>
-			<PreventSynchronization>0</PreventSynchronization>
-			<DynamicMusicCategory>HeavyFight</DynamicMusicCategory>
-			<DynamicMusicAmount>3</DynamicMusicAmount>
-			<DistantSounds>
-				<DistantSound DistanceCrossfade="10" Distance="200" Sound="WebberSpinSoundDistant1"/>
-			</DistantSounds>
-			<Volume>0.1</Volume>
-			<Loopable>true</Loopable>
-			<Waves>
-				<Wave Type="D3">
-					<Start>Audio\GeneratorStart.wav</Start>
-					<Loop>Audio\GeneratorLoop.wav</Loop>
-					<End>Audio\GeneratorOff.wav</End>
-				</Wave>
-			</Waves>
-		</Sound>
-		<Sound>
-			<Id>
-				<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
-				<SubtypeId>WebberSpinSoundDistant1</SubtypeId>
-			</Id>
-			<Category>SHOT</Category>
-			<MaxDistance>800</MaxDistance>
-			<PitchVariation>100</PitchVariation>
-			<Volume>0.1</Volume>
-			<Loopable>true</Loopable>
-			<Waves>
-				<Wave Type="D3">
-					<Start>Audio\GeneratorStartDist.wav</Start>
-					<Loop>Audio\GeneratorLoopDist.wav</Loop>
-					<End>Audio\GeneratorOffDist.wav</End>
+					<Start>Audio\MD\LaserTurretStartDist.wav</Start>
+					<Loop>Audio\MD\LaserTurretLoopDist.wav</Loop>
+					<End>Audio\MD\LaserTurretEndDist.wav</End>
 				</Wave>
 			</Waves>
 		</Sound>
