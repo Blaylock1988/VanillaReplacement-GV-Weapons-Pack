@@ -37,7 +37,7 @@ namespace WeaponThread
             Shape = new ShapeDef //defines the collision shape of projectile, defaults line and visual Line Length if set to 0
             {
                 Shape = LineShape,
-                Diameter = 2,
+                Diameter = 0,
             },
             Shrapnel = new ShrapnelDef
             {
@@ -143,6 +143,21 @@ namespace WeaponThread
                 ShieldHitDraw = true,
                 Particles = new AmmoParticleDef
                 {
+                    Ammo = new ParticleDef
+                    {
+                        Name = "MD_BulletGlowBigBlue", //Archer_MissileSmokeTrail
+                        ShrinkByDistance = false,
+                        Color = Color(red: 1, green: 1, blue: 1, alpha: 1),
+                        Offset = Vector(x: 0, y: 0, z: 0f),
+                        Extras = new ParticleOptionDef
+                        {
+                            Loop = true,
+                            Restart = false,
+                            MaxDistance = 2000,
+                            MaxDuration = 0,
+                            Scale = 1f,
+                        },
+                    },
                     Hit = new ParticleDef
                     {
                         Name = "MD_TorpedoSlowBlast",

@@ -69,7 +69,7 @@ namespace WeaponThread
 					Restart = false,
 					MaxDistance = 800,
 					MaxDuration = 1,
-					Scale = 2f,
+					Scale = 1f,
 				}
 			},
 		};
@@ -150,7 +150,7 @@ namespace WeaponThread
                     MaxAzimuth = 0,
                     MinElevation = 0,
                     MaxElevation = 0,
-                    FixedOffset = false,
+                    FixedOffset = true,
                     InventorySize = 8.250f,
                     Offset = Vector(x: 0, y: 0, z: 0),
                     Armor = IsWeapon, // IsWeapon, Passive, Active
@@ -186,6 +186,7 @@ namespace WeaponThread
             },
             Ammos = new[] {
                 Missiles_Missile_x150,
+				Missiles_Missile_HomingPhase
             },
             Animations = MXA_ArcherPods_Animation,
             //Upgrades = UpgradeModules,

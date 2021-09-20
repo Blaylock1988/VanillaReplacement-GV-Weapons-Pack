@@ -21,7 +21,6 @@ namespace WeaponThread
     {
         private AmmoDef Missiles_Rocket => new AmmoDef
         {
-            
 			AmmoMagazine = "Missile200mm",
 			AmmoRound = "Missiles_Rocket",
 			HybridRound = false, //AmmoMagazine based weapon with energy cost
@@ -30,6 +29,7 @@ namespace WeaponThread
 			Mass = 100f, // in kilograms
 			Health = 4, // 0 = disabled, otherwise how much damage it can take from other trajectiles before dying.
 			BackKickForce = 5f,
+            DecayPerShot = 0f,
 			HardPointUsable = true, // set to false if this is a shrapnel ammoType and you don't want the turret to be able to select it directly.
 			EnergyMagazineSize = 0,
 			IgnoreWater = false,
@@ -37,7 +37,7 @@ namespace WeaponThread
 			Shape = new ShapeDef //defines the collision shape of projectile, defaults line and visual Line Length if set to 0
 			{
 				Shape = LineShape,
-				Diameter = 1,
+				Diameter = 0,
 			},
 			DamageScales = new DamageScaleDef
 			{
@@ -92,7 +92,7 @@ namespace WeaponThread
 					ArmOnlyOnHit = false,
 					DetonationDamage = 0,
 					DetonationRadius = 0,
-					MinArmingTime = 30, //Min time in ticks before projectile will arm for detonation (will also affect shrapnel spawning)
+					MinArmingTime = 20, //Min time in ticks before projectile will arm for detonation (will also affect shrapnel spawning)
 				},
 			},
 			Trajectory = new TrajectoryDef
@@ -134,6 +134,21 @@ namespace WeaponThread
 				ShieldHitDraw = true,
 				Particles = new AmmoParticleDef
 				{
+                    Ammo = new ParticleDef
+                    {
+                        Name = "MD_BulletGlowMedYellow", //Archer_MissileSmokeTrail
+                        ShrinkByDistance = false,
+                        Color = Color(red: 1, green: 1, blue: 1, alpha: 1),
+                        Offset = Vector(x: 0, y: 0, z: 0f),
+                        Extras = new ParticleOptionDef
+                        {
+                            Loop = true,
+                            Restart = false,
+                            MaxDistance = 2000,
+                            MaxDuration = 0,
+                            Scale = 1f,
+                        },
+                    },
                     Hit = new ParticleDef
                     {
                         Name = "MD_HydraRocketExplosion", //MD_HydraRocketExplosion MD_InstallationExplosion
@@ -176,7 +191,7 @@ namespace WeaponThread
 							"WeaponLaser",
 						},
 						TextureMode = Normal,
-						DecayTime = 100,
+						DecayTime = 30,
 						Color = Color(red: 1, green: 1, blue: 1, alpha: 1f),
 						Back = false,
 						CustomWidth = 1f,
