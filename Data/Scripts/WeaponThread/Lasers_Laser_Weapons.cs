@@ -253,20 +253,20 @@ namespace WeaponThread
                     FireFullBurst = false, // Spin barrel position will always be relative to initial / starting positions (spin will not be as smooth).
                 },
                 Audio = new HardPointAudioDef {
-                    PreFiringSound = "CoilGunPrefire",
-                    FiringSound = "CoilGunFire", // WepShipGatlingShot
-                    FiringSoundPerShot = true,
+                    PreFiringSound = "MD_SmallLaserFire",
+                    FiringSound = "", // WepShipGatlingShot
+                    FiringSoundPerShot = false,
                     ReloadSound = "",
                     NoAmmoSound = "ArcWepShipGatlingNoAmmo",
                     HardPointRotationSound = "WepTurretGatlingRotate",
                     BarrelRotationSound = "WepShipGatlingRotation",
-                    FireSoundEndDelay = 120, // Measured in game ticks(6 = 100ms, 60 = 1 seconds, etc..).
+                    FireSoundEndDelay = 0, // Measured in game ticks(6 = 100ms, 60 = 1 seconds, etc..).
                 },
                 Graphics = new HardPointParticleDef {
 
 					Barrel1 = new ParticleDef //FIXTHIS
                     {
-                        Name = "TestMuzzle", // Smoke_LargeGunShot
+                        Name = "", // Smoke_LargeGunShot
                         Color = Color(red: 1, green: 200, blue: 100, alpha: 1),
                         Offset = Vector(x: 0, y: 0, z: 0),
                         Extras = new ParticleOptionDef
@@ -386,14 +386,14 @@ namespace WeaponThread
                     FireFullBurst = false, // Spin barrel position will always be relative to initial / starting positions (spin will not be as smooth).
                 },
                 Audio = new HardPointAudioDef {
-                    PreFiringSound = "CoilGunPrefire",
-                    FiringSound = "CoilGunFire", // WepShipGatlingShot
-                    FiringSoundPerShot = true,
+                    PreFiringSound = "",
+                    FiringSound = "MD_SmallLaserFire", // WepShipGatlingShot
+                    FiringSoundPerShot = false,
                     ReloadSound = "",
                     NoAmmoSound = "ArcWepShipGatlingNoAmmo",
                     HardPointRotationSound = "WepTurretGatlingRotate",
                     BarrelRotationSound = "WepShipGatlingRotation",
-                    FireSoundEndDelay = 120, // Measured in game ticks(6 = 100ms, 60 = 1 seconds, etc..).
+                    FireSoundEndDelay = 0, // Measured in game ticks(6 = 100ms, 60 = 1 seconds, etc..).
                 },
                 Graphics = new HardPointParticleDef {
 
