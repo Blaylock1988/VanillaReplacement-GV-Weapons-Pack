@@ -150,8 +150,8 @@
 				<TypeId>BlueprintDefinition</TypeId>
 				<SubtypeId>Missiles_Torpedo</SubtypeId>
 			</Id>
-			<DisplayName>[Torpedo] Shiva EMP</DisplayName>
-			<Icon>Textures\GUI\Icons\MXA_Shiva_Missile.png</Icon>
+			<DisplayName>[Torpedo] Crusader EMP</DisplayName>
+			<Icon>Textures\GUI\Icons\CrusaderMissile.png</Icon>
 			<Prerequisites>
 				<Item Amount="1400" TypeId="Ingot" SubtypeId="Iron"/>
 				<Item Amount="200" TypeId="Ingot" SubtypeId="Nickel"/>

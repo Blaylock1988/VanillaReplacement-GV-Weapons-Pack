@@ -8,8 +8,9 @@
 				<SubtypeId>MA_T2PDX</SubtypeId>
 			</Id>
 			<DisplayName>[Laser] Large XFEL Turret</DisplayName>
-			<Description>A general purpose X-ray Free-Electron Laser (XFEL) based turret that has pinpoint accuracy. It requires a large energy supply, and can overheat from continued use. Designed by AutoMcD Manufacturing.
-				[Uses Energy]
+			<Description>A general purpose X-ray Free-Electron Laser (XFEL) turret with slow but pinpoint accuracy. Designed by AutoMcD Manufacturing.
+				[2500m Range]
+				[Uses 30MW Energy]
 			</Description>
 			<Icon>Textures\GUI\Icons\Cubes\MA_T2PDX.png</Icon>
 			<CubeSize>Large</CubeSize>
@@ -43,7 +44,7 @@
 				<Model BuildPercentUpperBound="0.66" File="Models\MA_Laser2\MA_T2PDX_BS2.mwm"/>
 				<Model BuildPercentUpperBound="1.0" File="Models\MA_Laser2\MA_T2PDX_BS3.mwm"/>
 			</BuildProgressModels>
-			<BlockPairName>MA_T2PDX</BlockPairName>
+			<BlockPairName>Lasers_Laser_Turret</BlockPairName>
 			<MirroringX>OffsetX</MirroringX>
 			<MirroringY>ZThenOffsetX</MirroringY>
 			<MirroringZ>YThenOffsetX</MirroringZ>
@@ -60,21 +61,155 @@
 				</DynamicMode>
 			</VoxelPlacement>
 			<EdgeType>Light</EdgeType>
-			<!--OverlayTexture>Textures\GUI\Screens\turret_overlay.dds</OverlayTexture-->
 			<InventoryMaxVolume>0.384</InventoryMaxVolume>
-			<MinElevationDegrees>-20</MinElevationDegrees>
-			<MaxElevationDegrees>90</MaxElevationDegrees>
-			<MinAzimuthDegrees>-180</MinAzimuthDegrees>
-			<MaxAzimuthDegrees>180</MaxAzimuthDegrees>
-			<IdleRotation>true</IdleRotation>
-			<MaxRangeMeters>8000</MaxRangeMeters>
-			<RotationSpeed>0.007</RotationSpeed>
-			<ElevationSpeed>0.005 </ElevationSpeed>
+			<EmissiveColorPreset>Default</EmissiveColorPreset>
+			<ShowEdges>false</ShowEdges>
+			<DamageEffectName>Damage_Electrical_Damaged</DamageEffectName>
+			<DamagedSound>ParticleElectrical</DamagedSound>
+			<EmissiveColorPreset>Default</EmissiveColorPreset>
+			<DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+		</Definition>
+		<!-- MA_Fixed_T2 Gimbal -->
+		<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+			<Id>
+				<TypeId>ConveyorSorter</TypeId>
+				<SubtypeId>MA_Fixed_T2</SubtypeId>
+			</Id>
+			<DisplayName>[Laser] Large Gimbal XFEL</DisplayName>
+			<Description>An X-ray Free-Electron Laser (XFEL) with a gimbal stabilized frame (+/- 3 degrees) and automatic firing. Designed by AutoMcD Manufacturing.
+				[2500m Range]
+				[Uses 60MW Energy]
+			</Description>
+			<Icon>Textures\GUI\Icons\Cubes\MA_Fixed_T2.png</Icon>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="1" z="2"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<ShowEdges>false</ShowEdges>
+			<GuiVisible>true</GuiVisible>
+			<Model>Models\MA_Laser2\MA_Fixed_T2.mwm</Model>
+			<MountPoints>
+				<MountPoint Side="Front" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="2.00" EndY="1.00"/>
+				<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="2.00" EndY="1.00"/>
+				<MountPoint Side="Top" StartX="0.00" StartY="0.00" EndX="1.00" EndY="2.00"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="1.00" EndY="2.00"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.50" File="Models\MA_Laser2\MA_Fixed_T2_BS1.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\MA_Laser2\MA_Fixed_T2_BS2.mwm"/>
+			</BuildProgressModels>
+			<BlockPairName>Lasers_Laser_Fixed_Gimbal</BlockPairName>
+			<UseModelIntersection>true</UseModelIntersection>
+			<GuiVisible>true</GuiVisible>
+			<Components>
+				<Component Subtype="SteelPlate" Count="31"/>
+				<Component Subtype="Construction" Count="21"/>
+				<Component Subtype="Lens" Count="21"/>
+				<Component Subtype="SmallTube" Count="42"/>
+				<Component Subtype="Motor" Count="33"/>
+				<Component Subtype="Superconductor" Count="104"/>
+				<Component Subtype="BulletproofGlass" Count="21"/>
+				<Component Subtype="Computer" Count="25"/>
+				<Component Subtype="MetalGrid" Count="10"/>
+				<Component Subtype="SteelPlate" Count="271"/>
+			</Components>
+			<BuildTimeSeconds>101</BuildTimeSeconds>
+			<PCU>1640</PCU>
+			<CriticalComponent Subtype="Computer" Index="0"/>
+			<MirroringX>None</MirroringX>
+			<MirroringY>Z</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+			<VoxelPlacement>
+				<StaticMode>
+					<PlacementMode>OutsideVoxel</PlacementMode>
+					<MaxAllowed>0.2</MaxAllowed>
+					<MinAllowed>0</MinAllowed>
+				</StaticMode>
+				<DynamicMode>
+					<PlacementMode>OutsideVoxel</PlacementMode>
+					<MaxAllowed>0.2</MaxAllowed>
+					<MinAllowed>0.01</MinAllowed>
+				</DynamicMode>
+			</VoxelPlacement>
+			<EdgeType>Light</EdgeType>
+			<InventoryMaxVolume>0.384</InventoryMaxVolume>
 			<EmissiveColorPreset>Default</EmissiveColorPreset>
 			<MinFov>0.1</MinFov>
 			<MaxFov>1.04719755</MaxFov>
-			<ShowEdges>false</ShowEdges>
+			<DamageEffectName>Damage_Electrical_Damaged</DamageEffectName>
+			<DamagedSound>ParticleElectrical</DamagedSound>
+			<EmissiveColorPreset>Default</EmissiveColorPreset>
+			<DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
 			<AiEnabled>false</AiEnabled>
+		</Definition>
+		<!-- MA_Fixed_T2_Naked -->
+		<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+			<Id>
+				<TypeId>ConveyorSorter</TypeId>
+				<SubtypeId>MA_Fixed_T2_Naked</SubtypeId>
+			</Id>
+			<DisplayName>[Laser] Large Open XFEL</DisplayName>
+			<Description>An X-ray Free-Electron Laser (XFEL) on a fixed mount. Designed by AutoMcD Manufacturing.
+				[2500m Range]
+				[Uses 60MW Energy]
+			</Description>
+			<Icon>Textures\GUI\Icons\Cubes\MA_Fixed_T2_Naked.png</Icon>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="1" z="2"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<ShowEdges>false</ShowEdges>
+			<Model>Models\MA_Laser2\MA_Fixed_T2_Naked.mwm</Model>
+			<MountPoints>
+				<MountPoint Side="Left" StartX="0.79" StartY="0.29" EndX="1.21" EndY="0.71"/>
+				<MountPoint Side="Right" StartX="0.79" StartY="0.29" EndX="1.21" EndY="0.71"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.50" File="Models\MA_Laser2\Fixed_T2_BS1.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\MA_Laser2\Fixed_T2_BS2.mwm"/>
+			</BuildProgressModels>
+			<BlockPairName>Lasers_Laser_Fixed</BlockPairName>
+			<UseModelIntersection>true</UseModelIntersection>
+			<GuiVisible>true</GuiVisible>
+			<Components>
+				<Component Subtype="SteelPlate" Count="31"/>
+				<Component Subtype="Construction" Count="21"/>
+				<Component Subtype="Lens" Count="21"/>
+				<Component Subtype="SmallTube" Count="42"/>
+				<Component Subtype="Motor" Count="33"/>
+				<Component Subtype="Superconductor" Count="104"/>
+				<Component Subtype="BulletproofGlass" Count="21"/>
+				<Component Subtype="Computer" Count="25"/>
+				<Component Subtype="MetalGrid" Count="10"/>
+				<Component Subtype="SteelPlate" Count="271"/>
+			</Components>
+			<BuildTimeSeconds>101</BuildTimeSeconds>
+			<PCU>1640</PCU>
+			<CriticalComponent Subtype="Computer" Index="0"/>
+			<MirroringX>None</MirroringX>
+			<MirroringY>Z</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+			<VoxelPlacement>
+				<StaticMode>
+					<PlacementMode>OutsideVoxel</PlacementMode>
+					<MaxAllowed>0.2</MaxAllowed>
+					<MinAllowed>0</MinAllowed>
+				</StaticMode>
+				<DynamicMode>
+					<PlacementMode>OutsideVoxel</PlacementMode>
+					<MaxAllowed>0.2</MaxAllowed>
+					<MinAllowed>0.01</MinAllowed>
+				</DynamicMode>
+			</VoxelPlacement>
+			<EdgeType>Light</EdgeType>
+			<InventoryMaxVolume>0.384</InventoryMaxVolume>
+			<EmissiveColorPreset>Default</EmissiveColorPreset>
+			<MinFov>0.1</MinFov>
+			<MaxFov>1.04719755</MaxFov>
 			<DamageEffectName>Damage_Electrical_Damaged</DamageEffectName>
 			<DamagedSound>ParticleElectrical</DamagedSound>
 			<EmissiveColorPreset>Default</EmissiveColorPreset>
@@ -88,8 +223,9 @@
 				<SubtypeId>ReceptorTurret</SubtypeId>
 			</Id>
 			<DisplayName>[Laser] Small XFEL Turret</DisplayName>
-			<Description>A general purpose X-ray Free-Electron Laser (XFEL) based turret that has pinpoint accuracy. It requires a large energy supply, and can overheat from continued use. Designed by Akiad Engineering.
-				[Uses Energy]
+			<Description>A miniaturized X-ray Free-Electron Laser (XFEL) turret with slow but pinpoint accuracy. Designed by Akiad Engineering.
+				[1500m Range]
+				[Uses 7.5MW Energy]
 			</Description>
 			<Icon>Textures\GUI\Icons\ReceptorTurretBase.png</Icon>
 			<CubeSize>Small</CubeSize>
@@ -98,6 +234,7 @@
 			<ModelOffset x="0" y="0" z="0"/>
 			<Center x="2" y="0" z="2"/>
 			<Model>Models\Akiad\Small\ReceptorTurretBase.mwm</Model>
+			<GuiVisible>true</GuiVisible>
 			<Components>
 				<Component Subtype="SteelPlate" Count="11"/>
 				<Component Subtype="Construction" Count="7"/>
@@ -138,7 +275,7 @@
 					<MinAllowed>0.01</MinAllowed>
 				</DynamicMode>
 			</VoxelPlacement>
-			<BlockPairName>ReceptorTurret</BlockPairName>
+			<BlockPairName>Lasers_Laser_Turret</BlockPairName>
 			<MirroringY>Z</MirroringY>
 			<MirroringZ>Y</MirroringZ>
 			<EdgeType>Light</EdgeType>
@@ -170,15 +307,16 @@
 				<unsignedInt>0</unsignedInt>
 			</TieredUpdateTimes>
 		</Definition>
-		<!-- Receptor -->
+		<!-- Receptor Fixed -->
 		<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
 			<Id>
 				<TypeId>ConveyorSorter</TypeId>
 				<SubtypeId>ReceptorCoilGun</SubtypeId>
 			</Id>
 			<DisplayName>[Laser] Small XFEL Fixed Mount</DisplayName>
-			<Description>A general purpose X-ray Free-Electron Laser (XFEL) based turret that has pinpoint accuracy. It requires a large energy supply, and can overheat from continued use. Designed by Akiad Engineering.
-				[Uses Energy]
+			<Description>A miniaturized X-ray Free-Electron Laser (XFEL) on a fixed mount. Designed by Akiad Engineering.
+				[1500m Range]
+				[Uses 7.5MW Energy]
 			</Description>
 			<Icon>Textures\GUI\Icons\ReceptorCoilGun.png</Icon>
 			<CubeSize>Small</CubeSize>
@@ -187,6 +325,7 @@
 			<ModelOffset x="0" y="0" z="0"/>
 			<Center x="0" y="0" z="3"/>
 			<Model>Models\Akiad\Small\ReceptorCoilGun.mwm</Model>
+			<GuiVisible>true</GuiVisible>
 			<Components>
 				<Component Subtype="SteelPlate" Count="2"/>
 				<Component Subtype="Construction" Count="2"/>
@@ -220,7 +359,7 @@
 				<MaxAllowed>0.2</MaxAllowed>
 				<MinAllowed>0.01</MinAllowed>
 			</DynamicMode>
-			<BlockPairName>ReceptorLaser</BlockPairName>
+			<BlockPairName>Lasers_Laser_Fixed</BlockPairName>
 			<MirroringY>Z</MirroringY>
 			<MirroringZ>Y</MirroringZ>
 			<AiEnabled>false</AiEnabled>

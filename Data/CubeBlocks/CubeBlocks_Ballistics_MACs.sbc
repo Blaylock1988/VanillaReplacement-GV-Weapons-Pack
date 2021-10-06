@@ -4,18 +4,19 @@
 		<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
 			<Id>
 				<TypeId>ConveyorSorter</TypeId>
-				<SubtypeId>MXA_MACL</SubtypeId>
+				<SubtypeId>ARYXLightCoilgun</SubtypeId>
 			</Id>
-			<DisplayName>[MAC] Mark IX</DisplayName>
-			<Description>The Magnetic Accelerator Cannon fires a massive depleted uranium ferromagnetic round that provides unmatched speed, range, and damage. Only suitable for the largest ships, and damage drops with range. Designed by MXA-UNSC.
+			<DisplayName>[MAC] Onager Mass Driver</DisplayName>
+			<Description>The Magnetic Accelerator Cannon fires a massive depleted uranium ferromagnetic round that provides unmatched speed, range, and damage. Only suitable for the largest ships, and damage drops with range. Designed by Aryx Weapon Enterprises.
+				[5km Range]
 				[Uses 1000mm KE]
 			</Description>
-			<Icon>Textures\GUI\Icons\MXA_MACL.png</Icon>
+			<Icon>Textures\GUI\Icons\Aryx_AWE_LightCoilgun.dds</Icon>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
-			<Size x="1" y="2" z="10"/>
+			<Size x="1" y="2" z="15"/>
 			<ModelOffset x="0" y="0" z="0"/>
-			<Model>Models\MXA_MACL.mwm</Model>
+			<Model>Models\AWE_Coilgun\ARYX_LightCoilgun.mwm</Model>
 			<UseModelIntersection>true</UseModelIntersection>
 			<MirroringY>Z</MirroringY>
 			<MirroringZ>Y</MirroringZ>
@@ -40,29 +41,22 @@
 			<DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
 			<DamagedSound>ParticleWeapExpl</DamagedSound>
 			<ResourceSinkGroup>Defense</ResourceSinkGroup>
-			<DisassembleRatio>1.25</DisassembleRatio>
-			<NavigationDefinition>Default</NavigationDefinition>
 			<DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
 			<DestroySound>WepSmallWarheadExpl</DestroySound>
 			<IsAirTight>true</IsAirTight>
 			<MountPoints>
-				<MountPoint Side="Back" StartX="0.0" StartY="0.0" EndX="1.0" EndY="2.0" PressurizedWhenOpen="true"/>
-				<MountPoint Side="Left" StartX="1.04" StartY="1.0" EndX="1.9" EndY="2.0" PressurizedWhenOpen="true"/>
-				<MountPoint Side="Left" StartX="1.04" StartY="0.0" EndX="9.92" EndY="1.0" PressurizedWhenOpen="true"/>
-				<MountPoint Side="Left" StartX="8.98" StartY="1.05" EndX="9.98" EndY="2" PressurizedWhenOpen="true"/>
-				<MountPoint Side="Right" StartX="8.1" StartY="1.0" EndX="8.96" EndY="2.0" PressurizedWhenOpen="true"/>
-				<MountPoint Side="Right" StartX="0.08" StartY="0.0" EndX="8.96" EndY="1.0" PressurizedWhenOpen="true"/>
-				<MountPoint Side="Right" StartX="0.03" StartY="1.05" EndX="1.03" EndY="2" PressurizedWhenOpen="true"/>
-				<MountPoint Side="Top" StartX="0.0" StartY="8.09" EndX="1.0" EndY="8.96" PressurizedWhenOpen="true"/>
-				<MountPoint Side="Top" StartX="0.0" StartY="0.02" EndX="1.0" EndY="1.02" PressurizedWhenOpen="true"/>
-				<MountPoint Side="Bottom" StartX="0.0" StartY="1.04" EndX="1.0" EndY="9.92" PressurizedWhenOpen="true"/>
+				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="1.00" EndY="2.00"/>
+				<MountPoint Side="Left" StartX="1.00" StartY="0.00" EndX="4.00" EndY="1.00"/>
+				<MountPoint Side="Left" StartX="1.00" StartY="1.00" EndX="15.00" EndY="2.00"/>
+				<MountPoint Side="Left" StartX="13.00" StartY="0.00" EndX="15.00" EndY="1.00"/>
+				<MountPoint Side="Right" StartX="11.00" StartY="0.00" EndX="14.00" EndY="1.00"/>
+				<MountPoint Side="Right" StartX="0.00" StartY="1.00" EndX="14.00" EndY="2.00"/>
+				<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="2.00" EndY="1.00"/>
+				<MountPoint Side="Top" StartX="0.00" StartY="0.00" EndX="1.00" EndY="14.00"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="1.00" EndX="1.00" EndY="4.00"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="13.00" EndX="1.00" EndY="15.00"/>
 			</MountPoints>
-			<BuildProgressModels>
-				<Model BuildPercentUpperBound="0.33" File="Models\MXA_MACL_BS1.mwm"/>
-				<Model BuildPercentUpperBound="0.66" File="Models\MXA_MACL_BS2.mwm"/>
-				<Model BuildPercentUpperBound="1.0" File="Models\MXA_MACL_BS3.mwm"/>
-			</BuildProgressModels>
-			<BlockPairName>MXA_MACL</BlockPairName>
+			<BlockPairName>AWELightCoilgun</BlockPairName>
 		</Definition>
 	</CubeBlocks>
 </Definitions>

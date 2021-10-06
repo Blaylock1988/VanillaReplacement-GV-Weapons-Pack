@@ -1,26 +1,26 @@
 ﻿<?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 	<AmmoMagazines>
-        <AmmoMagazine>
-            <Id>
-                <TypeId>AmmoMagazine</TypeId>
-                <SubtypeId>Blank</SubtypeId>
-            </Id>
-            <DisplayName>Blank Ammo</DisplayName>
-            <Icon></Icon>
-            <Size>
-                <X>1</X>
-                <Y>1</Y>
-                <Z>1</Z>
-            </Size>
-            <Mass>1</Mass>
-            <Volume>1</Volume>
-            <Model></Model>
-            <PhysicalMaterial>Ammo</PhysicalMaterial>
-            <Capacity>1</Capacity>
-            <AmmoDefinitionId Subtype="Blank" />
-            <CanPlayerOrder>true</CanPlayerOrder>
-        </AmmoMagazine>
+		<AmmoMagazine>
+			<Id>
+				<TypeId>AmmoMagazine</TypeId>
+				<SubtypeId>Blank</SubtypeId>
+			</Id>
+			<DisplayName>Blank Ammo</DisplayName>
+			<Icon/>
+			<Size>
+				<X>1</X>
+				<Y>1</Y>
+				<Z>1</Z>
+			</Size>
+			<Mass>1</Mass>
+			<Volume>1</Volume>
+			<Model/>
+			<PhysicalMaterial>Ammo</PhysicalMaterial>
+			<Capacity>1</Capacity>
+			<AmmoDefinitionId Subtype="Blank"/>
+			<CanPlayerOrder>true</CanPlayerOrder>
+		</AmmoMagazine>
 		<AmmoMagazine>
 			<Id>
 				<TypeId>AmmoMagazine</TypeId>
@@ -126,7 +126,7 @@
 				<SubtypeId>Ballistics_MAC</SubtypeId>
 			</Id>
 			<DisplayName>[MAC] 1000mm KE</DisplayName>
-			<Icon>Textures\GUI\Icons\MXA_MACL_Ammo.png</Icon>
+			<Icon>Textures\GUI\Icons\ammo\AWEGaussAmmo.dds</Icon>
 			<Size>
 				<X>0.25</X>
 				<Y>1.2</Y>
@@ -134,31 +134,32 @@
 			</Size>
 			<Mass>5000</Mass>
 			<Volume>2500</Volume>
-			<Model>Models\MXA_MACL_Ammo.mwm</Model>
+			<Model>Models\AWE_Ammo\AryxFerrous1200mm.mwm</Model>
 			<Capacity>1</Capacity>
 			<AmmoDefinitionId Subtype="Blank"/>
 			<CanPlayerOrder>true</CanPlayerOrder>
 		</AmmoMagazine>
-        <AmmoMagazine>
-            <Id>
-                <TypeId>AmmoMagazine</TypeId>
-                <SubtypeId>Missile200mm</SubtypeId>
-            </Id>
-            <DisplayName>[Rocket] Hydra HE</DisplayName>
-            <Icon>Textures\GUI\Icons\ammo\Small_Rocket.dds</Icon>
-            <Size>
-                <X>1.2</X>
-                <Y>0.2</Y>
-                <Z>0.2</Z>
-            </Size>
-            <Mass>40</Mass>
-            <Volume>80</Volume>
-            <Model>Models\Weapons\Projectile_Missile.mwm</Model>
-            <PhysicalMaterial>Ammo</PhysicalMaterial>
-            <Capacity>1</Capacity>
-            <AmmoDefinitionId Subtype="Missile" /> <!-- changing missiles causes a critical error, because KEEN -->
-            <CanPlayerOrder>false</CanPlayerOrder>
-        </AmmoMagazine>
+		<AmmoMagazine>
+			<Id>
+				<TypeId>AmmoMagazine</TypeId>
+				<SubtypeId>Missile200mm</SubtypeId>
+			</Id>
+			<DisplayName>[Rocket] Hydra HE</DisplayName>
+			<Icon>Textures\GUI\Icons\ammo\Small_Rocket.dds</Icon>
+			<Size>
+				<X>1.2</X>
+				<Y>0.2</Y>
+				<Z>0.2</Z>
+			</Size>
+			<Mass>40</Mass>
+			<Volume>80</Volume>
+			<Model>Models\Weapons\Projectile_Missile.mwm</Model>
+			<PhysicalMaterial>Ammo</PhysicalMaterial>
+			<Capacity>1</Capacity>
+			<AmmoDefinitionId Subtype="Missile"/>
+			<!-- changing missiles causes a critical error, because KEEN -->
+			<CanPlayerOrder>false</CanPlayerOrder>
+		</AmmoMagazine>
 		<AmmoMagazine>
 			<Id>
 				<TypeId>AmmoMagazine</TypeId>
@@ -200,6 +201,24 @@
 				<TypeId>AmmoMagazine</TypeId>
 				<SubtypeId>Missiles_Torpedo</SubtypeId>
 			</Id>
+			<DisplayName>[Torpedo] Crusader EMP</DisplayName>
+			<Icon>Textures\GUI\Icons\CrusaderMissile.png</Icon>
+			<Size>
+				<X>1</X>
+				<Y>5.0</Y>
+				<Z>1</Z>
+			</Size>
+			<Mass>1400</Mass>
+			<Volume>2800</Volume>
+			<Model>Models\Akiad\Small\CrusaderMissile.mwm</Model>
+			<Capacity>1</Capacity>
+			<AmmoDefinitionId Subtype="Blank"/>
+		</AmmoMagazine>
+		<!--<AmmoMagazine>
+			<Id>
+				<TypeId>AmmoMagazine</TypeId>
+				<SubtypeId>Missiles_Torpedo</SubtypeId>
+			</Id>
 			<DisplayName>[Torpedo] Shiva EMP</DisplayName>
 			<Icon>Textures\GUI\Icons\MXA_Shiva_Missile.png</Icon>
 			<Size>
@@ -212,7 +231,7 @@
 			<Model>Models\Missiles\MXA_Shiva_Missile.mwm</Model>
 			<Capacity>1</Capacity>
 			<AmmoDefinitionId Subtype="Blank"/>
-		</AmmoMagazine>
+		</AmmoMagazine>-->
 		<AmmoMagazine>
 			<Id>
 				<TypeId>AmmoMagazine</TypeId>

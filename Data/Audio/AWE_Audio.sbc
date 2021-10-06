@@ -4,44 +4,6 @@
 		<Sound>
 			<Id>
 				<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
-				<SubtypeId>ArcWepShipARYXJudge_Fire</SubtypeId>
-			</Id>
-			<Category>SHOT</Category>
-			<MaxDistance>600</MaxDistance>
-			<PitchVariation>50</PitchVariation>
-			<PreventSynchronization>0</PreventSynchronization>
-			<DynamicMusicCategory>HeavyFight</DynamicMusicCategory>
-			<DynamicMusicAmount>3</DynamicMusicAmount>
-			<DistantSounds>
-				<DistantSound DistanceCrossfade="1" Distance="600" Sound="ArcWepShipARYXJudge_FireDistant"/>
-			</DistantSounds>
-			<Volume>0.70</Volume>
-			<Waves>
-				<Wave Type="D3">
-					<Start>Audio\Aryx\aryx_judge_fire_03.wav</Start>
-				</Wave>
-			</Waves>
-		</Sound>
-		<Sound>
-			<Id>
-				<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
-				<SubtypeId>ArcWepShipARYXJudge_FireDistant</SubtypeId>
-			</Id>
-			<Category>SHOT</Category>
-			<MaxDistance>2000</MaxDistance>
-			<PitchVariation>50</PitchVariation>
-			<PreventSynchronization>3</PreventSynchronization>
-			<Volume>1</Volume>
-			<Loopable>false</Loopable>
-			<Waves>
-				<Wave Type="D3">
-					<Start>Audio\Aryx\aryx_judge_fire_03Distant.wav</Start>
-				</Wave>
-			</Waves>
-		</Sound>
-		<Sound>
-			<Id>
-				<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
 				<SubtypeId>ArcWepShipARYXFlak_Fire</SubtypeId>
 			</Id>
 			<Category>SHOT</Category>

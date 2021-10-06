@@ -32,13 +32,13 @@ namespace WeaponThread
                                 new RelMove
                                 {
                                     CenterEmpty = "",//Specifiy an empty on the subpart to rotate around
-                                    TicksToMove = 3, //number of ticks to complete motion, 60 = 1 second
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
 
                                     MovementType = Linear, // ExpoGrowth (speedsup),  ExpoDecay (slows down), Linear, Delay, Show, Hide
                                     //EmissiveName = "LaserEmissive",//name of defined emissive 
                                     LinearPoints = new[]
                                     {
-                                        Transformation(0, 0f, 0.2f), //linear movement
+                                        Transformation(0, 0, 0.1f), //linear movement
                                     },
                                     Rotation = Transformation(0, 0, 0f), //degrees
                                     RotAroundCenter = Transformation(0, 0, 0), //degrees, rotates around CenterEmpty
@@ -46,47 +46,21 @@ namespace WeaponThread
                                 new RelMove
                                 {
                                     CenterEmpty = "",//Specifiy an empty on the subpart to rotate around
-                                    TicksToMove = 15, //number of ticks to complete motion, 60 = 1 second
-
-                                    MovementType = Linear, // ExpoGrowth (speedsup),  ExpoDecay (slows down), Linear, Delay, Show, Hide
-                                    //EmissiveName = "LaserEmissive",//name of defined emissive 
-                                    LinearPoints = new[]
-                                    {
-                                        Transformation(0, 0f, -0.1f), //linear movement
-                                    },
-                                    Rotation = Transformation(0, 0, 45f), //degrees
-                                    RotAroundCenter = Transformation(0, 0, 0), //degrees, rotates around CenterEmpty
-                                },
-                                new RelMove
-                                {
-                                    CenterEmpty = "",//Specifiy an empty on the subpart to rotate around
-                                    TicksToMove = 15, //number of ticks to complete motion, 60 = 1 second
+                                    TicksToMove = 14, //number of ticks to complete motion, 60 = 1 second
 
                                     MovementType = ExpoDecay, // ExpoGrowth (speedsup),  ExpoDecay (slows down), Linear, Delay, Show, Hide
                                     //EmissiveName = "LaserEmissive",//name of defined emissive 
                                     LinearPoints = new[]
                                     {
-                                        Transformation(0, 0f, -0.1f), //linear movement
+                                        Transformation(0, 0, -0.1f), //linear movement
                                     },
-                                    Rotation = Transformation(0, 0, 45f), //degrees
-                                    RotAroundCenter = Transformation(0, 0, 0), //degrees, rotates around CenterEmpty
-                                },
-                                new RelMove
-                                {
-                                    CenterEmpty = "",//Specifiy an empty on the subpart to rotate around
-                                    TicksToMove = 12, //number of ticks to complete motion, 60 = 1 second
-
-                                    MovementType = Delay, // ExpoGrowth (speedsup),  ExpoDecay (slows down), Linear, Delay, Show, Hide
-                                    //EmissiveName = "LaserEmissive",//name of defined emissive 
-                                    LinearPoints = new XYZ[0],
-                                    Rotation = Transformation(0, 0, 0f), //degrees
+                                    Rotation = Transformation(0, 0, 90f), //degrees
                                     RotAroundCenter = Transformation(0, 0, 0), //degrees, rotates around CenterEmpty
                                 },
                             },
                     }
                 },
 				#endregion
-
 
             }
         };

@@ -45,32 +45,22 @@
 												<Value2D/>
 											</Key>
 											<Key>
-												<Time>0.083836</Time>
+												<Time>0.3</Time>
 												<ValueVector4>
-													<X>15</X>
-													<Y>15</Y>
-													<Z>40</Z>
+													<X>1</X>
+													<Y>1</Y>
+													<Z>200</Z>
 													<W>0.5</W>
 												</ValueVector4>
 												<Value2D/>
 											</Key>
 											<Key>
-												<Time>0.1577571</Time>
+												<Time>0.5</Time>
 												<ValueVector4>
 													<X>2</X>
 													<Y>2</Y>
 													<Z>8</Z>
 													<W>0.3</W>
-												</ValueVector4>
-												<Value2D/>
-											</Key>
-											<Key>
-												<Time>0.3</Time>
-												<ValueVector4>
-													<X>0</X>
-													<Y>0</Y>
-													<Z>0</Z>
-													<W>0</W>
 												</ValueVector4>
 												<Value2D/>
 											</Key>
@@ -101,8 +91,8 @@
 												<Value2D/>
 											</Key>
 											<Key>
-												<Time>0.2</Time>
-												<ValueFloat>1</ValueFloat>
+												<Time>0.3</Time>
+												<ValueFloat>0</ValueFloat>
 												<Value2D/>
 											</Key>
 										</Keys>
@@ -296,14 +286,14 @@
 							<ValueVector3>
 								<X>0</X>
 								<Y>0</Y>
-								<Z>-0.5</Z>
+								<Z>0</Z>
 							</ValueVector3>
 						</Property>
 						<Property Name="Rotation velocity var" AnimationType="Const" Type="Float">
-							<ValueFloat>0</ValueFloat>
+							<ValueFloat>0.5</ValueFloat>
 						</Property>
 						<Property Name="Hue var" AnimationType="Const" Type="Float">
-							<ValueFloat>0</ValueFloat>
+							<ValueFloat>0.005</ValueFloat>
 						</Property>
 						<Property Name="Rotation enabled" AnimationType="Const" Type="Bool">
 							<ValueBool>true</ValueBool>
@@ -312,7 +302,7 @@
 							<ValueFloat>0.9</ValueFloat>
 						</Property>
 						<Property Name="Life var" AnimationType="Const" Type="Float">
-							<ValueFloat>0</ValueFloat>
+							<ValueFloat>0.02</ValueFloat>
 						</Property>
 						<Property Name="Streaks" AnimationType="Const" Type="Bool">
 							<ValueBool>false</ValueBool>
@@ -374,11 +364,11 @@
 								</Key>
 								<Key>
 									<Time>0.05</Time>
-									<ValueFloat>2</ValueFloat>
+									<ValueFloat>1</ValueFloat>
 									<Value2D/>
 								</Key>
 								<Key>
-									<Time>0.3216374</Time>
+									<Time>0.1</Time>
 									<ValueFloat>0</ValueFloat>
 									<Value2D/>
 								</Key>

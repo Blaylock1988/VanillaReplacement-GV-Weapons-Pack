@@ -138,7 +138,7 @@ namespace WeaponThread
             },
             AmmoGraphics = new GraphicDef
             {
-                ModelName = "\\Models\\Missiles\\MXA_Shiva_Missile.mwm",
+                ModelName = "\\Models\\Akiad\\Small\\CrusaderMissile.mwm",
                 VisualProbability = 1f,
                 ShieldHitDraw = true,
                 Particles = new AmmoParticleDef

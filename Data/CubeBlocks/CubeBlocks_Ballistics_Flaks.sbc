@@ -9,6 +9,7 @@
 			<DisplayName>[Flak] Large Riptide Turret</DisplayName>
 			<Icon>Textures\GUI\Icons\AryxRiptideFlak.dds</Icon>
 			<Description>Riptide delivers proximity-fused explosive shells. Used en-mass can provide an effective anti-strike and anti-missile screen, but yields poor damage against armoured targets. Designed by ARYX Weapon Enterprises.
+				[2500m Range]
 				[Uses 100mm HE]</Description>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -57,6 +58,7 @@
 			<DisplayName>[Flak] Small Riptide Turret</DisplayName>
 			<Icon>Textures\GUI\Icons\AryxRiptideFlak.dds</Icon>
 			<Description>Riptide delivers proximity-fused explosive shells. Used en-mass can provide an effective anti-strike and anti-missile screen, but yields poor damage against armoured targets. Designed by ARYX Weapon Enterprises.
+				[2500m Range]
 				[Uses 100mm HE]</Description>
 			<CubeSize>Small</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>

@@ -13,14 +13,14 @@ namespace WeaponThread
     partial class Weapons
     {
         // Don't edit above this line
-        WeaponDefinition MXA_MACL => new WeaponDefinition
+        WeaponDefinition ARYXLightCoilgun => new WeaponDefinition
         {
 
             Assignments = new ModelAssignmentsDef
             {
                 MountPoints = new[] {
                     new MountPointDef {
-                        SubtypeId = "MXA_MACL",
+                        SubtypeId = "ARYXLightCoilgun",
                         AimPartId = "None",
                         MuzzlePartId = "None",
                         AzimuthPartId = "None",
@@ -73,8 +73,8 @@ namespace WeaponThread
                     BarrelsPerShot = 1,
                     TrajectilesPerBarrel = 1, // Number of Trajectiles per barrel per fire event.
                     SkipBarrels = 0,
-                    ReloadTime = 2700, //5400// Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-                    DelayUntilFire = 124, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                    ReloadTime = 2360, //5400// Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                    DelayUntilFire = 340, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     HeatPerShot = 0, //heat generated per shot
                     MaxHeat = 0, //max heat before weapon enters cooldown (70% of max heat)
                     Cooldown = 0f, //percent of max heat to be under to start firing again after overheat accepts .2-.95
@@ -89,14 +89,14 @@ namespace WeaponThread
                 },
                 Audio = new HardPointAudioDef
                 {
-                    PreFiringSound = "MXA_MAC_Charge",
-                    FiringSound = "MXA_MAC_Fire", // WepShipGatlingShot
+                    PreFiringSound = "MD_MAC_Charge",
+                    FiringSound = "MD_MAC_Fire", // WepShipGatlingShot
                     FiringSoundPerShot = true,
                     ReloadSound = "",
                     NoAmmoSound = "",
-                    HardPointRotationSound = "WepTurretGatlingRotate",
-                    BarrelRotationSound = "WepShipGatlingRotation",
-                    FireSoundEndDelay = 0, // Measured in game ticks(6 = 100ms, 60 = 1 seconds, etc..).
+                    HardPointRotationSound = "",
+                    BarrelRotationSound = "",
+                    FireSoundEndDelay = 1000, // Measured in game ticks(6 = 100ms, 60 = 1 seconds, etc..).
                 },
                 Graphics = new HardPointParticleDef
                 {
@@ -137,8 +137,8 @@ namespace WeaponThread
                 Ballistics_MAC,
                 Ballistics_MAC_Shrapnel,
             },
-            Animations = MXA_MACL_Animation,
-            //Upgrades = UpgradeModules,
+            Animations = MD_MAC_Animations,
+			//Upgrades = UpgradeModules,
             // Don't edit below this line
         };
     }

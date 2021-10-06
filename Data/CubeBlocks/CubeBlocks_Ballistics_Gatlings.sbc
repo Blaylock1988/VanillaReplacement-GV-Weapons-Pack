@@ -9,6 +9,7 @@
 			<DisplayName>[Gatling] Large 25mm Autocannon Turret</DisplayName>
 			<Icon>Textures\GUI\Icons\Cubes\OKI14mmCIWS_Turret.dds</Icon>
 			<Description>Close-in weapon system for defense against small vehicles, ships, personnel, and anti-ship missiles.
+				[1500m Range]
 				[Uses 25mm KE]</Description>
 			<CubeSize>Large</CubeSize>
 			<PlaceDecals>false</PlaceDecals>
@@ -92,6 +93,7 @@
 			<DisplayName>[Gatling] Small 25mm Autocannon Turret</DisplayName>
 			<Icon>Textures\GUI\Icons\Cubes\gatling_turret.dds</Icon>
 			<Description>Close-in weapon system for defense against small vehicles, ships, personnel, and anti-ship missiles.
+				[1500m Range]
 				[Uses 25mm KE]</Description>
 			<CubeSize>Small</CubeSize>
 			<PlaceDecals>false</PlaceDecals>
@@ -177,6 +179,7 @@
 			<DisplayName>[Gatling] Small 25mm Autocannon</DisplayName>
 			<Icon>Textures\GUI\Icons\Cubes\gatling_gun.dds</Icon>
 			<Description>Electrically driven six-barrel rotary cannon, modified for use in zero-atmosphere environments.
+				[1500m Range]
 				[Uses 25mm KE]</Description>
 			<CubeSize>Small</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -229,6 +232,7 @@
 			<DisplayName>[Gatling] Small 25mm Autocannon Gimbal</DisplayName>
 			<Icon>Textures\GUI\Icons\Cubes\gatling_gun.dds</Icon>
 			<Description>Electrically driven six-barrel rotary cannon, modified for use in zero-atmosphere environments. This variant has a small range of gimballed motion, but is more fragile than the standard variant.
+				[1500m Range]
 				[Uses 25mm KE]</Description>
 			<CubeSize>Small</CubeSize>
 			<PlaceDecals>false</PlaceDecals>

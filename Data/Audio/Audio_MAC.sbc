@@ -4,69 +4,71 @@
 		<Sound>
 			<Id>
 				<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
-				<SubtypeId>MXA_MAC_Fire</SubtypeId>
+				<SubtypeId>MD_MAC_Fire</SubtypeId>
 			</Id>
 			<Category>SHOT</Category>
-			<MaxDistance>2500</MaxDistance>
+			<MaxDistance>1500</MaxDistance>
 			<VolumeVariation>0.05</VolumeVariation>
 			<PreventSynchronization>1</PreventSynchronization>
+			<PitchVariation>50</PitchVariation>
 			<DynamicMusicCategory>HeavyFight</DynamicMusicCategory>
 			<DynamicMusicAmount>3</DynamicMusicAmount>
 			<DistantSounds>
-				<DistantSound DistanceCrossfade="300" Distance="2500" Sound="MXA_MAC_Fire_Distant"/>
+				<DistantSound DistanceCrossfade="300" Distance="1500" Sound="MD_MAC_Fire_Distant"/>
 			</DistantSounds>
-			<Volume>1</Volume>
+			<Volume>2</Volume>
 			<Waves>
 				<Wave Type="D3">
-					<Start>Audio\MXA\MAC_Fire_1.xwm</Start>
+					<Start>Audio\MD\MD_Mac_Fire_7.xwm</Start>
 				</Wave>
 				<Wave Type="D3">
-					<Start>Audio\MXA\MAC_Fire_2.xwm</Start>
+					<Start>Audio\MD\MD_Mac_Fire_8.xwm</Start>
 				</Wave>
 				<Wave Type="D3">
-					<Start>Audio\MXA\MAC_Fire_3.xwm</Start>
+					<Start>Audio\MD\MD_Mac_Fire_9.xwm</Start>
 				</Wave>
 			</Waves>
 		</Sound>
 		<Sound>
 			<Id>
 				<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
-				<SubtypeId>MXA_MAC_Fire_Distant</SubtypeId>
+				<SubtypeId>MD_MAC_Fire_Distant</SubtypeId>
 			</Id>
 			<Category>SHOT</Category>
-			<MaxDistance>25000</MaxDistance>
+			<MaxDistance>5000</MaxDistance>
 			<VolumeVariation>0.02</VolumeVariation>
 			<PreventSynchronization>1</PreventSynchronization>
-			<Volume>1</Volume>
+			<Volume>2</Volume>
 			<Waves>
 				<Wave Type="D3">
-					<Start>Audio\MXA\MAC_Fire_Distant_1.xwm</Start>
+					<Start>Audio\MD\MD_Mac_Fire_1_Distant.xwm</Start>
 				</Wave>
 				<Wave Type="D3">
-					<Start>Audio\MXA\MAC_Fire_Distant_2.xwm</Start>
+					<Start>Audio\MD\MD_Mac_Fire_2_Distant.xwm</Start>
 				</Wave>
 				<Wave Type="D3">
-					<Start>Audio\MXA\MAC_Fire_Distant_3.xwm</Start>
+					<Start>Audio\MD\MD_Mac_Fire_3_Distant.xwm</Start>
 				</Wave>
 			</Waves>
 		</Sound>
 		<Sound>
 			<Id>
 				<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
-				<SubtypeId>MXA_MAC_Charge</SubtypeId>
+				<SubtypeId>MD_MAC_Charge</SubtypeId>
 			</Id>
-			<Category>SHOT</Category>
-			<MaxDistance>2500</MaxDistance>
+			<Category>RELOAD</Category>
+			<MaxDistance>800</MaxDistance>
 			<VolumeVariation>0.05</VolumeVariation>
 			<Pitch>1</Pitch>
-			<PitchVariation>2</PitchVariation>
+			<SoundLimit>5</SoundLimit>
+			<PitchVariation>0</PitchVariation>
 			<PreventSynchronization>1</PreventSynchronization>
 			<DynamicMusicCategory>HeavyFight</DynamicMusicCategory>
 			<DynamicMusicAmount>3</DynamicMusicAmount>
-			<Volume>1</Volume>
+			<Volume>3</Volume>
 			<Waves>
 				<Wave Type="D3">
-					<Start>Audio\MXA\MAC_Charge.xwm</Start>
+					<Start>Audio\MD\MD_Mac_Charge_6s.xwm</Start>
 				</Wave>
 			</Waves>
 		</Sound>
@@ -76,7 +78,7 @@
 				<SubtypeId>MXA_ImpactExplosion</SubtypeId>
 			</Id>
 			<Category>SHOT</Category>
-			<MaxDistance>500</MaxDistance>
+			<MaxDistance>1500</MaxDistance>
 			<VolumeVariation>0.05</VolumeVariation>
 			<PreventSynchronization>0</PreventSynchronization>
 			<SoundLimit>10</SoundLimit>

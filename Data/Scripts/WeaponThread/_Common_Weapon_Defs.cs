@@ -52,6 +52,13 @@ namespace WeaponThread
 			EnableOverload =  false, //only works on energy
 		};
 
+		private UiDef Common_Weapons_Hardpoint_Ui_Damage_Overload = new UiDef {
+			RateOfFire = false, //not recommended for beams
+			DamageModifier = true, //only works on energy
+			ToggleGuidance = false,
+			EnableOverload =  true, //only works on energy
+		};
+
 		private UiDef Common_Weapons_Hardpoint_Ui_GuidanceOnly = new UiDef {
 			RateOfFire = false, //not recommended for beams
 			DamageModifier = false, //only works on energy

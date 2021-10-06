@@ -9,7 +9,8 @@
 			<DisplayName>[Railgun] Apollo</DisplayName>
 			<Icon>Textures\GUI\Icons\AWERailgunTurret.dds</Icon>
 			<Description>A turreted version of the Artemis railgun, the Apollo shines with its high accuracy at medium to long range, but its slow firing rate and rotation speed, and limited elevation arc leaves makes the weapon suffer drastically at close range. Designed by ARYX Weapon Enterprises.
-				[Uses 200mm SABOT]</Description>
+				[4000m Range]
+				[Uses 250mm SABOT + 42MW]</Description>
 			<CubeSize>Large</CubeSize>
 			<GuiVisible>true</GuiVisible>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -57,7 +58,8 @@
 			</Id>
 			<DisplayName>[Railgun] Artemis</DisplayName>
 			<Description>The Artemis railgun has a higher damage than the 155mm Field Gun but has a high energy use, and slower fire rate. Great for long-range manual fire support, or use on precision strike craft for disabling hardpoints on large targets in the hands of an extremely skilled pilot. Designed by ARYX Weapon Enterprises.
-				[Uses 250mm SABOT]</Description>
+				[4000m Range]
+				[Uses 250mm SABOT + 42MW]</Description>
 			<Icon>Textures\GUI\Icons\AWERailgun.dds</Icon>
 			<GuiVisible>true</GuiVisible>
 			<CubeSize>Large</CubeSize>

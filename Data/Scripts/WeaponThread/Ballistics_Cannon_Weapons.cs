@@ -35,7 +35,7 @@ namespace WeaponThread
 
 		private HardPointAudioDef Ballistics_Cannons_Hardpoint_Audio = new HardPointAudioDef {
 			PreFiringSound = "",
-			FiringSound = "ArcWepShipARYXJudge_Fire", // subtype name from sbc
+			FiringSound = "MD_Cannon_Fire", // subtype name from sbc
 			FiringSoundPerShot = true,
 			ReloadSound = "",
 			NoAmmoSound = "ArcWepShipGatlingNoAmmo",
@@ -353,7 +353,7 @@ namespace WeaponThread
 
                 },
                 Barrels = new [] {
-                    "muzzle_missile_1",
+                    "muzzle_projectile_1",
                 },
                 Ejector = "",
                 Scope = "", //Where line of sight checks are performed from must be clear of block collision
@@ -391,16 +391,16 @@ namespace WeaponThread
 				Other = Common_Weapons_Hardpoint_Other_Large,
 				
                 Loading = new LoadingDef {
-                    RateOfFire = 80,
+                    RateOfFire = 240,
                     BarrelsPerShot = 1,
                     TrajectilesPerBarrel = 1, // Number of Trajectiles per barrel per fire event.
                     SkipBarrels = 0,
                     ReloadTime = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     DelayUntilFire = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-                    HeatPerShot = 0, //heat generated per shot
-                    MaxHeat = 0, //max heat before weapon enters cooldown (70% of max heat)
-                    Cooldown = 0f, //percent of max heat to be under to start firing again after overheat accepts .2-.95
-                    HeatSinkRate = 0, //amount of heat lost per second
+                    HeatPerShot = 4, //heat generated per shot
+                    MaxHeat = 60, //max heat before weapon enters cooldown (70% of max heat)
+                    Cooldown = 0.5f, //percent of max heat to be under to start firing again after overheat accepts .2-.95
+                    HeatSinkRate = 5, //amount of heat lost per second
                     DegradeRof = false, // progressively lower rate of fire after 80% heat threshold (80% of max heat)
                     ShotsInBurst = 0,
                     DelayAfterBurst = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
@@ -410,7 +410,15 @@ namespace WeaponThread
                     DeterministicSpin = false, // Spin barrel position will always be relative to initial / starting positions (spin will not be as smooth).
                 },
 
-                Audio = Ballistics_Cannons_Hardpoint_Audio,
+                Audio = new HardPointAudioDef {
+					PreFiringSound = "",
+					FiringSound = "MD_Cannon_Fire_Click", // subtype name from sbc
+					FiringSoundPerShot = true,
+					ReloadSound = "",
+					NoAmmoSound = "ArcWepShipGatlingNoAmmo",
+					HardPointRotationSound = "WepTurretGatlingRotate",
+					BarrelRotationSound = "",
+				},
 				
                 Graphics = new HardPointParticleDef 
 				{
@@ -418,12 +426,12 @@ namespace WeaponThread
 					{
 						Name = "MD_CannonMuzzleFlash", // OKI_230mm_Muzzle_Flash 
 						Color = new Vector4(1f,1f,1f,1f), //RGBA
-						Offset = new Vector3D(0f,0f,-6f), //XYZ
+						Offset = new Vector3D(0f,0f,0.25f), //XYZ
 						Extras = new ParticleOptionDef
 						{
 							Loop = false,
 							Restart = false,
-							MaxDistance = 800,
+							MaxDistance = 1000,
 							MaxDuration = 0,
 							Scale = 1.0f,
 						}

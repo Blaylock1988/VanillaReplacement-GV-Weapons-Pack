@@ -9,8 +9,9 @@
 			</Id>
 			<DisplayName>[AMS] Large PD-COIL Turret</DisplayName>
 			<Icon>Textures\Icons\MA_Designator.dds</Icon>
-			<Description>A low yield Chemical Oxygen Iodine Laser (COIL) turret which only targets projectiles. Capable of being placed anywhere, but has a moderate energy cost. Designed by AutoMcD Manufacturing.
-				[Uses Energy]</Description>
+			<Description>A low yield anti-missile Chemical Oxygen Iodine Laser (COIL) turret. Only targets projectiles. Designed by AutoMcD Manufacturing.
+				[1500m Range]
+				[Uses 5MW Energy]</Description>
 			<CubeSize>Large</CubeSize>
 			<PlaceDecals>false</PlaceDecals>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -18,6 +19,7 @@
 			<ModelOffset x="0" y="0" z="0"/>
 			<Model>Models\MA_Designator\MA_Designator.mwm</Model>
 			<UseModelIntersection>true</UseModelIntersection>
+			<GuiVisible>true</GuiVisible>
 			<Components>
 				<Component Subtype="SteelPlate" Count="11"/>
 				<Component Subtype="Construction" Count="7"/>
@@ -88,8 +90,9 @@
 			</Id>
 			<DisplayName>[AMS] Small PD-COIL Turret</DisplayName>
 			<Icon>Textures\Icons\MA_Designator.dds</Icon>
-			<Description>A low yield Chemical Oxygen Iodine Laser (COIL) turret which only targets projectiles. Capable of being placed anywhere, but has a moderate energy cost. Designed by AutoMcD Manufacturing.
-				[Uses Energy]</Description>
+			<Description>A low yield anti-missile Chemical Oxygen Iodine Laser (COIL) turret. Only targets projectiles. Designed by AutoMcD Manufacturing.
+				[1500m Range]
+				[Uses 5MW Energy]</Description>
 			<CubeSize>Small</CubeSize>
 			<PlaceDecals>false</PlaceDecals>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -97,6 +100,7 @@
 			<ModelOffset x="0" y="0" z="0"/>
 			<Model>Models\MA_Designator\MA_Designator_sm.mwm</Model>
 			<UseModelIntersection>true</UseModelIntersection>
+			<GuiVisible>true</GuiVisible>
 			<Components>
 				<Component Subtype="SteelPlate" Count="5"/>
 				<Component Subtype="Construction" Count="3"/>

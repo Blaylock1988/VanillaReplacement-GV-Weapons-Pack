@@ -129,15 +129,15 @@ namespace WeaponThread
                 {
                     Ammo = new ParticleDef
                     {
-                        Name = "", //ShipWelderArc
+                        Name = "MD_BulletGlowMedYellow", //ShipWelderArc
                         ShrinkByDistance = false,
-                        Color = Color(red: 255, green: 128, blue: 0, alpha: 1),
+                        Color = Color(red: 1, green: 1, blue: 1, alpha: 1),
                         Offset = Vector(x: 0, y: -1, z: 0),
                         Extras = new ParticleOptionDef
                         {
-                            Loop = false,
+                            Loop = true,
                             Restart = false,
-                            MaxDistance = 5000,
+                            MaxDistance = 2000,
                             MaxDuration = 1,
                             Scale = 1,
                         },

@@ -155,7 +155,7 @@ namespace WeaponThread
             BackKickForce = 0f,
 			DecayPerShot = 0f,            
             HardPointUsable = true,
-            EnergyMagazineSize = 300,
+            EnergyMagazineSize = 0,
             IgnoreWater = false,
 
             DamageScales = new DamageScaleDef
@@ -212,16 +212,16 @@ namespace WeaponThread
                 {
                     Hit = new ParticleDef
                     {
-                        Name = "LaserHitParticlesGimbal",//LaserHitParticlesGimbal
+                        Name = "Lasers_Laser_RedHit",//Big_melting_laser_hit
                         ApplyToShield = true,
                         ShrinkByDistance = true,
-                        Color = Color(red: 10, green: 2, blue: 1, alpha: 0.8f),
+                        Color = Color(red: 1, green: 1, blue: 1, alpha: 1f),
                         Offset = Vector(x: 0, y: 0, z: 0),
                         Extras = new ParticleOptionDef
                         {
                             Loop = true,
                             Restart = false,
-                            MaxDistance = 500,
+                            MaxDistance = 2000,
                             MaxDuration = 0,
                             Scale = 1,
                             HitPlayChance = 1,

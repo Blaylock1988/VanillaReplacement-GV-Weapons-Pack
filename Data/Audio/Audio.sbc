@@ -153,6 +153,18 @@
 				<Wave Type="D3">
 					<Start>Audio\HWR\Small_explosion_5.xwm</Start>
 				</Wave>
+				<Wave Type="D3">
+					<Start>Audio\HWR\Small_explosion_6.xwm</Start>
+				</Wave>
+				<Wave Type="D3">
+					<Start>Audio\HWR\Small_explosion_7.xwm</Start>
+				</Wave>
+				<Wave Type="D3">
+					<Start>Audio\HWR\Small_explosion_8.xwm</Start>
+				</Wave>
+				<Wave Type="D3">
+					<Start>Audio\HWR\Small_explosion_9.xwm</Start>
+				</Wave>
 			</Waves>
 		</Sound>
 		<Sound>
@@ -173,16 +185,49 @@
 			<Loopable>false</Loopable>
 			<Waves>
 				<Wave Type="D3">
-					<Start>Audio\HWR\Large_explosion_1.xwm</Start>
+					<Start>Audio\HWR\Huge_explosion_1.xwm</Start>
 				</Wave>
 				<Wave Type="D3">
-					<Start>Audio\HWR\Large_explosion_2.xwm</Start>
+					<Start>Audio\HWR\Huge_explosion_2.xwm</Start>
 				</Wave>
 				<Wave Type="D3">
-					<Start>Audio\HWR\Large_explosion_3.xwm</Start>
+					<Start>Audio\HWR\Huge_explosion_3.xwm</Start>
 				</Wave>
 				<Wave Type="D3">
-					<Start>Audio\HWR\Large_explosion_4.xwm</Start>
+					<Start>Audio\HWR\Huge_explosion_4.xwm</Start>
+				</Wave>
+				<Wave Type="D3">
+					<Start>Audio\HWR\Huge_explosion_5.xwm</Start>
+				</Wave>
+				<Wave Type="D3">
+					<Start>Audio\HWR\Huge_explosion_6.xwm</Start>
+				</Wave>
+				<Wave Type="D3">
+					<Start>Audio\HWR\Huge_explosion_7.xwm</Start>
+				</Wave>
+				<Wave Type="D3">
+					<Start>Audio\HWR\Huge_explosion_8.xwm</Start>
+				</Wave>
+				<Wave Type="D3">
+					<Start>Audio\HWR\Huge_explosion_9.xwm</Start>
+				</Wave>
+				<Wave Type="D3">
+					<Start>Audio\HWR\Huge_explosion_10.xwm</Start>
+				</Wave>
+				<Wave Type="D3">
+					<Start>Audio\HWR\Huge_explosion_11.xwm</Start>
+				</Wave>
+				<Wave Type="D3">
+					<Start>Audio\HWR\Huge_explosion_12.xwm</Start>
+				</Wave>
+				<Wave Type="D3">
+					<Start>Audio\HWR\Huge_explosion_13.xwm</Start>
+				</Wave>
+				<Wave Type="D3">
+					<Start>Audio\HWR\Huge_explosion_14.xwm</Start>
+				</Wave>
+				<Wave Type="D3">
+					<Start>Audio\HWR\Huge_explosion_15.xwm</Start>
 				</Wave>
 			</Waves>
 		</Sound>
@@ -277,6 +322,18 @@
 				<Wave Type="D3">
 					<Start>Audio\HWR\Flak_explosion_5.xwm</Start>
 				</Wave>
+				<Wave Type="D3">
+					<Start>Audio\HWR\Flak_explosion_6.xwm</Start>
+				</Wave>
+				<Wave Type="D3">
+					<Start>Audio\HWR\Flak_explosion_7.xwm</Start>
+				</Wave>
+				<Wave Type="D3">
+					<Start>Audio\HWR\Flak_explosion_8.xwm</Start>
+				</Wave>
+				<Wave Type="D3">
+					<Start>Audio\HWR\Flak_explosion_9.xwm</Start>
+				</Wave>
 			</Waves>
 		</Sound>
 		<Sound>
@@ -305,6 +362,18 @@
 				<Wave Type="D3">
 					<Start>Audio\HWR\Flak_explosion_5_Distant.xwm</Start>
 				</Wave>
+				<Wave Type="D3">
+					<Start>Audio\HWR\Flak_explosion_6_Distant.xwm</Start>
+				</Wave>
+				<Wave Type="D3">
+					<Start>Audio\HWR\Flak_explosion_7_Distant.xwm</Start>
+				</Wave>
+				<Wave Type="D3">
+					<Start>Audio\HWR\Flak_explosion_8_Distant.xwm</Start>
+				</Wave>
+				<Wave Type="D3">
+					<Start>Audio\HWR\Flak_explosion_9_Distant.xwm</Start>
+				</Wave>
 			</Waves>
 		</Sound>
 		<Sound>
@@ -332,6 +401,24 @@
 				</Wave>
 				<Wave Type="D3">
 					<Start>Audio\HWR\Distant_explosion_5.xwm</Start>
+				</Wave>
+				<Wave Type="D3">
+					<Start>Audio\HWR\Distant_explosion_6.xwm</Start>
+				</Wave>
+				<Wave Type="D3">
+					<Start>Audio\HWR\Distant_explosion_7.xwm</Start>
+				</Wave>
+				<Wave Type="D3">
+					<Start>Audio\HWR\Distant_explosion_8.xwm</Start>
+				</Wave>
+				<Wave Type="D3">
+					<Start>Audio\HWR\Huge_distant_explosion_1.xwm</Start>
+				</Wave>
+				<Wave Type="D3">
+					<Start>Audio\HWR\Huge_distant_explosion_2.xwm</Start>
+				</Wave>
+				<Wave Type="D3">
+					<Start>Audio\HWR\Huge_distant_explosion_3.xwm</Start>
 				</Wave>
 			</Waves>
 		</Sound>
@@ -460,6 +547,86 @@
 					<Start>Audio\MD\DRAGONGAVER_loop_start_3_Distant.wav</Start>
 					<Loop>Audio\MD\DRAGONGAVER_loop_3_Distant.wav</Loop>
 					<End>Audio\MD\DRAGONGAVER_loop_end_3_Distant.wav</End>
+				</Wave>
+			</Waves>
+		</Sound>
+		<Sound>
+			<Id>
+				<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+				<SubtypeId>MD_Cannon_Fire</SubtypeId>
+			</Id>
+			<Category>SHOT</Category>
+			<MaxDistance>600</MaxDistance>
+			<PitchVariation>100</PitchVariation>
+			<PreventSynchronization>0</PreventSynchronization>
+			<DynamicMusicCategory>HeavyFight</DynamicMusicCategory>
+			<DynamicMusicAmount>3</DynamicMusicAmount>
+			<SoundLimit>20</SoundLimit>
+			<DistantSounds>
+				<DistantSound DistanceCrossfade="1" Distance="600" Sound="MD_Cannon_Fire_1_Distant"/>
+			</DistantSounds>
+			<Volume>1</Volume>
+			<Waves>
+				<Wave Type="D3">
+					<Start>Audio\MD\MD_Cannon_Fire_3.wav</Start>
+				</Wave>
+			</Waves>
+		</Sound>
+		<Sound>
+			<Id>
+				<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+				<SubtypeId>MD_Cannon_Fire_Click</SubtypeId>
+			</Id>
+			<Category>SHOT</Category>
+			<MaxDistance>600</MaxDistance>
+			<PitchVariation>100</PitchVariation>
+			<PreventSynchronization>0</PreventSynchronization>
+			<DynamicMusicCategory>HeavyFight</DynamicMusicCategory>
+			<DynamicMusicAmount>3</DynamicMusicAmount>
+			<SoundLimit>20</SoundLimit>
+			<DistantSounds>
+				<DistantSound DistanceCrossfade="1" Distance="600" Sound="MD_Cannon_Fire_1_Distant"/>
+			</DistantSounds>
+			<Volume>1</Volume>
+			<Waves>
+				<Wave Type="D3">
+					<Start>Audio\MD\MD_Cannon_Fire_click_5.wav</Start>
+				</Wave>
+			</Waves>
+		</Sound>
+		<Sound>
+			<Id>
+				<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+				<SubtypeId>MD_Cannon_Fire_1_Distant</SubtypeId>
+			</Id>
+			<Category>SHOT</Category>
+			<MaxDistance>2000</MaxDistance>
+			<PitchVariation>50</PitchVariation>
+			<PreventSynchronization>3</PreventSynchronization>
+			<Volume>1</Volume>
+			<Loopable>false</Loopable>
+			<Waves>
+				<Wave Type="D3">
+					<Start>Audio\MD\MD_Cannon_Fire_1_Distant.wav</Start>
+				</Wave>
+			</Waves>
+		</Sound>
+		<Sound>
+			<Id>
+				<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+				<SubtypeId>Weapon_discharge_cooldown_1</SubtypeId>
+			</Id>
+			<Category>RELOAD</Category>
+			<MaxDistance>400</MaxDistance>
+			<PitchVariation>50</PitchVariation>
+			<PreventSynchronization>0</PreventSynchronization>
+			<DynamicMusicCategory>HeavyFight</DynamicMusicCategory>
+			<DynamicMusicAmount>3</DynamicMusicAmount>
+			<SoundLimit>2</SoundLimit>
+			<Volume>2</Volume>
+			<Waves>
+				<Wave Type="D3">
+					<Start>Audio\HWR\Weapon_discharge_cooldown_1.xwm</Start>
 				</Wave>
 			</Waves>
 		</Sound>

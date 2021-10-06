@@ -124,6 +124,7 @@ namespace WeaponThread
                     "subpart_ArcherPod1_Missile_30", "subpart_ArcherPod2_Missile_30", "subpart_ArcherPod3_Missile_30", "subpart_ArcherPod4_Missile_30", "subpart_ArcherPod5_Missile_30",
                 },
                 Ejector = "",
+                Scope = "subpart_ArcherPod2_Missile_16", //Where line of sight checks are performed from must be clear of block collision
             },
 			
             Targeting = Missiles_Missile_Targeting,
@@ -217,6 +218,8 @@ namespace WeaponThread
 					"muzzle_missile_003",
 					"muzzle_missile_004",
                 },
+                Ejector = "",
+                Scope = "muzzle_missile_002", //Where line of sight checks are performed from must be clear of block collision
             },
 			
             Targeting = Missiles_Missile_Targeting,

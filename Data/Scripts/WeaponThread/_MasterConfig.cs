@@ -23,9 +23,10 @@
 						LargeCannon230mm,
 						VehicleTurret122mm,
 						MXA_CoilgunL,
-						MXA_MACL,
+						ARYXLightCoilgun,
 						MXA_ArcherPods,
-						MXA_Shiva,
+						Torpedo_Crusader_Large,
+						Torpedo_Crusader_Small,
 						MXA_Moray,
 						MA_PDT,
 						MA_PDX_T2,
@@ -33,7 +34,9 @@
 						ReceptorCoilGun,
 						ReceptorTurret,
 						AryxRadar,
-						AryxSmallRadar);
+						AryxSmallRadar,
+						MA_Fixed_T2,
+						MA_Fixed_T2_Naked);
             
         }
     }

@@ -53,7 +53,7 @@
 				<Model BuildPercentUpperBound="0.66" File="Models\Coilguns\MXA_Sentry_BS2.mwm"/>
 				<Model BuildPercentUpperBound="1.0" File="Models\Coilguns\MXA_Sentry_BS3.mwm"/>
 			</BuildProgressModels>
-			<BlockPairName>Ballistics_Cannon</BlockPairName>
+			<BlockPairName>Ballistics_Cannon_Turret</BlockPairName>
 		</Definition>
 		<Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
 			<Id>
@@ -97,7 +97,7 @@
 				<Model BuildPercentUpperBound="0.67" File="Models\Cubes\Small\122mmBase_BS2.mwm"/>
 				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\Small\122mmBase_BS3.mwm"/>
 			</BuildProgressModels>
-			<BlockPairName>OKI122mmVT</BlockPairName>
+			<BlockPairName>Ballistics_Cannon_Turret</BlockPairName>
 			<MirroringY>Z</MirroringY>
 			<MirroringZ>Y</MirroringZ>
 			<EdgeType>Heavy</EdgeType>
@@ -161,7 +161,7 @@
 			</BuildProgressModels>
 			<StandbyPowerConsumption>0.001</StandbyPowerConsumption>
 			<OperationalPowerConsumption>0.2</OperationalPowerConsumption>
-			<BlockPairName>OKI122mmSGfixed</BlockPairName>
+			<BlockPairName>Ballistics_Cannon_Fixed</BlockPairName>
 			<Center x="0" y="0" z="4"/>
 			<MirroringY>Z</MirroringY>
 			<MirroringZ>Y</MirroringZ>
@@ -212,7 +212,7 @@
 				<Model BuildPercentUpperBound="0.5" File="Models\Cubes\Small\122mmFixed_BS1.mwm"/>
 				<Model BuildPercentUpperBound="1.0" File="Models\Cubes\Small\122mmFixed_BS2.mwm"/>
 			</BuildProgressModels>
-			<BlockPairName>OKI122mmSGfixed</BlockPairName>
+			<BlockPairName>Ballistics_Cannon_Fixed</BlockPairName>
 			<Center x="0" y="1" z="8"/>
 			<MirroringY>Z</MirroringY>
 			<MirroringZ>Y</MirroringZ>

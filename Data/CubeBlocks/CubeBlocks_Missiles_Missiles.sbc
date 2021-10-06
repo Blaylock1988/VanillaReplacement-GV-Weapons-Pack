@@ -8,7 +8,8 @@
 			</Id>
 			<DisplayName>[Missile] Large Archer Pod</DisplayName>
 			<Description>The Archer is a ship-to-ship homing missile carrying a simple HE charge. Archer missiles utilize advanced "drunken missile" manuvering to confuse enemy point defenses, and when used en-mass for extended periods can overwhelm any laser-based anti-missile systems. Designed by MXA-UNSC.
-			[Uses Archer HE]
+				[4000m Range]
+				[Uses Archer HE]
 			</Description>
 			<Icon>Textures\GUI\Icons\MXA_ArcherPods.png</Icon>
 			<CubeSize>Large</CubeSize>
@@ -19,20 +20,20 @@
 			<MirroringY>Z</MirroringY>
 			<MirroringZ>Y</MirroringZ>
 			<MirroringX>X</MirroringX>
-            <Components>
-                <Component Subtype="SteelPlate" Count="189" />
-                <Component Subtype="Construction" Count="95" />
-                <Component Subtype="MetalGrid" Count="19" />
-                <Component Subtype="LargeTube" Count="9" />
-                <Component Subtype="Motor" Count="95" />
-                <Component Subtype="InteriorPlate" Count="11" />
-                <Component Subtype="Computer" Count="189" />
-                <Component Subtype="Construction" Count="95" />
-                <Component Subtype="SteelPlate" Count="47" />
-            </Components>
-
-            <BuildTimeSeconds>99</BuildTimeSeconds>
-            <PCU>2010</PCU>			<CriticalComponent Subtype="Computer" Index="0"/>
+			<Components>
+				<Component Subtype="SteelPlate" Count="189"/>
+				<Component Subtype="Construction" Count="95"/>
+				<Component Subtype="MetalGrid" Count="19"/>
+				<Component Subtype="LargeTube" Count="9"/>
+				<Component Subtype="Motor" Count="95"/>
+				<Component Subtype="InteriorPlate" Count="11"/>
+				<Component Subtype="Computer" Count="189"/>
+				<Component Subtype="Construction" Count="95"/>
+				<Component Subtype="SteelPlate" Count="47"/>
+			</Components>
+			<BuildTimeSeconds>99</BuildTimeSeconds>
+			<PCU>2010</PCU>
+			<CriticalComponent Subtype="Computer" Index="0"/>
 			<EdgeType>Light</EdgeType>
 			<!--<WeaponDefinitionId Subtype="Missiles_Missile"/>-->
 			<InventoryMaxVolume>0.250</InventoryMaxVolume>
@@ -54,7 +55,7 @@
 				<Model BuildPercentUpperBound="0.66" File="Models\Missiles\MXA_ArcherPods_BS2.mwm"/>
 				<Model BuildPercentUpperBound="1.0" File="Models\Missiles\MXA_ArcherPods_BS3.mwm"/>
 			</BuildProgressModels>
-			<BlockPairName>MXA_ArcherPods</BlockPairName>
+			<BlockPairName>SmallRocketLauncherReload</BlockPairName>
 		</Definition>
 		<Definition xsi:type="MyObjectBuilder_WeaponBlockDefinition">
 			<Id>
@@ -65,7 +66,8 @@
 			<BlockPairName>SmallRocketLauncherReload</BlockPairName>
 			<Icon>Textures\GUI\Icons\Cubes\RocketLauncherReload.dds</Icon>
 			<Description>The Archer is a ship-to-ship homing missile carrying a simple HE charge. Archer missiles utilize advanced "drunken missile" manuvering to confuse enemy point defenses, and when used en-mass for extended periods can overwhelm any laser-based anti-missile systems.
-			[Uses Archer HE]</Description>
+				[4000m Range]
+				[Uses Archer HE]</Description>
 			<CubeSize>Small</CubeSize>
 			<GuiVisible>true</GuiVisible>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -80,20 +82,20 @@
 				<MountPoint Side="Right" StartX="0" StartY="0" EndX="3" EndY="3"/>
 				<MountPoint Side="Left" StartX="0" StartY="0" EndX="3" EndY="3"/>
 			</MountPoints>
-            <Components>
-                <Component Subtype="SteelPlate" Count="37" />
-                <Component Subtype="Construction" Count="18" />
-                <Component Subtype="MetalGrid" Count="4" />
-                <Component Subtype="LargeTube" Count="2" />
-                <Component Subtype="Motor" Count="18" />
-                <Component Subtype="InteriorPlate" Count="2" />
-                <Component Subtype="Computer" Count="37" />
-                <Component Subtype="Construction" Count="18" />
-                <Component Subtype="SteelPlate" Count="9" />
-            </Components>
-
-            <BuildTimeSeconds>19</BuildTimeSeconds>
-            <PCU>1110</PCU>			<CriticalComponent Subtype="Computer" Index="0"/>
+			<Components>
+				<Component Subtype="SteelPlate" Count="37"/>
+				<Component Subtype="Construction" Count="18"/>
+				<Component Subtype="MetalGrid" Count="4"/>
+				<Component Subtype="LargeTube" Count="2"/>
+				<Component Subtype="Motor" Count="18"/>
+				<Component Subtype="InteriorPlate" Count="2"/>
+				<Component Subtype="Computer" Count="37"/>
+				<Component Subtype="Construction" Count="18"/>
+				<Component Subtype="SteelPlate" Count="9"/>
+			</Components>
+			<BuildTimeSeconds>19</BuildTimeSeconds>
+			<PCU>1110</PCU>
+			<CriticalComponent Subtype="Computer" Index="0"/>
 			<BuildProgressModels>
 				<Model BuildPercentUpperBound="0.50" File="Models\Cubes\small\RocketLauncherReloadConstruction_1.mwm"/>
 				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\small\RocketLauncherReloadConstruction_2.mwm"/>

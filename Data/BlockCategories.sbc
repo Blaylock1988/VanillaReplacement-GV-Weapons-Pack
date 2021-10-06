@@ -12,10 +12,10 @@
 				<string>ARYXFlakTurret</string>
 				<string>ARYXRailgun</string>
 				<string>ARYXRailgunTurret</string>
-				<string>MXA_MACL</string>
+				<string>ARYXLightCoilgun</string>
 				<string>MXA_ArcherPods</string>
-				<string>MXA_Shiva</string>
-				<string>MXA_Moray</string>
+				<string>Missile_Torpedo_Large</string>
+				<string>Missile_Torpedo_Small</string>
 				<string>SmallGatlingTurretAutoGatling</string>
 				<string>LargeWarhead</string>
 				<string>LargeInteriorTurret</string>
@@ -29,7 +29,6 @@
 				<string>SmallMissileLauncher/(null)</string>
 				<string>SmallRocketLauncherReload</string>
 				<string>MA_T2PDX</string>
-				<string>MA_PDT</string>
 				<string>ReceptorCoilGun</string>
 				<string>ReceptorTurret</string>
 				<string>OKI122mmSGfixed</string>
@@ -37,6 +36,10 @@
 				<string>MXA_CoilgunL</string>
 				<string>OKI230mmBCfixed</string>
 				<string>JumpDriveDisruptorTurret</string>
+				<string>MA_Fixed_T2</string>
+				<string>MA_Fixed_T2_Naked</string>
+				<string>ARYXLargeRadar</string>
+				<string>ARYXSmallRadar</string>
 			</ItemIds>
 		</Category>
 	</CategoryClasses>
