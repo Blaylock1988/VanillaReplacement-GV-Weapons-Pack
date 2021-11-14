@@ -8,8 +8,7 @@
 		<Entry Class="ShipConsumables" BlueprintSubtypeId="Ballistics_Cannon"/>
 		<Entry Class="ShipConsumables" BlueprintSubtypeId="Ballistics_Railgun"/>
 		<Entry Class="ShipConsumables" BlueprintSubtypeId="Ballistics_MAC"/>
-		<Entry Class="ShipConsumables" BlueprintSubtypeId="Missiles_Missile_x150"/>
-		<Entry Class="ShipConsumables" BlueprintSubtypeId="Missiles_Missile_x1"/>
+		<Entry Class="ShipConsumables" BlueprintSubtypeId="Missiles_Missile"/>
 		<Entry Class="ShipConsumables" BlueprintSubtypeId="Missiles_Torpedo"/>
 		<Entry Class="ShipConsumables" BlueprintSubtypeId="Others_Mine"/>
 		<Entry Class="ShipConsumables" BlueprintSubtypeId="Missile200mm"/>

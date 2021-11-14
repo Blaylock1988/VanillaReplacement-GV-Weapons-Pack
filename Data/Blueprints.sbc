@@ -114,36 +114,19 @@
 		<Blueprint>
 			<Id>
 				<TypeId>BlueprintDefinition</TypeId>
-				<SubtypeId>Missiles_Missile_x150</SubtypeId>
+				<SubtypeId>Missiles_Missile</SubtypeId>
 			</Id>
-			<DisplayName>[Missile] Archer HE x150</DisplayName>
-			<Icon>Textures\GUI\Icons\MXA_Archer_Missile_Ammo_Stack.png</Icon>
-			<Prerequisites>
-				<Item Amount="1900" TypeId="Ingot" SubtypeId="Iron"/>
-				<Item Amount="280" TypeId="Ingot" SubtypeId="Nickel"/>
-				<Item Amount="52" TypeId="Ingot" SubtypeId="Magnesium"/>
-				<Item Amount="140" TypeId="Ingot" SubtypeId="Silicon"/>
-				<Item Amount="8.7" TypeId="Ingot" SubtypeId="Gold"/>
-			</Prerequisites>
-			<BaseProductionTimeInSeconds>197</BaseProductionTimeInSeconds>
-			<Result Amount="1" TypeId="AmmoMagazine" SubtypeId="Missiles_Missile_x150"/>
-		</Blueprint>
-		<Blueprint>
-			<Id>
-				<TypeId>BlueprintDefinition</TypeId>
-				<SubtypeId>Missiles_Missile_x1</SubtypeId>
-			</Id>
-			<DisplayName>[Missile] Archer HE x1</DisplayName>
+			<DisplayName>[Missile] Archer HE</DisplayName>
 			<Icon>Textures\GUI\Icons\MXA_Archer_Missile_Ammo.png</Icon>
-			<Prerequisites>
-				<Item Amount="13" TypeId="Ingot" SubtypeId="Iron"/>
-				<Item Amount="1.9" TypeId="Ingot" SubtypeId="Nickel"/>
-				<Item Amount="0.36" TypeId="Ingot" SubtypeId="Magnesium"/>
-				<Item Amount="0.96" TypeId="Ingot" SubtypeId="Silicon"/>
-				<Item Amount="0.06" TypeId="Ingot" SubtypeId="Gold"/>
-			</Prerequisites>
+            <Prerequisites>
+                <Item Amount="13" TypeId="Ingot" SubtypeId="Iron" />
+                <Item Amount="1.9" TypeId="Ingot" SubtypeId="Nickel" />
+                <Item Amount="0.36" TypeId="Ingot" SubtypeId="Magnesium" />
+                <Item Amount="0.96" TypeId="Ingot" SubtypeId="Silicon" />
+                <Item Amount="0.06" TypeId="Ingot" SubtypeId="Gold" />
+            </Prerequisites>
 			<BaseProductionTimeInSeconds>8</BaseProductionTimeInSeconds>
-			<Result Amount="1" TypeId="AmmoMagazine" SubtypeId="Missiles_Missile_x1"/>
+			<Result Amount="1" TypeId="AmmoMagazine" SubtypeId="Missiles_Missile"/>
 		</Blueprint>
 		<Blueprint>
 			<Id>
@@ -167,16 +150,16 @@
 				<TypeId>BlueprintDefinition</TypeId>
 				<SubtypeId>Others_Mine</SubtypeId>
 			</Id>
-			<DisplayName>[Mine] Moray Homing x8</DisplayName>
+			<DisplayName>[Mine] Moray Homing</DisplayName>
 			<Icon>Textures\GUI\Icons\MXA_Moray_Mine.png</Icon>
-			<Prerequisites>
-				<Item Amount="830" TypeId="Ingot" SubtypeId="Iron"/>
-				<Item Amount="120" TypeId="Ingot" SubtypeId="Nickel"/>
-				<Item Amount="23" TypeId="Ingot" SubtypeId="Magnesium"/>
-				<Item Amount="60" TypeId="Ingot" SubtypeId="Silicon"/>
-				<Item Amount="3.8" TypeId="Ingot" SubtypeId="Gold"/>
-			</Prerequisites>
-			<BaseProductionTimeInSeconds>220</BaseProductionTimeInSeconds>
+            <Prerequisites>
+                <Item Amount="100" TypeId="Ingot" SubtypeId="Iron" />
+                <Item Amount="15" TypeId="Ingot" SubtypeId="Nickel" />
+                <Item Amount="2.8" TypeId="Ingot" SubtypeId="Magnesium" />
+                <Item Amount="7.4" TypeId="Ingot" SubtypeId="Silicon" />
+                <Item Amount="0.46" TypeId="Ingot" SubtypeId="Gold" />
+            </Prerequisites>
+			<BaseProductionTimeInSeconds>58</BaseProductionTimeInSeconds>
 			<Result Amount="1" TypeId="AmmoMagazine" SubtypeId="Others_Mine"/>
 		</Blueprint>
 	</Blueprints>

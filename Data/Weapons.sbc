@@ -139,8 +139,7 @@
 			<NoAmmoSoundName>WepShipGatlingNoAmmo</NoAmmoSoundName>
 			<SecondarySoundName>WepShipGatlingRotation</SecondarySoundName>
 			<AmmoMagazines>
-				<AmmoMagazine Subtype="Missiles_Missile_x150"/>
-				<AmmoMagazine Subtype="Missiles_Missile_x1"/>
+				<AmmoMagazine Subtype="Missiles_Missile"/>
 			</AmmoMagazines>
 			<ReloadTime>0</ReloadTime>
 		</Weapon>
